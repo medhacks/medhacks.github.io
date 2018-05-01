@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="pitches/style.css">
+    </head>
+    <body>        
+        <div class="background"></div>
+        <div class='progress'></div>
+        <div class="notification">Fake message</div>
+        <div class="container">
+            <h1>Create an Announcement</h1>
+            <hr class='line' noshade/>
+            <form action="information.html">
+                <button class="corner-button view-button" type="submit"></button>
+            </form>
+            <div class="logins">
+                <h3>Log in to post announcements</h3>
+                <input class="inputText short middle" type="text" id="user" placeholder="Username"><br>
+                <input class="inputText short middle" type="password" id="pass" placeholder="Password"><br>
+                <div class="error" style="font-size: 16px"></div>
+                <button class="button" type="button" id="login" style="display: block;">Log in</button>
+            </div>
+            <textarea class="inputText invisible" rows="10" cols="50" placeholder="Text"></textarea><br></br>
+            <div class="error"></div>
+            <button class="button invisible" id="save-button" type="button">Submit</button>
+        </div>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script type="text/javascript" src="http://www.parsecdn.com/js/parse-latest.js"></script>
+        <script>
+            Parse.initialize("vicmart-server-test");
+            Parse.serverURL = "https://vicmart-server-test.herokuapp.com/";
+            var Announcements = Parse.Object.extend("Announcements");
+            var announementsQuery = new Parse.Query(Announcements);
+            var saving = false;
+            var timer;
+            var logging = false;
+            var loggedin = false;
+            
+            $("#save-button").click(function() {
+                save();
+            });
+            
+            function save() {
+                if (!saving) {
+                    saving = true;
+                    var description = $("textarea").val();
+
+                    $(".error").text("");
+                    if (!description) {
+                        notify("Please enter a description.", true);
+                        saving = false;
+                        return;
+                    }
+
+                    var announce = new Announcements();
+                    announce.set("Text", description);
+                    $("#save-button").text("Saving...");
+
+                    announce.save(null, {  
+                        success: function(savedAnnouncement) {
+                            console.log('New object created with objectId: ' + savedAnnouncement.id);
+                            $("#save-button").text("Saved. Redirecting...");
+                            setTimeout(function() {
+                                $("textarea").val("");
+                                $("#save-button").text("Save");
+                                saving = false;
+                            }, 500);
+                        },
+                        error: function(savedPitch, error) {
+                            notify('Failed to create new object, with error code: ' + error.message, true);
+                            saving = false;
+                        }
+                    });
+                }
+            }
+            
+            $("#login").click(function() {
+                login()
+            });
+                
+            function login() {
+                if (!logging) {
+                    logging = true;
+                    var user = $("#user").val();
+                    var pass = $("#pass").val();
+                    $(".error").text("");
+                    $("#login").text("Logging in...");
+                    Parse.User.logIn(user, pass, {
+                        success: function(user) {
+                            $(".invisible").each(function() {
+                                $(this).removeClass("invisible");
+                            });     
+                            $(".logins").remove();
+                            loggedin = true;
+                        },
+                        error: function(user, error) {
+                            console.log("Error: " + error.code + " " + error.message);
+                            notify("Invalid username and/or password", true);
+                            $("#login").text("Log in");
+                            logging = false;
+                        }
+                    });
+                }
+            }
+            
+            function notify(message, error) {
+                $(".notification").css("top", "0px");
+                if (error) {
+                    $(".notification").css("background-color", "#B22222");
+                    $(".notification").css("color", "#efefef");
+                    $(".notification").text("[ERROR] " + message);
+                } else {
+                    $(".notification").css("background-color", "rgb(239, 239, 239)");
+                    $(".notification").css("color", "rgba(25, 61, 86, 1)");
+                    $(".notification").text(message);
+                }
+                clearTimeout(timer);
+                timer = setTimeout(function() {
+                    var height = parseInt($(".notification").outerHeight());
+                    $(".notification").css("top", -1 * height);
+                }, 2000);
+            }
+            
+            $(document).keypress(function(e) {
+                if(e.which == 13) {
+                    if (!loggedin) {
+                        login();
+                    } else {
+                        save();
+                    }
+                }
+            });
+            
+            $(".view-button").hover(function() {
+                $(this).addClass("view-button-hover"); 
+            }, function() {
+                $(this).removeClass("view-button-hover"); 
+            });
+            
+            resize();
+            function resize() {
+                var window_height = parseInt($(window).outerHeight());
+                var window_width = parseInt($(window).outerWidth());
+                
+                if (window_width > window_height * 1.75) {
+                    $(".background").addClass("background-width");
+                } else if (window_width < window_height * 1.75) {
+                    $(".background").removeClass("background-width");
+                }
+            }
+            
+            function isMobile() {
+                return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+            }
+        </script>
+    </body>
+</html>
+

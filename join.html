@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>MedHacks 2017 - The Premier Biotech and Healthcare hackathon at Johns Hopkins University</title>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
+    <link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="assets/medhacks_cross.png">
+</head>
+<body id="page-top">
+    <div class="header-navbar ">
+        <a href="index.html"><h1 class="header-navbar-logo">Information</h1></a>
+        <div class="header-navbar-hamburger"></div>
+        <ul class="header-navbar-items">
+            <li class="header-navbar-item"><a href="index.html" class="header-navbar-link">Back</a></li>
+        </ul>
+    </div>
+
+    <div class="header">
+        <div class="header-grad"></div>
+        <div class="header-pcb"></div>
+        <div class="header-bg"></div>
+        <div class="header-text">
+            <h2 class="header-text-headline" id="title">Join the MedHacks Team!<span class="beating-heart fa fa-heart"></span> </h2>
+            <h4 class="header-text-byline" id="location">Info Sessions:<br> <br>Dec 7, 5pm, Remsen 101 <br> Dec 8, 5 pm, Hodson 210</h4><br>
+            <br>
+            <h4 class="header-text-byline" id="title"> What are you waiting for?</h4> 
+            <br>
+            <h4 class="header-text-byline" id="text"><a href ="https://goo.gl/forms/4sgrng8GhLJFEQdj1" onclick="_gaq.push(['_trackEvent', 'link', 'outbound’, 'Join - Home']);" class="faq-text-action" style='color:white;'>Apply Now!</a> </h4>
+            </div>
+        </div>
+        <div style="position: absolute; bottom: 5px; left: 20px;">
+          <p style="color: gray">Copyright &copy; MedHacks 2018</p>
+        </div>
+
+        <div style="position: absolute; bottom: 15px; right: 20px;">
+          <a id="twicon" href="http://twitter.com/MedHacks" target="_blank" class="fa fa-twitter" style="font-size: 30px;"></a>
+          <a id="fbicon" href="http://facebook.com/MedHacks" target="_blank" class="fa fa-facebook" style="font-size: 30px;"></a>
+        </div>
+    </div>
+
+    <div class="filler" style="height: calc(100% + 20px);width: 100%"></div>
+
+  <div id="faq" class="faq" style="padding-top: 5px;">
+        <h2>Open Positions</h2>
+        <div class="faq-column">
+            <div class="faq-box">
+                <h3>Graphic Designer</h3>
+                <p>MedHacks seeks a Graphic Designer eager to grow with a demanding and fast-paced organization. The Graphic Designer will be responsible for helping to shape and deliver projects with an emphasis on brand design for marketing deliverables. We want over-the-top creativity. Looking for proficiency in Adobe Photoshop, InDesign or Illustrator.</p>
+            </div>
+            <div class="faq-box">
+                <h3>App Developer</h3>
+                <p>MedHacks is going mobile! For the first time ever, we're hoping to create an app to help us scale along with the ever-growing size of the hackathon. We're looking for a coder interested in how to best improve the hacker experience at MedHacks with a mobile app, with profiency in Java, C++, or Swift. An interest in UI/UX is also a plus! </p>
+            </div>
+          </div>
+      <div class="faq-column">
+            <div class="faq-box">
+                <h3>Web Developers</h3>
+                <p>MedHacks is looking for talented web developers to help us refresh our online presence. Both frontend and backend coders are needed, and will be responsible for an overhaul of our website, as well as building an application portal, alongside our current tech team. We want motivated, driven individuals who are eager to learn. Looking for proficiency in HTML, CSS, JS, SQL, etc.</p>
+            </div>
+            <div class="faq-box">
+                <h3>General Team Member</h3>
+                <p>If you don't meet the specific qualifications for the other positions, don't worry! MedHacks is always looking for motivated individuals to join the team as a member of the Promotion, Logistics, or Outreach subteams. We're hoping for people with good teamwork, communication, and organizational skills, who are most importantly excited about the work that MedHacks is doing.</p>
+            </div>
+          </div>
+      <h4></h4>
+      <h4 class="header-text-byline"><a href ="https://goo.gl/forms/4sgrng8GhLJFEQdj1" onclick="_gaq.push(['_trackEvent', 'link', 'outbound’, 'Join - Home']);" class="faq-text-action">Apply Now!</a></h4>
+      </div>
+    
+
+
+    <script src="/assets/js/jquery.js"></script>
+    <script src="/assets/js/foggy.min.js"></script>
+    <script src="//cdn.jsdelivr.net/jquery.shadow-animation/1/mainfile"></script>
+    <script src="//cdn.jsdelivr.net/jquery.scrollto/2.1.2/jquery.scrollTo.min.js"></script>
+    <script type="text/javascript" src="/assets/js/Parse.js"></script>
+    <script>
+        Parse.initialize("vicmart-server-test");
+        Parse.serverURL = "https://vicmart-server-test.herokuapp.com";
+        //var Announcements = Parse.Object.extend("Announcements");
+        //var announementsQuery = new Parse.Query(Announcements);
+        //var side = 0;
+        $('#subtitle').hide();
+        $('#youtuberon').hide();
+        resizeSchedule();
+        setTimeout(function() {
+            query();
+        }, 500);
+        function query() {
+            announementsQuery.ascending("createdAt");
+            announementsQuery.find({
+                success: function(results) {
+                    var IDs = [];
+                    $(".announce").each(function(){
+                        IDs.push(this.id);
+                    });
+                    for (var i = 0; i < results.length; i++) {
+                        var object = results[i];
+                        var name = object.get("Name");
+                        var audience = object.get("Audience");
+                        var text = object.get("Text");
+                        var views = object.get("Views");
+                        var id = object.id;
+                        var createdAt = object.createdAt / 1000;
+                        if (!$("#" + id).length) {
+                            newItem = "<div class='faq-box announce' data-time=" +  createdAt + " id=" + id + "><h3>@medhacks</h3><div class='corner-time'>" + getTime(createdAt) + " ago</div></h3><p>" + text + "</p></div>";
+                            $(".faq-column").eq(side%2).prepend(newItem);
+                            side++;
+                        } else {
+                            var index = IDs.indexOf(object.id);
+                            if (index > -1) {
+                                IDs.splice(index, 1);
+                            }
+                        }
+                    }
+                    if (IDs.length > 0) {
+                        for (var z = 0; z < IDs.length; z++) {
+                            $("#" + IDs[z]).remove();
+                        }
+                        reorganize();
+                    }
+                },
+                error: function(error) {
+                    console.log("Error: " + error.code + " " + error.message); 
+                }
+            });
+            refresh();
+        }
+        function reorganize() {
+            var boxes = [];
+            side = 0;
+            $(".announce").each(function() {
+                boxes.push($(this).detach());
+            });
+            for (var b = 0; b < boxes.length; b++) {
+                $(".faq-column").eq(side%2).append(boxes[b]);
+                side++;
+            }
+        }
+        function refresh() {
+            $(".announce").each(function() {
+                var created = $(this).data("time");
+                $(".announce").eq(0).children(".corner-time").text(getTime(created));
+            });
+            setTimeout(function() {
+                query();
+            }, 60000);
+        }
+        function resizeSchedule() {
+            for (var i = 0; i < 3; i++) {
+                var table = $(".day-table").eq(i).children("div").eq(1);
+                var length = $(table).children("div").eq(0).children("div").length;
+                for (var j = 0; j < length; j++) {
+                    $(table).children("div").eq(0).children("div").eq(j).css("height", "auto");
+                    $(table).children("div").eq(1).children("div").eq(j).css("height", "auto");
+                    var newSize1 = parseInt($(table).children("div").eq(0).children("div").eq(j).css("height"));
+                    var newSize2 = parseInt($(table).children("div").eq(1).children("div").eq(j).css("height"));
+                    $(table).children("div").eq(0).children("div").eq(j).css("height", Math.max(newSize1, newSize2) + "px");
+                    $(table).children("div").eq(1).children("div").eq(j).css("height", Math.max(newSize1, newSize2) + "px");
+                }
+            }
+        }
+        function getTime(created) {
+            var current = new Date().getTime() / 1000;
+            var diff = Math.round((current - created)/86400);
+            var timestring = diff + 'd';
+            if (diff < 2) {
+                diff = Math.round((current - created)/3600);
+                timestring = diff + 'h';
+                if (diff < 1) {
+                    diff = Math.round((current - created)/60);
+                    timestring = diff + 'm';
+                }
+            }
+            return timestring;
+        }
+        function goSponsor() {
+             setTimeout(function() {
+                  $('#sponsorbox').animate({boxShadow : "0 0 24px 1px #193d56"}, 1000, function() {
+                       $('#sponsorbox').animate({boxShadow : "0 0 6px 1px rgba(0, 0, 0, 0.05)"}, 1000);
+                  });
+             }, 500);
+        }
+        function isMobile() {
+            return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        }
+        $( window ).resize(function() {
+            resizeSchedule();
+            if($(window).width() < 1200) {
+                $('#sponsor-column').removeClass('column-border-right');
+            } else {
+                $('#mlh-trust-badge').css("width", "10%");
+                $('#sponsor-column').addClass('column-border-right');
+            }
+            var logoWidth = parseInt($(".header-navbar-logo").css("width"));
+            if (isMobile()) {
+                $('#mlh-trust-badge').css("width", logoWidth * 0.2);
+            } else {
+                $('#mlh-trust-badge').css("width", logoWidth * 0.29);
+            }
+            $(".third").each(function() {
+                $(this).css("line-height", $(this).css("height"));
+            });
+        });
+        $(".third").each(function() {
+            $(this).css("line-height", $(this).css("height"));
+        });
+        $(window).scroll(function() {
+            if($(document).scrollTop() < ($(document).height() - $(window).height())/2) {
+                $('#title').show();
+                $('#location').show();
+                $('#location-sub').show();
+                $('#sponsors').show();
+                $('#subtitle').hide();
+                $('#youtuberon').hide();
+            } else if ($(document).scrollTop() > ($(document).height() - $(window).height())/2) {
+                $('#title').hide();
+                $('#location').hide();
+                $('#location-sub').hide();
+                $('#sponsors').hide();
+                $('#subtitle').show();
+                $('#youtuberon').show();
+            }
+        });
+        $(function() {
+            function isMobile() {
+                return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+            }
+            // http://paulirish.com/2011/requestanimationframe-for-smart-animating/
+            // http://my.opera.com/emoller/blog/2011/12/20/requestanimationframe-for-smart-er-animating
+            // requestAnimationFrame polyfill by Erik Möller. fixes from Paul Irish and Tino Zijdel
+            // MIT license
+            (function() {
+                var lastTime = 0;
+                var vendors = ['ms', 'moz', 'webkit', 'o'];
+                for(var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
+                    window.requestAnimationFrame = window[vendors[x]+'RequestAnimationFrame'];
+                    window.cancelAnimationFrame = window[vendors[x]+'CancelAnimationFrame'] ||
+                      window[vendors[x]+'CancelRequestAnimationFrame'];
+                }
+                if (!window.requestAnimationFrame)
+                    window.requestAnimationFrame = function(callback, element) {
+                        var currTime = new Date().getTime();
+                        var timeToCall = Math.max(0, 16 - (currTime - lastTime));
+                        var id = window.setTimeout(function() { callback(currTime + timeToCall); },
+                          timeToCall);
+                        lastTime = currTime + timeToCall;
+                        return id;
+                    };
+                if (!window.cancelAnimationFrame)
+                    window.cancelAnimationFrame = function(id) {
+                        clearTimeout(id);
+                    };
+            }());
+            if(!isMobile()) {
+                (function(window, document, undefined) {
+                  $(document).ready(function() {
+                    var running = false,
+                        $header = $('.header-navbar');
+                    function updateHeaderScroll() {
+                      if(running) {
+                        return;
+                      }
+                      running = true;
+                      window.requestAnimationFrame(function() {
+                        $header.toggleClass('header-navbar-scrolled', $(window).scrollTop() > $(window).height() - 100);
+                        running = false;
+                      });
+                    }
+                    updateHeaderScroll();
+                    $(window).scroll(updateHeaderScroll);
+                    var logoWidth = parseInt($(".header-navbar-logo").css("width"));
+                    $('#mlh-trust-badge').css("width", logoWidth * 0.29);
+                  });
+                })(window, window.document);
+            }
+            $('a[href*=#]:not([href=#])').click(function() {
+                if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                    if (target.length) {
+                        $('html,body').animate({
+                            scrollTop: target.offset().top - $('.header-navbar').height(),
+                        }, 500);
+                        $('html').removeClass('nav-open');
+                        return false;
+                    }
+                }
+            });
+            $('.header-navbar-logo').click(function() {
+                $('html,body').animate({scrollTop: 0}, 500);
+                $('html').removeClass('nav-open');
+            });
+            $('.header-navbar-hamburger').click(function() {
+                $('html').toggleClass('nav-open');
+            });
+            $('body').click(function(e) {
+                if($('html').hasClass('nav-open') && $(e.target).parents('.header-navbar').length === 0) {
+                    $('html').removeClass('nav-open');
+                }
+            });
+            if(isMobile()) {
+                //$('.header-navbar').addClass('header-navbar-scrolled');
+                $('.header-navbar-logo').css('margin', 10);
+                $('.header-navbar-logo').css('margin-left', 10);
+                $('.header-navbar-hamburger').css('margin', 10);
+                $('.header-navbar').css('height', 70);
+                $('.header-text-byline-caption').css('font-size', 14);
+                $('.header-text-byline-caption').css('margin', 5);
+                $('.header-text-headline').css('margin-bottom', 0);
+                var width = parseInt($(".header-navbar-logo").css("width"));
+                $('#mlh-trust-badge').css("width", (width * 0.2) + "px");
+                //$('#mlh-trust-badge').css("width", "10px");
+                $('#sponsor-column').removeClass('column-border-right');
+            }
+        });
+    </script>
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-59988687-1', 'auto');ga('send', 'pageview');
+    </script>
+</body>
+</html>

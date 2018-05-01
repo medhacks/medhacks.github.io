@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="shortcut icon" href="assets\medhacks_cross.png">
+    </head>
+    <body>
+        <div class="background"></div>
+        <div class="notification">Fake message</div>
+        <div class="container">
+            <div class='fixed-header'>
+                <h1 class='index-h1'>View Pitches</h1>
+                <input class="inputText short-center invisible" type="text" id="new-title" placeholder="View Pitches" maxlength="20"><br>
+                <button class="corner-button save-button"></button>
+                <button class="corner-button load-button"></button>
+                <form action="add.html">
+                    <button class="corner-button add-button" type="submit"></button>
+                </form>
+                <hr class='line' noshade/>
+                <h3 class='subtext' style="opacity: 0">Save your favorites</h3>
+                <div class="hashtag-container">
+                    <div class="check" href="#" data-clicked="1">#accesstocare</div>
+                    <div class="check" href="#" data-clicked="1">#adherence</div>
+                    <div class="check" href="#" data-clicked="1" id="lastcheck">#patientsafety</div>
+                </div>
+            </div>
+            <div class="everything">
+                <div class="pitch-nav invisible" id="favorites">
+                    <div class='subtitle underline nav-text'>Favorites</div>
+                    <div class='exit nav arrow arrow-close up-arrow'></div>
+                </div>
+                <div class="pitch-nav" id="new">
+                    <div class='subtitle underline nav-text new-text'>All Pitches</div>
+                    <div class='exit nav arrow arrow-close up-arrow'></div>
+                </div>
+                <div class="fake-pitch"></div>
+                <div class="loading">
+                    <div class="bubble"></div>
+                    <div class="bubble"></div>
+                    <div class="bubble"></div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script type="text/javascript" src="/assets/js/Parse.js"></script>
+        <script>
+            Parse.initialize("vicmart-server-test");
+            Parse.serverURL = "https://vicmart-server-test.herokuapp.com";
+            var Pitch = Parse.Object.extend("Pitch");
+            var pitchQuery = new Parse.Query(Pitch);
+            var d = new Date();
+            var prevTime;
+            var counter = 0;
+            var stop = false;
+            var first = false;
+            var timer;
+            var currentUser = null;
+            var load_list = false;
+
+            $(".check").click(function() {
+                var index = $(".check").index(this);
+                if ($(this).data("clicked") == 0) {
+                    $(this).css("background-color", "rgba(239, 239, 239, 1)");
+                    $(this).data("clicked", 1);
+                    $(".pitch").each(function() {
+                        if (!$(this).hasClass("pitch-nav")) {
+                            var checks = $(this).data("checked").split(",");
+                            var score = $(this).data("score");
+
+                            if (checks[index] == "1") {
+                                score++;
+                                $(this).data("score", score);
+                                if (score > 0) {
+                                    $(this).removeClass("hidden");
+                                }
+                            }
+                        }
+                    });
+                } else  {
+                    $(this).css("background-color", "rgba(239, 239, 239, 0.5)");
+                    $(this).data("clicked", 0);
+                    $(".pitch").each(function() {
+                        if (!$(this).hasClass("pitch-nav")) {
+                            var checks = $(this).data("checked").split(",");
+                            var score = $(this).data("score");
+                            var height = $(this).css("height");
+
+                            if (checks[index] == "1") {
+                                score--;
+                                $(this).data("score", score);
+                                if (score == 0) {
+                                    $(this).addClass("hidden");
+                                }
+                            }
+                        }
+                    });
+                }
+
+                updateFavorites();
+            });
+
+            $("#favorites").click(function() {
+                if ($(".favorite-pitch").hasClass("invisible")) {
+                    $(".favorite-pitch").removeClass("invisible");
+                    $(this).children(".exit").addClass("up-arrow");
+                } else {
+                    $(".favorite-pitch").addClass("invisible");
+                    $(this).removeClass("invisible");
+                    $(this).children(".exit").removeClass("up-arrow");
+                }
+            });
+
+            $("#new").click(function() {
+                if ($(".regular-pitch").hasClass("invisible")) {
+                    $(".regular-pitch").removeClass("invisible");
+                    $(this).children(".exit").addClass("up-arrow");
+                } else {
+                    $(".regular-pitch").addClass("invisible");
+                    $(this).removeClass("invisible");
+                    $(this).children(".exit").removeClass("up-arrow");
+                }
+            });
+
+            $(".save-button").click(function() {
+                saving(false);
+            });
+
+            $(".load-button").click(function() {
+                saving(true);
+            });
+
+            $(document).keypress(function(e) {
+                if(e.which == 13) {
+                    saveTitle();
+                }
+            });
+
+            function saving(loading) {
+                $(".save-button").addClass("save-check");
+                $(".save-button").off("click");
+                $("h3").text("Save your favorites list");
+
+                $("h1").addClass("kinda-invisible");
+                $("#new-title").removeClass("invisible");
+                $("#new-title").focus();
+                $("#new-title").attr("placeholder", $("h1").text());
+                if ($("h1").text().localeCompare("View Pitches") != 0) {
+                    $("#new-title").val($("h1").text().substring(0, $("h1").text().length - 7));
+                }
+                $("hr").addClass("underline-title");
+                $("h3").css("opacity", 1);
+                $(".load-button").addClass("load-exit");
+                $(".load-button").off("click");
+                $(".load-button").click(function() {
+                    backToNormal();
+                });
+                $(".save-button").off("click");
+                $(".save-button").click(function() {
+                    saveTitle();
+                });
+                if (loading) {
+                    $("h3").text("Load favorites list");
+                    load_list = true;
+                }
+            }
+
+            function backToNormal() {
+                $("h1").removeClass("kinda-invisible");
+                $("#new-title").addClass("invisible");
+                $("#new-title").val("");
+                $("hr").removeClass("underline-title");
+                $(".save-button").removeClass("save-check");
+                $(".load-button").removeClass("load-exit");
+                $("h3").css("opacity", 0);
+                $(".save-button").off("click");
+                $(".save-button").click(function() {
+                    saving();
+                });
+                $(".load-button").off("click");
+                $(".load-button").click(function() {
+                    saving(true);
+                });
+                load_list = false;
+            }
+
+
+
+            function saveTitle() {
+                if ($(".save-button").hasClass("save-check") && !load_list) {
+                    notify("Saving...", false);
+
+                    var favids = [];
+
+                    $(".favorite-pitch").each(function() {
+                        favids.push($(this).attr("id"));
+                    });
+
+                    var user = new Parse.User();
+                    user.set("username", $("#new-title").val());
+                    user.set("password", "password");
+                    user.set("favorite", favids);
+
+                    if (currentUser && currentUser.get("username").localeCompare($("#new-title").val()) == 0) {
+                        currentUser.set("favorite", favids);
+                        console.log('lol');
+                        if (favids.length > 0) {
+                            var user = Parse.User.logIn(currentUser.get("username"), "password", {
+                                success: function(user) {
+                                    currentUser.save(null, {
+                                        success: function(user) {
+                                            notify("Updated favorites list.", false);
+                                            backToNormal();
+                                        }
+                                    });
+                                }
+                            });
+                        } else {
+                            notify("Cannot save an empty list.", true)
+                            backToNormal();
+                        }
+                    } else {
+                        user.signUp(null, {
+                            success: function(new_user) {
+                                notify("Favorites list saved successfully.", false);
+                                $("h1").text($("#new-title").val() + "'s List");
+                                backToNormal();
+                                currentUser = user;
+                            },
+                            error: function(user, error) {
+                                if (error.code == 202) {
+                                    notify("List name is already taken.", true);
+                                } else if (error.code == -1) {
+                                    notify("List name cannot be empty.", true);
+                                } else {
+                                    notify("Favorites list could not be saved.", true);
+                                }
+                                console.log("Error: " + error.code + " " + error.message);
+                                backToNormal();
+                            }
+                        });
+                    }
+                } else if (load_list) {
+                    var userQuery = new Parse.Query(Parse.User);
+                    userQuery.equalTo("username", $("#new-title").val());
+
+                    userQuery.find({
+                        success: function(users) {
+                            if (users.length == 0) {
+                                notify("No lists found with that name.", true);
+                                backToNormal();
+                            } else {
+                                var favs = users[0].get("favorite");
+                                if (favs) {
+                                    $(".favorite-pitch").each(function() {
+                                        favoritePitch($(this).eq(0).children().eq(1).children().eq(2), false);
+                                    });
+                                    for (var i = 0; i < favs.length; i++) {
+                                        favoritePitch($("#" + favs[i]).eq(0).children().eq(1).children().eq(2), true);
+                                    }
+                                    notify("Favorites list loaded successfully.", false);
+                                    $("h1").text($("#new-title").val() + "'s List");
+                                    currentUser = users[0];
+                                } else {
+                                    notify("Favorites list was empty.", true);
+                                }
+                                backToNormal();
+                            }
+                        }
+                    });
+                }
+            };
+
+            query();
+
+            function query() {
+                pitchQuery.find({
+                    success: function(results) {
+                        prevTime = d.getTime();
+                        $(".loading").remove();
+                        stop = true;
+                        var newPitches = 0;
+                        var IDs = [];
+                        $(".pitch").each(function(){
+                            if (!$(this).hasClass("pitch-nav")) {
+                                IDs.push(this.id);
+                            }
+                        });
+
+                        for (var i = 0; i < results.length; i++) {
+                            var object = results[i];
+                            if (!$("#" + object.id).length) {
+                                newPitches++;
+                                var checks = object.get("checks");
+                                var hashtags = "";
+                                var count = 0;
+
+                                var phone = object.get('phone');
+                                var newPhone = phone.substring(0, 3) + "-" + phone.substring(3, 6) + "-" + phone.substring(6, phone.length);
+                                var createdAt = object.createdAt / 1000;
+
+                                for (var j = 0; j < checks.length; j++) {
+                                    if(checks[j] == 1) {
+                                        hashtags += $(".check").eq(j).text() + " ";
+                                        count++;
+                                    }
+                                }
+
+                                newItem = "<div class='pitch regular-pitch' id=" + object.id + " data-time=" + createdAt + " data-score=" + count + " data-checked=" + object.get("checks") + "><div class='subtitle underline'>" + object.get('title') + "<span class='hashtags'>" + hashtags + "</span><div class='timestamp'>" + getPitchTime(createdAt) + "</div></div>";
+                                newItem += "<div class='content'><div class='description'>" + object.get('description') + "</div>";
+                                newItem += "<div class='contact-info'><span class='subtitle no-move'>" + object.get('name') + "</span> <a href='mailto:" + object.get('email') + "'>" + object.get('email') + "</a> / " + newPhone + "</br></div><div class='exit fav' onclick='favoritePitch(this, false)' onmouseover='favoriteIn()' onmouseout='favoriteOut()'></div></div>";
+
+                                $("#new").after(newItem);
+                                $(".new-text").text("Available Pitches (" + $(".regular-pitch").length + ")");
+                            } else {
+                                var index = IDs.indexOf(object.id);
+                                if (index > -1) {
+                                    IDs.splice(index, 1);
+                                }
+                            }
+                        }
+
+                        if (IDs.length > 0) {
+                            notify("Removed " + IDs.length + " pitch(es).", false);
+                            for (var z = 0; z < IDs.length; z++) {
+                                $("#" + IDs[z]).remove();
+                            }
+                        }
+
+                        if (!first) {
+                            first = true;
+                            refresh();
+                        } else {
+                            setTimeout(refresh, 5000);
+                            if (newPitches > 0) {
+                                notify("Pulled " + newPitches + " new pitch(es).", false);
+                            }
+                        }
+                    },
+                    error: function(error) {
+                        console.log("Error: " + error.code + " " + error.message);
+                    }
+                });
+            }
+
+            function updateFavorites() {
+                var favids = [];
+
+                if (!loading) {
+                    $(".favorite-pitch").each(function() {
+                        favids.push($(this).attr("id"));
+                    });
+
+                    currentUser.set("favorite", favids);
+
+                    currentUser.save(null, {
+                        success: function(user) {
+
+                        },
+                        error: function(user, error) {
+                            console.log("Error: " + error.code + " " + error.message);
+                        }
+                    });
+                }
+
+                $(".nav-text").text("Favorite Pitches (" + $(".favorite-pitch").not(".hidden").length + ")");
+                $(".new-text").text("Available Pitches (" + $(".regular-pitch").not(".hidden").length + ")");
+            }
+
+            function favoritePitch(elem, justFav) {
+                if ($(elem).hasClass("fav-full") && !justFav) {
+                    $(elem).removeClass("fav-full");
+                    var parent = $(elem).parent().parent();
+                    $(parent).removeClass("favorite-pitch");
+                    $(parent).addClass("regular-pitch");
+                    $(parent).detach();
+                    $("#new").after($(parent));
+                    updateFavorites();
+
+                    if ($(".favorite-pitch").length == 0) {
+                        $("#favorites").addClass("invisible");
+                        $("#new").removeClass("new-title");
+                    }
+                } else {
+                    $(elem).addClass("fav-full");
+                    var parent = $(elem).parent().parent();
+                    $(parent).addClass("favorite-pitch");
+                    $(parent).removeClass("regular-pitch");
+                    $(parent).detach();
+                    $("#new").before($(parent));
+                    updateFavorites();
+
+                    $("#favorites").removeClass("invisible");
+                    $("#new").addClass("new-title");
+                }
+            }
+
+            function refresh() {
+                var pitchQuery = new Parse.Query(Pitch);
+
+                $(".pitch").each(function() {
+                    var created = $(this).data("time");
+
+                    $(this).children().eq(0).children().eq(1).text(getPitchTime(created));
+                });
+                query();
+            }
+
+            function getPitchTime(created) {
+                var current = new Date().getTime() / 1000;
+
+                var diff = Math.round((current - created)/86400);
+
+                var timestring = diff + 'd';
+                if (diff < 2) {
+                    diff = Math.round((current - created)/3600);
+                    timestring = diff + 'h';
+                    if (diff < 1) {
+                        diff = Math.round((current - created)/60);
+                        timestring = diff + 'm';
+                    }
+                }
+
+                return timestring;
+            }
+
+            setTimeout(loading, 250);
+            function loading() {
+                if (counter == 0) {
+                    $(".bubble").eq(0).css("opacity", "1");
+                } else if (counter == 1) {
+                    $(".bubble").eq(0).css("opacity", "0.25");
+                }  else if (counter == 2) {
+                    $(".bubble").eq(1).css("opacity", "1");
+                }  else if (counter == 3) {
+                    $(".bubble").eq(1).css("opacity", "0.25");
+                }  else if (counter == 4) {
+                    $(".bubble").eq(2).css("opacity", "1");
+                }  else if (counter == 5) {
+                    $(".bubble").eq(2).css("opacity", "0.25");
+                }
+                counter++;
+                if (counter > 5) {
+                    counter = 0;
+                }
+                if (!stop) {
+                    setTimeout(loading, 250);
+                }
+            }
+
+            function notify(message, error) {
+                $(".notification").css("top", "0px");
+                if (error) {
+                    $(".notification").css("background-color", "#B22222");
+                    $(".notification").css("color", "#efefef");
+                    $(".notification").text("[ERROR] " + message);
+                } else {
+                    $(".notification").css("background-color", "rgb(239, 239, 239)");
+                    $(".notification").css("color", "rgba(25, 61, 86, 1)");
+                    $(".notification").text(message);
+                }
+                clearTimeout(timer);
+                timer = setTimeout(function() {
+                    var height = parseInt($(".notification").outerHeight());
+                    $(".notification").css("top", -1 * height);
+                }, 2000);
+            }
+
+            function getRandom(min, max) {
+                return Math.random() * (max - min) + min;
+            }
+
+            $(window).resize(function() {
+                resize();
+            });
+
+            setTimeout(function() {
+                resize();
+            }, 100);
+            function resize() {
+                var header_height = parseInt($(".fixed-header").outerHeight());
+                var window_height = parseInt($(window).outerHeight());
+                var window_width = parseInt($(window).outerWidth());
+
+                $(".everything").css('height', (window_height - header_height + 50) + "px");
+
+                if (window_width > window_height * 1.75) {
+                    $(".background").addClass("background-width");
+                } else if (window_width < window_height * 1.75) {
+                    $(".background").removeClass("background-width");
+                }
+
+                if (header_height > 0.4 * window_height) {
+                    $("body").css("overflow", "scroll");
+                    $(".everything").css("height", "100%");
+                } else {
+                    $("body").css("overflow", "hidden");
+                    $(window).scrollTop(0);
+                }
+            }
+
+
+            $(".save-button").hover(function() {
+                if (!$(".save-button").hasClass("save-check")) {
+                    $("h3").text("Save your favorites list");
+                    $("h3").css("opacity", 1);
+                    if (!isMobile()) {
+                        $(this).addClass("save-button-hover");
+                    }
+                } else {
+                    if (!isMobile()) {
+                        $(this).addClass("save-check-hover");
+                    }
+                }
+            }, function() {
+                $("h3").css("opacity", 0);
+                $(this).removeClass("save-button-hover");
+                $(this).removeClass("save-check-hover");
+            });
+
+            $(".load-button").hover(function() {
+                if (!$(".load-button").hasClass("load-exit")) {
+                    $("h3").text("Load favorites list");
+                    $("h3").css("opacity", 1);
+                    if (!isMobile()) {
+                        $(this).addClass("load-button-hover");
+                    }
+                } else {
+                    if (!isMobile()) {
+                        $(this).addClass("load-exit-hover");
+                    }
+                }
+            }, function() {
+                $("h3").css("opacity", 0)
+                $(this).removeClass("load-button-hover");
+                $(this).removeClass("load-exit-hover");
+            });
+
+            $(".check").hover(function() {
+                $("h3").text("Filter pitches by hashtag");
+                $("h3").css("opacity", 1);
+            }, function() {
+                $("h3").css("opacity", 0);
+            });
+
+            $(".add-button").hover(function() {
+                $("h3").text("Add a pitch");
+                $("h3").css("opacity", 1);
+                if (!isMobile()) {
+                    $(this).addClass("add-button-hover");
+                }
+            }, function() {
+                $("h3").css("opacity", 0);
+                $(this).removeClass("add-button-hover");
+            });
+
+            function favoriteIn() {
+                if (!$(".fav").hasClass("fav-full")) {
+                    $("h3").text("Favorite this pitch");
+                    $("h3").css("opacity", 1);
+                }
+            }
+
+            function favoriteOut() {
+                $("h3").css("opacity", 0);
+            }
+
+            function isMobile() {
+                return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+            }
+        </script>
+    </body>
+</html>

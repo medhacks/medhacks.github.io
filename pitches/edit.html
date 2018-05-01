@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body style="overflow: scroll;">
+        <div class="background"></div>
+        <div class="notification">Fake message</div>
+        <div class="container">
+            <div class='fixed-header'>
+                <h1>Edit Pitches</h1>
+                <form action="index.html">
+                    <button class="corner-button view-button" type="submit"></button>
+                </form>
+                <hr class='line' noshade/>
+                <div class="logins">
+                    <h3>Log in to edit pitches</h3>
+                    <input class="inputText short middle" type="text" id="user" placeholder="Username"><br>
+                    <input class="inputText short middle" type="password" id="pass" placeholder="Password"><br>
+                    <div class="error" style="font-size: 16px"></div>
+                    <button class="button" type="button" id="login" style="display: block;">Log in</button>
+                </div>
+
+                <div class="hashtag-container">
+                    <div class="check invisible" href="#" data-clicked="0">#accesstocare</div>
+                    <div class="check invisible" href="#" data-clicked="0">#adherence</div>
+                    <div class="check invisible" href="#" data-clicked="0" id="lastcheck">#patientsafety</div>
+                </div>
+            </div>
+            <div class="pitch pitch-nav" id="unapproved">
+                <div class='subtitle underline nav-text invisible'>Unapproved Pitches (0)</div>
+                <div class='exit nav official-exit' onclick='deleteAll()'></div>
+                <div class='approve nav' onclick='approveAll()' style="margin-right: 2px"></div>
+            </div>
+
+            <div class="pitch pitch-nav official invisible" id="approved">
+                <div class='subtitle underline nav-text'>Approved Pitches</div>
+                <div class='exit nav arrow not-exit'></div>
+            </div>
+            <div class="loading invisible">
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+            </div>
+        </div>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script type="text/javascript" src="/assets/js/Parse.js"></script>
+        <script>
+            Parse.initialize("vicmart-server-test");
+            Parse.serverURL = "https://vicmart-server-test.herokuapp.com/";
+            var Pitch = Parse.Object.extend("TestPitch");
+            var officialPitch = Parse.Object.extend("Pitch");
+            var pitchQuery = new Parse.Query(Pitch);
+            var officialPitchQuery = new Parse.Query(officialPitch);
+            var d = new Date();
+            var prevTime;
+            var counter = 0;
+            var logging = false;
+            var timer;
+            
+            $("#approved").addClass("invisible");
+            
+            $(".check").each(function() {
+                $(this).css("color", "rgba(25, 61, 86, 1)");
+                $(this).data("clicked", 1);
+            })
+            
+            $(".check").click(function() {
+                var index = $(".check").index(this);
+                if ($(this).data("clicked") == 0) {
+                    $(this).css("background-color", "rgba(239, 239, 239, 1)");
+                    $(this).data("clicked", 1);
+                    $(".pitch").each(function() {
+                        if (!$(this).hasClass("pitch-nav")) {
+                            var checks = $(this).data("checked").split(",");
+                            var score = $(this).data("score");
+
+                            if (checks[index] == "1") {
+                                score++;
+                                $(this).data("score", score);
+                                if (score > 0) {
+                                    $(this).removeClass("hidden");
+                                }
+                            }
+                        }
+                    });
+                } else  {
+                    $(this).css("background-color", "rgba(239, 239, 239, 0.5)");
+                    $(this).data("clicked", 0);
+                    $(".pitch").each(function() {
+                        if (!$(this).hasClass("pitch-nav")) {
+                            var checks = $(this).data("checked").split(",");
+                            var score = $(this).data("score");
+                            var height = $(this).css("height");
+
+                            if (checks[index] == "1") {
+                                score--;
+                                $(this).data("score", score);
+                                if (score == 0) {
+                                    $(this).addClass("hidden");
+                                }
+                            }
+                        }
+                    });
+                }
+            });
+            
+            $("#approved").click(function() {
+                if ($(".official").hasClass("invisible")) {
+                    $(".official").removeClass("invisible");
+                    $(this).children(".exit").addClass("up-arrow");
+                } else {
+                    $(".official").addClass("invisible");
+                    $(this).removeClass("invisible");
+                    $(this).children(".exit").removeClass("up-arrow");
+                }
+            });
+            
+            $(".nav").hover(function() {
+                if (!$(this).hasClass("arrow")) {
+                    var index = $(".nav").index($(this));
+                    if (index == 1) {
+                        $(".nav-text").eq(0).text("Approve All Unapproved");    
+                    } else {
+                        $(".nav-text").eq(0).text("Delete All Unapproved");    
+                    }
+                }
+            }, function() {
+                $(".nav-text").eq(0).text("Unapproved Pitches (" + $(".unofficial").length + ")");                    
+            });
+            
+            $("#login").click(function() {
+                login()
+            });
+                
+            function login() {
+                if (!logging) {
+                    logging = true;
+                    var user = $("#user").val();
+                    var pass = $("#pass").val();
+                    $(".error").text("");
+                    $(".button").eq(1).text("Logging in...");
+                    Parse.User.logIn(user, pass, {
+                        success: function(user) {
+                            $(".invisible").each(function() {
+                                $(this).removeClass("invisible");
+                            });     
+                            $(".logins").remove();
+                            $(".button").eq(1).text("Approve All");
+                            query(); 
+                        },
+                        error: function(user, error) {
+                            console.log("Error: " + error.code + " " + error.message);
+                            notify("Invalid username and/or password", true);
+                            $(".button").eq(1).text("Log in");
+                            logging = false;
+                        }
+                    });
+                }
+            }
+
+            /**query();
+            $(".logins").remove();
+            $(".invisible").each(function() {
+                $(this).removeClass("invisible");
+            });**/
+            function query() {
+                pitchQuery.find({
+                    success: function(results) {
+                        prevTime = d.getTime();
+                        $(".loading").remove();
+                        var newPitches = 0;
+
+                        for (var i = 0; i < results.length; i++) {
+                            var object = results[i];
+                            if (!$("#" + object.id).length) {
+                                newPitches++;
+                                var checks = object.get("checks");
+                                var hashtags = "";
+                                var count = 0;
+
+                                var phone = object.get('phone');
+                                var newPhone = phone.substring(0, 3) + "-" + phone.substring(3, 6) + "-" + phone.substring(6, phone.length);
+
+                                for (var j = 0; j < checks.length; j++) {
+                                    if(checks[j] == 1) {
+                                        hashtags += $(".check").eq(j).text() + " ";
+                                        count++;
+                                    }
+                                }
+
+                                newItem = "<div class='pitch pitch-alternate unofficial' id=" + object.id + " data-obj=" + object.id + " data-score=" + count + " data-checked=" + object.get("checks") + "><div class='subtitle underline'>" + object.get('title') + "<span class='hashtags'>" + hashtags + "</span></div>";
+                                newItem += "<div class='content'><div class='description' style='padding-right: 60px'>" + object.get('description') + "</div>";
+                                newItem += "<div class='contact-info'><span class='subtitle no-move'>" + object.get('name') + "</span> <a href='mailto:" + object.get('email') + "'>" + object.get('email') + "</a> / " + newPhone + "</br><div class='approve' onclick='approvePitch(this)'></div><div class='exit' onclick='deletePitch(this, true, false)'></div></div></div>";
+
+                                $("#unapproved").after(newItem);
+                                $(".nav-text").eq(0).text("Unapproved Pitches (" + $(".unofficial").length + ")");                    
+                            }
+                        }
+
+                        if (newPitches > 0) {
+                            if (newPitches == 1) {
+                                notify("Pulled " + newPitches + " new pitch.");
+                            } else {
+                                notify("Pulled " + newPitches + " new pitches.");                                
+                            }
+                        }
+                    },
+                    error: function(error) {
+                        console.log("Error: " + error.code + " " + error.message);
+                    }
+                });
+                
+                officialPitchQuery.find({
+                    success: function(results) {
+                        prevTime = d.getTime();
+                        $(".loading").remove();
+                        setTimeout(refresh, 5000);
+                        var newPitches = 0;
+
+                        for (var i = 0; i < results.length; i++) {
+                            var object = results[i];
+                            if (!$("#" + object.id).length) {
+                                newPitches++;
+                                var checks = object.get("checks");
+                                var hashtags = "";
+                                var count = 0;
+
+                                var phone = object.get('phone');
+                                var newPhone = phone.substring(0, 3) + "-" + phone.substring(3, 6) + "-" + phone.substring(6, phone.length);
+
+                                for (var j = 0; j < checks.length; j++) {
+                                    if(checks[j] == 1) {
+                                        hashtags += $(".check").eq(j).text() + " ";
+                                        count++;
+                                    }
+                                }
+
+                                newItem = "<div class='pitch pitch-alternate official invisible' id=" + object.id + " data-obj=" + object.id + " data-score=" + count + " data-checked=" + object.get("checks") + "><div class='subtitle underline'>" + object.get('title') + "<span class='hashtags'>" + hashtags + "</span></div>";
+                                newItem += "<div class='content'><div class='description' style='padding-right: 60px'>" + object.get('description') + "</div>";
+                                newItem += "<div class='contact-info'><span class='subtitle no-move'>" + object.get('name') + "</span> <a href='mailto:" + object.get('email') + "'>" + object.get('email') + "</a> / " + newPhone + "</br><div class='exit official-exit' onclick='deletePitch(this, true, true)'></div></div></div>";
+
+                                $(".container").append(newItem);
+                                $(".nav-text").eq(1).text("Approved Pitches (" + ($(".official").length - 1) + ")");                    
+                            }
+                        }
+
+                        if (newPitches > 0) {
+                            if (newPitches == 1) {
+                                notify("Pulled " + newPitches + " new pitch.");
+                            } else {
+                                notify("Pulled " + newPitches + " new pitches.");                                
+                            }
+                        }
+                    },
+                    error: function(error) {
+                        console.log("Error: " + error.code + " " + error.message);
+                    }
+                });
+            }
+            
+            function approveAll() {
+                $(".approve").each(function() {
+                    if (!$(this).hasClass("nav")) {
+                        approvePitch(this);
+                    }
+                });
+                notify("Approved all pitches", false);
+            }
+            
+            function approvePitch(elem) {
+                var id = $(elem).parent().parent().parent().data("obj");
+                var parent = $(elem).parent().parent().parent();
+                
+                $(parent).children(".contact-info").children(".approve").css("visibility", "hidden");
+                $(parent).children(".contact-info").children(".exit").css("visibility", "hidden");
+                
+                var finalPitch = Parse.Object.extend("Pitch");
+                
+                var pitchQuery = new Parse.Query(Pitch);
+                console.log(id);
+                pitchQuery.get(id, {
+                    success: function(object) {
+                        var title = object.get("title");
+                        newPitch = new finalPitch();
+                        
+                        newPitch.set("title", object.get("title"));
+                        newPitch.set("description", object.get("description"));
+                        newPitch.set("name", object.get("name"));
+                        newPitch.set("email", object.get("email"));
+                        newPitch.set("phone", object.get("phone"));
+                        newPitch.set("checks", object.get("checks"));
+                        
+                        newPitch.save(null, {  
+                            success: function(newPitch) {
+                                console.log('New object created with objectId: ' + newPitch.id);
+                                object.destroy({
+                                    success: function(object) {
+                                        notify("Approved pitch titled " + title, false);
+                                        $(parent).remove();
+                                    },
+                                    error: function(object, error) {
+                                        notify("Could not delete old object", true);
+                                        $(parent).children(".contact-info").children(".approve").css("visibility", "visible");
+                                        $(parent).children(".contact-info").children(".exit").css("visibility", "visible");
+                                    }
+                                });
+                            },
+                            error: function(newPitch, error) {
+                                notify("Could not create new instance of object", true);
+                                $(parent).children(".contact-info").children(".approve").css("visibility", "visible");
+                                $(parent).children(".contact-info").children(".exit").css("visibility", "visible");
+                                console.log(error);
+                            }
+                        });
+                    },
+                    error: function(object, error) {
+                        notify("Object no longer exists", true);
+                        $(parent).remove();
+                    }
+                });
+            }
+
+            function deleteAll() {
+                var count = 0;
+                $(".exit").each(function() {
+                    if (!$(this).hasClass("official-exit") && !$(this).hasClass("not-exit")) {
+                        deletePitch(this, false, false);
+                        count++;
+                    }
+                });
+                notify("Destroyed " + count + " unapproved pitch(es).", false)
+            }
+            
+            function deletePitch(elem, prompt, official) {
+                var id = $(elem).parent().parent().parent().data("obj");
+                var parent = $(elem).parent().parent().parent();
+                
+                $(parent).children(".contact-info").children(".approve").css("visibility", "hidden");
+                $(parent).children(".contact-info").children(".exit").css("visibility", "hidden");
+
+                
+                var pitchQuery = new Parse.Query(Pitch);
+                if (official == true) {
+                    pitchQuery = new Parse.Query(officialPitch);    
+                }
+                
+                pitchQuery.get(id, {
+                    success: function(object) {
+                        var title = object.get("title");
+                        if (!prompt || confirm("Are you sure you want to delete the pitch '" + title + "'?")) {
+                            object.destroy({
+                                success: function(object) {
+                                    notify("Destroyed pitch titled " + title, false);
+                                    $(parent).remove();
+                                },
+                                error: function(object, error) {
+                                    notify("Could not delete object", true);
+                                    $(parent).children(".contact-info").children(".approve").css("visibility", "visible");
+                                    $(parent).children(".contact-info").children(".exit").css("visibility", "visible");
+                                }
+                            });
+                        }
+                        
+                        $(parent).children(".contact-info").children(".approve").css("visibility", "visible");
+                        $(parent).children(".contact-info").children(".exit").css("visibility", "visible");
+                    },
+                    error: function(object, error) {
+                        notify("Object no longer exists", true);
+                        $(parent).remove();
+                    }
+                });
+            }
+            
+            function refresh () {
+                var pitchQuery = new Parse.Query(Pitch);
+                query();
+            }
+            
+            function notify(message, error) {
+                $(".notification").css("top", "0px");
+                if (error) {
+                    $(".notification").css("background-color", "#B22222");
+                    $(".notification").css("color", "#efefef");
+                    $(".notification").text("[ERROR] " + message);
+                } else {
+                    $(".notification").css("background-color", "rgb(239, 239, 239)");
+                    $(".notification").css("color", "rgba(25, 61, 86, 1)");
+                    $(".notification").text(message);
+                }
+                
+                $(".nav-text").eq(0).text("Unapproved Pitches (" + $(".unofficial").length + ")");                    
+                $(".nav-text").eq(1).text("Approved Pitches (" + ($(".official").length - 1) + ")");                    
+                
+                clearTimeout(timer);
+                timer = setTimeout(function() {
+                    var height = parseInt($(".notification").outerHeight());
+                    $(".notification").css("top", -1 * height);
+                }, 2000);
+             }
+            
+            setTimeout(loading, 250);
+            function loading() {
+                if (counter == 0) {
+                    $(".bubble").eq(0).css("opacity", "1");
+                } else if (counter == 1) {
+                    $(".bubble").eq(0).css("opacity", "0.25");
+                }  else if (counter == 2) {
+                    $(".bubble").eq(1).css("opacity", "1");
+                }  else if (counter == 3) {
+                    $(".bubble").eq(1).css("opacity", "0.25");
+                }  else if (counter == 4) {
+                    $(".bubble").eq(2).css("opacity", "1");
+                }  else if (counter == 5) {
+                    $(".bubble").eq(2).css("opacity", "0.25");
+                } 
+                counter++;
+                if (counter > 5) {
+                    counter = 0;
+                }
+                setTimeout(loading, 250);
+            }
+            
+            $(document).keypress(function(e) {
+                if(e.which == 13) {
+                    login();
+                }
+            });
+            
+            $(window).resize(function() {
+                resize();
+            });
+            
+            resize();
+            function resize() {
+                var header_height = parseInt($(".fixed-header").outerHeight());
+                var window_height = parseInt($(window).outerHeight());
+                var window_width = parseInt($(window).outerWidth());
+                
+                $(".everything").css('height', (window_height - header_height - 10) + "px");
+                
+                if (window_width > window_height * 1.75) {
+                    $(".background").addClass("background-width");
+                } else if (window_width < window_height * 1.75) {
+                    $(".background").removeClass("background-width");
+                }
+            }
+            
+            $(".view-button").hover(function() {
+                $(this).addClass("view-button-hover"); 
+            }, function() {
+                $(this).removeClass("view-button-hover"); 
+            });
+            
+            function isMobile() {
+                return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+            }
+        </script>
+    </body>
+</html>
+
