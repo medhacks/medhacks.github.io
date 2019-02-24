@@ -1038,6 +1038,28 @@ hr.small {
     line-height: 24px;
 }
 
+/* CA */
+
+h2 {
+    padding-bottom: 30px;
+}
+
+td, th {
+    /*border: 2px solid #193e53;*/
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 2rem;
+    color: #193e53;
+    background-color: #fff;
+    border-bottom: 2px solid #193e53;
+    border-left: 2px solid #193e53;
+    border-right: 2px solid #193e53;
+}
+
+table {
+  border: 2px solid #193f53
+}
+
 /* Sponsors */
 
 .support-heading {

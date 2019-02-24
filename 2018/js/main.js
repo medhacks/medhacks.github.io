@@ -54,26 +54,31 @@ $(document).ready(() => {
     });
 
     $('#track1').on('click', () => {
-        $('.black-overlay').fadeToggle('fast');
-        $('#track1-info').fadeToggle('medium');
+        $('.black-overlay').fadeIn('fast');
+        $('#track1-info').fadeIn('medium');
         $curwindow = $('#track1-info');
     });
 
     $('#track2').on('click', () => {
-        $('.black-overlay').fadeToggle('fast');
-        $('#track2-info').fadeToggle('medium');
+        $('.black-overlay').fadeIn('fast');
+        $('#track2-info').fadeIn('medium');
         $curwindow = $('#track2-info');
     });
 
+    $('.close').on('click', () => {
+        $('.black-overlay').fadeOut('fast');
+        $curwindow.fadeOut('fast');
+    });
+
     $('#track3').on('click', () => {
-        $('.black-overlay').fadeToggle('fast');
-        $('#track3-info').fadeToggle('medium');
+        $('.black-overlay').fadeIn('fast');
+        $('#track3-info').fadeIn('medium');
         $curwindow = $('#track3-info');
     });
 
     $('.black-overlay').on('click', () => {
-        $('.black-overlay').fadeToggle('fast');
-        $curwindow.fadeToggle('fast');
+        $('.black-overlay').fadeOut('fast');
+        $curwindow.fadeOut('fast');
     });
 
     $('#ham-container').on('click', () => {
@@ -133,7 +138,6 @@ $(document).ready(() => {
         counter++;
         sections.push($(this));
     });
-    console.log(heights);
     heights[3] = heights[3] - 100;
     sections.push($("#tracksBubble"));
     sections.push($("#logisticsBubble"));
@@ -222,7 +226,6 @@ function checkBubbles() {
         percentage = scrollPosition / (heights[2]);
         scrollPosition = percentage / 4;
     }
-    console.log(percentage);
     if (scrollPosition > 1) {
         scrollPosition = 1;
     }
@@ -231,12 +234,11 @@ function checkBubbles() {
     $("#moose-mark").css("left", initWidth);
     $("#moose-mark").css("top", height - 3);
     $("#moose-mark").css('width', withProp);
-    // console.log(scrollPosition);
     $("#aboutBubble").removeClass("filled");
     $("#tracksBubble").removeClass("filled");
     $("#logisticsBubble").removeClass("filled");
     $("#applyBubble").removeClass("filled");
-    if (percentage > .95) {
+    if (percentage > .99999) {
         if (section == 1) {
             $("#aboutBubble").addClass("filled");
             $("#tracksBubble").removeClass("filled");

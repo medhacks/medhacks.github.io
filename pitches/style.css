@@ -27,13 +27,13 @@ body {
     width: 100%;
     height: calc(100% + 5px);
     top: -5px;
-    background: url(../assets/img/webbg_responsive.jpg) no-repeat;
+    background: url(../assets/img/pitchbg.jpg) no-repeat;
     background-size: auto 100%;
     background-position: center;
 }
 
 .background-width {
-    background: url(../assets/img/webbg_responsive.jpg) no-repeat;
+    background: url(../assets/img/pitchbg.jpg) no-repeat;
     background-size: 100% auto;
     background-position: center; 
 }
@@ -58,7 +58,7 @@ body {
 }
 
 h1 {
-    color: rgba(239, 239, 239, 1);
+    color: rgba(25, 61, 86, 1);
     font-family: custom;
     font-size: 2.75em;
     padding: 0px;
@@ -74,7 +74,7 @@ h3 {
     margin: 0px;
     margin-bottom: 5px;
     font-size: 1.25em;
-    color: rgba(239, 239, 239, 0.75);
+    color: rgba(25, 61, 86, 1);
     opacity: 1;
     
     -webkit-transition: all 0.5s;
@@ -90,11 +90,11 @@ h3 {
     height: 1.2em;
     padding-right: 1em;
     border: none;
-    border-bottom: 1px solid rgba(239, 239, 239, 0.5);
+    border-bottom: 1px rgba(25, 61, 86, 1);
     border-radius: 0px;
     font-family: custom;
     font-size: 1.5em;
-    color: rgba(239, 239, 239, 0.75);
+    color: rgba(25, 61, 86, 1);
     background-color: rgba(0, 0, 0, 0);
     
     -webkit-transition: all 0.5s;
@@ -108,8 +108,8 @@ h3 {
 
 .inputText:focus {
     outline: none;
-    border-bottom: 1px solid rgba(239, 239, 239, 1);
-    color: rgba(239, 239, 239, 1);                
+    border-bottom: 1px solid rgba(25, 61, 86, 0.5);
+    color: rgba(25, 61, 86, 0.5);             
 }
 
 .inputTextGood {
@@ -197,8 +197,8 @@ textarea[class='inputText'] {
     font-family: custom;
     font-size: 1.5em;
     margin: 10px auto;
-    color: rgba(239, 239, 239, 1);
-    background-color: rgba(0, 0, 0, 0);
+    color: rgba(25, 61, 86, 1);
+    background-color: rgba(239, 239, 239, 0.5);
     cursor: pointer; 
     cursor: hand;
     border-radius: 3px;
@@ -513,7 +513,7 @@ textarea[class='inputText'] {
 .underline {
     padding: 0px 10px;
     padding-top: 5px;
-    background-color: rgba(239, 239, 239, 0.95);
+    background-color: (239, 239, 239, 0.5);
     font-family: custom-light;
 }
 
@@ -691,7 +691,7 @@ textarea[class='inputText'] {
     width: 0%;
     height: 3px;
     top: 0;
-    background-color: rgba(239, 239, 239, 1);
+    background-color: rgba(25, 61, 86, 0.5);
     
     -webkit-transition: width 0.5s, background-color 0.5s;
     -ms-transition: width 0.5s, background-color 0.5s;
@@ -746,24 +746,24 @@ textarea[class='inputText'] {
 }
 
 .disclaimer {
-    color: rgba(239, 239, 239, 0.5);
+    color: rgba(25, 61, 86, 1);
     font-family: custom;
     margin-top: 0.5em;
     margin-bottom: 1em;
 }
 
 ::-webkit-input-placeholder {
-   color: rgb(239, 239, 239, 1);
+   color: rgba(25, 61, 86, 1);
 }
 
 :-moz-placeholder { /* Firefox 18- */
-   color: rgb(239, 239, 239, 1);  
+   color: rgba(25, 61, 86, 1); 
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
-   color: rgb(239, 239, 239, 1);  
+   color: rgba(25, 61, 86, 1);  
 }
 
 :-ms-input-placeholder {  
-   color: rgb(239, 239, 239, 1);  
+   color: rgba(25, 61, 86, 1);
 }

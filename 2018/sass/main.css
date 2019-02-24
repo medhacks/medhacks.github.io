@@ -1,4 +1,4 @@
-#header .description, #header .applyButton, .navbar .applyButton, .navbar-default .applyButton, #basicInfo #infoContainer p, #basicInfo #infoContainer, #aboutSection h2, #challenges .track-container, #challenges .track-info, #logistics .scheduleContainer, #logistics .scheduleContainer ul li, #logistics .scheduleContainerDropdown, #faq h2, #faq .faq-container ul li, #faq .faq-dropdown, #applySection h2 {
+#header .description, #header .applyButton, .navbar .applyButton, .navbar-default .applyButton, #basicInfo #infoContainer p, #basicInfo #infoContainer, #aboutSection h2, #challenges .track-container, #challenges .track-info, #logistics .scheduleContainer, #logistics .scheduleContainer ul li, #logistics .scheduleContainerDropdown, #logistics .keynoteContainer .row .keynoteColumn p, #faq h2, #faq .faq-container ul li, #faq .faq-dropdown, #applySection h2, .sponsor-section h2 {
   text-align: center;
   vertical-align: middle; }
 
@@ -174,6 +174,8 @@ html, body {
         width: 100vw;
         top: 0;
         left: 0; } }
+  #header .longButton a h2 {
+    font-size: 1.5rem; }
   #header .applyButton {
     position: relative;
     margin-left: auto;
@@ -182,6 +184,7 @@ html, body {
     padding: 0.5rem;
     background-color: #efefef;
     width: 225px;
+    vertical-align: center;
     border-radius: 5%;
     transform: scale(0.85);
     transition: 0.2s background-color ease-out, .2s border-color ease-out, .2s transform ease-out; }
@@ -388,6 +391,7 @@ html, body {
     color: #FFFF;
     background-color: #BF4D42;
     width: 15rem;
+    vertical-align: center;
     border-radius: 0.5rem;
     transform: scale(0.85);
     transition: 0.2s background-color ease-out, .2s border-color ease-out, .2s transform ease-out; }
@@ -399,7 +403,8 @@ html, body {
       .navbar .applyButton a h2, .navbar-default .applyButton a h2 {
         background-color: #BF4D42;
         color: #ffff;
-        transition: 0.2s background-color ease-out, .2s border-color ease-out, .2s transform ease-out; }
+        transition: 0.2s background-color ease-out, .2s border-color ease-out, .2s transform ease-out;
+        vertical-align: center; }
     .navbar .applyButton:hover, .navbar-default .applyButton:hover {
       transform: scale(1);
       background-color: #efefef;
@@ -407,7 +412,8 @@ html, body {
       cursor: pointer; }
       .navbar .applyButton:hover h2, .navbar-default .applyButton:hover h2 {
         background-color: #efefef;
-        color: black; }
+        color: black;
+        vertical-align: center; }
 
 .header-text-actions {
   margin-top: 24px;
@@ -445,7 +451,8 @@ html, body {
 #aboutSection {
   background-color: #efefef;
   margin-bottom: 0;
-  padding-top: 5%; }
+  padding-top: 5%;
+  overflow: hidden; }
   #aboutSection .top {
     margin-top: 1rem; }
   #aboutSection h2 {
@@ -471,31 +478,49 @@ html, body {
     padding-top: 0;
     margin-right: 0;
     padding-bottom: 2rem; }
+  #aboutSection #melvin-text {
+    margin: 0% 10vw;
+    display: inline; }
+  #aboutSection img {
+    width: 22.5vw;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    float: right; }
 
 #challenges {
   display: block;
   background-color: #efefef; }
-  #challenges h2 {
-    color: #042449;
-    padding-bottom: 4rem;
-    font-size: 3rem; }
-  #challenges img {
-    width: 30%;
-    margin: none;
-    float: right;
-    position: relative;
-    z-index: 0;
-    bottom: 23rem;
-    right: 10rem; }
   #challenges p {
-    width: 34%;
     margin: 0% 10%;
     padding-top: 1rem;
     color: #193f55;
     font-size: 1.5rem;
     text-align: center;
     display: block;
-    overflow: auto; }
+    overflow: auto;
+    margin-bottom: 5%; }
+  #challenges h2 {
+    color: #042449;
+    padding-bottom: 4rem;
+    font-size: 3rem; }
+  #challenges .challengeRow {
+    display: flex; }
+    #challenges .challengeRow .challengeColumn {
+      flex: 30%; }
+      #challenges .challengeRow .challengeColumn img {
+        width: 75%;
+        margin: none;
+        float: right;
+        position: relative;
+        z-index: 0; }
+      #challenges .challengeRow .challengeColumn p {
+        margin: 0% 10%;
+        padding-top: 1rem;
+        color: #193f55;
+        font-size: 1.5rem;
+        text-align: center;
+        display: block;
+        overflow: auto; }
   #challenges .track-container {
     float: none;
     margin-left: 10%;
@@ -505,14 +530,55 @@ html, body {
     grid-template-areas: "track1 track2 track3";
     -webkit-grid-column-gap: 3rem;
     -moz-grid-column-gap: 3rem;
-    grid-column-gap: 1rem;
+    grid-column-gap: 2rem;
     grid-row-gap: 1rem;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
     align-items: center;
     justify-items: center;
     padding-bottom: 5%;
-    background-color: #efefef; }
+    background-color: #efefef;
+    font-family: custom, sans-serif;
+    color: #193f55; }
+    #challenges .track-container #track1 {
+      height: 20rem;
+      width: 25rem;
+      background-color: #fff;
+      grid-area: track1; }
+      #challenges .track-container #track1 h2 {
+        font-size: 2rem;
+        color: #193f55; }
+      #challenges .track-container #track1 .imgrow {
+        position: relative;
+        bottom: 2rem;
+        display: flex; }
+        #challenges .track-container #track1 .imgrow img {
+          padding: 0.5rem;
+          width: 40%;
+          height: 40%;
+          flex: 40%; }
+    #challenges .track-container #track2 {
+      background-color: #fff;
+      height: 20rem;
+      width: 25rem;
+      grid-area: track2; }
+      #challenges .track-container #track2 h2 {
+        font-size: 2rem;
+        color: #193f55; }
+      #challenges .track-container #track2 img {
+        width: 18.75vw;
+        height: 4.125vw;
+        margin-top: 2rem; }
+    #challenges .track-container #track3 {
+      background-color: #fff;
+      grid-area: track3;
+      height: 20rem;
+      width: 25rem; }
+      #challenges .track-container #track3 h2 {
+        font-size: 2rem; }
+      #challenges .track-container #track3 img {
+        width: 16.94vw;
+        height: 4.88vw; }
     #challenges .track-container .track {
       border: 3px solid #193f55;
       border-radius: 3rem;
@@ -520,12 +586,6 @@ html, body {
       #challenges .track-container .track img {
         width: 10rem;
         height: 10rem; }
-      #challenges .track-container .track #track1 {
-        grid-area: track1; }
-      #challenges .track-container .track #track2 {
-        grid-area: track2; }
-      #challenges .track-container .track #track3 {
-        grid-area: track3; }
       #challenges .track-container .track:hover {
         border-color: #BF4D42;
         cursor: pointer; }
@@ -551,15 +611,41 @@ html, body {
   #challenges .track-info {
     z-index: 4;
     background-color: #ffff;
-    width: 70%;
-    height: 70%;
+    width: 80%;
+    height: 80%;
     display: none;
     position: fixed;
     box-sizing: border-box;
-    background-color: #FFFFFF;
-    top: 15%;
-    left: 15%;
-    border-radius: 3rem; }
+    background-color: #efefef;
+    top: 10%;
+    font-family: custom, sans-serif;
+    color: #193f55;
+    left: 10%; }
+    #challenges .track-info .close {
+      float: right;
+      margin: 1rem;
+      font-size: 36px;
+      font-weight: bold; }
+    #challenges .track-info ul {
+      list-style-position: inside; }
+    #challenges .track-info .track-row {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      position: relative;
+      right: 1.5%; }
+      #challenges .track-info .track-row .track-column h1 {
+        padding: 3rem 0 2rem  0;
+        font-size: 2.25rem; }
+      #challenges .track-info .track-row .track-column iframe {
+        margin: 2rem;
+        width: 100%; }
+      #challenges .track-info .track-row .track-column h2 {
+        font-size: 2rem;
+        margin: 0;
+        padding: 0.5rem; }
+      #challenges .track-info .track-row .track-column p {
+        font-size: 1.05rem; }
 
 #logistics {
   margin-top: 75px;
@@ -644,6 +730,24 @@ html, body {
         color: #fff; }
     #logistics table tr:hover {
       background-color: #f5f5f5; }
+  #logistics .keynoteContainer .row {
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+    display: flex; }
+    #logistics .keynoteContainer .row .keynoteColumn {
+      flex: 50%;
+      padding-right: 20px;
+      margin: 0; }
+      #logistics .keynoteContainer .row .keynoteColumn h3 {
+        padding-bottom: 2rem; }
+      #logistics .keynoteContainer .row .keynoteColumn img {
+        width: 55%; }
+      #logistics .keynoteContainer .row .keynoteColumn p {
+        font-size: 1.25rem;
+        margin: auto;
+        margin-top: 2rem;
+        padding: none;
+        width: 55%; }
 
 .marginFormat {
   background-color: #efefef;
@@ -659,8 +763,8 @@ footer {
   footer .copyright {
     position: relative;
     float: right;
-    right: 2%;
-    top: 6.4rem;
+    left: 15rem;
+    top: 18rem;
     margin-bottom: 0; }
     @media screen and (max-width: 600px) {
       footer .copyright {
@@ -688,10 +792,10 @@ footer {
     footer .column1 p {
       margin-top: 1.5rem; }
   footer .column2 {
-    float: left;
+    float: right;
     margin: 3% 1%;
     width: 11%;
-    margin-left: 30%;
+    margin-right: 10%;
     margin-bottom: 0; }
     @media screen and (max-width: 600px) {
       footer .column2 {
@@ -921,5 +1025,16 @@ select {
 
 select::-ms-expand {
   display: none; }
+
+.sponsor-section {
+  font-size: 3rem;
+  font-family: custom, sans-serif;
+  margin-top: 3rem; }
+  .sponsor-section h2 {
+    margin: auto; }
+  .sponsor-section .sponsor {
+    display: inline-block;
+    margin: 14px;
+    transition: .2s opacity ease-out; }
 
 /*# sourceMappingURL=main.css.map */

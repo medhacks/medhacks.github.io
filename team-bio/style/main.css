@@ -1,3 +1,4 @@
+/* This is the file we all should be editing */
 html,
 body {
     width: 100%;
@@ -80,6 +81,7 @@ hr.small {
 }
 
 .header-navbar-item {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     float: left;
 }
 
@@ -278,7 +280,7 @@ hr.small {
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1000px;
+  max-width: 100%;
   position: relative;
   margin: auto;
 }
@@ -355,12 +357,14 @@ hr.small {
 
 .container-exec-lead {
   position: relative;
-  width: 50%;
+  width: 45%;
+  margin: 0.5rem;
 }
 
 .container-member {
   position: relative;
-  width: 33%;
+  width: 30%;
+  margin: 0.33rem;
 }
 
 .image {
@@ -373,6 +377,7 @@ hr.small {
 
 
 .overlay {
+  object-fit: cover;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -383,6 +388,8 @@ hr.small {
   opacity: 0;
   transition: .5s ease;
   background-color: #193e53;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 .container-exec-lead:hover .overlay {
@@ -393,21 +400,53 @@ hr.small {
   opacity: .8;
 }
 
-.overlay-img-text {
-  color: white;
-  font-size: 19px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  text-align: center;
+/* style starts */
+/* does not work but ideally it should in the end.
+@media only screen and (max width: 1030px) {
+  .overlay-img-text {
+    display: none;
+  }
 }
+*/
+/*@media only screen and (min width: 1030px) {*/
+  .overlay-img-text {
+    color: white;
+    font-size: 1.5vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+/*}*/
+
+p {
+  font-size: 1.2vw;
+  color: black;
+  padding-bottom: 0.5vw;
+}
+/*
+@media screen and (max width: 1030px) {
+  p {
+    display: none;
+    font-size: 1vw;
+    color: cyan;
+  }
+}
+@media screen and (min width: 1030px) {
+  p {
+    font-size: 1vw;
+    color: cyan;
+  }
+}
+}*/
+/* style ends */
 
 .column {
     float: left;
     width: 33.33%;
-    padding: 5px;
+    border: 5px;
 }
 
 .row {

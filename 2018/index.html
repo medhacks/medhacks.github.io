@@ -2,16 +2,29 @@
 <html>
 
 <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121831305-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-121831305-1');
+  </script>
+
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scle=1, shrink-to-fit=no">
   <!-- Bootstrap linkin -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <!-- link to css file below this -->
   <link rel="stylesheet" href="sass/main.css" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   <link href="../assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-  <link rel="shortcut icon" href="./assets/logos/medhacks_cross.png" type="image/png"/>
-  <title>MedHacks 2018 </title>
+  <link rel="shortcut icon" href="./assets/logos/medhacks_cross.png" type="image/png" />
+  <title>MedHacks 2018: Snow Day </title>
   <!--sonny tests-->
   <!--sonny ends tests-->
 </head>
@@ -26,19 +39,29 @@
       <ul>
         <div id="moose-mark"></div>
         <a id="homeBubble" class="filled">
-          <div class="bubble"><p id="homeBubP">Home</p></div>
+          <div class="bubble">
+            <p id="homeBubP">Home</p>
+          </div>
         </a>
         <a id="aboutBubble">
-          <div class="bubble" style="left:36rem"><p id="aboutBubP">About</p></div>
+          <div class="bubble" style="left:36rem">
+            <p id="aboutBubP">About</p>
+          </div>
         </a>
         <a id="tracksBubble">
-          <div class="bubble" style="left:39rem"><p id="tracksBubP">Tracks</p></div>
+          <div class="bubble" style="left:39rem">
+            <p id="tracksBubP">Tracks</p>
+          </div>
         </a>
         <a id="logisticsBubble">
-          <div class="bubble" style="left:42rem"><p id="logBubP">Apply</p></div>
+          <div class="bubble" style="left:42rem">
+            <p id="logBubP">Apply</p>
+          </div>
         </a>
         <a id="applyBubble">
-          <div class="bubble" style="left: 46rem"><p id="applyBubP">Logistics</p></div>
+          <div class="bubble" style="left: 46rem">
+            <p id="applyBubP">Logistics</p>
+          </div>
         </a>
       </ul>
     </div>
@@ -49,7 +72,7 @@
     </div>
     <div class="applyButton">
       <a href="http://apply.medhacks.org">
-          <h2>
+        <h2>
               APPLY NOW
           </h2>
       </a>
@@ -60,81 +83,108 @@
         <li id="about-small-button">About</li>
         <li id="tracks-small-button">Tracks</li>
         <li id="logistics-small-button">Apply</li>
-        <li id="apply-small-button">Logisitcs</li>
+        <li id="apply-small-button">Logistics</li>
         <li class="apply"> <a href="http://apply.medhacks.org">Apply Now</a> </li>
       </ul>
     </div>
+
   </nav>
 
 
-
   <!-- Header -->
+
   <div id="header" class="jumbotron jumbotron-fluid section-container">
+    <a id="mlh-trust-badge" class="mlh-trust-badge-mobile" style="display:block;max-width:105px;position: absolute; left: 5px;min-width:55px;width:10%;" href="https://mlh.io/seasons/na-2018/events?utm_source=na-2018&utm_medium=TrustBadge&utm_campaign=na-2018&utm_content=white"
+      target="_blank"><img src="https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-blue.svg" alt="Major League Hacking 2018 Hackathon Season" style="position: absolute; margin: 20% 12.5%; width:80%"></a>
+
     <div class="container" "header-text-action">
-      <img class="mobileBG" src="./assets/snow_day_header_portrait.png"/>
-      <div class="applyButton" "header-text-actions">
-        <a href="http://apply.medhacks.org">
-            <h2>
-                APPLY NOW
+
+      <img class="mobileBG" src="./assets/snow_day_header_portrait.png" />
+
+      <div class="applyButton longButton">
+        <a href="./assets/MH-Info-Full-2018.pdf" target="_blank">
+          <h2>
+                Hacker Information Packet
             </h2>
         </a>
       </div>
-      <img class="beating-heart" src="./assets/newFrostyHeart.png"/>
+      <img class="beating-heart" src="./assets/newFrostyHeart.png" />
       <!-- <img class="frosty-title" src="./assets/logos/frosty_medhacks_logo.png"/> -->
     </div>
     <p class="description">September 7-9, 2018 @ JHU Medical Campus</p>
   </div>
 
+  <!-- SPACE-->
   <div class="marginFormat" style="height:175px; width:100%"></div>
 
 
   <!-- Basic Info and what they need to know -->
-  <div id="basicInfo" >
+  <div id="basicInfo">
 
     <div id="infoContainer">
       <p>
-          Hosted at the nation’s pinnacle center for care, MedHacks is the world’s premier and largest medical hackathon. Join us at the Johns Hopkins Hospital for 36 hours to revolutionize the global state of healthcare.
+        Hosted at the nation’s pinnacle center for care, MedHacks is the world’s premier and largest medical hackathon. Join us at the Johns Hopkins Hospital for 36 hours to revolutionize the global state of healthcare!
       </p>
     </div>
   </div>
 
-  <div class="marginFormat" style="height:125px; width:100%"></div>
+  <!--SPACE-->
+  <div class="marginFormat" style="height:30px; width:100%"></div>
 
   <div id="aboutSection" class="section-container">
-      <h2>About</h2>
-      <h3 class="top"> Our History </h3>
+    <h2>About</h2>
+    <h3 class="top"> Our History </h3>
+    <p>
+      MedHacks was started in 2015 with the mission to bring together talented and diverse minds from all backgrounds and foster collaboration towards solving the world’s most pressing medical issues.
       <p>
-          MedHacks was started in 2014 with the mission to bring together diverse minds from all backgrounds and foster collaboration towards solving the world’s most pressing medical issues.
-          In the past three years, MedHacks has grown from 250 to over 750 participants, moved from the Homewood undergraduate campus to the Johns Hopkins Medical Campus, and has established itself as one of the world’s biggest and most recognized medical hackathons.
+        In the past three years, MedHacks has been attended by thousands from over 500 institutions and 30 countries, has formed partnerships with companies at the forefront of medicine and technology including Blue Cross Blue Shield, CVS Health, Google, and
+        KPCB, and has established itself as one of the world’s most recognized and influential medical hackathons.
       </p>
       <p>
-          The MedHacks brand has grown into something larger than our flagship medical hackathon with the introduction of 2 new events this spring: (1) Mini-MedHacks: a 1-day medical hackathon for Baltimore city high-school students and (2) The China-U.S HealthTech Forum: bringing together speakers such as Jim Lai, the VP of Tencent, and Lee Chang, the VP of Baidu Ventures, to talk about the global state of healthcare innovations.
+        The MedHacks brand has grown into something larger than our flagship medical hackathon with the introduction of 2 new events this spring: (1) Mini-MedHacks: a 1-day medical hackathon for Baltimore city high-school students and (2) The China-U.S HealthTech
+        Forum: bringing together speakers such as Jim Lai, the VP of Tencent, and Lee Chang, the VP of Baidu Ventures, to talk about the global state of healthcare innovations.
       </p>
       <p>
-          Join us at MedHacks 2018: Snow Day where we are bringing the largest healthcare & technology companies alongside the Johns Hopkins Medicine Network to revolutionize the way we think about medicine.
+        Join us at MedHacks 2018: Snow Day, where we are bringing the largest healthcare &amp; technology companies in collaboration with the Johns Hopkins Medicine Network to revolutionize the way we think about medicine.
       </p>
       <h3> The MedHacks Factor</h3>
       <p>
-          We believe that the most pressing medical challenges must be solved by interdisciplinary and diverse teams of people. That's why we don’t care about whether or not you’ve won coding competitions, or even if you’re pursuing an engineering or CS degree. You don’t need a PhD or MD to innovate in healthcare, all you need is a passion for bettering humanity.
+        We believe that the most pressing medical challenges must be solved by interdisciplinary and diverse teams of people. We don’t care about whether or not you’ve won coding competitions, or even if you’re pursuing an engineering or CS degree. You don’t
+        need a PhD or MD to innovate in healthcare, all you need is a passion for bettering humanity.
       </p>
       <p>
-          Last year at MedHacks 2017, we had over 750 hackers for over 300 schools and 15 countries, with diverse majors ranging from public health to biomedical engineering to computer science. We had teams of all ages from undergraduates, to graduates, to medical professionals all coming together with diverse expertise and backgrounds.
-      </p>
+        Last year at MedHacks 2017, we hosted over 750 hackers from more than 300 schools and 15 countries, with diverse majors ranging from public health to anthropology to computer science. We had teams of all ages including undergraduates, graduate students,
+        and medical professionals all coming together with diverse expertise and backgrounds. </p>
       <h3> MedHacks 2018: Snow Day </h3>
       <p>
-          We’re thrilled to introduce the theme for MedHacks 2018: Snow Day! It’s been a long, exhausting year, and we know that we could all use a day (or three) to relax, not think about school work, huddle up with a computer and some teammates, and focus on innovating healthcare. Even though September in Baltimore is not exactly known for its below-zero temperatures, we’ll be sure to bring the cool within the Johns Hopkins Hospital with our trusty moose, Melvin, by our sides!
+        We’re thrilled to introduce the theme for MedHacks 2018: Snow Day! It’s been a long, exhausting year, and we know that we could all use a day (or three) to relax, not think about school work, huddle up with a computer and some teammates, and focus on
+        innovating healthcare. Even though September in Baltimore is not exactly known for its below-zero temperatures, we’ll be sure to bring the cool within the Johns Hopkins Hospital with our trusty moose, Melvin, by our sides!
       </p>
+      <h3> Meet Melvin! </h3>
+      <img src="./assets/melvin-story-img.png" />
+
+      <div id="melvin-text">
+        <p> Originally hailing from the chilliest, northernmost forests of the United States, Melvin the Moose spent his early days by rivers, feasting on leaves and shrubs without a care in the world. One day he ventured a little (...okay, a lot) farther
+          than usual on his journey to find a new grazing spot and stumbled upon the Johns Hopkins University campus. He was amazed - there was so much greenery to munch on! It was a dream come true. After taking a bite of grass, he felt a slight tingle
+          in his body.
+        </p>
+        <p> After getting a bite to eat, Melvin felt his body shrink to the size of a small human. His front hooves became dexterous, and he suddenly gained the ability to crunch numbers and function long days and nights without sleep. Disoriented by this
+          sudden transition, he was found sprawled out under the gazebo by a MedHacks student. He was taken in and nursed back to health with the rare elixir of Soylent. </p>
+        <p> Touched by the student’s kindness, Melvin the Moose joined MedHacks to meet more of these awesome people (and also to get his hooves on more of that delicious Soylent). He fit right in, and now is an integral member of our family. However, one
+          of his projects, Melvin accidently wrote the wrong code, somehow manipulating space-time to bring winter home a lot earlier than usual... which is why our theme for MedHacks 2018 is Snow Day! </p>
+      </div>
       <h3> Campus Ambassadors </h3>
       <p>
-          We welcome anyone passionate about the MedHacks mission to join our team as a Campus Ambassador. What this entails is spreading the word about MedHacks at your university/city. Campus ambassadors are an integral part of the MedHacks organizing team and receive a guaranteed acceptance to MedHacks, a guaranteed travel reimbursement, and custom swag.
+        We welcome anyone passionate about the MedHacks mission to apply to join our team as a Campus Ambassador. What this entails is spreading the word about MedHacks at your university/city. Campus ambassadors are an integral part of the MedHacks organizing
+        team and receive a guaranteed acceptance to MedHacks, a guaranteed travel reimbursement, and custom swag.
       </p>
       <p>
-          We have already sent our first round of acceptances, but if you are from the Toronto, Philadelphia, or Boston area please email <a href="mailto:info@medhacks.org">info@medhacks.org</a> to learn how you can get involved.
+        We are closing campus ambassador applications on July 20th at 11:59pm EST. Please email <a href="mailto:info@medhacks.org">info@medhacks.org</a> to learn how you can get involved.
       </p>
   </div>
 
   <!-- Space -->
-  <div class="marginFormat" style="height:125px; width:100%"></div>
+  <div class="marginFormat" style="height:70px; width:100%"></div>
 
   </div>
 
@@ -142,94 +192,216 @@
   <div id="challenges" class="text-center section-container">
     <h2>Tracks</h2>
     <p>
-        At MedHacks 2018: Snow Day, you’ll have the choice of choosing a project within our three tracks. The hack you decide to do must fall within the track that you choose and you will be judged within your track for a track-specific prize. The three tracks from MedHacks 2017 were Medication Adherence with CVS Health, Patient Safety & Quality with Hopkins Medicine, and Access to Care with Blue Cross Blue Shield.
-    </p>
-    <p>
-        Stay tuned for an announcement of tracks for MedHacks 2018!
-    </p>
+      At MedHacks 2018: Snow Day, you’ll have the choice of choosing a project within our three tracks. The hack you decide to do must fall within the track that you choose and you will be judged within your track for a track-specific prize. The three tracks
+      from MedHacks 2017 were Medication Adherence with CVS Health, Patient Safety & Quality with Hopkins Medicine, and Access to Care with Blue Cross Blue Shield.
+      <br>
+      <br>
 
-    <img src="./assets/sleepy_moose.png"/>
-    <!-- <div class="track-container" style="display: none">
+    </p>
+    <!-- <div class="challengeRow">
+      <div class="challengeColumn">
+          <p>
+              At MedHacks 2018: Snow Day, you’ll have the choice of choosing a project within our three tracks. The hack you decide to do must fall within the track that you choose and you will be judged within your track for a track-specific prize. The three tracks
+              from MedHacks 2017 were Medication Adherence with CVS Health, Patient Safety & Quality with Hopkins Medicine, and Access to Care with Blue Cross Blue Shield.
+            </p>
+            <p>
+              Stay tuned for an announcement of tracks for MedHacks 2018!
+            </p>
+      </div>
+
+      <div class="challengeColumn">
+          <img src="./assets/sleepy_moose.png" />
+      </div>
+    </div> -->
+
+
+
+    <!-- <img src="./assets/sleepy_moose.png"/> -->
+
+    <div class="track-container">
       <div class="track" id="track1">
-        <img src="assets/comp.png" />
+        <h2>Patient Safety and Quality</h2>
+        <div class="imgrow">
+          <img src="./assets/JHMI_track.png" alt="Hopkins Medicine">
+          <img src="./assets/Nursing_track.png">
+        </div>
       </div>
       <div class="track" id="track2">
-        <img src="assets/comp.png" />
+        <h2 style="padding-bottom: 0">Community Health Infrastructure</h2>
+        <img src="assets/logos/bcbs.png" />
       </div>
       <div class="track" id="track3">
-        <img src="assets/comp.png" />
+        <h2 style="padding-bottom: 0">Open Science to Advance Health Equity</h2>
+        <img src="assets/allianceForHeal.png" />
       </div>
     </div>
 
     <div class="black-overlay">
-      </>
-      <div class="track-info" id="track1-info">
-        <h1>Track 1 info</h1>
-        <br>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/-yUafzOXHPE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+    <div class="track-info" id="track1-info">
+      <span class="close">&times;</span>
+
+      <div class="track-row">
+          <div class="track-column" style="flex: 60%">
+              <h1>Patient Safety and Quality</h1>
+              <p>
+                  The Johns Hopkins Armstrong Institute for Patient Safety and Quality and the Johns Hopkins School of Nursing are proud to sponsor a Patient Safety and Quality track at MedHacks 2018.  Your participation in this track and innovative ideas can further their shared commitment to eliminate preventable harm to patients and achieve the best outcomes at the lowest cost possible. The three focus areas highlighted in the track are Geriatric Safety, Joy of Practice, and Digital Approaches to Care Management. There will be a number of faculty mentors from both the Armstrong Institute and the School of Nursing available for the entire weekend to assist you with your project.
+                  <br>
+                  <br>
+                  Some other useful links are provided below:
+                  <br>
+                    <a target="_blank" href="https://www.youtube.com/watch?v=EL2K4tEts_A">The New Script of Nursing</a>
+                  <br>
+                  <a target="_blank" href="https://clinicalconnection.hopkinsmedicine.org/videos/understanding-cusp-and-the-cusp-team-the-armstrong-institute-for-patient-safety-and-quality">Understanding CUSP and the CUSP Team</a>
+              </p>
+          </div>
+          <div class="track-column" style="flex: 40%">
+              <iframe style="width: 100%; height: 30vh" src="https://www.youtube.com/embed/TYxeOgjKeac" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+              <h2>
+                Prize
+              </h2>
+              <p>
+                  Winners of this track will be given private professional development sessions with leadership from within the Johns Hopkins University network.
+              </p>
+          </div>
+
+
       </div>
+      <br>
+    </div>
       <div class="track-info" id="track2-info">
-        <h1>Track 2 info</h1>
-        <br>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-          in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
+        <span class="close">&times;</span>
+        <div class="track-row">
+          <div class="track-column" style="flex: 60%">
+              <h1>Community Health Infrastructure</h1>
+              <p>
+                  We at the BCBS Institute are excited to sponsor the Community Health Infrastructure track at MedHacks 2018. The future of health is governed by the capacity to better design and manage the Infrastructure within the community setting. The Community Health Infrastructure track extends into the community setting to address barriers, such as primary care desert, pharmacy desert, nutrition desert, transportation desert, and fitness desert. The window of opportunity exists to help shape the future of the new health service delivery model for the next decade.
+                <br>
+                <br>
+                Some other useful links are provided below:
+                <br>
+                  <a target="_blank" href="https://www.bcbs.com/institute">BCBSA Institute</a>
+                <br>
+                <a target="_blank" href="https://www.forbes.com/sites/brucejapsen/2018/03/14/cvs-and-walgreens-partner-with-lyft-to-get-blue-cross-patients-to-pharmacies/#1b393ff776c8">BCBSA partnering with Lyft, CVS, and Walgreens</a>
+              </p>
+          </div>
+          <div class="track-column" style="flex: 40%">
+              <iframe style="width: 100%; height: 30vh" src="https://www.youtube.com/embed/Wv-S-rfndGg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+              <h2>
+                Prize
+              </h2>
+              <p>
+                  Winners of this track will be given private professional development sessions with John Banta, the Executive Director of the Blue Venture Fund.
+              </p>
+          </div>
+
+
       </div>
-      <div class="track-info" id="track3-info">
-        <h1>Track 3 info</h1>
-        <br>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-          in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-      </div>
-    </div> -->
-</div>
+    </div>
+    <div class="track-info" id="track3-info">
+        <span class="close">&times;</span>
+        <div class="track-row">
+          <div class="track-column" style="flex: 60%">
+              <h1>Open Science Track</h1>
+              <p style="margin-bottom: 0;">
+                The Johns Hopkins University Alliance for a Healthier World through its Transformative Technologies and Institutions theme is proud to sponsor this year’s newly established “Open Science to Advance Health Equity” track.  Your team’s mission is to help us advance health equity through an open science “hack.’  By health equity, we mean not just the finding of disparity, but also coming up with solutions to reduce or resolve them.
+                Your project might build upon the following focus areas: Scaling Technology Platforms, Making Data Actionable, or Empowering Patients.
+                <br>
+                <br>
+                Some quick links to guide you in choosing this track:
+                <br>
+                  <a target="_blank" href="https://healthequitymedhacks.squarespace.com/">A dedicated webpage with resources to jumpstart your efforts</a>
+              </p>
+          </div>
+          <div class="track-column" style="flex: 40%">
+              <iframe style="width: 100%; height: 30vh" src="https://www.youtube.com/embed/Py_cdqRnmoE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+              <h2>
+                Prize
+              </h2>
+              <p>
+                  The winning team will receive $500 plus free consultation with the Hopkins Social Innovation Lab. Teams with at least one Hopkins student also eligible for $1000 in translational support from Hopkins Fast Forward U.
+              </p>
+          </div>
+    </div>
+  </div>
+  </div>
 
-    <!-- Space -->
-    <div class="marginFormat" style="height:105px; width:100%"></div>
+  <!-- Space -->
+  <div class="marginFormat" style="height:50px; width:100%"></div>
 
 
-    <div id="applySection"  class="section-container">
-        <h2>
+  <div id="applySection" class="section-container">
+    <h2>
             Apply
         </h2>
-        <h3 class="top">The Application Process</h3>
-        <p>
-            MedHacks receives thousands of applications from talented and diverse people all around the world every year, but unfortunately we don’t have the space to accommodate everyone who who like to attend.
-        </p>
-        <p>
-            MedHacks prides itself on being accessible for all students, especially those without any kind of computing background, and so we try as hard as possible to reflect that in the population of participants at the event. We encourage all individuals interested in the fields of medicine and innovation to apply, regardless of skill level. We’d love to have you!
-        </p>
-        <p>
-            We follow a rolling application basis, so the earlier you apply, the more likely you’ll be able to be accepted! General applications will be closing tentatively August 15th at 11:59PM.
-        </p>
-        <h3>The Application Portal</h3>
-        <p>
-            This year, in order to streamline the application process, our talented team of developers have developed an application portal. Once you create an account you can submit an application, view the status of your application and view any resources.
-        </p>
-        <h3>Travel Reimbursements</h3>
-        <p>
-            If you are interested in receiving a travel reimbursement, you must indicate this on your application. We will then be sending out travel reimbursement applications to those that have indicated it on their application. You will then have until July 15th to apply for a travel reimbursement. We offer reimbursements in $50, $100, $250 increments depending on where you are coming from. If you are coming from a school with a lot of hackers, we may send a bus on a case-by-case basis.
-        </p>
-    </div>
+    <h3 class="top">The Application Process</h3>
+    <p>
+      MedHacks receives thousands of applications from talented and diverse people all around the world every year, but unfortunately we don’t have the space to accommodate everyone who would like to attend.
+    </p>
+    <p>
+      MedHacks prides itself on being accessible for all students, especially those without any kind of computing background, and so we try as hard as possible to reflect that in the population of participants at the event. We encourage all individuals interested
+      in any (or all!) of the fields of medicine, technology, and entrepreneurship to apply. We’d love to have you!
+    </p>
+    <p>
+      We follow a rolling application basis, so the earlier you apply, the more likely you’ll be able to be accepted! General applications will be closing on <b>August 31st at 11:59 PM EST</b>. Applications for JHU students close on <b>September 3rd at 11:59 PM EST</b>.
+    </p>
+    <h3>The Application Portal</h3>
+    <p>
+      This year, in order to streamline the application process, our talented team of developers have developed an application portal. Once you create an account you can submit an application, view the status of your application and view any resources.
+    </p>
+    <h3>Travel Reimbursements</h3>
+    <p>
+      If you are interested in receiving a travel reimbursement, you must indicate this on your application. You can then fill out travel reimbursement applications if you have indicated it on their application. We offer reimbursements in $50, $100, $250 increments
+      depending on where you are coming from.
+    </p>
+    <p> The deadline for a National/International travel reimbursement (up to $250) is <b>July 20th at 11:59 PM EST</b>. The deadline for a Midwest/Regional travel reimbursement (up to $100) is <b>August 15th at 11:59 PM EST</b>.
+      <p>
+        Additionally, we’ve previously sent buses to universities such as the University of Maryland and UMBC, and would love to consider sending to yours as well! Please contact us <a href="mailto:info@medhacks.org?Subject=I'd like to bring MedHacks Bus to my school!"
+          target="_top">here</a> if you’re interested in having a bus from your school.
+      </p>
+      <p>
+        <b> Please note that if your forms are not filled out correctly by the due date, you will not receive a travel reimbursement. There will be no exceptions to this rule. </b> </p>
 
-    <!-- logistics (schedule + transportation) -->
-    <div id="logistics" class="text-center section-container">
-      <h2>
+  </div>
+
+  <!-- logistics (schedule + transportation) -->
+  <div id="logistics" class="text-center section-container">
+
+    <div class="keynoteContainer">
+        <h2>Keynote Speakers</h2>
+        <div class="row">
+          <div class="keynoteColumn">
+            <h3>Roy Ziegelstein</h3>
+            <img src="./assets/ZIEGELSTEIN-Roy.jpg" />
+            <p>
+              <strong>Roy Ziegelstein</strong>, M.D., MACP is the Vice Dean for Education at Johns Hopkins University School of Medicine and the Vice Chair of Humanism in the Department of Medicine at Johns Hopkins Bayview Medical Center.
+              <br>
+              Dr. Ziegelstein has been an NIH-funded basic and clinical investigator in cardiology, with research focused on vascular biology. For the past 20 years, he has been a leader in research on depression and cardiovascular disease. Dr. Ziegelstein also directed the internal medicine residency training program at Johns Hopkins Bayview from 1997-2006. He co-directs the Aliki Initiative, a program for internal medicine residents that is focused on the practice of patient-centered care.
+            </p>
+          </div>
+          <div class="keynoteColumn">
+            <h3>Trent Haywood</h3>
+            <img src="./assets/Haywood_Trent.jpg" />
+            <p>
+              <strong>Trent Haywood</strong>, M.D., J.D., is chief medical officer for the BlueCross BlueShield Association (BCBSA), a national federation of 36 independent, community-based and locally operated Blue Cross and Blue Shield companies. The Blue System is the nation’s largest health insurer covering one-in-three of all Americans.
+              <br>
+              As the Association’s chief medical officer, Haywood supports the innovation of BlueCross and BlueShield companies in communities around the country as they improve the choices of healthcare quality and patient safety for their members. Haywood also leads the BlueCross BlueShield Institute, a first-of-its-kind benefit corporation established to address social determinants of health through technology and strategic collaborations.
+            </p>
+          </div>
+        </div>
+    </div>
+    <h2>
                 Scheduling
             </h2>
 
 
-
-      <div class="scheduleContainer">
-        <ul class="nav nav-tabs">
-          <li class="activeLi"><a id="fridayAnc" data-toggle="tab" class="active" href="#friday">Friday, September 7</a></li>
-          <li><a id="saturdayAnc" data-toggle="tab" href="#saturday">Saturday, September 8</a></li>
-          <li><a id="sundayAnc" data-toggle="tab" href="#sunday">Sunday, September 9</a></li>
-        </ul>
-        <!--<div class="dropdown">
+    <div class="scheduleContainer">
+      <ul class="nav nav-tabs">
+        <li class="activeLi"><a id="fridayAnc" data-toggle="tab" class="active" href="#friday">Friday, September 7</a></li>
+        <li><a id="saturdayAnc" data-toggle="tab" href="#saturday">Saturday, September 8</a></li>
+        <li><a id="sundayAnc" data-toggle="tab" href="#sunday">Sunday, September 9</a></li>
+      </ul>
+      <!--<div class="dropdown">
           <span>Dates</span>
           <ul class="dropdown-content">
             <li><a data-toggle="tab" class="active" href="#friday">Friday Sept 7</a></li>
@@ -239,721 +411,883 @@
         </div>-->
 
 
-        <div class="tab-content">
-          <div id = "friday" class="tab-pane  active">
-            <table>
-              <col width="15rem" class="time"/>
-              <col width="20rem" class="event"/>
-              <col width="20rem" class="location"/>
-              <tr>
-                <th>
-                  Time
-                </th>
-                <th>
-                  Event
-                </th>
-                <th>
-                    Location
-                </th>
-              </tr>
-              <tr>
-                <th>
-                  5:00-6:00PM
-                </th>
-                <th>
-                  Registration
-                </th>
-                <th>
-                    tbd
-                </th>
-              </tr>
-              <tr>
-                <th>
-                  5:00-6:00PM
-                </th>
-                <th>
-                  Sponsor Fair
-                </th>
-                <th>
-                    tbd
-                </th>
-              </tr>
-              <tr>
-                <th>
-                  6:00-7:30PM
-                </th>
-                <th>
-                  Opening Ceremony
-                </th>
-                <th>
-                    tbd
-                </th>
-              </tr>
-              <tr>
-                <th>
-                  7:30-8:30PM
-                </th>
-                <th>
-                  Registration
-                </th>
-                <th>
-                    tbd
-                </th>
-              </tr>
-              <tr>
-                <th>
-                  7:45-9:00PM
-                </th>
-                <th>
-                  Problem/Solution
-                </th>
-                <th>
-                    tbd
-                </th>
-              </tr>
-              <tr>
-                <th>
-                  9:00-10:30PM
-                </th>
-                <th>
-                  Pitching Session
-                </th>
-                <th>
-                    tbd
-                </th>
-              </tr>
-              <tr>
-                <th>
-                  9:30PM
-                </th>
-                <th>
-                  Team Registration and Hacking Begin!
-                </th>
-                <th>
-                    tbd
-                </th>
-              </tr>
-            </table>
-          </div>
-          <div id = "saturday" class="tab-pane ">
-            <table>
-                <col width="15rem" class="time"/>
-                <col width="20rem" class="event"/>
-                <col width="20rem" class="location"/>
-              <tr>
-                <th>
-                  Time
-                </th>
-                <th>
-                  Event
-                </th>
-                <th>
-                    Location
-                </th>
-              </tr>
-              <tr>
-                <th>
-                  12:00 AM
-                </th>
-                <th>
-                  Midnight Snack
-                </th>
-                <th>
-                    tbd
-                </th>
-              </tr>
-              <tr>
-                <th>
-                  8:30 AM
-                </th>
-                <th>
-                  Breakfast
-                </th>
-                <th>
-                    tbd
-                </th>
-              </tr>
-              <tr>
-                <th>
-                  10:30 AM
-                </th>
-                <th>
-                  Morning Snack
-                </th>
-                <th>
-                    tbd
-                </th>
-              </tr>
-              <tr>
-                <th>
-                  12:00 PM
-                </th>
-                <th>
-                  Lunch
-                </th>
-                <th>
-                    tbd
-                </th>
-              </tr>
-              <tr>
-                <th>
-                  3:00PM
-                </th>
-                <th>
-                  Afternoon Snack
-                </th>
-                <th>
-                    tbd
-                </th>
-              </tr>
-              <tr>
-                <th>
-                  6:30 PM
-                </th>
-                <th>
-                  Dinner
-                </th>
-                <th>
-                    tbd
-                </th>
-              </tr>
-              <tr>
-                <th>
-                  6:30PM
-                </th>
-                <th>
-                  Team Registration Due
-                </th>
-                <th>
-                    tbd
-                </th>
-              </tr>
-            </table>
-          </div>
-          <div id = "sunday" class="tab-pane ">
-            <table>
-                <col width="15rem" class="time"/>
-                <col width="20rem" class="event"/>
-                <col width="20rem" class="location"/>
-              <tr>
-                <th>
-                  Time
-                </th>
-                <th>
-                  Event
-                </th>
-                <th>
-                    Location
-                </th>
-              </tr>
-              <tr>
-                <th>
-                  12:00 AM
-                </th>
-                <th>
-                  Midnight Snack
-                </th>
-                <th>
-                    tbd
-                </th>
-              </tr>
-              <tr>
-                <th>
-                  8:30-9:30 AM
-                </th>
-                <th>
-                  Breakfast
-                </th>
-                <th>
-                    tbd
-                </th>
-              </tr>
-              <tr>
-                <th>
-                  10:00 AM
-                </th>
-                <th>
-                  Submissions Due on DevPost
-                </th>
-                <th>
-                    tbd
-                </th>
-              </tr>
-              <tr>
-                <th>
-                  11:00-1:00PM
-                </th>
-                <th>
-                  Preliminary Judging Round
-                </th>
-                <th>
-                    tbd
-                </th>
-              </tr>
-              <tr>
-                <th>
-                  1:00 PM
-                </th>
-                <th>
-                  Lunch
-                </th>
-                <th>
-                    tbd
-                </th>
-              </tr>
-              <tr>
-                <th>
-                  1:00-2:00 PM
-                </th>
-                <th>
-                  Networking with Judges and Mentors
-                </th>
-                <th>
-                    tbd
-                </th>
-              </tr>
-              <tr>
-                <th>
-                  2:00-3:00 PM
-                </th>
-                <th>
-                  Finalist Presentations
-                </th>
-                <th>
-                    tbd
-                </th>
-              </tr>
-              <tr>
-                <th>
-                  3:30-3:00 PM
-                </th>
-                <th>
-                  Awards and Closing Remarks
-                </th>
-                <th>
-                    tbd
-                </th>
-              </tr>
-            </table>
-          </div>
+      <div class="tab-content">
+        <div id="friday" class="tab-pane  active">
+          <table>
+            <col width="15rem" class="time" />
+            <col width="20rem" class="event" />
+            <col width="20rem" class="location" />
+            <tr>
+              <th>
+                Time
+              </th>
+              <th>
+                Event
+              </th>
+              <th>
+                Location
+              </th>
+            </tr>
+            <tr>
+              <th>
+                3:00-5:00 PM
+              </th>
+              <th>
+                Registration
+              </th>
+              <th>
+                Turner Auditorium Terrace
+              </th>
+            </tr>
+            <tr>
+              <th>
+                3:00-5:30 PM
+              </th>
+              <th>
+                Sponsor Fair
+              </th>
+              <th>
+                Turner Concourse
+              </th>
+            </tr>
+            <tr>
+              <th>
+                6:00-7:30 PM
+              </th>
+              <th>
+                Opening Ceremony
+              </th>
+              <th>
+                Turner Auditorium
+              </th>
+            </tr>
+            <tr>
+              <th>
+                7:30-8:30 PM
+              </th>
+              <th>
+                Dinner
+              </th>
+              <th>
+                Turner Concourse
+              </th>
+            </tr>
+            <tr>
+              <th>
+                8:30-10:30 PM
+              </th>
+              <th>
+                Track Pitching Session
+              </th>
+              <th>
+                Rooms tbd
+              </th>
+            </tr>
+            <tr>
+              <th>
+                10:30-12:00 AM
+              </th>
+              <th>
+                Team Formation and Registration
+              </th>
+              <th>
+                tbd
+              </th>
+            </tr>
+            <tr>
+              <th>
+                12:00 AM
+              </th>
+              <th>
+                Hacking Begins!
+              </th>
+              <th>
+                tbd
+              </th>
+            </tr>
+          </table>
+        </div>
+        <div id="saturday" class="tab-pane ">
+          <table>
+            <col width="15rem" class="time" />
+            <col width="20rem" class="event" />
+            <col width="20rem" class="location" />
+            <tr>
+              <th>
+                Time
+              </th>
+              <th>
+                Event
+              </th>
+              <th>
+                Location
+              </th>
+            </tr>
+            <tr>
+              <th>
+                12:30 AM
+              </th>
+              <th>
+                Midnight Snack
+              </th>
+              <th>
+                tbd
+              </th>
+            </tr>
+            <tr>
+              <th>
+                8:30 AM
+              </th>
+              <th>
+                Breakfast
+              </th>
+              <th>
+                tbd
+              </th>
+            </tr>
+            <tr>
+              <th>
+                10:00-11:15 PM
+              </th>
+              <th>
+                Big Data in Healthcare Panel
+              </th>
+              <th>
+                Turner Auditorium
+              </th>
+            </tr>
+            <tr>
+              <th>
+                12:00 PM
+              </th>
+              <th>
+                Lunch
+              </th>
+              <th>
+                tbd
+              </th>
+            </tr>
+            <tr>
+              <th>
+                1:00-7:00PM
+              </th>
+              <th>
+                Workshops (TBA)
+              </th>
+              <th>
+                tbd
+              </th>
+            </tr>
+            <tr>
+              <th>
+                3:00PM
+              </th>
+              <th>
+                Afternoon Snack
+              </th>
+              <th>
+                tbd
+              </th>
+            </tr>
+            <tr>
+              <th>
+                6:30 PM
+              </th>
+              <th>
+                Dinner
+              </th>
+              <th>
+                tbd
+              </th>
+            </tr>
+            <tr>
+              <th>
+                7:00PM
+              </th>
+              <th>
+                Team Registration Due
+              </th>
+              <th>
+                tbd
+              </th>
+            </tr>
+          </table>
+        </div>
+        <div id="sunday" class="tab-pane ">
+          <table>
+            <col width="15rem" class="time" />
+            <col width="20rem" class="event" />
+            <col width="20rem" class="location" />
+            <tr>
+              <th>
+                Time
+              </th>
+              <th>
+                Event
+              </th>
+              <th>
+                Location
+              </th>
+            </tr>
+            <tr>
+              <th>
+                12:30 AM
+              </th>
+              <th>
+                Midnight Snack
+              </th>
+              <th>
+                tbd
+              </th>
+            </tr>
+            <tr>
+              <th>
+                8:30 AM
+              </th>
+              <th>
+                Breakfast
+              </th>
+              <th>
+                tbd
+              </th>
+            </tr>
+            <tr>
+              <th>
+                9:30 AM
+              </th>
+              <th>
+                Final Submissions Due on DevPost
+              </th>
+              <th>
+                tbd
+              </th>
+            </tr>
+            <tr>
+              <th>
+                10:00-11:45 AM
+              </th>
+              <th>
+                Judging Round 1
+              </th>
+              <th>
+                tbd
+              </th>
+            </tr>
+            <tr>
+              <th>
+                12:00 PM
+              </th>
+              <th>
+                Judging Round 1 Results
+              </th>
+              <th>
+                tbd
+              </th>
+            </tr>
+            <tr>
+              <th>
+                12:00 - 2:00 PM
+              </th>
+              <th>
+                Snacks and 2nd Sponsor Fair
+              </th>
+              <th>
+                tbd
+              </th>
+            </tr>
+            <tr>
+              <th>
+                12:30-2:00 PM
+              </th>
+              <th>
+                Judging Round 2
+              </th>
+              <th>
+                tbd
+              </th>
+            </tr>
+            <tr>
+              <th>
+                2:00-3:00 PM
+              </th>
+              <th>
+                Lunch
+              </th>
+              <th>
+                tbd
+              </th>
+            </tr>
+            <tr>
+              <th>
+                3:00-4:00 PM
+              </th>
+              <th>
+                Closing Ceremony
+              </th>
+              <th>
+                Turner Auditorium
+              </th>
+            </tr>
+          </table>
         </div>
       </div>
-<!-- this is the new one with dropdown -->
-      <div class="scheduleContainerDropdown">
-        <div class = "dropdown">
-            <div class="select-container">
-                  <select class="dropdown-content" id="schedule-select">
+    </div>
+    <!-- this is the new one with dropdown -->
+    <div class="scheduleContainerDropdown">
+      <div class="dropdown">
+        <div class="select-container">
+          <select class="dropdown-content" id="schedule-select">
                     <option><a value="fri" id="friday-drop">Friday, September 7</a></option>
                     <option><a value="sat" id="saturday-drop">Saturday, September 8</a></option>
                     <option><a value="sun" id="sunday-drop">Sunday, September 9</a></option>
                  </select>
-             </div>
-         </div>
+        </div>
+      </div>
 
 
-        <div class="tab-content">
-          <div id = "friday2" class="tab-pane  active">
-              <table>
-                  <col width="15rem" class="time"/>
-                  <col width="20rem" class="event"/>
-                <tr>
-                  <th>
-                    Time
-                  </th>
-                  <th>
-                    Event
-                  </th>
-                </tr>
-                <tr>
-                  <th>
-                    5:00-6:00PM
-                  </th>
-                  <th>
-                    Registration
-                  </th>
-</tr>
-                </tr>
-                <tr>
-                  <th>
-                    5:00-6:00PM
-                  </th>
-                  <th>
-                    Sponsor Fair
-                  </th>
-</tr>
-                </tr>
-                <tr>
-                  <th>
-                    6:00-7:30PM
-                  </th>
-                  <th>
-                    Opening Ceremony
-                  </th>
-</tr>
-                </tr>
-                <tr>
-                  <th>
-                    7:30-8:30PM
-                  </th>
-                  <th>
-                    Registration
-                  </th>
-</tr>
-                </tr>
-                <tr>
-                  <th>
-                    7:45-9:00PM
-                  </th>
-                  <th>
-                    Problem/Solution
-                  </th>
-</tr>
-                </tr>
-                <tr>
-                  <th>
-                    9:00-10:30PM
-                  </th>
-                  <th>
-                    Pitching Session
-                  </th>
-              </tr>
-                <tr>
-                  <th>
-                    9:30PM
-                  </th>
-                  <th>
-                    Team Registration and Hacking Begin!
-                  </th>
-              </tr>
-              </table>
-          </div>
-          <div id = "saturday2" class="tab-pane ">
-              <table>
-                  <col width="15rem" class="time"/>
-                  <col width="20rem" class="event"/>
-                <tr>
-                  <th>
-                    Time
-                  </th>
-                  <th>
-                    Event
-                  </th>
-                </tr>
-                <tr>
-                  <th>
-                    12:00 AM
-                  </th>
-                  <th>
-                    Midnight Snack
-                  </th>
-                </tr>
-                <tr>
-                  <th>
-                    8:30 AM
-                  </th>
-                  <th>
-                    Breakfast
-                    </th>
-                </tr>
-                <tr>
-                  <th>
-                    10:30 AM
-                  </th>
-                  <th>
-                    Morning Snack
-                  </th>
-                </tr>
-                <tr>
-                  <th>
-                    12:00 PM
-                  </th>
-                  <th>
-                    Lunch
-                  </th>
-                </tr>
-                <tr>
-                  <th>
-                    3:00PM
-                  </th>
-                  <th>
-                    Afternoon Snack
-                  </th>
-                </tr>
-                <tr>
-                  <th>
-                    6:30 PM
-                  </th>
-                  <th>
-                    Dinner
-                  </th>
-                </tr>
-                <tr>
-                  <th>
-                    6:30PM
-                  </th>
-                  <th>
-                    Team Registration Due
-                  </th>
-                </tr>
-              </table>
-          </div>
-          <div id = "sunday2" class="tab-pane ">
-              <table>
-                  <col width="15rem" class="time"/>
-                  <col width="20rem" class="event"/>
-                <tr>
-                  <th>
-                    Time
-                  </th>
-                  <th>
-                    Event
-                  </th>
-                </tr>
-                <tr>
-                  <th>
-                    12:00 AM
-                  </th>
-                  <th>
-                    Midnight Snack
-                  </th>
-                </tr>
-                <tr>
-                  <th>
-                    8:30-9:30 AM
-                  </th>
-                  <th>
-                    Breakfast
-                  </th>
-                </tr>
-                <tr>
-                  <th>
-                    10:00 AM
-                </th>
-                  <th>
-                    Submissions Due on DevPost
-                  </th>
+      <div class="tab-content">
+        <div id="friday2" class="tab-pane  active">
+          <table>
+            <col width="15rem" class="time" />
+            <col width="20rem" class="event" />
+            <tr>
+              <th>
+                Time
+              </th>
+              <th>
+                Event
+              </th>
+            </tr>
+            <tr>
+              <th>
+                3:00-5:00 PM
+              </th>
+              <th>
+                Registration
+              </th>
+            </tr>
 
-                </tr>
-                <tr>
-                  <th>
-                    11:00-1:00PM
-                  </th>
-                  <th>
-                    Preliminary Judging Round
-                  </th>
+            <tr>
+              <th>
+                3:00-5:45 PM
+              </th>
+              <th>
+                Sponsor Fair
+              </th>
+            </tr>
 
-                </tr>
-                <tr>
-                  <th>
-                    1:00 PM
-                  </th>
-                  <th>
-                    Lunch
-                  </th>
+            <tr>
+              <th>
+                6:00-7:30 PM
+              </th>
+              <th>
+                Opening Ceremony
+              </th>
+            </tr>
 
-                </tr>
-                <tr>
-                  <th>
-                    1:00-2:00 PM
-                  </th>
-                  <th>
-                    Networking with Judges and Mentors
-                  </th>
+            <tr>
+              <th>
+                7:30-8:30 PM
+              </th>
+              <th>
+                Dinner
+              </th>
+            </tr>
 
-                </tr>
-                <tr>
-                  <th>
-                    2:00-3:00 PM
-                  </th>
-                  <th>
-                    Finalist Presentations
-                  </th>
+            <tr>
+              <th>
+                8:30-10:30 PM
+              </th>
+              <th>
+                Track Pitching Sessions
+              </th>
+            </tr>
 
-                </tr>
-                <tr>
-                  <th>
-                    3:30-3:00 PM
-                  </th>
-                  <th>
-                    Awards and Closing Remarks
-                  </th>
+            <tr>
+              <th>
+                10:30-12:00 AM
+              </th>
+              <th>
+                Team Formation and Registration
+              </th>
+            </tr>
+            <tr>
+              <th>
+                12:00 AM
+              </th>
+              <th>
+                Hacking Begins!
+              </th>
+            </tr>
+          </table>
+        </div>
+        <div id="saturday2" class="tab-pane ">
+          <table>
+            <col width="15rem" class="time" />
+            <col width="20rem" class="event" />
+            <tr>
+              <th>
+                Time
+              </th>
+              <th>
+                Event
+              </th>
+            </tr>
+            <tr>
+              <th>
+                12:30 AM
+              </th>
+              <th>
+                Midnight Snack
+              </th>
+            </tr>
+            <tr>
+              <th>
+                8:30 AM
+              </th>
+              <th>
+                Breakfast
+              </th>
+            </tr>
+            <tr>
+              <th>
+                10:30-2:00 AM
+              </th>
+              <th>
+                Big Data in Healthcare Panel
+              </th>
+              <th>
+                tbd
+              </th>
+            </tr>
+            <tr>
+              <th>
+                12:00 PM
+              </th>
+              <th>
+                Lunch
+              </th>
+            </tr>
+            <tr>
+              <th>
+                1:00-7:00 PM
+              </th>
+              <th>
+                Workshops
+              </th>
+            </tr>
+            <tr>
+              <th>
+                3:00 PM
+              </th>
+              <th>
+                Afternoon Snack
+              </th>
+            </tr>
+            <tr>
+              <th>
+                6:30 PM
+              </th>
+              <th>
+                Dinner
+              </th>
+            </tr>
+            <tr>
+              <th>
+                7:00 PM
+              </th>
+              <th>
+                Team Registration Due
+              </th>
+            </tr>
+          </table>
+        </div>
+        <div id="sunday2" class="tab-pane ">
+          <table>
+            <col width="15rem" class="time" />
+            <col width="20rem" class="event" />
+            <tr>
+              <th>
+                Time
+              </th>
+              <th>
+                Event
+              </th>
+            </tr>
+            <tr>
+              <th>
+                12:30 AM
+              </th>
+              <th>
+                Midnight Snack
+              </th>
+            </tr>
+            <tr>
+              <th>
+                8:30 AM
+              </th>
+              <th>
+                Breakfast
+              </th>
+            </tr>
+            <tr>
+              <th>
+                9:30 AM
+              </th>
+              <th>
+                Submissions Due on DevPost
+              </th>
+            </tr>
+            <tr>
+              <th>
+                10:00-11:45 AM
+              </th>
+              <th>
+                Judging Round 1
+              </th>
+            </tr>
+            <tr>
+              <th>
+                12:00 PM
+              </th>
+              <th>
+                Judging Round 1 Results
+              </th>
+            </tr>
+            <tr>
+              <th>
+                12:00-2:00 PM
+              </th>
+              <th>
+                Snacks and 2nd Sponsor Fair
+              </th>
 
-                </tr>
-              </table>
-          </div>
+            </tr>
+            <tr>
+              <th>
+                12:30-2:00 PM
+              </th>
+              <th>
+                Judging Round 2
+              </th>
+            </tr>
+            <tr>
+              <th>
+                2:00-3:00 PM
+              </th>
+              <th>
+                Lunch
+              </th>
+            </tr>
+            <tr>
+              <th>
+                3:00-4:00 PM
+              </th>
+              <th>
+                Closing Ceremony
+              </th>
+            </tr>
+          </table>
         </div>
       </div>
     </div>
+  </div>
 
 
-    <div class="marginFormat" style="height:75px; width:100%"></div>
+  <div class="marginFormat" style="height:75px; width:100%"></div>
 
-    <div id="faq">
-      <h2> FAQ </h2>
-      <div class="faq-container">
-        <ul class="nav nav-tabs">
-          <li class="activeLi"><a id="genAnc" data-toggle="tab" class="active" href="#general-tab">General</a></li>
-          <li><a data-toggle="tab" id="eligAnc" href="#eligibility-tab">Eligibility</a></li>
-          <li><a data-toggle="tab" id="miscAnc" href="#misc-tab">Misc</a></li>
-        </ul>
+  <div id="faq">
+    <h2> FAQ </h2>
+    <div class="faq-container">
+      <ul class="nav nav-tabs">
+        <li class="activeLi"><a id="genAnc" data-toggle="tab" class="active" href="#general-tab">General</a></li>
+        <li><a data-toggle="tab" id="eligAnc" href="#eligibility-tab">Eligibility</a></li>
+        <li><a data-toggle="tab" id="miscAnc" href="#misc-tab">Misc</a></li>
+      </ul>
 
-        <div class="tab-content">
-          <div id="general-tab" class="tab-pane active">
-            <div class="faq-holder">
+      <div class="tab-content">
+        <div id="general-tab" class="tab-pane active">
+          <div class="faq-holder">
+            <h3>How do I apply?</h3>
+            <p>Applications for MedHacks 2018 are open! Please sign into our application portal <a href="http://apply.medhacks.org">here</a>.
+            </p>
+          </div>
+          <div class="faq-holder">
+            <h3>How can I tell the status of my application or travel reimbursement application?</h3>
+            <p>Sign into the MedHacks application portal <a href="http://apply.medhacks.org">here</a>, and your application status, as well as the status of any other pending applications (travel reimbursements, etc), will be displayed on your profile page.</p>
+          </div>
+          <div class="faq-holder">
 
+            <h3>How are admission decisions made?</h3>
+            <p> At least four members of the MedHacks executive team read each and every application made to MedHacks and decide as a group whether to offer acceptance to a applicant. All MedHacks admission decisions are <b>final</b> and we do not offer the
+              reasoning behind any applicant's acceptance or rejection for any reason.
+            </p>
+          </div>
+          <div class="faq-holder">
+
+            <h3>What are some deadlines that I should know about?</h3>
+            <!--p> <b> July 20 </b>: Deadline for Interational and West Coast travel reimbursement applications. <p>
+=======
               <h3>How do I apply?</h3>
-              <p>Applications for MedHacks 2018 are not open yet, but sign into our application portal here.
+                <p>Applications for MedHacks 2018 are open! Please sign into our application portal <a href="http://apply.medhacks.org">here</a>.
               </p>
             </div>
             <div class="faq-holder">
                 <h3>How can I tell the status of my application or travel reimbursement application?</h3>
-                <p>Sign into the MedHacks application portal here, and your application status, as well as the status of any other pending applications (travel reimbursements, etc), will be displayed on your profile page.</p>
+                <p>Sign into the MedHacks application portal <a href="http://apply.medhacks.org">here</a>, and your application status, as well as the status of any other pending applications (travel reimbursements, etc), will be displayed on your profile page.</p>
             </div>
-            <div class="faq-holder">
-                <h3>Where is MedHacks 2018 Located?</h3>
-                <p>MedHacks 2018 is located at the Turner Auditorium in the Ross Research Building at the Johns Hopkins Medical Campus in East Baltimore, MD. The Ross Research Building is located at 720 Rutland Avenue, Baltimore, MD 21218. If you are traveling from the Homewood Campus, you can take the JHMI or special MedHacks buses to the event. If you are driving to the event, there will be parking on campus and more details will be emailed out closer to the event. If you are coming from the airport, train station, or hotel, we highly recommend you take a cab/lyft to the building. The medical campus is in the city, so please be safe when traveling to the event.</p>
-            </div>
-          </div>
-          <div id="eligibility-tab" class="tab-pane ">
             <div class="faq-holder">
 
-              <h3>Who can participate in MedHacks 2018?</h3>
+                   <h3>How are admission decisions made?</h3>
+                   <p> At least four members of the MedHacks executive team read each and every application made to MedHacks and decide as a group whether to offer acceptance to a applicant. All MedHacks admission decisions are <b>final</b> and we do not offer the reasoning behind any applicant's acceptance or rejection for any reason.
+                   </p>
+                 </div>
+              <div class="faq-holder">
+
+                   <h3>What are some deadlines that I should know about?</h3>
+                   p> <b> July 20 </b>: Deadline for Interational and West Coast travel reimbursement applications. <p>
+>>>>>>> 43ea433ac3e8a9a93323e6d1e6d3beb3b867d049
+                        <b> August 14 </b>: Deadline for Midwest and Regional travel reimbursement applications. <p>
+                        <b> August 25 </b>: General application deadline.
+                   </p-->
+            <p><b> July 20 </b>: Deadline for Interational and West Coast travel reimbursement applications. </p>
+            <p><b> August 14 </b>: Deadline for Midwest and Regional travel reimbursement applications. </p>
+            <p><b> August 31 </b>: General application deadline. </p>
+          </div>
+          <div class="faq-holder">
+            <h3>Where is MedHacks 2018 Located?</h3>
+            <p>MedHacks 2018 is located at the Turner Auditorium in the Ross Research Building at the Johns Hopkins Medical Campus in East Baltimore, MD. The Ross Research Building is located at 720 Rutland Avenue, Baltimore, MD 21205. If you are traveling
+              from the Homewood Campus, you can take the JHMI or special MedHacks buses to the event. If you are driving to the event, there will be parking on campus and more details will be emailed out closer to the event. If you are coming from the
+              airport, train station, or hotel, we highly recommend you take a cab/lyft to the building. The medical campus is in the city, so please be safe when traveling to the event.</p>
+          </div>
+          <div>
+
+          </div>
+          <div class="faq-holder">
+            <h3>How can I tell the status of my application or travel reimbursement application?</h3>
+            <p>Sign into the MedHacks application portal <a href="http://apply.medhacks.org">here</a>, and your application status, as well as the status of any other pending applications (travel reimbursements, etc), will be displayed on your profile page.</p>
+
+          </div>
+          <div class="faq-holder">
+
+            <h3>How are admission decisions made?</h3>
+            <p> At least four members of the MedHacks executive team read each and every application made to MedHacks and decide as a group whether to offer acceptance to a applicant. All MedHacks admission decisions are <b>final</b> and we do not offer the
+              reasoning behind any applicant's acceptance or rejection for any reason.
+            </p>
+          </div>
+          <div class="faq-holder">
+
+            <h3>What are some deadlines that I should know about?</h3>
+            <p> <b> July 20 </b>: Deadline for Interational and West Coast travel reimbursement applications.
               <p>
-                  Anyone is eligible to participate in MedHacks 2018, however if you’re under 18, we ask that a parent or guardian be in the Baltimore area at all times during the event.
-              </p>
-              <p>
-                  If you’re a graduate student or professional, you can choose to join MedHacks either as a participant or as a mentor!
-              </p>
-            </div>
-            <div class="faq-holder">
-                <h3>I’m not an engineer, but I’m interested in participating. Is that ok?</h3>
-                <p>That’s more than OK! In fact, that’s encouraged! We love introducing people from all kinds of backgrounds to the world of innovation.
+                <b> August 14 </b>: Deadline for Midwest and Regional travel reimbursement applications.
+                <p>
+                  <b> August 31 </b>: General application deadline.
                 </p>
-            </div>
           </div>
-          <div id="misc-tab" class="tab-pane ">
-            <div class="faq-holder">
+          <div class="faq-holder">
+            <h3>Where is MedHacks 2018 Located?</h3>
+            <p>MedHacks 2018 is located at the Turner Auditorium in the Ross Research Building at the Johns Hopkins Medical Campus in East Baltimore, MD. The Ross Research Building is located at 720 Rutland Avenue, Baltimore, MD 21205. If you are traveling
+              from the Homewood Campus, you can take the JHMI or special MedHacks buses to the event. If you are driving to the event, there will be parking on campus and more details will be emailed out closer to the event. If you are coming from the
+              airport, train station, or hotel, we highly recommend you take a cab/lyft to the building. The medical campus is in the city, so please be safe when traveling to the event.</p>
+          </div>
+          <div class="faq-holder">
+            <h3>Where do I park?</h3>
+            <p>Parking will be free at the Washington Street Parking Garage, 701 N Washington St, Baltimore, MD 21205, which closes at MIDNIGHT on Friday and is open FREE of charge on Saturdays and Sundays from 7am - 7pm. As long as you enter on Friday before Midnight and leave on Sunday before 7pm, it should be completely free of charge.</p>
+          </div>
+        </div>
+        <div id="eligibility-tab" class="tab-pane ">
+          <div class="faq-holder">
 
-              <h3>How can I get a travel reimbursement?</h3>
-                  <p>
-                      If you are accepted and remarked on your application that you would need a travel reimbursement, you may be invited to apply for a travel reimbursement. In that case, sign into the MedHacks application portal and follow the links for the travel reimbursement application.
-                  </p>
-                  <p>
-                      Once you are accepted for a reimbursement, you must submit a VALID receipt. Guidelines for valid receipts are here. Your reimbursement is contingent upon your submitting a valid receipt. Failure to do so will result in MedHacks’ inability to issue said reimbursement.
-                  </p>
-            </div>
-            <div class="faq-holder">
+            <h3>Who can participate in MedHacks 2018?</h3>
+            <p>
+              Anyone is eligible to participate in MedHacks 2018, however if you’re under 18, a parent or guardian <b> must </b> be in the Baltimore area at all times during the event. We also do not offer travel reimbursements to minors.
+            </p>
+            <p>
+              If you’re a graduate student or professional, you can choose to join MedHacks either as a participant or as a mentor!
+            </p>
+          </div>
+          <div class="faq-holder">
+            <h3>I’m not an engineer, but I’m interested in participating. Is that ok?</h3>
+            <p>That’s more than OK! In fact, that’s encouraged! We love introducing people from all kinds of backgrounds to the world of innovation.
+            </p>
+          </div>
+        </div>
+        <div id="misc-tab" class="tab-pane ">
+          <div class="faq-holder">
 
-              <h3>I don’t have a team or an idea. What should I do?</h3>
-              <p>
-                  That’s perfectly alright! In fact, we don’t allow participants to enter with an idea they’ve been working on for a while and encourage teams to be formed during one of MedHacks’ ideation sessions.
-              </p>
-            </div>
+            <h3>How can I get a travel reimbursement?</h3>
+            <p>
+              If you are accepted and remarked on your application that you would need a travel reimbursement, you may be invited to apply for a travel reimbursement. In that case, sign into the MedHacks application portal and follow the links for the travel reimbursement
+              application.
+            </p>
+            <p>
+              Once you are accepted for a reimbursement, you must submit a VALID receipt. Guidelines for valid receipts are here. Your reimbursement is contingent upon your submitting a valid receipt. Failure to do so will result in MedHacks’ inability to issue said
+              reimbursement.
+            </p>
+          </div>
+          <div class="faq-holder">
+
+            <h3>I don’t have a team or an idea. What should I do?</h3>
+            <p>
+              That’s perfectly alright! In fact, we don’t allow participants to enter with an idea they’ve been working on for a while and encourage teams to be formed during one of MedHacks’ ideation sessions.
+            </p>
           </div>
         </div>
       </div>
-      <div class="faq-dropdown">
-          <div class = "dropdown">
-              <div class="select-container">
-                    <select class="dropdown-content" id="faq-select">
-                      <option><a value="fri" id="gen-drop">General</a></option>
+    </div>
+    <div class="faq-dropdown">
+      <div class="dropdown">
+        <div class="select-container">
+          <select class="dropdown-content" id="faq-select">
+                      <option><a value="fri" id="gen-drop">Applications</a></option>
                       <option><a value="sat" id="elig-drop">Eligibility</a></option>
                       <option><a value="sun" id="misc-drop">Miscelaneous</a></option>
                    </select>
-               </div>
-           </div>
-           <div class="tab-content">
-             <div id="general-tab2" class="tab-pane active">
-                 <div class="faq-holder">
+        </div>
+      </div>
+      <div class="tab-content">
+        <div id="general-tab2" class="tab-pane active">
+          <div class="faq-holder">
 
-                   <h3>How do I apply?</h3>
-                   <p>Applications for MedHacks 2018 are not open yet, but sign into our application portal here.
-                   </p>
-                 </div>
-                 <div class="faq-holder">
-                     <h3>How can I tell the status of my application or travel reimbursement application?</h3>
-                     <p>Sign into the MedHacks application portal here, and your application status, as well as the status of any other pending applications (travel reimbursements, etc), will be displayed on your profile page.</p>
-                 </div>
-                 <div class="faq-holder">
-                     <h3>Where is MedHacks 2018 Located?</h3>
-                     <p>MedHacks 2018 is located at the Turner Auditorium in the Ross Research Building at the Johns Hopkins Medical Campus in East Baltimore, MD. The Ross Research Building is located at 720 Rutland Avenue, Baltimore, MD 21218. If you are traveling from the Homewood Campus, you can take the JHMI or special MedHacks buses to the event. If you are driving to the event, there will be parking on campus and more details will be emailed out closer to the event. If you are coming from the airport, train station, or hotel, we highly recommend you take a cab/lyft to the building. The medical campus is in the city, so please be safe when traveling to the event.</p>
-                 </div>
-             </div>
-             <div id="eligibility-tab2" class="tab-pane ">
-                 <div class="faq-holder">
+            <h3>How do I apply?</h3>
+            <p>Applications for MedHacks 2018 are open! Please sign into our application portal <a href="http://apply.medhacks.org">here</a>.
+            </p>
+          </div>
+          <div class="faq-holder">
+            <h3>How can I tell the status of my application or travel reimbursement application?</h3>
+            <p>Sign into the MedHacks application portal <a href="http://apply.medhacks.org">here</a>, and your application status, as well as the status of any other pending applications (travel reimbursements, etc), will be displayed on your profile page.</p>
+          </div>
+          <div class="faq-holder">
 
-                   <h3>Who can participate in MedHacks 2018?</h3>
-                   <p>
-                       Anyone is eligible to participate in MedHacks 2018, however if you’re under 18, we ask that a parent or guardian be in the Baltimore area at all times during the event.
-                   </p>
-                   <p>
-                       If you’re a graduate student or professional, you can choose to join MedHacks either as a participant or as a mentor!
-                   </p>
-                 </div>
-                 <div class="faq-holder">
-                     <h3>I’m not an engineer, but I’m interested in participating. Is that ok?</h3>
-                     <p>That’s more than OK! In fact, that’s encouraged! We love introducing people from all kinds of backgrounds to the world of innovation.
-                     </p>
-                 </div>
-             </div>
-             <div id="misc-tab2" class="tab-pane ">
-                 <div class="faq-holder">
+            <h3>How are admission decisions made?</h3>
+            <p> At least four members of the MedHacks executive team read each and every application made to MedHacks and decide as a group whether to offer acceptance to a applicant. All MedHacks admission decisions are <b>final</b> and we do not offer the
+              reasoning behind any applicant's acceptance or rejection for any reason.
+            </p>
+          </div>
+           <div class="faq-holder">
 
-                   <h3>How can I get a travel reimbursement?</h3>
-                       <p>
-                           If you are accepted and remarked on your application that you would need a travel reimbursement, you may be invited to apply for a travel reimbursement. In that case, sign into the MedHacks application portal and follow the links for the travel reimbursement application.
-                       </p>
-                       <p>
-                           Once you are accepted for a reimbursement, you must submit a VALID receipt. Guidelines for valid receipts are here. Your reimbursement is contingent upon your submitting a valid receipt. Failure to do so will result in MedHacks’ inability to issue said reimbursement.
-                       </p>
-                 </div>
-                 <div class="faq-holder">
+          <h3>What are some deadlines that I should know about? </h3>
+          <p> <b> July 20 </b>: Deadline for Interational and West Coast travel reimbursement applications.
+            <p>
+              <b> August 14 </b>: Deadline for Midwest and Regional travel reimbursement applications.
+              <p>
+                <b> August 31 </b>: General application deadline.
+              </p>
+        </div>
+        <div class="faq-holder">
+          <h3>Where is MedHacks 2018 Located?</h3>
+          <p>MedHacks 2018 is located at the Turner Auditorium in the Ross Research Building at the Johns Hopkins Medical Campus in East Baltimore, MD. The Ross Research Building is located at 720 Rutland Avenue, Baltimore, MD 21205. If you are traveling
+            from the Homewood Campus, you can take the JHMI or special MedHacks buses to the event. If you are driving to the event, there will be parking on campus and more details will be emailed out closer to the event. If you are coming from the airport,
+            train station, or hotel, we highly recommend you take a cab/lyft to the building. The medical campus is in the city, so please be safe when traveling to the event.</p>
+        </div>
+        <div class="faq-holder">
+          <h3>Where do I park?</h3>
+          <p>Parking will be free at the Washington Street Parking Garage, 701 N Washington St, Baltimore, MD 21205, which closes at MIDNIGHT on Friday and is open FREE of charge on Saturdays and Sundays from 7am - 7pm. As long as you enter on Friday before Midnight and leave on Sunday before 7pm, it should be completely free of charge.</p>
+        </div>
+      </div>
+      <div id="eligibility-tab2" class="tab-pane ">
+        <div class="faq-holder">
 
-                   <h3>I don’t have a team or an idea. What should I do?</h3>
-                   <p>
-                       That’s perfectly alright! In fact, we don’t allow participants to enter with an idea they’ve been working on for a while and encourage teams to be formed during one of MedHacks’ ideation sessions.
-                   </p>
-                 </div>
-             </div>
-           </div>
-       </div>
+          <h3>Who can participate in MedHacks 2018?</h3>
+          <p>
+            Anyone is eligible to participate in MedHacks 2018, however if you’re under 18, we ask that a parent or guardian be in the Baltimore area at all times during the event.
+          </p>
+          <p>
+            If you’re a graduate student or professional, you can choose to join MedHacks either as a participant or as a mentor!
+          </p>
+        </div>
+        <div class="faq-holder">
+          <h3>I’m not an engineer, but I’m interested in participating. Is that ok?</h3>
+          <p>That’s more than OK! In fact, that’s encouraged! We love introducing people from all kinds of backgrounds to the world of innovation.
+          </p>
+        </div>
+      </div>
+      <div id="misc-tab2" class="tab-pane ">
+        <div class="faq-holder">
+
+          <h3>How can I get a travel reimbursement?</h3>
+          <p>
+            If you are accepted and remarked on your application that you would need a travel reimbursement, you may be invited to apply for a travel reimbursement. In that case, sign into the MedHacks application portal and follow the links for the travel reimbursement
+            application.
+          </p>
+          <p>
+            Once you are accepted for a reimbursement, you must submit a VALID receipt. Guidelines for valid receipts are here. Your reimbursement is contingent upon your submitting a valid receipt. Failure to do so will result in MedHacks’ inability to issue said
+            reimbursement.
+          </p>
+        </div>
+        <div class="faq-holder">
+
+          <h3>I don’t have a team or an idea. What should I do?</h3>
+          <p>
+            That’s perfectly alright! In fact, we don’t allow participants to enter with an idea they’ve been working on for a while and encourage teams to be formed during one of MedHacks’ ideation sessions.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="sponsor-section">
+        <h2>
+          Sponsors
+        </h2>
+        <div style="margin-left: 5%; margin-top: 2%;">
+          <a href="http://www.hopkinsmedicine.org" class="sponsor" target="_blank"><img class='sponsor-img' style="height: 90px;margin: 0px;" src="./assets/JHMI_track.png" alt="Hopkins Medicine"></a>
+          <a href="http://nursing.jhu.edu" class="sponsor" target="_blank"><img class="sponsor-img" style="height: 90px; margin: 0px;" src="./assets/Nursing_track.png"></a>
+          <a href="http://ahealthierworld.jhu.edu" class="sponsor" target="_blank"><img class="sponsor-img" style="height: 80px; margin: 0" src="./assets/allianceForHeal.png"></a>
+          <a href="https://www.bcbs.com/" class="sponsor" target="_blank"><img class ='sponsor-img' style="height: 80px;margin: 0px;" src=../assets/WebsiteAdditions/bluecross.png alt="BlueCross BlueShield Association"></a>
+          <br>
+          <a href="https://bme.jhu.edu" class="sponsor" target="_blank"><img class='sponsor-img' style="height: 160px" src="./assets/BME.png" alt="JHU BME"></a>
+
+          <a href="http://roivant.com" class="sponsor" target="_blank"><img class="sponsor-img" style="height: 120px" src="./assets/Roivant.png" alt="Roivant"></a>
+          <a href="https://www.elsevier.com" class="sponsor" target="_blank"><img class='sponsor-img' style="height: 120px" src="../assets\img\sponsors\Elsevier.png" alt="Elsevier"></a>
+          <a href="http://www.jhuapl.edu/" class="sponsor" target="_blank"><img class='sponsor-img' style="height: 90px" src="../assets\img\sponsors\JHU_APL_logo.png" alt="APL"></a>
+          <a href="http://www.intuitive.com/" class="sponsor" target="_blank"><img class='sponsor-img' style="height: 80px" src="./assets/Intuitive.png" alt="Intuitive Surgical"></a>
+          <a href="http://www.simplyvitalhealth.com/" class="sponsor" target="_blank"><img class='sponsor-img' style="height: 60px" src="./assets/SimplyVital.png" alt="Simply Vital Health"></a>
+          <a href="http://www.namecheap.com/" class="sponsor" target="_blank"><img class='sponsor-img' style="height: 80px" src="./assets/namecheap.png" alt="NameCheap"></a>
+          <a href="http://www.highmark.com/" class="sponsor" target="_blank"><img class='sponsor-img' style="height: 60px" src="./assets/highmark.png" alt="Highmark"></a>
+          <a href="https://research.jhu.edu/hour" class="sponsor" target="_blank"><img class="sponsor-img" style="height: 60px" src="./assets/HOUR Logo Light Background.png" alt="JHU HOUR"></a>
+          <a href="https://www.epic.com/" class="sponsor" target="_blank"><img class="sponsor-img" style="height: 60px" src="./assets/epic_sponsor.png" alt="Epic Systems"></a>
+          <a href="http://tedco.md/" class="sponsor" target="_blank"><img class='sponsor-img' style="height: 75px" src="../assets\WebsiteAdditions\tedco-logo-full.png" alt="Tedco"></a>
+          <a href="https://www.emotiv.com" class="sponsor" target="_blank"><img class='sponsor-img' style="height: 30px" src="../assets\WebsiteAdditions\cropped_emotiv-logo-ol.png" alt="EMOTIV"></a>
+          <a href="http://www.pokitdok.com/" class="sponsor" target="_blank"><img class='sponsor-img' style="height: 60px" src="./assets/pokitdok.png" alt="PokitDok"></a>
+          <a href="http://www.seedspot.org/" class="sponsor" target="_blank"><img class='sponsor-img' style="height: 80px" src="./assets/seedspot.png" alt="Seed Spot"></a>
+        </div>
+
+        <!--<a href="https://www.digitalocean.com" class="sponsor" target="_blank"><img class='sponsor-img' style="height: 70px" src="assets/img/sponsors/DigitalOcean_logo.png" alt="Digital Ocean"></a>-->
+    </div>
+  </div>
+
+  
+  
+  <div class="marginFormat" style="height:125px; width:100%"></div>
+  <footer>
+    <div class="column1">
+      <img src="./assets/logos/white-medhacks-logo.png" />
+      <p>MedHacks brings together diverse minds from all backgrounds to foster collaboration towards solving the world’s most pressing medical issues.</p>
+    </div>
+    <div class="column2">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="http://www.medhacks.org">Home</a></li>
+        <li><a href="http://apply.medhacks.org">Apply</a></li>
+        <li><a href="mailto:info@medhacks.org">Email Us</a>
+          <li><a href="http://medhacks.org/mlh-code-of-conduct.pdf">MLH Code of Conduct</a></li>
+      </ul>
     </div>
 
-    <div class="marginFormat" style="height:125px; width:100%"></div>
-    <footer>
-        <div class="column1">
-            <img  src="./assets/logos/white-medhacks-logo.png"/>
-            <p>MedHacks brings together diverse minds from all backgrounds to foster collaboration towards solving the world’s most pressing medical issues.</p>
-        </div>
-        <div class="column2">
-            <h3>Quick Links</h3>
-            <ul>
-                <li><a href="http://www.medhacks.org">Home</a></li>
-                <li><a href="http://apply.medhacks.org">Apply Here</a></li>
-                <li>info@medhacks.org</li>
-            </ul>
-        </div>
-        <div class="column3">
-            <h3>Address</h3>
-            <ul>
-                <li>Turner Auditorium</li>
-                <li>720 Rutland Ave</li>
-                <li>Baltimore, MD, 21205</li>
-            </ul>
-        </div>
-        <p style="color: gray" class="copyright">Copyright &copy; MedHacks 2018</p>
-    </footer>
+    <p style="color: gray" class="copyright">Copyright &copy; MedHacks 2018</p>
+  </footer>
 
-    <!-- if you want to put in any JQuery, put it between here and -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
+  <!-- if you want to put in any JQuery, put it between here and -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
 
-    <!--  below this are bootstrap JS dependencies -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script>
-      $(header).scrollTop(50);
-    </script>
+  <!--  below this are bootstrap JS dependencies -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script>
+    $(header).scrollTop(50);
+  </script>
 </body>
 
 </html>
