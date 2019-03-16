@@ -1,2 +1,31 @@
+@import "mixins.scss";
+
 // main sass file where everything will eventuall end up
 // put big variable names for colors and what not up her for ease of view
+
+$text-color: black;
+$background-color: #e6e6e6;
+$section-header-size: 3rem;
+$subsection-header-size: 2.5rem;
+$content-size: 1rem;
+
+
+body {
+   background-color: $background-color; 
+   color: $text-color;
+}
+
+#aboutSection {
+    margin: auto;
+    width: 80%;
+    font-size: $content-size;
+}
+
+.header {
+    font-size: $section-header-size;
+    @include center;
+}
+
+.subHeader {
+    font-size: $subsection-header-size;
+}
