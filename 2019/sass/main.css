@@ -1,0 +1,18 @@
+body {
+  background-color: #e6e6e6;
+  color: black; }
+
+#aboutSection {
+  margin: auto;
+  width: 80%;
+  font-size: 1rem; }
+
+.header {
+  font-size: 3rem;
+  text-align: center;
+  vertical-align: middle; }
+
+.subHeader {
+  font-size: 2.5rem; }
+
+/*# sourceMappingURL=main.css.map */
