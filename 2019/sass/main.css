@@ -1,10 +1,18 @@
 nav {
   position: fixed;
   top: 15%;
-  left: 95%; }
+  left: 90%; }
   nav .navButton {
     cursor: pointer;
     margin-top: 4rem; }
+  nav #sliderContainer {
+    display: flex;
+    flex-direction: row; }
+  nav #bar {
+    margin-top: 4rem;
+    border: solid 3px black;
+    height: 100px;
+    width: 5px; }
 
 body {
   background-color: #304B78;
