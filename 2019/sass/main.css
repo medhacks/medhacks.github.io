@@ -1,16 +1,40 @@
+nav {
+  position: fixed;
+  top: 15%;
+  left: 95%; }
+  nav .navButton {
+    cursor: pointer;
+    margin-top: 4rem; }
+
 body {
-  background-color: #e6e6e6;
-  color: black; }
+  background-color: #304B78;
+  color: white; }
 
 #aboutSection {
-  margin: auto;
+  margin-left: 5%;
+  width: 80%;
+  font-size: 1rem; }
+
+#trackSection {
+  margin-left: 5%;
+  width: 80%;
+  font-size: 1rem; }
+
+#logisticsSection {
+  margin-left: 5%;
+  width: 80%;
+  font-size: 1rem; }
+
+#faqSection {
+  margin-left: 5%;
   width: 80%;
   font-size: 1rem; }
 
 .header {
   font-size: 3rem;
   text-align: center;
-  vertical-align: middle; }
+  vertical-align: middle;
+  color: #57BC8B; }
 
 .subHeader {
   font-size: 2.5rem; }

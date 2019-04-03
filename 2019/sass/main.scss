@@ -1,13 +1,18 @@
 @import "mixins.scss";
+@import "navbar.scss";
 
 // main sass file where everything will eventuall end up
 // put big variable names for colors and what not up her for ease of view
 
-$text-color: black;
-$background-color: #e6e6e6;
+$text-color: white;
+$background-color: #304B78;
+$section-header-color: #57BC8B;
+
 $section-header-size: 3rem;
 $subsection-header-size: 2.5rem;
 $content-size: 1rem;
+
+$margin-size: 5%;
 
 
 body {
@@ -16,7 +21,25 @@ body {
 }
 
 #aboutSection {
-    margin: auto;
+    margin-left: $margin-size;
+    width: 80%;
+    font-size: $content-size;
+}
+
+#trackSection {
+	margin-left: $margin-size;
+    width: 80%;
+    font-size: $content-size;
+}
+
+#logisticsSection {
+	margin-left: $margin-size;
+    width: 80%;
+    font-size: $content-size;
+}
+
+#faqSection {
+	margin-left: $margin-size;
     width: 80%;
     font-size: $content-size;
 }
@@ -24,8 +47,19 @@ body {
 .header {
     font-size: $section-header-size;
     @include center;
+    color: $section-header-color;
 }
 
 .subHeader {
     font-size: $subsection-header-size;
 }
+
+
+
+
+
+
+
+
+
+
