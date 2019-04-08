@@ -1,3 +1,7 @@
+const initPos = $("#homeButton")[0].getBoundingClientRect().top;
+const maxPos = $("#logisticsButton")[0].getBoundingClientRect().bottom;
+const maxLen = maxPos - initPos;
+
 $(document).ready(() => {
 
 	$('#aboutButton').on('click', () => {
@@ -9,6 +13,8 @@ $(document).ready(() => {
 	$('#logisticsButton').on('click', () => {
 		$("#logisticsSection").goTo();
 	});
+
+	updateBar();
 });
 
 $(document).scroll(() => {
@@ -18,6 +24,11 @@ $(document).scroll(() => {
 
 function updateBar() {
 	let scrollPosition = $(window).scrollTop();
+
+	if (scrollPosition > maxLen) {
+		scrollPosition = maxLen;
+	}
+
 	$("#bar").css('height', scrollPosition + "px");
 }
 
