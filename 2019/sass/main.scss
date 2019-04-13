@@ -64,18 +64,18 @@ body {
         display:none;
     }
     width: 59.8%;
-    @extend %center;
+    @include center;
     position: relative;
     left: 20%;
     font-size: 1.89rem;
-    background-color:$background-color;
+    background-color: $background-color-blue;
     padding-bottom: 0.1rem;
 
     ul {
         border: none;
         width: 70vw;
         .activeLi {
-            background-color: $background-color;
+            background-color: $background-color-blue;
             //color: #;
             border: none;
             //border: 1px ;
@@ -86,7 +86,7 @@ body {
         li {
             //background-color: #;
             padding: 0rem;
-            @extend %center;
+            @include center;
             //border: 1px ;
             border-collapse: collapse;
             a {
@@ -106,7 +106,7 @@ body {
         display: none;
     }
     width: 60%;
-    @extend %center;
+    @include center;
     position: relative;
     left: 20%;
     font-size: 2rem;
@@ -122,7 +122,7 @@ body {
 table {
     margin-top: 5%;
     margin-bottom: 4%;
-    background-color: $background-color;
+    background-color: $background-color-blue;
     width: 80vw;
     position: relative;
     table-layout: fixed;
@@ -141,6 +141,7 @@ table {
             font-size: 14px;
         }
     }
+}
 
 
 

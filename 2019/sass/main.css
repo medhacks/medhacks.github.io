@@ -49,4 +49,66 @@ body {
 .subHeader {
   font-size: 2.5rem; }
 
+.scheduleContainer {
+  width: 59.8%;
+  text-align: center;
+  vertical-align: middle;
+  position: relative;
+  left: 20%;
+  font-size: 1.89rem;
+  background-color: #304B78;
+  padding-bottom: 0.1rem; }
+  @media screen and (max-width: 1000px) {
+    .scheduleContainer {
+      display: none; } }
+  .scheduleContainer ul {
+    border: none;
+    width: 70vw; }
+    .scheduleContainer ul .activeLi {
+      background-color: #304B78;
+      border: none; }
+    .scheduleContainer ul li {
+      padding: 0rem;
+      text-align: center;
+      vertical-align: middle;
+      border-collapse: collapse; }
+      .scheduleContainer ul li a {
+        padding: 1rem;
+        text-decoration: none; }
+
+.scheduleContainerDropdown {
+  width: 60%;
+  text-align: center;
+  vertical-align: middle;
+  position: relative;
+  left: 20%;
+  font-size: 2rem; }
+  @media screen and (min-width: 1000px) {
+    .scheduleContainerDropdown {
+      display: none; } }
+  .scheduleContainerDropdown .dropdown-content {
+    position: relative;
+    padding-bottom: 0; }
+  .scheduleContainerDropdown .dropdown .select-container {
+    right: 25%; }
+
+table {
+  margin-top: 5%;
+  margin-bottom: 4%;
+  background-color: #304B78;
+  width: 80vw;
+  position: relative;
+  table-layout: fixed;
+  right: 15%;
+  border-style: hidden; }
+  table th, table tr {
+    font-size: 20px;
+    word-wrap: break-word;
+    font-style: normal;
+    font-weight: normal;
+    color: white; }
+    @media screen and (max-width: 650px) {
+      table th, table tr {
+        font-size: 14px; } }
+
 /*# sourceMappingURL=main.css.map */
