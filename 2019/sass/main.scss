@@ -5,8 +5,11 @@
 // put big variable names for colors and what not up her for ease of view
 
 $text-color: white;
-$background-color: #304B78;
-$section-header-color: #392C5F;
+$background-color-blue: #304B78;
+$background-color-purple: #392C5F;
+
+$about-text-color: #DBB13B;
+$faq-text-color: #57BC8B;
 
 $section-header-size: 3rem;
 $subsection-header-size: 2.5rem;
@@ -16,11 +19,12 @@ $margin-size: 5%;
 
 
 body {
-   background-color: $background-color; 
+   background-image: linear-gradient($background-color-blue, $background-color-purple); 
    color: $text-color;
 }
 
 #aboutSection {
+    color: $about-text-color;
     margin-left: $margin-size;
     width: 80%;
     font-size: $content-size;
@@ -42,12 +46,13 @@ body {
 	margin-left: $margin-size;
     width: 80%;
     font-size: $content-size;
+    color: $faq-text-color;
 }
 
 .header {
     font-size: $section-header-size;
     @include center;
-    color: $section-header-color;
+    color: white;
 }
 
 .subHeader {

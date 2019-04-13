@@ -15,10 +15,11 @@ nav {
     width: 5px; }
 
 body {
-  background-color: #304B78;
+  background-image: linear-gradient(#304B78, #392C5F);
   color: white; }
 
 #aboutSection {
+  color: #DBB13B;
   margin-left: 5%;
   width: 80%;
   font-size: 1rem; }
@@ -36,13 +37,14 @@ body {
 #faqSection {
   margin-left: 5%;
   width: 80%;
-  font-size: 1rem; }
+  font-size: 1rem;
+  color: #57BC8B; }
 
 .header {
   font-size: 3rem;
   text-align: center;
   vertical-align: middle;
-  color: #392C5F; }
+  color: white; }
 
 .subHeader {
   font-size: 2.5rem; }
