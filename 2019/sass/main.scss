@@ -1,7 +1,7 @@
 @import "mixins.scss";
 @import "navbar.scss";
 
-// main sass file where everything will eventuall end up
+// main sass file where everything will eventually end up
 // put big variable names for colors and what not up her for ease of view
 
 $text-color: white;
@@ -59,7 +59,88 @@ body {
     font-size: $subsection-header-size;
 }
 
+.scheduleContainer {
+    @media screen and (max-width: 1000px) {
+        display:none;
+    }
+    width: 59.8%;
+    @extend %center;
+    position: relative;
+    left: 20%;
+    font-size: 1.89rem;
+    background-color:$background-color;
+    padding-bottom: 0.1rem;
 
+    ul {
+        border: none;
+        width: 70vw;
+        .activeLi {
+            background-color: $background-color;
+            //color: #;
+            border: none;
+            //border: 1px ;
+            a {
+                //color: ;
+            }
+        }
+        li {
+            //background-color: #;
+            padding: 0rem;
+            @extend %center;
+            //border: 1px ;
+            border-collapse: collapse;
+            a {
+                padding: 1rem;
+                text-decoration: none;
+                //color: ;
+            }
+        }
+
+    }
+
+}
+
+
+.scheduleContainerDropdown {
+    @media screen and (min-width: 1000px) {
+        display: none;
+    }
+    width: 60%;
+    @extend %center;
+    position: relative;
+    left: 20%;
+    font-size: 2rem;
+
+    .dropdown-content {
+        position: relative;
+        padding-bottom: 0;
+    }
+    .dropdown .select-container {
+        right: 25%;
+    }
+}
+table {
+    margin-top: 5%;
+    margin-bottom: 4%;
+    background-color: $background-color;
+    width: 80vw;
+    position: relative;
+    table-layout: fixed;
+    right: 15%;
+    border-style: hidden;
+    th, tr {
+        //font-family: $font-fam;
+        font-size: 20px;
+        word-wrap: break-word;
+        font-style: normal;
+        font-weight: normal;
+        color: $text-color;
+        //border: 3px ;
+
+        @media screen and (max-width: 650px) {
+            font-size: 14px;
+        }
+    }
 
 
 
