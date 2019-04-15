@@ -10,6 +10,7 @@ $background-color-purple: #392C5F;
 
 $about-text-color: #DBB13B;
 $faq-text-color: #57BC8B;
+$apply-text-color: #DBB13B;
 
 $section-header-size: 3rem;
 $subsection-header-size: 2.5rem;
@@ -47,11 +48,21 @@ body {
     width: 80%;
     font-size: $content-size;
     color: $faq-text-color;
+
+    .faq-container .nav-tabs li{
+        margin: 1rem;
+
+    }
+}
+
+#applyingSection {
+    color: $apply-text-color;
+    width: 80%;
+    margin-left: $margin-size;
 }
 
 .header {
     font-size: $section-header-size;
-    @include center;
     color: white;
 }
 
@@ -63,12 +74,11 @@ body {
     @media screen and (max-width: 1000px) {
         display:none;
     }
-    width: 59.8%;
+    width: 80%;
     @include center;
     position: relative;
-    left: 20%;
+    left: 10%;
     font-size: 1.89rem;
-    background-color: $background-color-blue;
     padding-bottom: 0.1rem;
 
     ul {
@@ -97,28 +107,10 @@ body {
         }
 
     }
-
 }
 
 
-.scheduleContainerDropdown {
-    @media screen and (min-width: 1000px) {
-        display: none;
-    }
-    width: 60%;
-    @include center;
-    position: relative;
-    left: 20%;
-    font-size: 2rem;
 
-    .dropdown-content {
-        position: relative;
-        padding-bottom: 0;
-    }
-    .dropdown .select-container {
-        right: 25%;
-    }
-}
 table {
     margin-top: 5%;
     margin-bottom: 4%;
@@ -141,6 +133,11 @@ table {
             font-size: 14px;
         }
     }
+}
+
+.marginFormat {
+    height:100px;
+    width:100%;
 }
 
 

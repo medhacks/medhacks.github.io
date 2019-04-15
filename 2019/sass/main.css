@@ -39,24 +39,28 @@ body {
   width: 80%;
   font-size: 1rem;
   color: #57BC8B; }
+  #faqSection .faq-container .nav-tabs li {
+    margin: 1rem; }
+
+#applyingSection {
+  color: #DBB13B;
+  width: 80%;
+  margin-left: 5%; }
 
 .header {
   font-size: 3rem;
-  text-align: center;
-  vertical-align: middle;
   color: white; }
 
 .subHeader {
   font-size: 2.5rem; }
 
 .scheduleContainer {
-  width: 59.8%;
+  width: 80%;
   text-align: center;
   vertical-align: middle;
   position: relative;
-  left: 20%;
+  left: 10%;
   font-size: 1.89rem;
-  background-color: #304B78;
   padding-bottom: 0.1rem; }
   @media screen and (max-width: 1000px) {
     .scheduleContainer {
@@ -76,22 +80,6 @@ body {
         padding: 1rem;
         text-decoration: none; }
 
-.scheduleContainerDropdown {
-  width: 60%;
-  text-align: center;
-  vertical-align: middle;
-  position: relative;
-  left: 20%;
-  font-size: 2rem; }
-  @media screen and (min-width: 1000px) {
-    .scheduleContainerDropdown {
-      display: none; } }
-  .scheduleContainerDropdown .dropdown-content {
-    position: relative;
-    padding-bottom: 0; }
-  .scheduleContainerDropdown .dropdown .select-container {
-    right: 25%; }
-
 table {
   margin-top: 5%;
   margin-bottom: 4%;
@@ -110,5 +98,9 @@ table {
     @media screen and (max-width: 650px) {
       table th, table tr {
         font-size: 14px; } }
+
+.marginFormat {
+  height: 100px;
+  width: 100%; }
 
 /*# sourceMappingURL=main.css.map */
