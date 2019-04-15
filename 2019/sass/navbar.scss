@@ -11,6 +11,64 @@ nav {
 	#sliderContainer {
 		display: flex;
 		flex-direction: row;
+		   .bubble {
+		        border: 2px solid Black;
+		        border-radius: 10px;
+		        margin-left: 7rem;
+		        padding: 8px;
+		        width: 2.5px;
+		        height: 2.5px;
+		        display: inline-block;
+		        // .bubble {
+		        //     display: inline-block;
+		        //     width: 1rem;
+		        //     height: 1rem;
+		        //     padding: 1rem;
+		        //     float: left;
+		        //     text-align: center;
+		        //     position: relative;
+		        //     font-size: 1.25rem;
+		            // #homeBubP {
+		            //     position:relative;
+		            //     right: 17.4rem;
+		            //     bottom: 0.5rem;
+		            // }
+		            // #aboutBubP {
+		            //     position: relative;
+		            //     right: 38.7rem;
+		            //     bottom: 0.5rem;
+		            // }
+		            // #tracksBubP {
+		            //     position: relative;
+		            //     right: 41.7rem;
+		            //     bottom: 0.5rem;
+		            // }
+								//
+		            // #logBubP {
+		            //     position: relative;
+		            //     right: 44.7rem;
+		            //     bottom: 0.5rem;
+		            // }
+								//
+		            // #applyBubP {
+		            //     position: relative;
+		            //     right: 49.2rem;
+		            //     bottom: 0.5rem;
+		            // }
+		        // }
+		        div {
+		            display: inline-block;
+		            position: relative;
+		            left: 15rem;
+		            color: Black;
+		            text-decoration: none;
+		            top: 0.5rem;
+		        }
+
+		    }
+				ul .filled {
+		        background-color: Black;
+		    }
 	}
 
 	#bar {
