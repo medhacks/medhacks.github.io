@@ -6,6 +6,7 @@ nav {
 nav .navButton {
   cursor: pointer;
   margin-top: 4rem;
+  margin-right: 2rem;
 }
 nav #sliderContainer {
   display: flex;
@@ -14,11 +15,13 @@ nav #sliderContainer {
 nav #sliderContainer .bubble {
   border: 2px solid Black;
   border-radius: 10px;
-  margin-left: 7rem;
+  margin-left: 1rem;
   padding: 8px;
   width: 2.5px;
   height: 2.5px;
   display: inline-block;
+  position: absolute;
+  right: -0.45rem;
 }
 nav #sliderContainer .bubble div {
   display: inline-block;
