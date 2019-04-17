@@ -36,20 +36,23 @@ function setUpArrays() {
 	distances = [
 		{
 			real: aboutPos,
+			realDist: aboutPos,
 			bar: aboutTop - homeTop,
-			dist: aboutTop - homeTop,
+			distBar: aboutTop - homeTop,
 			selector: $("#aboutBubble")
 		},
 		{
 			real: tracksPos - aboutPos,
+			realDist: tracksPos,
 			bar: trackTop - aboutTop,
-			dist: trackTop - homeTop,
+			distBar: trackTop - homeTop,
 			selector: $("#tracksBubble")
 		},
 		{
 			real: logisticsPos - aboutPos,
+			realDist: logisticsPos,
 			bar: logisticsTop - trackTop,
-			dist: logisticsTop - homeTop,
+			distBar: logisticsTop - homeTop,
 			selector: $("#logisticsBubble")
 		}
 	];
@@ -58,18 +61,27 @@ function setUpArrays() {
 
 //calculates what the current length of the bar should be
 function calculateLength(curPos) {
-	return curPos;
+	let curLen;
+	distances.forEach(elem => {
+		if ((curPos <= elem.realDist) && curPos > (elem.realDist - elem.real)){
+			let inside = elem.real - elem.realDist + curPos;
+			curLen = (inside * elem.distBar) / elem.real;
+			console.log(curLen);
+			return;
+		}
+	});
+
+	return curLen;
 }
 
 //determines which bubbles need to be filled
 function updateBubbles(curLen) {
 	distances.forEach(elem => {
-		if (curLen > elem.dist) {
+		if (curLen > elem.distBar) {
 			elem.selector.addClass("filled");
 		} else {
 			elem.selector.removeClass("filled");
 		}
-
 	});
 }
 
