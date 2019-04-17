@@ -7,6 +7,9 @@ nav {
 		cursor: pointer;
 		margin-top: 4rem;
 		margin-right: 2rem;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
 	}
 
 	#sliderContainer {
@@ -19,9 +22,7 @@ nav {
 		        padding: 8px;
 		        width: 2.5px;
 		        height: 2.5px;
-		        display: inline-block;
-						position: absolute;
-						right: -0.45rem;
+						display: inline-block;
 						
 
 		        div {
@@ -34,7 +35,7 @@ nav {
 		        }
 
 		    }
-				ul .filled {
+				.filled {
 		        background-color: Black;
 		    }
 	}
@@ -44,5 +45,7 @@ nav {
 		border: solid 3px black;
 		height: 100px;
 		width: 5px;
+		position: absolute;
+		right: 30%;
 	}
 }
