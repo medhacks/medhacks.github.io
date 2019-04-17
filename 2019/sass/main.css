@@ -1,58 +1,94 @@
 nav {
   position: fixed;
   top: 15%;
-  left: 90%; }
-  nav .navButton {
-    cursor: pointer;
-    margin-top: 4rem; }
-  nav #sliderContainer {
-    display: flex;
-    flex-direction: row; }
-  nav #bar {
-    margin-top: 4rem;
-    border: solid 3px black;
-    height: 100px;
-    width: 5px; }
+  left: 90%;
+}
+nav .navButton {
+  cursor: pointer;
+  margin-top: 4rem;
+  margin-right: 2rem;
+}
+nav #sliderContainer {
+  display: flex;
+  flex-direction: row;
+}
+nav #sliderContainer .bubble {
+  border: 2px solid Black;
+  border-radius: 10px;
+  margin-left: 1rem;
+  padding: 8px;
+  width: 2.5px;
+  height: 2.5px;
+  display: inline-block;
+  position: absolute;
+  right: -0.45rem;
+}
+nav #sliderContainer .bubble div {
+  display: inline-block;
+  position: relative;
+  left: 15rem;
+  color: Black;
+  text-decoration: none;
+  top: 0.5rem;
+}
+nav #sliderContainer ul .filled {
+  background-color: Black;
+}
+nav #bar {
+  margin-top: 4rem;
+  border: solid 3px black;
+  height: 100px;
+  width: 5px;
+}
 
 body {
   background-image: linear-gradient(#304B78, #392C5F);
-  color: white; }
+  color: white;
+}
 
 #aboutSection {
   color: #DBB13B;
   margin-left: 5%;
   width: 80%;
-  font-size: 1rem; }
+  font-size: 1rem;
+}
 
 #trackSection {
   margin-left: 5%;
   width: 80%;
-  font-size: 1rem; }
+  font-size: 1rem;
+}
 
 #logisticsSection {
   margin-left: 5%;
   width: 80%;
-  font-size: 1rem; }
+  font-size: 1rem;
+}
 
 #faqSection {
   margin-left: 5%;
   width: 80%;
   font-size: 1rem;
-  color: #57BC8B; }
-  #faqSection .faq-container .nav-tabs li {
-    margin: 1rem; }
+  color: #57BC8B;
+}
+#faqSection .faq-container .nav-tabs li {
+  margin: 1rem;
+}
 
 #applyingSection {
   color: #DBB13B;
   width: 80%;
-  margin-left: 5%; }
+  margin-left: 5%;
+}
 
 .header {
   font-size: 3rem;
-  color: white; }
+  color: white;
+}
 
 .subHeader {
-  font-size: 2.5rem; }
+  font-size: 2.5rem;
+}
 
 .scheduleContainer {
   width: 80%;
@@ -61,24 +97,31 @@ body {
   position: relative;
   left: 10%;
   font-size: 1.89rem;
-  padding-bottom: 0.1rem; }
-  @media screen and (max-width: 1000px) {
-    .scheduleContainer {
-      display: none; } }
-  .scheduleContainer ul {
-    border: none;
-    width: 70vw; }
-    .scheduleContainer ul .activeLi {
-      background-color: #304B78;
-      border: none; }
-    .scheduleContainer ul li {
-      padding: 0rem;
-      text-align: center;
-      vertical-align: middle;
-      border-collapse: collapse; }
-      .scheduleContainer ul li a {
-        padding: 1rem;
-        text-decoration: none; }
+  padding-bottom: 0.1rem;
+}
+@media screen and (max-width: 1000px) {
+  .scheduleContainer {
+    display: none;
+  }
+}
+.scheduleContainer ul {
+  border: none;
+  width: 70vw;
+}
+.scheduleContainer ul .activeLi {
+  background-color: #304B78;
+  border: none;
+}
+.scheduleContainer ul li {
+  padding: 0rem;
+  text-align: center;
+  vertical-align: middle;
+  border-collapse: collapse;
+}
+.scheduleContainer ul li a {
+  padding: 1rem;
+  text-decoration: none;
+}
 
 table {
   margin-top: 5%;
@@ -88,19 +131,24 @@ table {
   position: relative;
   table-layout: fixed;
   right: 15%;
-  border-style: hidden; }
+  border-style: hidden;
+}
+table th, table tr {
+  font-size: 20px;
+  word-wrap: break-word;
+  font-style: normal;
+  font-weight: normal;
+  color: white;
+}
+@media screen and (max-width: 650px) {
   table th, table tr {
-    font-size: 20px;
-    word-wrap: break-word;
-    font-style: normal;
-    font-weight: normal;
-    color: white; }
-    @media screen and (max-width: 650px) {
-      table th, table tr {
-        font-size: 14px; } }
+    font-size: 14px;
+  }
+}
 
 .marginFormat {
   height: 100px;
-  width: 100%; }
+  width: 100%;
+}
 
 /*# sourceMappingURL=main.css.map */

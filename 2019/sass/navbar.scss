@@ -6,11 +6,37 @@ nav {
 	.navButton {
 		cursor: pointer;
 		margin-top: 4rem;
+		margin-right: 2rem;
 	}
 
 	#sliderContainer {
 		display: flex;
 		flex-direction: row;
+		   .bubble {
+		        border: 2px solid Black;
+		        border-radius: 10px;
+		        margin-left: 1rem;
+		        padding: 8px;
+		        width: 2.5px;
+		        height: 2.5px;
+		        display: inline-block;
+						position: absolute;
+						right: -0.45rem;
+						
+
+		        div {
+		            display: inline-block;
+		            position: relative;
+		            left: 15rem;
+		            color: Black;
+		            text-decoration: none;
+		            top: 0.5rem;
+		        }
+
+		    }
+				ul .filled {
+		        background-color: Black;
+		    }
 	}
 
 	#bar {
