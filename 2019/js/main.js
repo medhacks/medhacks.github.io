@@ -1,6 +1,7 @@
 let maxLen;
 let distances;
 
+
 $(document).ready(() => {
 	setUpArrays();
 	$('#aboutButton').on('click', () => {
@@ -14,6 +15,7 @@ $(document).ready(() => {
 	});
 
 	updateBar();
+	
 });
 
 $(document).scroll(() => {
@@ -122,3 +124,11 @@ function updateBar() {
         return this;
     }
 })(jQuery);
+
+
+$(function() {
+	$("#typingText").typed({
+		strings: ["number 1", "number 2"],
+		typeSpeed: 0
+	});
+});
