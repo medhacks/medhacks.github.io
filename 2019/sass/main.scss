@@ -109,6 +109,67 @@ body {
     }
 }
 
+.scheduleContainerDropdown {
+    @media screen and (min-width: 1000px) {
+        display: none;
+    }
+    width: 60%;
+    @extend %center;
+    position: relative;
+    left: 20%;
+    font-size: 2rem;
+
+    .dropdown-content {
+        position: relative;
+        padding-bottom: 0;
+    }
+    .dropdown .select-container {
+        right: 25%;
+    }
+}
+    
+table {
+    margin-top: 5%;
+    margin-bottom: 4%;
+    background-color: $background-color;
+    width: 80vw;
+    position: relative;
+    table-layout: fixed;
+    right: 15%;
+    border-style: hidden;
+    th, tr {
+        //font-family: $font-fam;
+        font-size: 20px;
+        word-wrap: break-word;
+        font-style: normal;
+        font-weight: normal;
+        color: $small-text-color;
+        //border: 3px solid black;
+
+        @media screen and (max-width: 650px) {
+            font-size: 14px;
+        }
+    }
+    td, th {
+        border: 1px solid black;
+    }
+
+    tr:first-child {
+        &:hover {
+            background-color: $small-text-color;
+        }
+        background-color: $small-text-color;
+            th {
+                color: #fff;
+            }
+
+    }
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+}
+
+
 
 
 table {
