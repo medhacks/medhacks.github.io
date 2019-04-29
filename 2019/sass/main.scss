@@ -1,16 +1,16 @@
-@import "mixins.scss";
-@import "navbar.scss";
+@import "./mixins.scss";
+@import "./navbar.scss";
+@import "./rotateImage.scss";
 
 // main sass file where everything will eventually end up
 // put big variable names for colors and what not up her for ease of view
-
 $text-color: white;
-$background-color-blue: #304B78;
-$background-color-purple: #392C5F;
+$background-color-blue: #304b78;
+$background-color-purple: #392c5f;
 
-$about-text-color: #DBB13B;
-$faq-text-color: #57BC8B;
-$apply-text-color: #DBB13B;
+$about-text-color: #dbb13b;
+$faq-text-color: #57bc8b;
+$apply-text-color: #dbb13b;
 
 $section-header-size: 3rem;
 $subsection-header-size: 2.5rem;
@@ -18,125 +18,131 @@ $content-size: 1rem;
 
 $margin-size: 5%;
 
-
 body {
-   background-image: linear-gradient($background-color-blue, $background-color-purple);
-   color: $text-color;
+  background-image: linear-gradient(
+    $background-color-blue,
+    $background-color-purple
+  );
+  color: $text-color;
 }
 
 #aboutSection {
-    color: $about-text-color;
-    margin-left: $margin-size;
-    width: 80%;
-    font-size: $content-size;
+  color: $about-text-color;
+  margin-left: $margin-size;
+  width: 80%;
+  font-size: $content-size;
+
+  .aboutRotate {
+    display: flex;
+    align-items: center;
+    p {
+      flex: 1;
+    }
+  }
 }
 
 #trackSection {
-	margin-left: $margin-size;
-    width: 80%;
-    font-size: $content-size;
+  margin-left: $margin-size;
+  width: 80%;
+  font-size: $content-size;
 }
 
 #logisticsSection {
-	margin-left: $margin-size;
-    width: 80%;
-    font-size: $content-size;
+  margin-left: $margin-size;
+  width: 80%;
+  font-size: $content-size;
 }
 
 #faqSection {
-	margin-left: $margin-size;
-    width: 80%;
-    font-size: $content-size;
-    color: $faq-text-color;
+  margin-left: $margin-size;
+  width: 80%;
+  font-size: $content-size;
+  color: $faq-text-color;
 
-    .faq-container .nav-tabs li{
-        margin: 1rem;
-
-    }
+  .faq-container .nav-tabs li {
+    margin: 1rem;
+  }
 }
 
 #applyingSection {
-    color: $apply-text-color;
-    width: 80%;
-    margin-left: $margin-size;
+  color: $apply-text-color;
+  width: 80%;
+  margin-left: $margin-size;
 }
 
 .header {
-    font-size: $section-header-size;
-    color: white;
+  font-size: $section-header-size;
+  color: white;
 }
 
 .subHeader {
-    font-size: $subsection-header-size;
+  font-size: $subsection-header-size;
 }
 
 .scheduleContainer {
-    @media screen and (max-width: 1000px) {
-        display:none;
-    }
-    width: 80%;
-    @include center;
-    position: relative;
-    left: 10%;
-    font-size: 1.89rem;
-    padding-bottom: 0.1rem;
+  @media screen and (max-width: 1000px) {
+    display: none;
+  }
+  width: 80%;
+  @include center;
+  position: relative;
+  left: 10%;
+  font-size: 1.89rem;
+  padding-bottom: 0.1rem;
 
-    ul {
-        border: none;
-        width: 70vw;
-        .activeLi {
-            background-color: $background-color-blue;
-            //color: #;
-            border: none;
-            //border: 1px ;
-            a {
-                //color: ;
-            }
-        }
-        li {
-            //background-color: #;
-            padding: 0rem;
-            @include center;
-            //border: 1px ;
-            border-collapse: collapse;
-            a {
-                padding: 1rem;
-                text-decoration: none;
-                //color: ;
-            }
-        }
-
+  ul {
+    border: none;
+    width: 70vw;
+    .activeLi {
+      background-color: $background-color-blue;
+      //color: #;
+      border: none;
+      //border: 1px ;
+      a {
+        //color: ;
+      }
     }
+    li {
+      //background-color: #;
+      padding: 0rem;
+      @include center;
+      //border: 1px ;
+      border-collapse: collapse;
+      a {
+        padding: 1rem;
+        text-decoration: none;
+        //color: ;
+      }
+    }
+  }
 }
-
-
 
 table {
-    margin-top: 5%;
-    margin-bottom: 4%;
-    background-color: $background-color-blue;
-    width: 80vw;
-    position: relative;
-    table-layout: fixed;
-    right: 15%;
-    border-style: hidden;
-    th, tr {
-        //font-family: $font-fam;
-        font-size: 20px;
-        word-wrap: break-word;
-        font-style: normal;
-        font-weight: normal;
-        color: $text-color;
-        //border: 3px ;
+  margin-top: 5%;
+  margin-bottom: 4%;
+  background-color: $background-color-blue;
+  width: 80vw;
+  position: relative;
+  table-layout: fixed;
+  right: 15%;
+  border-style: hidden;
+  th,
+  tr {
+    //font-family: $font-fam;
+    font-size: 20px;
+    word-wrap: break-word;
+    font-style: normal;
+    font-weight: normal;
+    color: $text-color;
+    //border: 3px ;
 
-        @media screen and (max-width: 650px) {
-            font-size: 14px;
-        }
+    @media screen and (max-width: 650px) {
+      font-size: 14px;
     }
+  }
 }
 
-
 .marginFormat {
-    height:100px;
-    width:100%;
+  height: 100px;
+  width: 100%;
 }

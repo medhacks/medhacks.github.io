@@ -37,15 +37,29 @@ nav {
     position: absolute;
     right: 30%; }
 
+.rotateIn {
+  flex: 1;
+  width: 30vw;
+  transform: rotate(0deg);
+  transform-origin: 110% 50%; }
+  .rotateIn img {
+    padding-left: 6vw;
+    width: 30vw; }
+
 body {
-  background-image: linear-gradient(#304B78, #392C5F);
+  background-image: linear-gradient(#304b78, #392c5f);
   color: white; }
 
 #aboutSection {
-  color: #DBB13B;
+  color: #dbb13b;
   margin-left: 5%;
   width: 80%;
   font-size: 1rem; }
+  #aboutSection .aboutRotate {
+    display: flex;
+    align-items: center; }
+    #aboutSection .aboutRotate p {
+      flex: 1; }
 
 #trackSection {
   margin-left: 5%;
@@ -61,12 +75,12 @@ body {
   margin-left: 5%;
   width: 80%;
   font-size: 1rem;
-  color: #57BC8B; }
+  color: #57bc8b; }
   #faqSection .faq-container .nav-tabs li {
     margin: 1rem; }
 
 #applyingSection {
-  color: #DBB13B;
+  color: #dbb13b;
   width: 80%;
   margin-left: 5%; }
 
@@ -92,7 +106,7 @@ body {
     border: none;
     width: 70vw; }
     .scheduleContainer ul .activeLi {
-      background-color: #304B78;
+      background-color: #304b78;
       border: none; }
     .scheduleContainer ul li {
       padding: 0rem;
@@ -106,20 +120,22 @@ body {
 table {
   margin-top: 5%;
   margin-bottom: 4%;
-  background-color: #304B78;
+  background-color: #304b78;
   width: 80vw;
   position: relative;
   table-layout: fixed;
   right: 15%;
   border-style: hidden; }
-  table th, table tr {
+  table th,
+  table tr {
     font-size: 20px;
     word-wrap: break-word;
     font-style: normal;
     font-weight: normal;
     color: white; }
     @media screen and (max-width: 650px) {
-      table th, table tr {
+      table th,
+      table tr {
         font-size: 14px; } }
 
 .marginFormat {
