@@ -14,7 +14,7 @@ function setupRotation() {
 
 $(document).scroll(() => {
   let rotateAmount;
-  var loc = $(window).scrollTop();
+  var loc = $(window).scrollTop() + $(window).height() / 2;
   if (loc > topY && loc < bottomY) {
     loc -= topY;
     rotateAmount = 150 - (305 * loc) / (bottomY - topY);
