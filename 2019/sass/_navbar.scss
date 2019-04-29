@@ -1,7 +1,16 @@
 nav {
+  z-index: 2;
   position: fixed;
   top: 0%;
-  left: 65%;
+  left: 15%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .logo {
+    align-self: center;
+    width: 30%;
+  }
 
   .navButton {
     cursor: pointer;
@@ -15,7 +24,11 @@ nav {
 
   #sliderContainer {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    .buttonContainer {
+      display: flex;
+      flex-direction: row;
+    }
     .bubble {
       border: 2px solid Black;
       border-radius: 10px;
@@ -45,7 +58,7 @@ nav {
     height: 5px;
     width: 100px;
     position: absolute;
-    left: 5%;
     bottom: 45%;
+    margin-left: 2%;
   }
 }
