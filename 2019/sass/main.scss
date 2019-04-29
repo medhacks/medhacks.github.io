@@ -26,6 +26,26 @@ body {
   color: $text-color;
 }
 
+#titleSection {
+  margin: $margin-size;
+  .flexContainer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    div {
+      width: 50%;
+    }
+    p {
+      flex: 50%;
+    }
+    img {
+      flex: 50%;
+      align-self: center;
+      width: 15%;
+    }
+  }
+}
+
 #aboutSection {
   color: $about-text-color;
   margin-left: $margin-size;

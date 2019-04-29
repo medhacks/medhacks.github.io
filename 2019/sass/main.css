@@ -1,13 +1,14 @@
 nav {
   position: fixed;
-  top: 15%;
-  left: 90%; }
+  top: 0%;
+  left: 65%; }
   nav .navButton {
     cursor: pointer;
-    margin-top: 4rem;
-    margin-right: 2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+    margin-right: 3rem;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between; }
   nav #sliderContainer {
     display: flex;
@@ -32,10 +33,11 @@ nav {
   nav #bar {
     margin-top: 4rem;
     border: solid 3px black;
-    height: 100px;
-    width: 5px;
+    height: 5px;
+    width: 100px;
     position: absolute;
-    right: 30%; }
+    left: 5%;
+    bottom: 45%; }
 
 .rotateIn {
   flex: 1;
@@ -49,6 +51,21 @@ nav {
 body {
   background-image: linear-gradient(#304b78, #392c5f);
   color: white; }
+
+#titleSection {
+  margin: 5%; }
+  #titleSection .flexContainer {
+    display: flex;
+    flex-direction: row;
+    width: 100%; }
+    #titleSection .flexContainer div {
+      width: 50%; }
+    #titleSection .flexContainer p {
+      flex: 50%; }
+    #titleSection .flexContainer img {
+      flex: 50%;
+      align-self: center;
+      width: 15%; }
 
 #aboutSection {
   color: #dbb13b;

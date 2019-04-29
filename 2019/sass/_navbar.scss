@@ -1,14 +1,15 @@
 nav {
   position: fixed;
-  top: 15%;
-  left: 90%;
+  top: 0%;
+  left: 65%;
 
   .navButton {
     cursor: pointer;
-    margin-top: 4rem;
-    margin-right: 2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+    margin-right: 3rem;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
   }
 
@@ -41,9 +42,10 @@ nav {
   #bar {
     margin-top: 4rem;
     border: solid 3px black;
-    height: 100px;
-    width: 5px;
+    height: 5px;
+    width: 100px;
     position: absolute;
-    right: 30%;
+    left: 5%;
+    bottom: 45%;
   }
 }

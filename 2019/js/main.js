@@ -26,10 +26,10 @@ function setUpArrays() {
   let tracksPos = $("#trackSection")[0].getBoundingClientRect().top;
   let logisticsPos = $("#logisticsSection")[0].getBoundingClientRect().top;
 
-  let homeTop = $("#homeButton")[0].getBoundingClientRect().top;
-  let aboutTop = $("#aboutButton")[0].getBoundingClientRect().top;
-  let trackTop = $("#tracksButton")[0].getBoundingClientRect().top;
-  let logisticsTop = $("#logisticsButton")[0].getBoundingClientRect().top;
+  let homeTop = $("#homeButton")[0].getBoundingClientRect().left;
+  let aboutTop = $("#aboutButton")[0].getBoundingClientRect().left;
+  let trackTop = $("#tracksButton")[0].getBoundingClientRect().left;
+  let logisticsTop = $("#logisticsButton")[0].getBoundingClientRect().left;
   maxLen = logisticsTop - homeTop;
 
   // array of variables with pertinent info about each location
@@ -107,7 +107,7 @@ function updateBar() {
     curLen = maxLen;
   }
 
-  $("#bar").css("height", curLen + "px");
+  $("#bar").css("width", curLen + "px");
 }
 
 (function($) {
@@ -123,7 +123,11 @@ function updateBar() {
 
 $(function() {
   $("#typingText").typed({
-    strings: ["number 1", "number 2"],
+    strings: [
+      "Cool story bro come to medhacks ",
+      "hey bro do things make me happy, like other stuff that makes us haooy",
+      "reading a good buck, watching avengers endgame, going to medhacks"
+    ],
     typeSpeed: 0
   });
 });
