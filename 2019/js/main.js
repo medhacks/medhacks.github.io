@@ -22,9 +22,11 @@ $(document).scroll(() => {
 
 // calculates y positions of relevant pieces of site and puts them into arrays for further use
 function setUpArrays() {
-  let aboutPos = $("#aboutSection")[0].getBoundingClientRect().top;
-  let tracksPos = $("#trackSection")[0].getBoundingClientRect().top;
-  let logisticsPos = $("#logisticsSection")[0].getBoundingClientRect().top;
+  let curPos = $(window).scrollTop();
+  let aboutPos = $("#aboutSection")[0].getBoundingClientRect().top + curPos;
+  let tracksPos = $("#trackSection")[0].getBoundingClientRect().top + curPos;
+  let logisticsPos =
+    $("#logisticsSection")[0].getBoundingClientRect().top + curPos;
 
   let homeTop = $("#homeButton")[0].getBoundingClientRect().left;
   let aboutTop = $("#aboutButton")[0].getBoundingClientRect().left;
