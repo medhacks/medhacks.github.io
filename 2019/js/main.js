@@ -74,6 +74,13 @@ function calculateLength(curPos) {
     if (curPos <= elem.realDist && curPos > elem.realDist - elem.real) {
       let inside = curPos - (elem.realDist - elem.real);
       console.log(inside);
+      if (inside % 0.625 == 0) {
+        console.log("-------------------");
+        console.log("currPos = " + curPos);
+        console.log("realDist = " + elem.realDist); //asdfasdf
+        console.log("real = " + elem.real); //asdfasdf
+        console.log("-------------------");
+      }
       curLen = (inside * elem.distBar) / elem.real;
     }
   });

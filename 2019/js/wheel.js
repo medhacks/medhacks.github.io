@@ -7,7 +7,7 @@ $(document).ready(() => {
 
 function setupRotation() {
   var bounds = $(".rotateIn")[0].getBoundingClientRect();
-  topY = bounds.top + $(window).scrollTop();
+  topY = bounds.top + $(window).scrollTop() - 200;
   bottomY = bounds.bottom + $(window).scrollTop();
   rotate();
 }
