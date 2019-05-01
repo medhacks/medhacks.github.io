@@ -546,8 +546,6 @@ body {
     float: none;
     margin-left: 10%;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     width: 80%;
     height: 50%;
     grid-template-areas: "track1 track2 track3";
@@ -566,8 +564,6 @@ body {
     @media screen and (max-width: 768px) {
       #challenges .track-container {
         flex-direction: column; } }
-    #challenges .track-container .track {
-      margin: 0; }
     #challenges .track-container #track1 {
       height: 20rem;
       width: 25rem;
