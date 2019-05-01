@@ -85,13 +85,16 @@ body {
 #aboutSection {
   color: #dbb13b;
   margin-left: 5%;
-  width: 80%;
+  width: 100%;
   font-size: 1rem; }
   #aboutSection .aboutRotate {
     display: flex;
-    align-items: center; }
+    align-items: center;
+    justify-content: space-between; }
     #aboutSection .aboutRotate p {
-      flex: 1; }
+      flex: 0.4; }
+    #aboutSection .aboutRotate .rotateIn {
+      flex: 0.4; }
 
 #trackSection {
   margin-left: 5%;
