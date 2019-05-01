@@ -28,10 +28,10 @@ function setUpArrays() {
   let logisticsPos =
     $("#logisticsSection")[0].getBoundingClientRect().top + curPos;
 
-  let homeTop = $("#homeButton")[0].getBoundingClientRect().left;
-  let aboutTop = $("#aboutButton")[0].getBoundingClientRect().left;
-  let trackTop = $("#tracksButton")[0].getBoundingClientRect().left;
-  let logisticsTop = $("#logisticsButton")[0].getBoundingClientRect().left;
+  let homeTop = $("#homeBubble")[0].getBoundingClientRect().left;
+  let aboutTop = $("#aboutBubble")[0].getBoundingClientRect().left;
+  let trackTop = $("#tracksBubble")[0].getBoundingClientRect().left;
+  let logisticsTop = $("#logisticsBubble")[0].getBoundingClientRect().left;
   maxLen = logisticsTop - homeTop;
 
   // array of variables with pertinent info about each location
@@ -69,21 +69,16 @@ function calculateLength(curPos) {
     curPos = 0;
   }
   let curLen;
-  let tooBig = false;
 
   distances.forEach(elem => {
     if (curPos <= elem.realDist && curPos > elem.realDist - elem.real) {
-      let inside = elem.real - elem.realDist + curPos;
+      let inside = curPos - (elem.realDist - elem.real);
+      console.log(inside);
       curLen = (inside * elem.distBar) / elem.real;
-      tooBig = false;
-    }
-
-    if (curPos > elem.realDist) {
-      tooBig = true;
     }
   });
 
-  if (tooBig) {
+  if (curPos > distances[distances.length - 1].realDist) {
     curLen = maxLen;
   }
   return curLen;

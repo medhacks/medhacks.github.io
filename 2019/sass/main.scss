@@ -18,6 +18,12 @@ $content-size: 1rem;
 
 $margin-size: 5%;
 
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   background-image: linear-gradient(
     $background-color-blue,

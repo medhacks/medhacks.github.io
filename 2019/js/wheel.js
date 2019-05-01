@@ -22,5 +22,4 @@ $(document).scroll(() => {
     rotateAmount = 155;
   }
   $(".rotateIn").css("transform", "rotate(" + rotateAmount + "deg)");
-  console.log("rotate(" + $(window).scrollTop() + "deg)");
 });

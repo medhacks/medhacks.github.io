@@ -58,6 +58,11 @@ nav {
     padding-left: 6vw;
     width: 30vw; }
 
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden; }
+
 body {
   background-image: linear-gradient(#304b78, #392c5f);
   color: white; }
