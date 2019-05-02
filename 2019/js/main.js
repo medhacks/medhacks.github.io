@@ -1,5 +1,6 @@
 let maxLen;
 let distances;
+let bubbleMargin = 150;
 
 $(document).ready(() => {
   setUpArrays();
@@ -23,16 +24,25 @@ $(document).scroll(() => {
 // calculates y positions of relevant pieces of site and puts them into arrays for further use
 function setUpArrays() {
   let curPos = $(window).scrollTop();
-  let aboutPos = $("#aboutSection")[0].getBoundingClientRect().top + curPos;
-  let tracksPos = $("#trackSection")[0].getBoundingClientRect().top + curPos;
+  let aboutPos =
+    $("#aboutSection")[0].getBoundingClientRect().top + curPos - bubbleMargin;
+  let tracksPos =
+    $("#trackSection")[0].getBoundingClientRect().top + curPos - bubbleMargin;
   let logisticsPos =
-    $("#logisticsSection")[0].getBoundingClientRect().top + curPos;
+    $("#logisticsSection")[0].getBoundingClientRect().top +
+    curPos -
+    bubbleMargin;
+  let applyingPos =
+    $("#applyingSection")[0].getBoundingClientRect().top +
+    curPos -
+    bubbleMargin;
 
   let homeTop = $("#homeBubble")[0].getBoundingClientRect().left;
   let aboutTop = $("#aboutBubble")[0].getBoundingClientRect().left;
   let trackTop = $("#tracksBubble")[0].getBoundingClientRect().left;
   let logisticsTop = $("#logisticsBubble")[0].getBoundingClientRect().left;
-  maxLen = logisticsTop - homeTop;
+  let applyingTop = $("#applyingBubble")[0].getBoundingClientRect().left;
+  maxLen = applyingTop - homeTop;
 
   // array of variables with pertinent info about each location
   distances = [
@@ -54,11 +64,19 @@ function setUpArrays() {
     },
     {
       //bar between tracks and logistics
-      real: logisticsPos - aboutPos,
+      real: logisticsPos - tracksPos,
       realDist: logisticsPos,
       bar: logisticsTop - trackTop,
       distBar: logisticsTop - homeTop,
       selector: $("#logisticsBubble")
+    },
+    {
+      //bar between tracks and logistics
+      real: applyingPos - logisticsPos,
+      realDist: applyingPos,
+      bar: applyingTop - logisticsTop,
+      distBar: applyingTop - homeTop,
+      selector: $("#applyingBubble")
     }
   ];
 }

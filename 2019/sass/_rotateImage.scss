@@ -9,3 +9,24 @@
     width: 30vw;
   }
 }
+
+.leftRotate {
+  transform-origin: -10% 50%;
+
+  img {
+    padding-right: 6vw;
+    width: 30vw;
+  }
+}
+
+.aboutRotate {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  p {
+    flex: 0.4;
+  }
+  .rotateIn {
+    flex: 0.4;
+  }
+}

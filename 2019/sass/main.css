@@ -41,6 +41,7 @@ nav {
     nav #sliderContainer .filled {
       background-color: Black; }
   nav #bar {
+    flex: 1;
     margin-top: 4rem;
     border: solid 3px black;
     height: 5px;
@@ -57,6 +58,21 @@ nav {
   .rotateIn img {
     padding-left: 6vw;
     width: 30vw; }
+
+.leftRotate {
+  transform-origin: -10% 50%; }
+  .leftRotate img {
+    padding-right: 6vw;
+    width: 30vw; }
+
+.aboutRotate {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  .aboutRotate p {
+    flex: 0.4; }
+  .aboutRotate .rotateIn {
+    flex: 0.4; }
 
 html,
 body {
@@ -87,14 +103,6 @@ body {
   margin-left: 5%;
   width: 100%;
   font-size: 1rem; }
-  #aboutSection .aboutRotate {
-    display: flex;
-    align-items: center;
-    justify-content: space-between; }
-    #aboutSection .aboutRotate p {
-      flex: 0.4; }
-    #aboutSection .aboutRotate .rotateIn {
-      flex: 0.4; }
 
 #trackSection {
   margin-left: 5%;
