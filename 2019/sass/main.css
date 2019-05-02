@@ -98,17 +98,17 @@ body {
 
 #trackSection {
   margin-left: 5%;
-  width: 80%;
+  width: 90%;
   font-size: 1rem; }
 
 #logisticsSection {
   margin-left: 5%;
-  width: 80%;
+  width: 90%;
   font-size: 1rem; }
 
 #faqSection {
   margin-left: 5%;
-  width: 80%;
+  width: 90%;
   font-size: 1rem;
   color: #57bc8b; }
   #faqSection .faq-container .nav-tabs li {
@@ -116,7 +116,7 @@ body {
 
 #applyingSection {
   color: #dbb13b;
-  width: 80%;
+  width: 90%;
   margin-left: 5%; }
 
 .header {
@@ -127,7 +127,7 @@ body {
   font-size: 2.5rem; }
 
 .scheduleContainer {
-  width: 80%;
+  width: 90%;
   text-align: center;
   vertical-align: middle;
   position: relative;
@@ -139,7 +139,7 @@ body {
       display: none; } }
   .scheduleContainer ul {
     border: none;
-    width: 70vw; }
+    width: 90vw; }
     .scheduleContainer ul .activeLi {
       background-color: #304b78;
       border: none; }
@@ -156,10 +156,10 @@ table {
   margin-top: 5%;
   margin-bottom: 4%;
   background-color: #304b78;
-  width: 80vw;
+  width: 90vw;
   position: relative;
   table-layout: fixed;
-  right: 15%;
+  right: 10%;
   border-style: hidden; }
   table th,
   table tr {

@@ -73,19 +73,19 @@ body {
 
 #trackSection {
   margin-left: $margin-size;
-  width: 80%;
+  width: 90%;
   font-size: $content-size;
 }
 
 #logisticsSection {
   margin-left: $margin-size;
-  width: 80%;
+  width: 90%;
   font-size: $content-size;
 }
 
 #faqSection {
   margin-left: $margin-size;
-  width: 80%;
+  width: 90%;
   font-size: $content-size;
   color: $faq-text-color;
 
@@ -96,7 +96,7 @@ body {
 
 #applyingSection {
   color: $apply-text-color;
-  width: 80%;
+  width: 90%;
   margin-left: $margin-size;
 }
 
@@ -113,7 +113,7 @@ body {
   @media screen and (max-width: 1000px) {
     display: none;
   }
-  width: 80%;
+  width: 90%;
   @include center;
   position: relative;
   left: 10%;
@@ -122,7 +122,7 @@ body {
 
   ul {
     border: none;
-    width: 70vw;
+    width: 90vw;
     .activeLi {
       background-color: $background-color-blue;
       //color: #;
@@ -151,10 +151,10 @@ table {
   margin-top: 5%;
   margin-bottom: 4%;
   background-color: $background-color-blue;
-  width: 80vw;
+  width: 90vw;
   position: relative;
   table-layout: fixed;
-  right: 15%;
+  right: 10%;
   border-style: hidden;
   th,
   tr {
