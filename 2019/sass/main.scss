@@ -25,10 +25,11 @@ body {
 }
 
 body {
-  background-image: linear-gradient(
-    $background-color-blue,
-    $background-color-purple
-  );
+  background-image: none;
+  // linear-gradient(
+  //   $background-color-blue,
+  //   $background-color-purple
+  // );
   color: $text-color;
 }
 
@@ -124,7 +125,7 @@ body {
     border: none;
     width: 90vw;
     .activeLi {
-      background-color: $background-color-blue;
+      background-color: none; //$background-color-blue;
       //color: #;
       border: none;
       //border: 1px ;
@@ -150,7 +151,7 @@ body {
 table {
   margin-top: 5%;
   margin-bottom: 4%;
-  background-color: $background-color-blue;
+  background-color: none; //$background-color-blue;
   width: 90vw;
   position: relative;
   table-layout: fixed;
@@ -175,4 +176,17 @@ table {
 .marginFormat {
   height: 100px;
   width: 100%;
+}
+
+.parallax-window {
+    z-index: -100;
+    position: fixed;
+    overflow: hidden;
+    transform: translate3d(0px, 0px, 0px);
+    visibility: visible;
+    top: 0px;
+    left: 0px;
+    height: 5000px;
+    min-width: 100vw;
+    background: transparent;
 }

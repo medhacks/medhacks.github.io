@@ -5,126 +5,155 @@ nav {
   left: 15%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between; }
-  nav .logo {
-    align-self: center;
-    width: 30%; }
-  nav .navButton {
-    cursor: pointer;
-    margin-top: 0.5rem;
-    margin-bottom: 2rem;
-    margin-right: 3rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; }
-  nav #sliderContainer {
-    display: flex;
-    flex-direction: column; }
-    nav #sliderContainer .buttonContainer {
-      display: flex;
-      flex-direction: row; }
-    nav #sliderContainer .bubble {
-      border: 2px solid Black;
-      border-radius: 10px;
-      margin-left: 1rem;
-      padding: 8px;
-      width: 2.5px;
-      height: 2.5px;
-      display: inline-block; }
-      nav #sliderContainer .bubble div {
-        display: inline-block;
-        position: relative;
-        left: 15rem;
-        color: Black;
-        text-decoration: none;
-        top: 0.5rem; }
-    nav #sliderContainer .filled {
-      background-color: Black; }
-  nav #bar {
-    margin-top: 4rem;
-    border: solid 3px black;
-    height: 5px;
-    width: 100px;
-    position: absolute;
-    bottom: 45%;
-    margin-left: 2%; }
+  justify-content: space-between;
+}
+nav .logo {
+  align-self: center;
+  width: 30%;
+}
+nav .navButton {
+  cursor: pointer;
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+  margin-right: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+nav #sliderContainer {
+  display: flex;
+  flex-direction: column;
+}
+nav #sliderContainer .buttonContainer {
+  display: flex;
+  flex-direction: row;
+}
+nav #sliderContainer .bubble {
+  border: 2px solid Black;
+  border-radius: 10px;
+  margin-left: 1rem;
+  padding: 8px;
+  width: 2.5px;
+  height: 2.5px;
+  display: inline-block;
+}
+nav #sliderContainer .bubble div {
+  display: inline-block;
+  position: relative;
+  left: 15rem;
+  color: Black;
+  text-decoration: none;
+  top: 0.5rem;
+}
+nav #sliderContainer .filled {
+  background-color: Black;
+}
+nav #bar {
+  margin-top: 4rem;
+  border: solid 3px black;
+  height: 5px;
+  width: 100px;
+  position: absolute;
+  bottom: 45%;
+  margin-left: 2%;
+}
 
 .rotateIn {
   flex: 1;
   width: 30vw;
   transform: rotate(0deg);
-  transform-origin: 110% 50%; }
-  .rotateIn img {
-    padding-left: 6vw;
-    width: 30vw; }
+  transform-origin: 110% 50%;
+}
+.rotateIn img {
+  padding-left: 6vw;
+  width: 30vw;
+}
 
 html,
 body {
   max-width: 100%;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+}
 
 body {
-  background-image: linear-gradient(#304b78, #392c5f);
-  color: white; }
+  background-image: none;
+  color: white;
+}
 
 #titleSection {
-  margin: 5%; }
-  #titleSection .flexContainer {
-    display: flex;
-    flex-direction: row;
-    width: 100%; }
-    #titleSection .flexContainer div {
-      width: 50%; }
-    #titleSection .flexContainer p {
-      flex: 50%; }
-    #titleSection .flexContainer img {
-      flex: 50%;
-      align-self: center;
-      width: 15%; }
+  margin: 5%;
+}
+#titleSection .flexContainer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+#titleSection .flexContainer div {
+  width: 50%;
+}
+#titleSection .flexContainer p {
+  flex: 50%;
+}
+#titleSection .flexContainer img {
+  flex: 50%;
+  align-self: center;
+  width: 15%;
+}
 
 #aboutSection {
   color: #dbb13b;
   margin-left: 5%;
   width: 100%;
-  font-size: 1rem; }
-  #aboutSection .aboutRotate {
-    display: flex;
-    align-items: center;
-    justify-content: space-between; }
-    #aboutSection .aboutRotate p {
-      flex: 0.4; }
-    #aboutSection .aboutRotate .rotateIn {
-      flex: 0.4; }
+  font-size: 1rem;
+}
+#aboutSection .aboutRotate {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#aboutSection .aboutRotate p {
+  flex: 0.4;
+}
+#aboutSection .aboutRotate .rotateIn {
+  flex: 0.4;
+}
 
 #trackSection {
   margin-left: 5%;
   width: 90%;
-  font-size: 1rem; }
+  font-size: 1rem;
+}
 
 #logisticsSection {
   margin-left: 5%;
   width: 90%;
-  font-size: 1rem; }
+  font-size: 1rem;
+}
 
 #faqSection {
   margin-left: 5%;
   width: 90%;
   font-size: 1rem;
-  color: #57bc8b; }
-  #faqSection .faq-container .nav-tabs li {
-    margin: 1rem; }
+  color: #57bc8b;
+}
+#faqSection .faq-container .nav-tabs li {
+  margin: 1rem;
+}
 
 #applyingSection {
   color: #dbb13b;
   width: 90%;
-  margin-left: 5%; }
+  margin-left: 5%;
+}
 
 .header {
   font-size: 3rem;
-  color: white; }
+  color: white;
+}
 
 .subHeader {
-  font-size: 2.5rem; }
+  font-size: 2.5rem;
+}
 
 .scheduleContainer {
   width: 90%;
@@ -133,48 +162,73 @@ body {
   position: relative;
   left: 10%;
   font-size: 1.89rem;
-  padding-bottom: 0.1rem; }
-  @media screen and (max-width: 1000px) {
-    .scheduleContainer {
-      display: none; } }
-  .scheduleContainer ul {
-    border: none;
-    width: 90vw; }
-    .scheduleContainer ul .activeLi {
-      background-color: #304b78;
-      border: none; }
-    .scheduleContainer ul li {
-      padding: 0rem;
-      text-align: center;
-      vertical-align: middle;
-      border-collapse: collapse; }
-      .scheduleContainer ul li a {
-        padding: 1rem;
-        text-decoration: none; }
+  padding-bottom: 0.1rem;
+}
+@media screen and (max-width: 1000px) {
+  .scheduleContainer {
+    display: none;
+  }
+}
+.scheduleContainer ul {
+  border: none;
+  width: 90vw;
+}
+.scheduleContainer ul .activeLi {
+  background-color: none;
+  border: none;
+}
+.scheduleContainer ul li {
+  padding: 0rem;
+  text-align: center;
+  vertical-align: middle;
+  border-collapse: collapse;
+}
+.scheduleContainer ul li a {
+  padding: 1rem;
+  text-decoration: none;
+}
 
 table {
   margin-top: 5%;
   margin-bottom: 4%;
-  background-color: #304b78;
+  background-color: none;
   width: 90vw;
   position: relative;
   table-layout: fixed;
   right: 10%;
-  border-style: hidden; }
+  border-style: hidden;
+}
+table th,
+table tr {
+  font-size: 20px;
+  word-wrap: break-word;
+  font-style: normal;
+  font-weight: normal;
+  color: white;
+}
+@media screen and (max-width: 650px) {
   table th,
-  table tr {
-    font-size: 20px;
-    word-wrap: break-word;
-    font-style: normal;
-    font-weight: normal;
-    color: white; }
-    @media screen and (max-width: 650px) {
-      table th,
-      table tr {
-        font-size: 14px; } }
+table tr {
+    font-size: 14px;
+  }
+}
 
 .marginFormat {
   height: 100px;
-  width: 100%; }
+  width: 100%;
+}
+
+.parallax-window {
+  z-index: -100;
+  position: fixed;
+  overflow: hidden;
+  transform: translate3d(0px, 0px, 0px);
+  visibility: visible;
+  top: 0px;
+  left: 0px;
+  height: 5000px;
+  min-width: 100vw;
+  background: transparent;
+}
 
 /*# sourceMappingURL=main.css.map */
