@@ -8,6 +8,9 @@ nav {
   justify-content: space-between;
 
   .logo {
+    @media screen and (max-width: 1000px) {
+      display: none;
+    }
     align-self: center;
     width: 30%;
   }
@@ -23,6 +26,9 @@ nav {
   }
 
   #sliderContainer {
+    @media screen and (max-width: 1000px) {
+      display: none;
+    }
     display: flex;
     flex-direction: column;
     .buttonContainer {
@@ -62,4 +68,12 @@ nav {
     bottom: 45%;
     margin-left: 2%;
   }
+}
+
+#side-info {
+  display: none;
+}
+
+#ham-container {
+  display: none;
 }

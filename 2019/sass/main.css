@@ -9,6 +9,9 @@ nav {
   nav .logo {
     align-self: center;
     width: 30%; }
+    @media screen and (max-width: 1000px) {
+      nav .logo {
+        display: none; } }
   nav .navButton {
     cursor: pointer;
     margin-top: 0.5rem;
@@ -20,6 +23,9 @@ nav {
   nav #sliderContainer {
     display: flex;
     flex-direction: column; }
+    @media screen and (max-width: 1000px) {
+      nav #sliderContainer {
+        display: none; } }
     nav #sliderContainer .buttonContainer {
       display: flex;
       flex-direction: row; }
@@ -49,6 +55,12 @@ nav {
     position: absolute;
     bottom: 45%;
     margin-left: 2%; }
+
+#side-info {
+  display: none; }
+
+#ham-container {
+  display: none; }
 
 .rotateIn {
   flex: 1;
@@ -80,7 +92,12 @@ nav {
 html,
 body {
   max-width: 100%;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  scroll-behavior: smooth; }
+  html a,
+  body a {
+    text-decoration: none;
+    color: white; }
 
 body {
   background-image: none;

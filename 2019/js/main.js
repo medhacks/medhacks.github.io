@@ -4,16 +4,6 @@ let bubbleMargin = 150;
 
 $(document).ready(() => {
   setUpArrays();
-  $("#aboutButton").on("click", () => {
-    $("#aboutSection").goTo();
-  });
-  $("#tracksButton").on("click", () => {
-    $("#trackSection").goTo();
-  });
-  $("#logisticsButton").on("click", () => {
-    $("#logisticsSection").goTo();
-  });
-
   updateBar();
 });
 
@@ -126,25 +116,3 @@ function updateBar() {
 
   $("#bar").css("width", curLen + "px");
 }
-
-(function($) {
-  $.fn.goTo = function() {
-    var placeToGo;
-    placeToGo = $(this).offset().top;
-    $("html, body").animate({
-      scrollTop: placeToGo + "px"
-    });
-    return this;
-  };
-})(jQuery);
-
-$(function() {
-  $("#typingText").typed({
-    strings: [
-      "Cool story bro come to medhacks ",
-      "hey bro do things make me happy, like other stuff that makes us haooy",
-      "reading a good buck, watching avengers endgame, going to medhacks"
-    ],
-    typeSpeed: 0
-  });
-});
