@@ -47,6 +47,9 @@ body {
       flex: 50%;
     }
     img {
+      @media screen and (max-width: 1000px) {
+        display: none;
+      }
       flex: 50%;
       align-self: center;
       width: 15%;
@@ -168,14 +171,14 @@ table {
 }
 
 .parallax-window {
-    z-index: -100;
-    position: fixed;
-    overflow: hidden;
-    transform: translate3d(0px, 0px, 0px);
-    visibility: visible;
-    top: 0px;
-    left: 0px;
-    height: 5000px;
-    min-width: 100vw;
-    background: transparent;
+  z-index: -100;
+  position: fixed;
+  overflow: hidden;
+  transform: translate3d(0px, 0px, 0px);
+  visibility: visible;
+  top: 0px;
+  left: 0px;
+  height: 5000px;
+  min-width: 100vw;
+  background: transparent;
 }

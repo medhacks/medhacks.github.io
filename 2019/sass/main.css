@@ -101,6 +101,9 @@ body {
       flex: 50%;
       align-self: center;
       width: 15%; }
+      @media screen and (max-width: 1000px) {
+        #titleSection .flexContainer img {
+          display: none; } }
 
 #aboutSection {
   color: #dbb13b;
