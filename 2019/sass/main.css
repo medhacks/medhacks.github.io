@@ -73,6 +73,9 @@ nav {
     flex: 0.4; }
   .aboutRotate .rotateIn {
     flex: 0.4; }
+    @media screen and (max-width: 1000px) {
+      .aboutRotate .rotateIn {
+        display: none; } }
 
 html,
 body {

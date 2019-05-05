@@ -27,6 +27,9 @@
     flex: 0.4;
   }
   .rotateIn {
+    @media screen and (max-width: 1000px) {
+      display: none;
+    }
     flex: 0.4;
   }
 }
