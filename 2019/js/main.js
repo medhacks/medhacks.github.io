@@ -13,6 +13,13 @@ $(document).ready(() => {
 
 $(document).scroll(() => {
   updateBar();
+
+  $(".fadeOut").each(function() {
+    let cur = $(this).offset().top - $(window).scrollTop();
+    if (cur < $("nav").height()) {
+      $(this).fadeOut();
+    }
+  });
 });
 
 // calculates y positions of relevant pieces of site and puts them into arrays for further use
