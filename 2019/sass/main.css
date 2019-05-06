@@ -2,7 +2,8 @@ nav {
   z-index: 2;
   position: fixed;
   top: 0%;
-  width: 95%;
+  left: 5%;
+  width: 83%;
   display: flex;
   flex-direction: row;
   justify-content: space-between; }
@@ -50,7 +51,8 @@ nav {
   nav #bar {
     flex: 1;
     margin-top: 4rem;
-    border: solid 3px black;
+    border: 3px black;
+    border-style: dotted;
     height: 5px;
     width: 100px;
     position: absolute;
@@ -141,11 +143,11 @@ body {
     color: white; }
 
 body {
-  background-image: linear-gradient(#392c5f, #304b78, green);
+  background-image: linear-gradient(#392c5f, #304b78, #57bc8b);
   color: white; }
 
 #titleSection {
-  margin: 5%; }
+  margin: 7%; }
   #titleSection .flexContainer {
     display: flex;
     flex-direction: row;
@@ -155,31 +157,30 @@ body {
     #titleSection .flexContainer p {
       flex: 50%; }
     #titleSection .flexContainer img {
-      flex: 50%;
       align-self: center;
-      width: 15%; }
+      width: 40vw; }
       @media screen and (max-width: 1000px) {
         #titleSection .flexContainer img {
           display: none; } }
 
 #aboutSection {
   color: white;
-  margin-left: 5%;
-  width: 100%;
+  margin: 7%;
+  width: "86%%";
   font-size: 1.25rem; }
 
 #trackSection {
-  margin-left: 5%;
+  margin-left: 7%;
   width: 90%;
   font-size: 1.25rem; }
 
 #logisticsSection {
-  margin-left: 5%;
+  margin-left: 7%;
   width: 90%;
   font-size: 1.25rem; }
 
 #faqSection {
-  margin-left: 5%;
+  margin-left: 7%;
   width: 95%;
   font-size: 1.25rem;
   color: white;
@@ -194,7 +195,7 @@ body {
 #applyingSection {
   color: white;
   width: 90%;
-  margin-left: 5%; }
+  margin-left: 7%; }
 
 .header {
   font-size: 3rem;
