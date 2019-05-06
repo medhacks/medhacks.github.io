@@ -19,7 +19,7 @@ $section-header-size: 3rem;
 $subsection-header-size: 2.5rem;
 $content-size: 1.25rem;
 
-$margin-size: 7%;
+$margin-size: 7vw;
 
 @font-face {
   font-family: custom;
@@ -94,7 +94,7 @@ body {
 
 #faqSection {
   margin-left: $margin-size;
-  width: 95%;
+  margin-right: $margin-size;
   font-size: $content-size;
   color: $faq-text-color;
   text-align: left;
@@ -111,9 +111,10 @@ body {
 
 #applyingSection {
   color: $apply-text-color;
-  width: 90%;
+  width: (100 - 2 * $margin-size) + "vw";
   text-align: left;
   margin-left: $margin-size;
+  margin-right: $margin-size;
 }
 
 .header {

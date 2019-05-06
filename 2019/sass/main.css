@@ -104,10 +104,10 @@ nav {
 
 .leftRotate {
   transform-origin: -10% 50%;
-  margin-left: -15vw; }
+  margin-left: -10vw; }
   .leftRotate img {
     padding-right: 6vw;
-    width: 50vw; }
+    width: 40vw; }
 
 .rotateRight img {
   width: 30vw; }
@@ -147,7 +147,7 @@ body {
   color: white; }
 
 #titleSection {
-  margin: 7%; }
+  margin: 7vw; }
   #titleSection .flexContainer {
     display: flex;
     flex-direction: row;
@@ -165,23 +165,23 @@ body {
 
 #aboutSection {
   color: white;
-  margin: 7%;
-  width: "86%%";
+  margin: 7vw;
+  width: "86vw%";
   font-size: 1.25rem; }
 
 #trackSection {
-  margin-left: 7%;
+  margin-left: 7vw;
   width: 90%;
   font-size: 1.25rem; }
 
 #logisticsSection {
-  margin-left: 7%;
+  margin-left: 7vw;
   width: 90%;
   font-size: 1.25rem; }
 
 #faqSection {
-  margin-left: 7%;
-  width: 95%;
+  margin-left: 7vw;
+  margin-right: 7vw;
   font-size: 1.25rem;
   color: white;
   text-align: left; }
@@ -194,9 +194,10 @@ body {
 
 #applyingSection {
   color: white;
-  width: 90%;
+  width: "86vwvw";
   text-align: left;
-  margin-left: 7%; }
+  margin-left: 7vw;
+  margin-right: 7vw; }
 
 .header {
   font-size: 3rem;
