@@ -5,6 +5,10 @@ let bubbleMargin = 150;
 $(document).ready(() => {
   setUpArrays();
   updateBar();
+  $("#ham-container").on("click", () => {
+    $("#ham-container").toggleClass("change");
+    $("#side-info").slideToggle();
+  });
 });
 
 $(document).scroll(() => {

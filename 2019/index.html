@@ -13,10 +13,10 @@
 			<title>MedHacks 2019</title>
 	</head>
 	<body>
-		<div class="parallax-window" data-parallax="scroll" data-image-src="assets/mh_website_gradient_2019-01.png" data-speed="0.8" data-naturalHeight="18142px" data-naturalWidth="9071px"></div>
+		<!-- <div class="parallax-window" data-parallax="scroll" data-image-src="assets/mh_website_gradient_2019-01.png" data-speed="0.8" data-naturalHeight="18142px" data-naturalWidth="9071px"></div> -->
 
 		<nav>
-      <img class="logo" src="../2018/assets/logos/medhacks-without-cross.png">
+      <img class="logo" src="./assets/MedHacks-White-01.png">
       <div id="sliderContainer">
         <div class="buttonContainer">
           <a href="#titleSection">
@@ -58,22 +58,22 @@
         
 				<div id="bar">
         </div>
-        
-        <div id="ham-container">
-          <div class="bar1"></div>
-          <div class="bar2"></div>
-          <div class="bar3"></div>
-        </div>
-        <div id="side-info">
-          <ul>
-            <li id="home-small-button">Home</li>
-            <li id="about-small-button">About</li>
-            <li id="tracks-small-button">Tracks</li>
-            <li id="logistics-small-button">Logistics</li>
-            <li id="apply-small-button">Apply</li>
-          </ul>
-        </div>
-			</div>
+      </div>
+      <div id="ham-container">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+      <div id="side-info">
+        <ul>
+          <li id="home-small-button">Home</li>
+          <li id="about-small-button">About</li>
+          <li id="tracks-small-button">Tracks</li>
+          <li id="logistics-small-button">Logistics</li>
+          <li id="apply-small-button">Apply</li>
+        </ul>
+      </div>
+			
     </nav>
     <div class="marginFormat"></div>
     <!-- title image -->
@@ -81,8 +81,9 @@
       <div class="flexContainer">
         <div>
           <div id="typed-strings">
-              <p>Typed.js is a <strong>JavaScript</strong> library.</p>
-              <p>It <em>types</em> out sentences.</p>
+              <p>Hosted at the nation’s pinnacle center for care</p>
+              <p>MedHacks is the world’s premier and largest medical hackathon</p>
+              <p>Join us at the Johns Hopkins Hospital for 36 hours to revolutionize the global state of healthcare!</p>
           </div>
           <span id="typed"></span>
         </div>
@@ -100,10 +101,17 @@
 			<h2 class="subHeader">Thing 1
       </h2>
       <div class="aboutRotate" display="flex" style="flex-direction: row">
+        <div>
+        <h3>
+          Our History
+        </h3>
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tortor justo, fermentum et nibh ac, dapibus vestibulum leo. Phasellus maximus libero tellus, vel interdum elit pretium ut. Quisque neque ex, maximus ut ipsum vel, gravida ultrices lacus. Fusce lacinia ac ante et pellentesque. Quisque pretium ac leo vel commodo. Sed varius nec elit et ultricies. Nullam velit lacus, tempus at auctor id, bibendum et dolor. Etiam aliquam ornare finibus. Donec sodales blandit maximus. In sed pellentesque velit. Donec porta, arcu in scelerisque mattis, turpis risus mattis purus, ac dapibus quam nunc ut nibh.
+            MedHacks was started in 2015 with the mission to bring together talented and diverse minds from all backgrounds and foster collaboration towards solving the world’s most pressing medical issues.
+            In the past three years, MedHacks has been attended by thousands from over 500 institutions and 30 countries, has formed partnerships with companies at the forefront of medicine and technology including Blue Cross Blue Shield, CVS Health, Google, and KPCB, and has established itself as one of the world’s most recognized and influential medical hackathons.
+            The MedHacks brand has grown into something larger than our flagship medical hackathon with the introduction of our now annual Mini-MedHacks, a 1-day medical hackathon for Baltimore city high-school students and last spring’s China-U.S. HealthTech Forum, an event bringing together speakers such as Jim Lai, the VP of Tencent, and Lee Chang, the VP of Baidu Ventures, to talk about the global state of healthcare innovations.
         </p>
-        <div class="rotateIn" id="rotateAbout">
+      </div>
+        <div class="rotateIn rotateRight" id="rotateAbout">
           <img src="./assets/about wheel left.png"/>
         </div>
       </div>
@@ -145,10 +153,10 @@
       <div class="tab-content">
         <div id="friday" class="tab-pane  active">
           <table>
-            <col width="15rem" class="time" />
+            <col width="20rem" class="time" />
             <col width="20rem" class="event" />
             <col width="20rem" class="location" />
-            <tr>
+            <tr style="text-decoration: underline">
            		<th>
                 Time
               </th>
@@ -241,10 +249,10 @@
 
       <div id="saturday" class="tab-pane ">
           <table>
-            <col width="15rem" class="time" />
+            <col width="20rem" class="time" />
             <col width="20rem" class="event" />
             <col width="20rem" class="location" />
-            <tr>
+            <tr style="text-decoration: underline">
             	<th>
                 Time
               </th>
@@ -348,10 +356,10 @@
 
         <div id="sunday" class="tab-pane ">
           <table>
-            <col width="15rem" class="time" />
+            <col width="20rem" class="time" />
             <col width="20rem" class="event" />
             <col width="20rem" class="location" />
-            <tr>
+            <tr style="text-decoration: underline">
             	<th>
                 Time
               </th>
@@ -471,12 +479,13 @@
 
 		<!-- faq -->
   <div id="faqSection">
-    <h2 class="header"> FAQ </h2>
     <div class="aboutRotate">
       <div class="leftRotate rotateIn" id="rotateLogistics">
         <img src="./assets/logistics wheel right.png"/>
       </div>
       <div class="faq-container">
+          <h2 class="header"> FAQ </h2>
+
         <ul class="nav nav-tabs">
           <li class="activeLi"><a id="genAnc" data-toggle="tab" class="active" href="#general-tab">General</a></li>
           <li><a data-toggle="tab" id="eligAnc" href="#eligibility-tab">Eligibility</a></li>
@@ -586,6 +595,5 @@
 		<script src="js/parallax.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <a id="mlh-trust-badge" style="display:block;max-width:100px;min-width:60px;position:fixed;left:50px;top:0;width:6%;z-index:10000" href="https://mlh.io/seasons/na-2020/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2020-season&utm_content=black" target="_blank"><img src="https://s3.amazonaws.com/logged-assets/trust-badge/2020/mlh-trust-badge-2020-black.svg" alt="Major League Hacking 2020 Hackathon Season" style="width:100%"></a>
-  </body>
+    <a id="mlh-trust-badge" style="display:block;max-width:100px;min-width:60px;position:fixed;right: 5px;top:0;width:10%;z-index:10000" href="https://mlh.io/seasons/na-2020/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2020-season&utm_content=black" target="_blank"><img src="https://s3.amazonaws.com/logged-assets/trust-badge/2020/mlh-trust-badge-2020-black.svg" alt="Major League Hacking 2020 Hackathon Season" style="width:100%"></a>  </body>
 </html>

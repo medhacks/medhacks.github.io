@@ -8,15 +8,22 @@ $text-color: white;
 $background-color-blue: #304b78;
 $background-color-purple: #392c5f;
 
-$about-text-color: #dbb13b;
-$faq-text-color: #57bc8b;
-$apply-text-color: #dbb13b;
+$color-yellow: #dbb13b;
+
+$about-text-color: white;
+$faq-text-color: white;
+$apply-text-color: white;
 
 $section-header-size: 3rem;
 $subsection-header-size: 2.5rem;
-$content-size: 1rem;
+$content-size: 1.25rem;
 
 $margin-size: 5%;
+
+@font-face {
+  font-family: custom;
+  src: url(../assets/Ok-Regular.ttf);
+}
 
 html,
 body {
@@ -27,16 +34,20 @@ body {
     text-decoration: none;
     color: $text-color;
   }
+  font-family: custom;
+  font-size: $content-size;
+  text-transform: uppercase;
 }
 
 body {
-  background-image: none;
-  // linear-gradient(
-  //   $background-color-blue,
-  //   $background-color-purple
-  // );
+  //background-image: none;
+  background-image: linear-gradient(
+    $background-color-purple,
+    $background-color-blue,
+    green
+  );
   color: $text-color;
-  background-color: $background-color-blue;
+  //background-color: $background-color-blue;
 }
 
 #titleSection {
@@ -83,10 +94,16 @@ body {
 
 #faqSection {
   margin-left: $margin-size;
-  width: 90%;
+  width: 95%;
   font-size: $content-size;
   color: $faq-text-color;
-
+  text-align: left;
+  .faq-container {
+    width: 50vw;
+  }
+  .nav {
+    justify-content: space-around;
+  }
   .faq-container .nav-tabs li {
     margin: 1rem;
   }
@@ -101,6 +118,7 @@ body {
 .header {
   font-size: $section-header-size;
   color: white;
+  text-decoration: underline;
 }
 
 .subHeader {
@@ -114,17 +132,18 @@ body {
   width: 90%;
   @include center;
   position: relative;
-  left: 10%;
   font-size: 1.89rem;
   padding-bottom: 0.1rem;
 
   ul {
     border: none;
     width: 90vw;
+    display: flex;
+    justify-content: space-evenly;
     .activeLi {
       background-color: none; //$background-color-blue;
       //color: #;
-      border: none;
+      // border: none;
       //border: 1px ;
       a {
         //color: ;
@@ -135,34 +154,36 @@ body {
       padding: 0rem;
       @include center;
       //border: 1px ;
-      border-collapse: collapse;
+      //border-collapse: collapse;
       a {
         padding: 1rem;
         text-decoration: none;
         //color: ;
+        &:hover {
+          color: $color-yellow;
+        }
       }
     }
   }
 }
 
 table {
-  margin-top: 5%;
+  margin-top: 2%;
   margin-bottom: 4%;
   background-color: none; //$background-color-blue;
   width: 90vw;
   position: relative;
   table-layout: fixed;
-  right: 10%;
-  border-style: hidden;
+  // border-style: hidden;
   th,
   tr {
     //font-family: $font-fam;
-    font-size: 20px;
+    font-size: 25px;
     word-wrap: break-word;
     font-style: normal;
     font-weight: normal;
     color: $text-color;
-    //border: 3px ;
+    border: 3px white solid;
 
     @media screen and (max-width: 650px) {
       font-size: 14px;

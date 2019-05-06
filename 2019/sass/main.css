@@ -2,7 +2,7 @@ nav {
   z-index: 2;
   position: fixed;
   top: 0%;
-  left: 15%;
+  width: 95%;
   display: flex;
   flex-direction: row;
   justify-content: space-between; }
@@ -16,10 +16,10 @@ nav {
     cursor: pointer;
     margin-top: 0.5rem;
     margin-bottom: 2rem;
-    margin-right: 3rem;
+    margin-right: 2rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; }
+    justify-content: space-evenly; }
   nav #sliderContainer {
     display: flex;
     flex-direction: column; }
@@ -32,7 +32,8 @@ nav {
     nav #sliderContainer .bubble {
       border: 2px solid Black;
       border-radius: 10px;
-      margin-left: 1rem;
+      margin-left: auto;
+      margin-right: auto;
       padding: 8px;
       width: 2.5px;
       height: 2.5px;
@@ -60,7 +61,35 @@ nav {
   display: none; }
 
 #ham-container {
-  display: none; }
+  position: absolute;
+  right: 0%;
+  top: 4%;
+  align-self: flex-end;
+  display: inline-block;
+  cursor: pointer; }
+  @media screen and (min-width: 1000px) {
+    #ham-container {
+      display: none; } }
+  #ham-container .bar1,
+  #ham-container .bar2,
+  #ham-container .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s; }
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+  z-index: 4;
+  background-color: white !important; }
+.change .bar2 {
+  opacity: 0; }
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+  background-color: white !important; }
 
 .rotateIn {
   flex: 1;
@@ -72,10 +101,14 @@ nav {
     width: 30vw; }
 
 .leftRotate {
-  transform-origin: -10% 50%; }
+  transform-origin: -10% 50%;
+  margin-left: -15vw; }
   .leftRotate img {
     padding-right: 6vw;
-    width: 30vw; }
+    width: 50vw; }
+
+.rotateRight img {
+  width: 30vw; }
 
 .aboutRotate {
   display: flex;
@@ -83,26 +116,33 @@ nav {
   justify-content: space-between; }
   .aboutRotate p {
     flex: 0.4; }
+  .aboutRotate div {
+    flex: 0.6; }
   .aboutRotate .rotateIn {
     flex: 0.4; }
     @media screen and (max-width: 1000px) {
       .aboutRotate .rotateIn {
         display: none; } }
 
+@font-face {
+  font-family: custom;
+  src: url(../assets/Ok-Regular.ttf); }
 html,
 body {
   max-width: 100%;
   overflow-x: hidden;
-  scroll-behavior: smooth; }
+  scroll-behavior: smooth;
+  font-family: custom;
+  font-size: 1.25rem;
+  text-transform: uppercase; }
   html a,
   body a {
     text-decoration: none;
     color: white; }
 
 body {
-  background-image: none;
-  color: white;
-  background-color: #304b78; }
+  background-image: linear-gradient(#392c5f, #304b78, green);
+  color: white; }
 
 #titleSection {
   margin: 5%; }
@@ -123,37 +163,43 @@ body {
           display: none; } }
 
 #aboutSection {
-  color: #dbb13b;
+  color: white;
   margin-left: 5%;
   width: 100%;
-  font-size: 1rem; }
+  font-size: 1.25rem; }
 
 #trackSection {
   margin-left: 5%;
   width: 90%;
-  font-size: 1rem; }
+  font-size: 1.25rem; }
 
 #logisticsSection {
   margin-left: 5%;
   width: 90%;
-  font-size: 1rem; }
+  font-size: 1.25rem; }
 
 #faqSection {
   margin-left: 5%;
-  width: 90%;
-  font-size: 1rem;
-  color: #57bc8b; }
+  width: 95%;
+  font-size: 1.25rem;
+  color: white;
+  text-align: left; }
+  #faqSection .faq-container {
+    width: 50vw; }
+  #faqSection .nav {
+    justify-content: space-around; }
   #faqSection .faq-container .nav-tabs li {
     margin: 1rem; }
 
 #applyingSection {
-  color: #dbb13b;
+  color: white;
   width: 90%;
   margin-left: 5%; }
 
 .header {
   font-size: 3rem;
-  color: white; }
+  color: white;
+  text-decoration: underline; }
 
 .subHeader {
   font-size: 2.5rem; }
@@ -163,7 +209,6 @@ body {
   text-align: center;
   vertical-align: middle;
   position: relative;
-  left: 10%;
   font-size: 1.89rem;
   padding-bottom: 0.1rem; }
   @media screen and (max-width: 1000px) {
@@ -171,35 +216,36 @@ body {
       display: none; } }
   .scheduleContainer ul {
     border: none;
-    width: 90vw; }
+    width: 90vw;
+    display: flex;
+    justify-content: space-evenly; }
     .scheduleContainer ul .activeLi {
-      background-color: none;
-      border: none; }
+      background-color: none; }
     .scheduleContainer ul li {
       padding: 0rem;
       text-align: center;
-      vertical-align: middle;
-      border-collapse: collapse; }
+      vertical-align: middle; }
       .scheduleContainer ul li a {
         padding: 1rem;
         text-decoration: none; }
+        .scheduleContainer ul li a:hover {
+          color: #dbb13b; }
 
 table {
-  margin-top: 5%;
+  margin-top: 2%;
   margin-bottom: 4%;
   background-color: none;
   width: 90vw;
   position: relative;
-  table-layout: fixed;
-  right: 10%;
-  border-style: hidden; }
+  table-layout: fixed; }
   table th,
   table tr {
-    font-size: 20px;
+    font-size: 25px;
     word-wrap: break-word;
     font-style: normal;
     font-weight: normal;
-    color: white; }
+    color: white;
+    border: 3px white solid; }
     @media screen and (max-width: 650px) {
       table th,
       table tr {

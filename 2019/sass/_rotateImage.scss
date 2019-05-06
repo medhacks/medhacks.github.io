@@ -12,9 +12,18 @@
 
 .leftRotate {
   transform-origin: -10% 50%;
+  margin-left: -15vw;
 
   img {
     padding-right: 6vw;
+    width: 50vw;
+  }
+}
+
+.rotateRight {
+  //margin-right: 15vw;
+
+  img {
     width: 30vw;
   }
 }
@@ -25,6 +34,9 @@
   justify-content: space-between;
   p {
     flex: 0.4;
+  }
+  div {
+    flex: 0.6;
   }
   .rotateIn {
     @media screen and (max-width: 1000px) {
