@@ -76,19 +76,18 @@ body {
 #aboutSection {
   color: $about-text-color;
   margin: $margin-size;
-  width: (100 - 2 * $margin-size) + "%";
+  width: (100 - 2 * $margin-size) + "vw";
   font-size: $content-size;
 }
 
 #trackSection {
   margin-left: $margin-size;
-  width: 90%;
+  margin-right: $margin-size;
+  width: (100 - 2 * $margin-size) + "vw";
   font-size: $content-size;
 }
 
 #logisticsSection {
-  margin-left: $margin-size;
-  width: 90%;
   font-size: $content-size;
 }
 
@@ -120,6 +119,7 @@ body {
 .header {
   font-size: $section-header-size;
   color: white;
+  text-align: left;
   text-decoration: underline;
 }
 
@@ -131,7 +131,8 @@ body {
   @media screen and (max-width: 1000px) {
     display: none;
   }
-  width: 90%;
+  margin: 0 $margin-size;
+  width: (100 - 2 * $margin-size) + "vw";
   @include center;
   position: relative;
   font-size: 1.89rem;
@@ -172,8 +173,10 @@ body {
 table {
   margin-top: 2%;
   margin-bottom: 4%;
+  margin-left: 0;
+  margin-right: 0;
   background-color: none; //$background-color-blue;
-  width: 90vw;
+  width: 100vw - $margin-size * 2;
   position: relative;
   table-layout: fixed;
   // border-style: hidden;

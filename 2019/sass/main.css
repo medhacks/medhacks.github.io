@@ -166,17 +166,16 @@ body {
 #aboutSection {
   color: white;
   margin: 7vw;
-  width: "86vw%";
+  width: "86vwvw";
   font-size: 1.25rem; }
 
 #trackSection {
   margin-left: 7vw;
-  width: 90%;
+  margin-right: 7vw;
+  width: "86vwvw";
   font-size: 1.25rem; }
 
 #logisticsSection {
-  margin-left: 7vw;
-  width: 90%;
   font-size: 1.25rem; }
 
 #faqSection {
@@ -202,13 +201,15 @@ body {
 .header {
   font-size: 3rem;
   color: white;
+  text-align: left;
   text-decoration: underline; }
 
 .subHeader {
   font-size: 2.5rem; }
 
 .scheduleContainer {
-  width: 90%;
+  margin: 0 7vw;
+  width: "86vwvw";
   text-align: center;
   vertical-align: middle;
   position: relative;
@@ -237,8 +238,10 @@ body {
 table {
   margin-top: 2%;
   margin-bottom: 4%;
+  margin-left: 0;
+  margin-right: 0;
   background-color: none;
-  width: 90vw;
+  width: 86vw;
   position: relative;
   table-layout: fixed; }
   table th,
