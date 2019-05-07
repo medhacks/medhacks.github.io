@@ -218,7 +218,9 @@ body {
     flex-direction: row;
     width: 100%; }
     #titleSection .flexContainer div {
-      width: 50%; }
+      width: 50%;
+      max-height: 50vh;
+      min-height: 50vh; }
     #titleSection .flexContainer p {
       flex: 50%; }
     #titleSection .flexContainer img {
