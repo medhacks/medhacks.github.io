@@ -9,6 +9,10 @@ $(document).ready(() => {
     $("#ham-container").toggleClass("change");
     $("#side-info").slideToggle();
   });
+  $(".side-anchor").on("click", () => {
+    $("#ham-container").toggleClass("change");
+    $("#side-info").slideToggle();
+  });
 });
 
 $(document).resize(() => {
