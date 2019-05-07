@@ -98,6 +98,9 @@ nav {
   width: 30vw;
   transform: rotate(0deg);
   transform-origin: 110% 50%; }
+  @media screen and (max-width: 1000px) {
+    .rotateIn {
+      display: none; } }
   .rotateIn img {
     padding-left: 6vw;
     width: 30vw; }
@@ -118,13 +121,64 @@ nav {
   justify-content: space-between; }
   .aboutRotate p {
     flex: 0.4; }
-  .aboutRotate div {
-    flex: 0.6; }
+  @media screen and (min-width: 1000px) {
+    .aboutRotate div {
+      flex: 0.6; } }
   .aboutRotate .rotateIn {
     flex: 0.4; }
     @media screen and (max-width: 1000px) {
       .aboutRotate .rotateIn {
         display: none; } }
+
+.scheduleContainer {
+  margin: 0 7vw;
+  width: "86vwvw";
+  text-align: center;
+  vertical-align: middle;
+  position: relative;
+  font-size: 1.89rem;
+  padding-bottom: 0.1rem; }
+  @media screen and (max-width: 1000px) {
+    .scheduleContainer {
+      display: none; } }
+  .scheduleContainer ul {
+    border: none;
+    width: 90vw;
+    display: flex;
+    justify-content: space-evenly; }
+    .scheduleContainer ul .activeLi {
+      background-color: none; }
+    .scheduleContainer ul li {
+      padding: 0rem;
+      text-align: center;
+      vertical-align: middle; }
+      .scheduleContainer ul li a {
+        padding: 1rem;
+        text-decoration: none; }
+        .scheduleContainer ul li a:hover {
+          color: #dbb13b; }
+
+table {
+  margin-top: 2%;
+  margin-bottom: 4%;
+  margin-left: 0;
+  margin-right: 0;
+  background-color: none;
+  width: 86vw;
+  position: relative;
+  table-layout: fixed; }
+  table th,
+  table tr {
+    font-size: 25px;
+    word-wrap: break-word;
+    font-style: normal;
+    font-weight: normal;
+    color: white;
+    border: 3px white solid; }
+    @media screen and (max-width: 650px) {
+      table th,
+      table tr {
+        font-size: 14px; } }
 
 @font-face {
   font-family: custom;
@@ -184,8 +238,6 @@ body {
   font-size: 1.25rem;
   color: white;
   text-align: left; }
-  #faqSection .faq-container {
-    width: 50vw; }
   #faqSection .nav {
     justify-content: space-around; }
   #faqSection .faq-container .nav-tabs li {
@@ -206,56 +258,6 @@ body {
 
 .subHeader {
   font-size: 2.5rem; }
-
-.scheduleContainer {
-  margin: 0 7vw;
-  width: "86vwvw";
-  text-align: center;
-  vertical-align: middle;
-  position: relative;
-  font-size: 1.89rem;
-  padding-bottom: 0.1rem; }
-  @media screen and (max-width: 1000px) {
-    .scheduleContainer {
-      display: none; } }
-  .scheduleContainer ul {
-    border: none;
-    width: 90vw;
-    display: flex;
-    justify-content: space-evenly; }
-    .scheduleContainer ul .activeLi {
-      background-color: none; }
-    .scheduleContainer ul li {
-      padding: 0rem;
-      text-align: center;
-      vertical-align: middle; }
-      .scheduleContainer ul li a {
-        padding: 1rem;
-        text-decoration: none; }
-        .scheduleContainer ul li a:hover {
-          color: #dbb13b; }
-
-table {
-  margin-top: 2%;
-  margin-bottom: 4%;
-  margin-left: 0;
-  margin-right: 0;
-  background-color: none;
-  width: 86vw;
-  position: relative;
-  table-layout: fixed; }
-  table th,
-  table tr {
-    font-size: 25px;
-    word-wrap: break-word;
-    font-style: normal;
-    font-weight: normal;
-    color: white;
-    border: 3px white solid; }
-    @media screen and (max-width: 650px) {
-      table th,
-      table tr {
-        font-size: 14px; } }
 
 .marginFormat {
   height: 100px;

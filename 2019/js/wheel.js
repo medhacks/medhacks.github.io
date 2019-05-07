@@ -8,6 +8,12 @@ $(document).ready(() => {
   setupRotation();
 });
 
+$(document).resize(() => {
+  setUpRotation();
+  rotateAbout();
+  rotateLogistics();
+});
+
 function setupRotation() {
   //set up for about rotational element
   var bounds = $("#rotateAbout")[0].getBoundingClientRect();

@@ -11,6 +11,11 @@ $(document).ready(() => {
   });
 });
 
+$(document).resize(() => {
+  setUpArrays();
+  updateBar();
+});
+
 $(document).scroll(() => {
   updateBar();
 

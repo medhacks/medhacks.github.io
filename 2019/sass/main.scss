@@ -1,7 +1,3 @@
-@import "./mixins.scss";
-@import "./navbar.scss";
-@import "./rotateImage.scss";
-
 // main sass file where everything will eventually end up
 // put big variable names for colors and what not up her for ease of view
 $text-color: white;
@@ -20,6 +16,11 @@ $subsection-header-size: 2.5rem;
 $content-size: 1.25rem;
 
 $margin-size: 7vw;
+
+@import "./mixins.scss";
+@import "./navbar.scss";
+@import "./rotateImage.scss";
+@import "./schedule.scss";
 
 @font-face {
   font-family: custom;
@@ -97,9 +98,6 @@ body {
   font-size: $content-size;
   color: $faq-text-color;
   text-align: left;
-  .faq-container {
-    width: 50vw;
-  }
   .nav {
     justify-content: space-around;
   }
@@ -125,75 +123,6 @@ body {
 
 .subHeader {
   font-size: $subsection-header-size;
-}
-
-.scheduleContainer {
-  @media screen and (max-width: 1000px) {
-    display: none;
-  }
-  margin: 0 $margin-size;
-  width: (100 - 2 * $margin-size) + "vw";
-  @include center;
-  position: relative;
-  font-size: 1.89rem;
-  padding-bottom: 0.1rem;
-
-  ul {
-    border: none;
-    width: 90vw;
-    display: flex;
-    justify-content: space-evenly;
-    .activeLi {
-      background-color: none; //$background-color-blue;
-      //color: #;
-      // border: none;
-      //border: 1px ;
-      a {
-        //color: ;
-      }
-    }
-    li {
-      //background-color: #;
-      padding: 0rem;
-      @include center;
-      //border: 1px ;
-      //border-collapse: collapse;
-      a {
-        padding: 1rem;
-        text-decoration: none;
-        //color: ;
-        &:hover {
-          color: $color-yellow;
-        }
-      }
-    }
-  }
-}
-
-table {
-  margin-top: 2%;
-  margin-bottom: 4%;
-  margin-left: 0;
-  margin-right: 0;
-  background-color: none; //$background-color-blue;
-  width: 100vw - $margin-size * 2;
-  position: relative;
-  table-layout: fixed;
-  // border-style: hidden;
-  th,
-  tr {
-    //font-family: $font-fam;
-    font-size: 25px;
-    word-wrap: break-word;
-    font-style: normal;
-    font-weight: normal;
-    color: $text-color;
-    border: 3px white solid;
-
-    @media screen and (max-width: 650px) {
-      font-size: 14px;
-    }
-  }
 }
 
 .marginFormat {
