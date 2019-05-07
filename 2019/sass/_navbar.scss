@@ -24,6 +24,9 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    &:hover {
+      color: $color-green;
+    }
   }
 
   #sliderContainer {
@@ -56,7 +59,7 @@ nav {
       }
     }
     .filled {
-      background-color: Black;
+      background-color: black;
     }
   }
 

@@ -35,6 +35,10 @@ body {
   a {
     text-decoration: none;
     color: $text-color;
+    &:hover {
+      text-decoration: none;
+      color: $text-color;
+    }
   }
   font-family: custom;
   font-size: $content-size;

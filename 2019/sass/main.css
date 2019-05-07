@@ -21,6 +21,8 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly; }
+    nav .navButton:hover {
+      color: #57bc8b; }
   nav #sliderContainer {
     display: flex;
     flex-direction: column; }
@@ -47,7 +49,7 @@ nav {
         text-decoration: none;
         top: 0.5rem; }
     nav #sliderContainer .filled {
-      background-color: Black; }
+      background-color: black; }
   nav #bar {
     flex: 1;
     margin-top: 4rem;
@@ -206,6 +208,10 @@ body {
   body a {
     text-decoration: none;
     color: white; }
+    html a:hover,
+    body a:hover {
+      text-decoration: none;
+      color: white; }
 
 body {
   background-image: linear-gradient(#392c5f, #304b78, #57bc8b);
