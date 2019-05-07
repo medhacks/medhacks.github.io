@@ -8,12 +8,12 @@ nav {
   flex-direction: row;
   justify-content: space-between;
 
-  .logo {
+  a .logo {
     @media screen and (max-width: 1000px) {
       display: none;
     }
     align-self: center;
-    width: 30%;
+    width: 30vw;
   }
 
   .navButton {

@@ -7,11 +7,11 @@ nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between; }
-  nav .logo {
+  nav a .logo {
     align-self: center;
-    width: 30%; }
+    width: 30vw; }
     @media screen and (max-width: 1000px) {
-      nav .logo {
+      nav a .logo {
         display: none; } }
   nav .navButton {
     cursor: pointer;
