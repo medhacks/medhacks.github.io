@@ -254,20 +254,22 @@ body {
   font-size: 1.15rem; }
 
 #trackSection {
-  margin-left: 7vw;
-  margin-right: 7vw;
+  margin: 7vw;
   width: "86vwvw";
   font-size: 1.15rem; }
 
 #logisticsSection {
-  font-size: 1.15rem; }
+  font-size: 1.15rem;
+  margin-top: 7vw; }
 
 #applyingSection {
   color: white;
   width: "86vwvw";
   text-align: left;
-  margin-left: 7vw;
-  margin-right: 7vw; }
+  margin: 7vw; }
+
+.anchor {
+  height: 1rem; }
 
 .header {
   font-size: 3rem;

@@ -89,24 +89,27 @@ body {
 }
 
 #trackSection {
-  margin-left: $margin-size;
-  margin-right: $margin-size;
+  margin: $margin-size;
+
   width: (100 - 2 * $margin-size) + "vw";
   font-size: $content-size;
 }
 
 #logisticsSection {
   font-size: $content-size;
+  margin-top: $margin-size;
 }
 
 #applyingSection {
   color: $apply-text-color;
   width: (100 - 2 * $margin-size) + "vw";
   text-align: left;
-  margin-left: $margin-size;
-  margin-right: $margin-size;
+  margin: $margin-size;
 }
 
+.anchor {
+  height: 1rem;
+}
 .header {
   font-size: $section-header-size;
   color: white;
