@@ -13,7 +13,7 @@ $apply-text-color: white;
 
 $section-header-size: 3rem;
 $subsection-header-size: 2.5rem;
-$content-size: 1.25rem;
+$content-size: 1.15rem;
 
 $margin-size: 7vw;
 
@@ -21,6 +21,7 @@ $margin-size: 7vw;
 @import "./navbar.scss";
 @import "./rotateImage.scss";
 @import "./schedule.scss";
+@import "./faq.scss";
 
 @font-face {
   font-family: custom;
@@ -96,20 +97,6 @@ body {
 
 #logisticsSection {
   font-size: $content-size;
-}
-
-#faqSection {
-  margin-left: $margin-size;
-  margin-right: $margin-size;
-  font-size: $content-size;
-  color: $faq-text-color;
-  text-align: left;
-  .nav {
-    justify-content: space-around;
-  }
-  .faq-container .nav-tabs li {
-    margin: 1rem;
-  }
 }
 
 #applyingSection {

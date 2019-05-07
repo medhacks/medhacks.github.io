@@ -30,11 +30,14 @@ function setupRotation() {
 function rotateAbout() {
   let rotateAmount;
   var loc = $(window).scrollTop() + $(window).height() / 2;
-  if (loc > topYAbout && loc < bottomYAbout) {
-    loc -= topYAbout;
-    rotateAmount = 150 - (305 * loc) / (bottomYAbout - topYAbout);
-  } else {
-    rotateAmount = 155;
+  // if (loc > topYAbout && loc < bottomYAbout) {
+  //   loc -= topYAbout;
+  //   rotateAmount = 150 - (305 * loc) / (bottomYAbout - topYAbout);
+  // } else {
+  //   rotateAmount = 155;
+  // }
+  if (loc > topYAbout - 100) {
+    rotateAmount = 0;
   }
   $("#rotateAbout").css("transform", "rotate(" + rotateAmount + "deg)");
 }
@@ -42,13 +45,16 @@ function rotateAbout() {
 function rotateLogistics() {
   let rotateAmount;
   var loc = $(window).scrollTop() + $(window).height() / 2;
-  if (loc > topYLogistics && loc < bottomYLogistics) {
-    loc -= topYLogistics;
-    rotateAmount = 150 - (305 * loc) / (bottomYLogistics - topYLogistics);
-  } else {
-    rotateAmount = 155;
+  // if (loc > topYLogistics && loc < bottomYLogistics) {
+  //   loc -= topYLogistics;
+  //   rotateAmount = 150 - (305 * loc) / (bottomYLogistics - topYLogistics);
+  // } else {
+  //   rotateAmount = 155;
+  // }
+  // rotateAmount * -1;
+  if (loc > topYLogistics - 100) {
+    rotateAmount = 0;
   }
-  rotateAmount * -1;
   $("#rotateLogistics").css("transform", "rotate(" + rotateAmount + "deg)");
 }
 

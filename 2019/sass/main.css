@@ -1,7 +1,7 @@
 nav {
   z-index: 2;
   position: fixed;
-  top: 0%;
+  top: 1%;
   left: 5%;
   width: 83%;
   display: flex;
@@ -109,8 +109,8 @@ nav {
 .rotateIn {
   flex: 1;
   width: 30vw;
-  transform: rotate(0deg);
-  transform-origin: 110% 50%; }
+  transform-origin: 110% 50%;
+  transform: rotate(180deg); }
   @media screen and (max-width: 1000px) {
     .rotateIn {
       display: none; } }
@@ -138,7 +138,8 @@ nav {
     .aboutRotate div {
       flex: 0.6; } }
   .aboutRotate .rotateIn {
-    flex: 0.4; }
+    flex: 0.4;
+    transition: transform 0.7s ease-in-out; }
     @media screen and (max-width: 1000px) {
       .aboutRotate .rotateIn {
         display: none; } }
@@ -192,6 +193,17 @@ table {
       table tr {
         font-size: 14px; } }
 
+#faqSection {
+  margin-left: 7vw;
+  margin-right: 7vw;
+  font-size: 1.15rem;
+  color: white;
+  text-align: left; }
+  #faqSection .nav {
+    justify-content: space-around; }
+  #faqSection .faq-container .nav-tabs li {
+    margin: 1rem; }
+
 @font-face {
   font-family: custom;
   src: url(../assets/Ok-Regular.ttf); }
@@ -201,7 +213,7 @@ body {
   overflow-x: hidden;
   scroll-behavior: smooth;
   font-family: custom;
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   text-transform: uppercase; }
   html a,
   body a {
@@ -239,27 +251,16 @@ body {
   color: white;
   margin: 7vw;
   width: "86vwvw";
-  font-size: 1.25rem; }
+  font-size: 1.15rem; }
 
 #trackSection {
   margin-left: 7vw;
   margin-right: 7vw;
   width: "86vwvw";
-  font-size: 1.25rem; }
+  font-size: 1.15rem; }
 
 #logisticsSection {
-  font-size: 1.25rem; }
-
-#faqSection {
-  margin-left: 7vw;
-  margin-right: 7vw;
-  font-size: 1.25rem;
-  color: white;
-  text-align: left; }
-  #faqSection .nav {
-    justify-content: space-around; }
-  #faqSection .faq-container .nav-tabs li {
-    margin: 1rem; }
+  font-size: 1.15rem; }
 
 #applyingSection {
   color: white;
