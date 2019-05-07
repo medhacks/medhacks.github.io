@@ -156,7 +156,6 @@ nav {
       display: none; } }
   .scheduleContainer ul {
     border: none;
-    width: 90vw;
     display: flex;
     justify-content: space-evenly; }
     .scheduleContainer ul .activeLi {
