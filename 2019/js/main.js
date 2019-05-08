@@ -62,7 +62,7 @@ function setUpArrays() {
       realDist: aboutPos,
       bar: aboutTop - homeTop,
       distBar: aboutTop - homeTop,
-      selector: $("#aboutBubble")
+      selector: "#aboutBubble"
     },
     {
       //bar between about and tracks
@@ -70,7 +70,7 @@ function setUpArrays() {
       realDist: tracksPos,
       bar: trackTop - aboutTop,
       distBar: trackTop - homeTop,
-      selector: $("#tracksBubble")
+      selector: "#tracksBubble"
     },
     {
       //bar between tracks and logistics
@@ -78,7 +78,7 @@ function setUpArrays() {
       realDist: logisticsPos,
       bar: logisticsTop - trackTop,
       distBar: logisticsTop - homeTop,
-      selector: $("#logisticsBubble")
+      selector: "#logisticsBubble"
     },
     {
       //bar between tracks and logistics
@@ -86,7 +86,7 @@ function setUpArrays() {
       realDist: applyingPos,
       bar: applyingTop - logisticsTop,
       distBar: applyingTop - homeTop,
-      selector: $("#applyingBubble")
+      selector: "#applyingBubble"
     }
   ];
 }
@@ -101,7 +101,6 @@ function calculateLength(curPos) {
   distances.forEach(elem => {
     if (curPos <= elem.realDist && curPos > elem.realDist - elem.real) {
       let inside = curPos - (elem.realDist - elem.real);
-      console.log(inside);
       curLen += (inside * elem.bar) / elem.real;
     } else if (curPos >= elem.realDist) {
       curLen += elem.bar;
@@ -118,9 +117,11 @@ function calculateLength(curPos) {
 function updateBubbles(curLen) {
   distances.forEach(elem => {
     if (curLen >= elem.distBar) {
-      elem.selector.addClass("filled");
+      $(elem.selector + " img:nth-child(1)").removeClass("active");
+      $(elem.selector + " img:nth-child(2)").addClass("active");
     } else {
-      elem.selector.removeClass("filled");
+      $(elem.selector + " img:nth-child(1)").addClass("active");
+      $(elem.selector + " img:nth-child(2)").removeClass("active");
     }
   });
 }

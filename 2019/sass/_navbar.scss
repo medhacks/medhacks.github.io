@@ -12,6 +12,7 @@ nav {
     @media screen and (max-width: 1000px) {
       display: none;
     }
+    margin-top: 0.5rem;
     align-self: center;
     width: 30vw;
   }
@@ -19,7 +20,6 @@ nav {
   .navButton {
     cursor: pointer;
     margin-top: 0.5rem;
-    margin-bottom: 2rem;
     margin-right: 2rem;
     display: flex;
     flex-direction: column;
@@ -38,6 +38,7 @@ nav {
     .buttonContainer {
       display: flex;
       flex-direction: row;
+      padding-bottom: 0;
     }
     .bubble {
       border: 2px solid Black;
@@ -66,12 +67,12 @@ nav {
   #bar {
     flex: 1;
     margin-top: 4rem;
-    border: 3px black;
+    border: 3px;
     border-style: dotted;
     height: 5px;
     width: 100px;
     position: absolute;
-    bottom: 45%;
+    bottom: 35%;
     margin-left: 2%;
   }
 }
@@ -79,13 +80,19 @@ nav {
 #side-info {
   display: none;
   height: 100vh;
-  width: 50vw;
+  width: 22vw;
   position: fixed;
   left: 0px;
   top: 0px;
   background-color: black;
   color: white;
   padding-left: 10vw;
+  ul {
+    position: fixed;
+    left: 0px;
+    top: 40px;
+    padding: 2rem 0.5rem;
+  }
   li {
     list-style-type: none;
   }
@@ -131,4 +138,18 @@ nav {
     transform: rotate(45deg) translate(-8px, -8px);
     background-color: white !important;
   }
+}
+
+.planet {
+  width: 2rem;
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+.planet-container {
+  display: flex;
+  justify-content: space-between;
 }
