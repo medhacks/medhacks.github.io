@@ -149,21 +149,17 @@ nav {
   position: relative;
   font-size: 1.89rem;
   padding-bottom: 0.1rem; }
-  @media screen and (max-width: 1000px) {
-    .scheduleContainer {
-      display: none; } }
+  .scheduleContainer .header {
+    margin-bottom: 1.5rem; }
   .scheduleContainer ul {
     border: none;
     display: flex;
-    justify-content: space-evenly; }
+    justify-content: space-around; }
     .scheduleContainer ul .activeLi {
       background-color: none; }
     .scheduleContainer ul li {
-      padding: 0rem;
-      text-align: center;
-      vertical-align: middle; }
+      padding: 0rem; }
       .scheduleContainer ul li a {
-        padding: 1rem;
         text-decoration: none; }
         .scheduleContainer ul li a:hover {
           color: #dbb13b; }
