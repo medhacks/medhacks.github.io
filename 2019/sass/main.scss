@@ -62,12 +62,8 @@ body {
   .flexContainer {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     width: 100%;
-    div {
-      width: 50%;
-      max-height: 50vh;
-      min-height: 50vh;
-    }
     p {
       flex: 50%;
     }
@@ -137,4 +133,12 @@ body {
   height: 5000px;
   min-width: 100vw;
   background: transparent;
+}
+
+.apply-button {
+  @include buttonAnimate(white, $color-green);
+  @include center;
+  border-radius: 5px;
+  width: 8rem;
+  font-size: 1.5rem;
 }

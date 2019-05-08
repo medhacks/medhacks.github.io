@@ -33,7 +33,7 @@ nav {
     flex: 1;
     margin-top: 4rem;
     border: 3px;
-    border-style: dotted;
+    border-style: dashed;
     height: 5px;
     width: 100px;
     position: absolute;
@@ -230,11 +230,8 @@ body {
   #titleSection .flexContainer {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     width: 100%; }
-    #titleSection .flexContainer div {
-      width: 50%;
-      max-height: 50vh;
-      min-height: 50vh; }
     #titleSection .flexContainer p {
       flex: 50%; }
     #titleSection .flexContainer img {
@@ -292,5 +289,20 @@ body {
   height: 5000px;
   min-width: 100vw;
   background: transparent; }
+
+.apply-button {
+  background-color: white;
+  color: #57bc8b;
+  transition: 0.2s background-color ease-out, 0.2s border-color ease-out, 0.2s transform ease-out;
+  transform: scale(0.85);
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 5px;
+  width: 8rem;
+  font-size: 1.5rem; }
+  .apply-button:hover {
+    background-color: #57bc8b;
+    color: white;
+    transform: scale(1); }
 
 /*# sourceMappingURL=main.css.map */
