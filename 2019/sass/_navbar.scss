@@ -9,7 +9,7 @@ nav {
   justify-content: space-between;
 
   a .logo {
-    @media screen and (max-width: 1000px) {
+    @media screen and (max-width: 800px) {
       display: none;
     }
     margin-top: 0.5rem;
@@ -25,7 +25,7 @@ nav {
   }
 
   #sliderContainer {
-    @media screen and (max-width: 1000px) {
+    @media screen and (max-width: 800px) {
       display: none;
     }
     display: flex;
@@ -33,7 +33,7 @@ nav {
     .buttonContainer {
       display: flex;
       flex-direction: row;
-      justify-content: space-evenly;
+      justify-content: space-around;
       padding-bottom: 0;
     }
   }
@@ -73,7 +73,7 @@ nav {
 }
 
 #ham-container {
-  @media screen and (min-width: 1000px) {
+  @media screen and (min-width: 800px) {
     display: none;
   }
   z-index: 4;
@@ -118,6 +118,18 @@ nav {
   width: 2rem;
   display: none;
   align-self: center;
+}
+
+.nav-dot {
+  border: white 4px solid;
+  border-radius: 40%;
+  width: 0.5rem;
+  height: 0.5rem;
+  align-self: center;
+}
+
+.invis {
+  border: none;
 }
 
 .active {

@@ -1,5 +1,6 @@
 let maxLen;
 let distances;
+let dots;
 let bubbleMargin = 150;
 
 $(document).ready(() => {
@@ -89,6 +90,49 @@ function setUpArrays() {
       selector: "#applyingBubble"
     }
   ];
+
+  let dot1Top = $("#dot1")[0].getBoundingClientRect().left;
+  let dot2Top = $("#dot2")[0].getBoundingClientRect().left;
+  let dot3Top = $("#dot3")[0].getBoundingClientRect().left;
+  let dot4Top = $("#dot4")[0].getBoundingClientRect().left;
+  let dot5Top = $("#dot5")[0].getBoundingClientRect().left;
+  let dot6Top = $("#dot6")[0].getBoundingClientRect().left;
+  let dot7Top = $("#dot7")[0].getBoundingClientRect().left;
+  let dot8Top = $("#dot8")[0].getBoundingClientRect().left;
+  dots = [
+    {
+      bar: dot1Top - homeTop,
+      selector: "#dot1"
+    },
+    {
+      bar: dot2Top - homeTop,
+      selector: "#dot2"
+    },
+    {
+      bar: dot3Top - homeTop,
+      selector: "#dot3"
+    },
+    {
+      bar: dot4Top - homeTop,
+      selector: "#dot4"
+    },
+    {
+      bar: dot5Top - homeTop,
+      selector: "#dot5"
+    },
+    {
+      bar: dot6Top - homeTop,
+      selector: "#dot6"
+    },
+    {
+      bar: dot7Top - homeTop,
+      selector: "#dot7"
+    },
+    {
+      bar: dot8Top - homeTop,
+      selector: "#dot8"
+    }
+  ];
 }
 
 //calculates what the current length of the bar should be
@@ -122,6 +166,14 @@ function updateBubbles(curLen) {
     } else {
       $(elem.selector + " img:nth-child(1)").addClass("active");
       $(elem.selector + " img:nth-child(2)").removeClass("active");
+    }
+  });
+
+  dots.forEach(elem => {
+    if (curLen >= elem.bar) {
+      $(elem.selector).removeClass("invis");
+    } else {
+      $(elem.selector).addClass("invis");
     }
   });
 }
