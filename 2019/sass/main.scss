@@ -66,9 +66,9 @@ body {
     p {
       flex: 50%;
       font-size: 1.4rem;
-      #typed-strings {
-        font-size: 2rem;
-      }
+    }
+    span {
+      font-size: 2rem;
     }
     img {
       @media screen and (max-width: 1000px) {

@@ -241,8 +241,8 @@ body {
     #titleSection .flexContainer p {
       flex: 50%;
       font-size: 1.4rem; }
-      #titleSection .flexContainer p #typed-strings {
-        font-size: 2rem; }
+    #titleSection .flexContainer span {
+      font-size: 2rem; }
     #titleSection .flexContainer img {
       align-self: center;
       width: 40vw; }
