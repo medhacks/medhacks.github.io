@@ -228,7 +228,7 @@ body {
       color: white; }
 
 body {
-  background-image: linear-gradient(#392c5f, #304b78, #57bc8b);
+  background-image: linear-gradient(#392c5f, #304b78);
   color: white; }
 
 #titleSection {
@@ -239,7 +239,10 @@ body {
     justify-content: space-between;
     width: 100%; }
     #titleSection .flexContainer p {
-      flex: 50%; }
+      flex: 50%;
+      font-size: 1.4rem; }
+      #titleSection .flexContainer p #typed-strings {
+        font-size: 2rem; }
     #titleSection .flexContainer img {
       align-self: center;
       width: 40vw; }

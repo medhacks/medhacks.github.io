@@ -50,8 +50,7 @@ body {
   //background-image: none;
   background-image: linear-gradient(
     $background-color-purple,
-    $background-color-blue,
-    $color-green
+    $background-color-blue // $color-green
   );
   color: $text-color;
   //background-color: $background-color-blue;
@@ -66,6 +65,10 @@ body {
     width: 100%;
     p {
       flex: 50%;
+      font-size: 1.4rem;
+      #typed-strings {
+        font-size: 2rem;
+      }
     }
     img {
       @media screen and (max-width: 1000px) {
