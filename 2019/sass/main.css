@@ -192,7 +192,7 @@ table {
     word-wrap: break-word;
     font-style: normal;
     font-weight: normal;
-    color: white;
+    color: #fcffe4;
     border: 3px white solid; }
     @media screen and (max-width: 650px) {
       table th,
@@ -203,7 +203,7 @@ table {
   margin-left: 7vw;
   margin-right: 7vw;
   font-size: 1.1rem;
-  color: white;
+  color: #fcffe4;
   text-align: left; }
   #faqSection .nav {
     justify-content: space-around; }
@@ -224,15 +224,15 @@ body {
   html a,
   body a {
     text-decoration: none;
-    color: white; }
+    color: #fcffe4; }
     html a:hover,
     body a:hover {
       text-decoration: none;
-      color: white; }
+      color: #fcffe4; }
 
 body {
   background-image: linear-gradient(#392c5f, #304b78);
-  color: white; }
+  color: #fcffe4; }
 
 #titleSection {
   margin: 7vw; }
@@ -254,7 +254,7 @@ body {
           display: none; } }
 
 #aboutSection {
-  color: white;
+  color: #fcffe4;
   margin: 7vw;
   width: "86vwvw";
   font-size: 1.1rem; }
@@ -269,7 +269,7 @@ body {
   margin-top: 7vw; }
 
 #applyingSection {
-  color: white;
+  color: #fcffe4;
   width: "86vwvw";
   text-align: left;
   margin: 7vw; }
@@ -279,7 +279,7 @@ body {
 
 .header {
   font-size: 3rem;
-  color: white;
+  color: #fcffe4;
   text-align: left;
   text-decoration: underline; }
 

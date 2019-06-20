@@ -1,15 +1,15 @@
 // main sass file where everything will eventually end up
 // put big variable names for colors and what not up her for ease of view
-$text-color: white;
+$text-color: #fcffe4;
 $background-color-blue: #304b78;
 $background-color-purple: #392c5f;
 
 $color-yellow: #dbb13b;
 $color-green: #57bc8b;
 
-$about-text-color: white;
-$faq-text-color: white;
-$apply-text-color: white;
+$about-text-color: #fcffe4;
+$faq-text-color: #fcffe4;
+$apply-text-color: #fcffe4;
 
 $section-header-size: 3rem;
 $subsection-header-size: 2.5rem;
@@ -111,7 +111,7 @@ body {
 }
 .header {
   font-size: $section-header-size;
-  color: white;
+  color: #fcffe4;
   text-align: left;
   text-decoration: underline;
 }
