@@ -25,7 +25,7 @@ $margin-size: 7vw;
 
 @font-face {
   font-family: custom;
-  src: url(../assets/Ok-Regular.ttf);
+  src: url(../assets/Roboto-Medium.ttf);
 }
 
 html,
@@ -43,7 +43,7 @@ body {
   }
   font-family: custom;
   font-size: $content-size;
-  text-transform: uppercase;
+  // text-transform: uppercase;
 }
 
 body {
