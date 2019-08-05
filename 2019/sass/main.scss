@@ -13,7 +13,7 @@ $apply-text-color: #fcffe4;
 
 $section-header-size: 3rem;
 $subsection-header-size: 2.5rem;
-$content-size: 1.1rem;
+$content-size: 1rem;
 
 $margin-size: 7vw;
 
@@ -26,6 +26,11 @@ $margin-size: 7vw;
 @font-face {
   font-family: custom;
   src: url(../assets/Roboto-Medium.ttf);
+}
+
+@font-face {
+  font-family: header;
+  src: url(../assets/Ok-Regular.ttf);
 }
 
 html,
@@ -114,10 +119,14 @@ body {
   color: #fcffe4;
   text-align: left;
   text-decoration: underline;
+  font-family: header;
+  text-transform: capitalize;
 }
 
 .subHeader {
   font-size: $subsection-header-size;
+  font-family: header;
+  text-transform: capitalize;
 }
 
 .marginFormat {

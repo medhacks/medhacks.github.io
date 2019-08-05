@@ -202,7 +202,7 @@ table {
 #faqSection {
   margin-left: 7vw;
   margin-right: 7vw;
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #fcffe4;
   text-align: left; }
   #faqSection .nav {
@@ -212,6 +212,9 @@ table {
 
 @font-face {
   font-family: custom;
+  src: url(../assets/Roboto-Medium.ttf); }
+@font-face {
+  font-family: header;
   src: url(../assets/Ok-Regular.ttf); }
 html,
 body {
@@ -219,8 +222,7 @@ body {
   overflow-x: hidden;
   scroll-behavior: smooth;
   font-family: custom;
-  font-size: 1.1rem;
-  text-transform: uppercase; }
+  font-size: 1rem; }
   html a,
   body a {
     text-decoration: none;
@@ -257,15 +259,15 @@ body {
   color: #fcffe4;
   margin: 7vw;
   width: "86vwvw";
-  font-size: 1.1rem; }
+  font-size: 1rem; }
 
 #trackSection {
   margin: 7vw;
   width: "86vwvw";
-  font-size: 1.1rem; }
+  font-size: 1rem; }
 
 #logisticsSection {
-  font-size: 1.1rem;
+  font-size: 1rem;
   margin-top: 7vw; }
 
 #applyingSection {
@@ -281,10 +283,14 @@ body {
   font-size: 3rem;
   color: #fcffe4;
   text-align: left;
-  text-decoration: underline; }
+  text-decoration: underline;
+  font-family: header;
+  text-transform: capitalize; }
 
 .subHeader {
-  font-size: 2.5rem; }
+  font-size: 2.5rem;
+  font-family: header;
+  text-transform: capitalize; }
 
 .marginFormat {
   height: 100px;
