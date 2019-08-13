@@ -40,6 +40,17 @@ nav {
     bottom: 35%;
     margin-left: 7%; }
 
+hr {
+  display: block;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 20px;
+}
+
+
 #side-info {
   display: none;
   height: 100vh;
@@ -276,6 +287,12 @@ body {
   text-align: left;
   margin: 7vw; }
 
+#sponsorSection {
+  background-color: #ffffff;
+  width: 100%;
+  text-align: left;
+}
+
 .anchor {
   height: 1rem; }
 
@@ -289,6 +306,16 @@ body {
 
 .subHeader {
   font-size: 2.5rem;
+  font-family: header;
+  text-transform: capitalize; }
+
+.sponsorHeader {
+  font-size: 3rem;
+  color: #372F62;
+  text-align: left;
+  padding-top: 100 px;
+  margin: 7vw;
+  text-decoration: underline;
   font-family: header;
   text-transform: capitalize; }
 
