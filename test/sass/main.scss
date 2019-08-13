@@ -111,6 +111,12 @@ body {
   margin: $margin-size;
 }
 
+#sponsorSection {
+  background-color: #ffffff;
+  width: 100%;
+  text-align: left;
+}
+
 .anchor {
   height: 1rem;
 }
@@ -122,6 +128,19 @@ body {
   font-family: header;
   text-transform: capitalize;
 }
+
+
+.sponsorHeader {
+  font-size: 3rem;
+  color: #372F62;
+  text-align: left;
+  padding-top: 100 px;
+  margin: 7vw;
+  text-decoration: underline;
+  font-family: header;
+  text-transform: capitalize; }
+
+
 
 .subHeader {
   font-size: $subsection-header-size;
