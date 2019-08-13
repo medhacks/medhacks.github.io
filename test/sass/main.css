@@ -45,16 +45,6 @@ nav {
     bottom: 35%;
     margin-left: 7%; }
 
-hr {
-  display: block;
-  margin-top: 0;
-  margin-bottom: 0;
-  margin-left: auto;
-  margin-right: auto;
-  border-style: inset;
-  border-width: 20px;
-}
-
 
 #side-info {
   display: none;
@@ -296,6 +286,7 @@ body {
   background-color: #ffffff;
   width: 100%;
   text-align: left;
+  box-shadow:  0px -5px 3px white;
 }
 
 .anchor {
