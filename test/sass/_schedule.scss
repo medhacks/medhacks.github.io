@@ -1,0 +1,56 @@
+.scheduleContainer {
+  .header {
+    margin-bottom: 1.5rem;
+  }
+  margin: 0 $margin-size;
+  width: (100 - 2 * $margin-size) + "vw";
+  @include center;
+  position: relative;
+  font-size: 1.89rem;
+  padding-bottom: 0.1rem;
+
+  ul {
+    border: none;
+    display: flex;
+    justify-content: space-around;
+    .activeLi {
+      background-color: none;
+    }
+    li {
+      padding: 0rem;
+      a {
+        text-decoration: none;
+        //color: ;
+        &:hover {
+          color: $color-yellow;
+        }
+      }
+    }
+  }
+}
+
+table {
+  margin-top: 2%;
+  margin-bottom: 4%;
+  margin-left: 0;
+  margin-right: 0;
+  background-color: none; //$background-color-blue;
+  width: 100vw - $margin-size * 2;
+  position: relative;
+  table-layout: fixed;
+  // border-style: hidden;
+  th,
+  tr {
+    //font-family: $font-fam;
+    font-size: 25px;
+    word-wrap: break-word;
+    font-style: normal;
+    font-weight: normal;
+    color: $text-color;
+    border: 3px white solid;
+
+    @media screen and (max-width: 650px) {
+      font-size: 14px;
+    }
+  }
+}
