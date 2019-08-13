@@ -176,6 +176,9 @@ function updateBubbles(curLen) {
       $(elem.selector).addClass("invis");
     }
   });
+
+
+  
 }
 
 function updateBar() {
