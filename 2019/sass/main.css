@@ -272,9 +272,17 @@ body {
   width: "86vwvw";
   font-size: 1rem; }
 
+#keynoteSection{
+  color: #fcffe4;
+  margin: 7vw;
+  width: "86vwvw";
+  font-size: 1rem; }
+}
+
 #logisticsSection {
   font-size: 1rem;
-  margin-top: 7vw; }
+  margin-top: 7vw; 
+  width: "86vwvw";}
 
 #applyingSection {
   color: #fcffe4;
@@ -304,6 +312,11 @@ body {
   font-size: 2.5rem;
   font-family: header;
   text-transform: capitalize; }
+
+.speakerDescription {
+  width: 50%;
+  margin:auto;
+}
 
 .sponsorHeader {
   font-size: 3rem;

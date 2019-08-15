@@ -92,6 +92,13 @@ body {
   font-size: $content-size;
 }
 
+#keynoteSection {
+  color: $about-text-color;
+  margin: $margin-size;
+  width: (100 - 2 * $margin-size) + "vw";
+  font-size: $content-size;
+}
+
 #trackSection {
   margin: $margin-size;
 
@@ -148,6 +155,7 @@ body {
   font-family: header;
   text-transform: capitalize;
 }
+
 
 .marginFormat {
   height: 100px;
