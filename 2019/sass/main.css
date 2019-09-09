@@ -1,9 +1,12 @@
 nav {
   z-index: 2;
   position: fixed;
-  top: 1%;
-  left: 5%;
-  width: 83%;
+  padding-top: 1%;
+  padding-left: 5%;
+  padding-right: 12%;
+  box-shadow: 0px 10px 5px 0px black;
+  width: 100%;
+  background-color: black;
   display: flex;
   flex-direction: row;
   justify-content: space-between; }
