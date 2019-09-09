@@ -122,7 +122,7 @@ body {
   background-color: #ffffff;
   width: 100%;
   text-align: left;
-  box-shadow:  0px -5px 3px white;
+  box-shadow: 0px -5px 3px white;
 }
 
 .anchor {
@@ -137,25 +137,22 @@ body {
   text-transform: capitalize;
 }
 
-
 .sponsorHeader {
   font-size: 3rem;
-  color: #372F62;
+  color: #372f62;
   text-align: left;
   padding-top: 100 px;
   margin: 7vw;
   text-decoration: underline;
   font-family: header;
-  text-transform: capitalize; }
-
-
+  text-transform: capitalize;
+}
 
 .subHeader {
   font-size: $subsection-header-size;
   font-family: header;
   text-transform: capitalize;
 }
-
 
 .marginFormat {
   height: 100px;
@@ -181,4 +178,14 @@ body {
   border-radius: 5px;
   width: 8rem;
   font-size: 1.5rem;
+}
+
+.keynoteColumn {
+  flex: 0.5;
+  margin: 1rem;
+}
+
+.keynoteContainer {
+  display: flex;
+  justify-content: space-evenly;
 }
