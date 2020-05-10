@@ -3,7 +3,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <link href="assets/sass/main.css" rel="stylesheet">
+    <link href="./assets/sass/main.css" rel="stylesheet">
+    <script src="./assets/js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <title>MedHacks 2020</title>
 
 </head>
@@ -46,14 +48,11 @@
 
     </div>
 
-    <!-- === Margin === -->
-    <div class="marginFormat" style="height:30px" ; width:"100%"></div>
-
     <!-- === ABOUT === -->
     <div id="aboutSection">
         <!--Slideshow container-->
         <div class="slideshow-container">
-            <h2>Aboat MedHacks</h2>
+            <h2>About MedHacks</h2>
             <div class="mySlides">
                 <p>Join us at MedHacks 2020, where we are bringing the largest healthcare & technology companies in
                     collaboration with the Johns Hopkins Medicine Network to revolutionize the way we think about
@@ -271,6 +270,9 @@
         </div>
     </div>
 
+    <!-- === Margin === -->
+    <div class="marginFormat" style="height:30px" ; width:"100%"></div>
+
 
     <!-- === APPLY === -->
     <div>
@@ -298,6 +300,9 @@
     <div class="linkDiv">
         <a class="applyLink" href="https://www.google.com" target="_blank">Apply Here Now!</a>
     </div>
+
+    <!-- === Margin === -->
+    <div class="marginFormat" style="height:30px" ; width:"100%"></div>
 
 
     <!-- === SPONSORS === -->
@@ -352,95 +357,107 @@
                         alt="Tech Slice" /></a>
         </div>
 
+        <!-- === Margin === -->
+        <div class="marginFormat" style="height:30px" ; width:"100%"></div>
 
-            <!-- === FAQ === -->
-    <h1 class="header">FAQ</h1>
-    <div class="FAQColumn">
-        <div class="FAQDiv">
-            <button class="FAQButton">What is a Hackathon?</button>
-            <div class="FAQAnswer">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam commodo, leo ut consectetur eleifend,
-                    nisl arcu fermentum metus, sed faucibus justo massa non tortor. Morbi vitae purus eget ligula
-                    ultricies pretium. Suspendisse potenti. Vestibulum eget lacinia nibh, in scelerisque elit.</p>
+        <!-- === FAQ === -->
+        <h1 class="header">FAQ</h1>
+        <div class="FAQColumn">
+            <div class="FAQDiv">
+                <button class="FAQButton">What is a Hackathon?</button>
+                <div class="FAQAnswer">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam commodo, leo ut consectetur
+                        eleifend,
+                        nisl arcu fermentum metus, sed faucibus justo massa non tortor. Morbi vitae purus eget ligula
+                        ultricies pretium. Suspendisse potenti. Vestibulum eget lacinia nibh, in scelerisque elit.</p>
+                </div>
+            </div>
+            <div class="FAQDiv">
+                <button class="FAQButton">Why MedHacks?</button>
+                <div class="FAQAnswer">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam commodo, leo ut consectetur
+                        eleifend,
+                        nisl arcu fermentum metus, sed faucibus justo massa non tortor. Morbi vitae purus eget ligula
+                        ultricies pretium. Suspendisse potenti. Vestibulum eget lacinia nibh, in scelerisque elit.</p>
+                </div>
+            </div>
+            <div class="FAQDiv">
+                <button class="FAQButton">How do I apply?</button>
+                <div class="FAQAnswer">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam commodo, leo ut consectetur
+                        eleifend,
+                        nisl arcu fermentum metus, sed faucibus justo massa non tortor. Morbi vitae purus eget ligula
+                        ultricies pretium. Suspendisse potenti. Vestibulum eget lacinia nibh, in scelerisque elit.</p>
+                </div>
+            </div>
+            <div class="FAQDiv">
+                <button class="FAQButton">How can I track my application status?</button>
+                <div class="FAQAnswer">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam commodo, leo ut consectetur
+                        eleifend,
+                        nisl arcu fermentum metus, sed faucibus justo massa non tortor. Morbi vitae purus eget ligula
+                        ultricies pretium. Suspendisse potenti. Vestibulum eget lacinia nibh, in scelerisque elit.</p>
+                </div>
+            </div>
+            <div class="FAQDiv">
+                <button class="FAQButton">What are some important deadlines?</button>
+                <div class="FAQAnswer">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam commodo, leo ut consectetur
+                        eleifend,
+                        nisl arcu fermentum metus, sed faucibus justo massa non tortor. Morbi vitae purus eget ligula
+                        ultricies pretium. Suspendisse potenti. Vestibulum eget lacinia nibh, in scelerisque elit.</p>
+                </div>
             </div>
         </div>
-        <div class="FAQDiv">
-            <button class="FAQButton">Why MedHacks?</button>
-            <div class="FAQAnswer">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam commodo, leo ut consectetur eleifend,
-                    nisl arcu fermentum metus, sed faucibus justo massa non tortor. Morbi vitae purus eget ligula
-                    ultricies pretium. Suspendisse potenti. Vestibulum eget lacinia nibh, in scelerisque elit.</p>
+        <div class="FAQColumn">
+            <div class="FAQDiv">
+                <button class="FAQButton">Where is MedHacks 2020 Located?</button>
+                <div class="FAQAnswer">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam commodo, leo ut consectetur
+                        eleifend,
+                        nisl arcu fermentum metus, sed faucibus justo massa non tortor. Morbi vitae purus eget ligula
+                        ultricies pretium. Suspendisse potenti. Vestibulum eget lacinia nibh, in scelerisque elit.</p>
+                </div>
+            </div>
+            <div class="FAQDiv">
+                <button class="FAQButton">Where will I sleep?</button>
+                <div class="FAQAnswer">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam commodo, leo ut consectetur
+                        eleifend,
+                        nisl arcu fermentum metus, sed faucibus justo massa non tortor. Morbi vitae purus eget ligula
+                        ultricies pretium. Suspendisse potenti. Vestibulum eget lacinia nibh, in scelerisque elit.</p>
+                </div>
+            </div>
+            <div class="FAQDiv">
+                <button class="FAQButton">How do I form a hackathon team?</button>
+                <div class="FAQAnswer">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam commodo, leo ut consectetur
+                        eleifend,
+                        nisl arcu fermentum metus, sed faucibus justo massa non tortor. Morbi vitae purus eget ligula
+                        ultricies pretium. Suspendisse potenti. Vestibulum eget lacinia nibh, in scelerisque elit.</p>
+                </div>
+            </div>
+            <div class="FAQDiv">
+                <button class="FAQButton">How do project teams get judged?</button>
+                <div class="FAQAnswer">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam commodo, leo ut consectetur
+                        eleifend,
+                        nisl arcu fermentum metus, sed faucibus justo massa non tortor. Morbi vitae purus eget ligula
+                        ultricies pretium. Suspendisse potenti. Vestibulum eget lacinia nibh, in scelerisque elit.</p>
+                </div>
+            </div>
+            <div class="FAQDiv">
+                <button class="FAQButton">What assistance do the teams get?</button>
+                <div class="FAQAnswer">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam commodo, leo ut consectetur
+                        eleifend,
+                        nisl arcu fermentum metus, sed faucibus justo massa non tortor. Morbi vitae purus eget ligula
+                        ultricies pretium. Suspendisse potenti. Vestibulum eget lacinia nibh, in scelerisque elit.</p>
+                </div>
             </div>
         </div>
-        <div class="FAQDiv">
-            <button class="FAQButton">How do I apply?</button>
-            <div class="FAQAnswer">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam commodo, leo ut consectetur eleifend,
-                    nisl arcu fermentum metus, sed faucibus justo massa non tortor. Morbi vitae purus eget ligula
-                    ultricies pretium. Suspendisse potenti. Vestibulum eget lacinia nibh, in scelerisque elit.</p>
-            </div>
-        </div>
-        <div class="FAQDiv">
-            <button class="FAQButton">How can I track my application status?</button>
-            <div class="FAQAnswer">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam commodo, leo ut consectetur eleifend,
-                    nisl arcu fermentum metus, sed faucibus justo massa non tortor. Morbi vitae purus eget ligula
-                    ultricies pretium. Suspendisse potenti. Vestibulum eget lacinia nibh, in scelerisque elit.</p>
-            </div>
-        </div>
-        <div class="FAQDiv">
-            <button class="FAQButton">What are some important deadlines?</button>
-            <div class="FAQAnswer">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam commodo, leo ut consectetur eleifend,
-                    nisl arcu fermentum metus, sed faucibus justo massa non tortor. Morbi vitae purus eget ligula
-                    ultricies pretium. Suspendisse potenti. Vestibulum eget lacinia nibh, in scelerisque elit.</p>
-            </div>
-        </div>
-    </div>
-    <div class="FAQColumn">
-        <div class="FAQDiv">
-            <button class="FAQButton">Where is MedHacks 2020 Located?</button>
-            <div class="FAQAnswer">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam commodo, leo ut consectetur eleifend,
-                    nisl arcu fermentum metus, sed faucibus justo massa non tortor. Morbi vitae purus eget ligula
-                    ultricies pretium. Suspendisse potenti. Vestibulum eget lacinia nibh, in scelerisque elit.</p>
-            </div>
-        </div>
-        <div class="FAQDiv">
-            <button class="FAQButton">Where will I sleep?</button>
-            <div class="FAQAnswer">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam commodo, leo ut consectetur eleifend,
-                    nisl arcu fermentum metus, sed faucibus justo massa non tortor. Morbi vitae purus eget ligula
-                    ultricies pretium. Suspendisse potenti. Vestibulum eget lacinia nibh, in scelerisque elit.</p>
-            </div>
-        </div>
-        <div class="FAQDiv">
-            <button class="FAQButton">How do I form a hackathon team?</button>
-            <div class="FAQAnswer">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam commodo, leo ut consectetur eleifend,
-                    nisl arcu fermentum metus, sed faucibus justo massa non tortor. Morbi vitae purus eget ligula
-                    ultricies pretium. Suspendisse potenti. Vestibulum eget lacinia nibh, in scelerisque elit.</p>
-            </div>
-        </div>
-        <div class="FAQDiv">
-            <button class="FAQButton">How do project teams get judged?</button>
-            <div class="FAQAnswer">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam commodo, leo ut consectetur eleifend,
-                    nisl arcu fermentum metus, sed faucibus justo massa non tortor. Morbi vitae purus eget ligula
-                    ultricies pretium. Suspendisse potenti. Vestibulum eget lacinia nibh, in scelerisque elit.</p>
-            </div>
-        </div>
-        <div class="FAQDiv">
-            <button class="FAQButton">What assistance do the teams get?</button>
-            <div class="FAQAnswer">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam commodo, leo ut consectetur eleifend,
-                    nisl arcu fermentum metus, sed faucibus justo massa non tortor. Morbi vitae purus eget ligula
-                    ultricies pretium. Suspendisse potenti. Vestibulum eget lacinia nibh, in scelerisque elit.</p>
-            </div>
-        </div>
-    </div>
 
-    <script src="./parts/main.js"></script>
+        <script src="./assets/js/main.js"></script>
         <div class="website-bottom">
 
 

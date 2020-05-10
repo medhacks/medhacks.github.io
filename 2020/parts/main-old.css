@@ -59,6 +59,9 @@
   .FAQColumn {
     width: 50%;
   }
+  .linkDiv {
+    width: 40%;
+  }
 }
 
 .FAQDiv {
@@ -99,4 +102,4 @@
   transition: max-height 0.2s ease-out;
   background-color: #DE495F;
 }
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=main-old.css.map */
