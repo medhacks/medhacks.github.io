@@ -61,9 +61,14 @@ $font-size: 16pt;
     float:left;
 }
 
+
 @media only screen and (min-width: 768px) {
     .FAQColumn {
         width: 50%;
+    }
+
+    .linkDiv {
+        width: 40%;
     }
 }
 

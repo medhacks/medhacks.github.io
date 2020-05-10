@@ -2,7 +2,7 @@
   font-size: 16px;
 }
 
-#aboutSection h2, #challenges, #challenges .track-container, #challenges .track-info {
+#challenges .track-info, #challenges .track-container, #challenges, #aboutSection h2 {
   text-align: center;
   vertical-align: middle;
 }
@@ -11,16 +11,14 @@ html,
 body {
   background-color: #c7ecfa;
   padding: 0;
-  margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1rem;
   letter-spacing: 1.5px;
   line-height: 1.8;
 }
-
 @media screen and (max-width: 980px) {
   html,
-  body {
+body {
     letter-spacing: 1px;
   }
 }
@@ -29,18 +27,15 @@ body {
   padding: 5% 2%;
   overflow: hidden;
 }
-
 #aboutSection .top {
   margin-top: 1rem;
 }
-
 #aboutSection h2 {
   color: #050f38;
   padding-bottom: 2rem;
   margin: -10px;
   font-size: 1.8rem;
 }
-
 #aboutSection h3 {
   color: #c7ecfa;
   margin-bottom: 1.5%;
@@ -49,7 +44,6 @@ body {
   font-size: 1.5rem;
   margin-top: 2.5rem;
 }
-
 #aboutSection p {
   color: #050f38;
   font-size: 1rem;
@@ -94,10 +88,7 @@ body {
   font-weight: bold;
   font-size: 16px;
   border-radius: 5px;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  user-select: none;
   background-color: #de495f;
 }
 
@@ -117,8 +108,7 @@ body {
 .next:hover {
   background-color: white;
   color: #4e7888;
-  -webkit-transform: scale(1.3);
-          transform: scale(1.3);
+  transform: scale(1.3);
 }
 
 /* The dot/bullet/indicator container */
@@ -138,7 +128,6 @@ body {
   background-color: #de495f;
   border-radius: 50%;
   display: inline-block;
-  -webkit-transition: background-color 0.6s ease;
   transition: background-color 0.6s ease;
 }
 
@@ -152,7 +141,6 @@ body {
   display: block;
   background-color: #c7ecfa;
 }
-
 #challenges p {
   margin: 0% 10%;
   padding-top: 1rem;
@@ -163,25 +151,17 @@ body {
   overflow: auto;
   margin-bottom: 5%;
 }
-
 #challenges h2 {
   color: #050f38;
   padding-bottom: 4rem;
   font-size: 1.8rem;
 }
-
 #challenges .challengeRow {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 #challenges .challengeRow .challengeColumn {
-  -webkit-box-flex: 30%;
-      -ms-flex: 30%;
-          flex: 30%;
+  flex: 30%;
 }
-
 #challenges .challengeRow .challengeColumn img {
   width: 75%;
   margin: none;
@@ -189,7 +169,6 @@ body {
   position: relative;
   z-index: 0;
 }
-
 #challenges .challengeRow .challengeColumn p {
   margin: 0% 10%;
   padding-top: 1rem;
@@ -199,136 +178,95 @@ body {
   display: block;
   overflow: auto;
 }
-
 #challenges .track-container {
   float: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin-left: 10%;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-between;
   width: 80%;
   height: 50%;
-      grid-template-areas: "track1 track2 track3";
+  grid-template-areas: "track1 track2 track3";
   -webkit-grid-column-gap: 3rem;
   -moz-grid-column-gap: 3rem;
   grid-column-gap: 2rem;
   grid-row-gap: 1rem;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
-  -ms-grid-rows: 1fr;
-      grid-template-rows: 1fr;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  align-items: center;
   justify-items: center;
   padding-bottom: 5%;
   background-color: #c7ecfa;
   font-family: Arial, Helvetica, sans-serif;
 }
-
 @media screen and (max-width: 980px) {
   #challenges .track-container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
 }
-
 #challenges .track-container .track {
   margin: 10px;
 }
-
 #challenges .track-container #track1 {
   height: 20rem;
   width: 25rem;
   background-color: white;
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
   grid-area: track1;
 }
-
 #challenges .track-container #track1 h2 {
   font-size: 1.5rem;
 }
-
 #challenges .track-container #track1 .imgrow {
   position: relative;
   bottom: 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 #challenges .track-container #track1 .imgrow img {
   padding: 0.5rem;
   width: 40%;
   height: 40%;
-  -webkit-box-flex: 40%;
-      -ms-flex: 40%;
-          flex: 40%;
+  flex: 40%;
 }
-
 #challenges .track-container #track2 {
   background-color: #fff;
   height: 20rem;
   width: 25rem;
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
   grid-area: track2;
 }
-
 #challenges .track-container #track2 h2 {
   font-size: 1.5rem;
 }
-
 #challenges .track-container #track2 img {
   width: 18.75vw;
   height: 4.125vw;
   margin-top: 2rem;
 }
-
 #challenges .track-container #track3 {
   background-color: #fff;
-  -ms-grid-row: 1;
-  -ms-grid-column: 3;
   grid-area: track3;
   height: 20rem;
   width: 25rem;
 }
-
 #challenges .track-container #track3 h2 {
   font-size: 1.5rem;
 }
-
 #challenges .track-container #track3 img {
   width: 16.94vw;
   height: 4.88vw;
 }
-
 #challenges .track-container .track {
   border: 3px solid #050f38;
   border-radius: 3rem;
   padding: 3rem;
 }
-
 #challenges .track-container .track img {
   width: 10rem;
   height: 10rem;
 }
-
 #challenges .track-container .track:hover {
   border-color: #de495f;
   cursor: pointer;
 }
-
 #challenges .black-overlay {
   position: fixed;
   /* Sit on top of the page content */
@@ -349,7 +287,6 @@ body {
   cursor: pointer;
   /* Add a pointer on hover */
 }
-
 #challenges .track-info {
   z-index: 4;
   background-color: #ffff;
@@ -357,55 +294,43 @@ body {
   height: 80%;
   display: none;
   position: fixed;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   background-color: #c7ecfa;
   top: 10%;
   font-family: Arial, Helvetica, sans-serif;
   color: #050f38;
   left: 10%;
 }
-
 #challenges .track-info .close {
   float: right;
   margin: 1rem;
   font-size: 36px;
   font-weight: bold;
 }
-
 #challenges .track-info ul {
   list-style-position: inside;
 }
-
 #challenges .track-info .track-row {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   height: 100%;
   position: relative;
   right: 1.5%;
 }
-
 #challenges .track-info .track-row .track-column h1 {
   padding: 3rem 0 2rem 0;
   font-size: 1.35rem;
 }
-
 #challenges .track-info .track-row .track-column iframe {
   margin: 2rem;
   width: 100%;
 }
-
 #challenges .track-info .track-row .track-column h2 {
   font-size: 1.5rem;
   margin: 0;
   padding: 0.5rem;
   color: #050f38;
 }
-
 #challenges .track-info .track-row .track-column p {
   font-size: 0.7rem;
 }
@@ -433,12 +358,12 @@ body {
 }
 
 .linkDiv {
-  width: 20%;
+  width: 80%;
   text-align: center;
   float: left;
   margin-bottom: 30px;
-  margin-left: 40%;
-  margin-right: 40%;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 .applyLink {
@@ -468,12 +393,17 @@ body {
   float: left;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 980px) {
   .FAQColumn {
     width: 50%;
   }
-}
 
+  .linkDiv {
+    width: 40%;
+    margin-left: 30%;
+    margin-right: 30%;
+  }
+}
 .FAQDiv {
   float: left;
   width: 80%;
@@ -491,8 +421,7 @@ body {
   width: 100%;
   height: 40px;
   color: white;
-  -webkit-box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.05);
-          box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.05);
   font-size: 1rem;
 }
 
@@ -510,7 +439,6 @@ body {
   padding-right: 2%;
   max-height: 0;
   overflow: hidden;
-  -webkit-transition: max-height 0.2s ease-out;
   transition: max-height 0.2s ease-out;
   background-color: #DE495F;
 }
@@ -523,7 +451,7 @@ h1, h2, h4 {
 #header {
   height: 800px;
   background-color: #c7ecfa;
-  background-image: url("../img/bg_cut.png");
+  background-image: url("../assets/img/bg_cut.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   -moz-background-size: 100% 100%;
@@ -546,22 +474,20 @@ h1, h2, h4 {
   margin: 10px;
   padding: 15px;
   text-decoration: none;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
   border-radius: 7px;
   color: white;
   background-color: #DE495F;
 }
 
 .wrapper {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 
 .container {
   background-color: #58a7e7;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
   text-align: center;
   width: 30%;
   margin: 0 auto;
@@ -594,9 +520,10 @@ h1, h2, h4 {
   margin-top: 0px;
   padding-top: 0px;
   padding-bottom: 1000px;
-  background-image: url("../img/website_bottom.png");
+  background-image: url("../assets/img/website_bottom.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   -moz-background-size: 100% 100%;
 }
+
 /*# sourceMappingURL=main.css.map */
