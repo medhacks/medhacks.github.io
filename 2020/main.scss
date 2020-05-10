@@ -1,0 +1,105 @@
+$background-color: #C7ECFA;
+$text-font: Arial, Helvetica, sans-serif;
+$header-font: Arial, Helvetica, sans-serif;
+$text-color: #050F38;
+$font-size: 16pt;
+
+.body {
+    background-color: $background-color;
+}
+
+.header {
+    text-align: center;
+    font-family: $header-font;
+    font-size: 30pt;
+    color: $text-color;
+}
+
+.subheader {
+    color: $text-color;
+}
+
+.subsection {
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+}
+
+.linkDiv {
+    width: 20%;
+    text-align: center;
+    float:left;
+    margin-bottom: 30px;
+    margin-left: 40%;
+    margin-right: 40%;
+}
+
+.applyLink {
+    text-decoration: none;
+    background-color: gray;
+    border: 2px solid black;
+    color: #fff;
+    display: inline-block;
+    font-size: 20px;
+    line-height: 24px;
+    padding: 10px;
+}
+
+.applyLink:hover {
+    text-decoration: underline;
+    background-color: #4684B4;
+}
+
+.subtext {
+    font-size: $font-size;
+    font-family: $text-font;
+    color: $text-color;
+}
+
+.FAQColumn {
+    width: 100%;
+    float:left;
+}
+
+@media only screen and (min-width: 768px) {
+    .FAQColumn {
+        width: 50%;
+    }
+}
+
+.FAQDiv {
+    float: left;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 10px;
+    background-color: #4684B4;
+}
+
+.FAQButton {
+    border: none;
+    background-color: inherit; 
+    font-family: $text-font;
+    width: 100%;
+    height: 40px;
+    color: white;
+    box-shadow: 0 0 6px 1px rgba(0, 0, 0, .05);
+}
+
+.FAQButton:focus {
+    outline: 0;
+}
+
+.FAQButton:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.FAQAnswer {
+    padding-left: 2%;
+    padding-right: 2%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #DE495F;
+}
