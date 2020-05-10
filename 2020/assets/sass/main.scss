@@ -10,17 +10,13 @@ $header-font: Arial, Helvetica, sans-serif;
 $font-size: 16pt;
 $text-color: #050F38;
 
-//from About/Tracks
 $section-header-size: 1.8rem;
 $subsection-size: 1.5rem;
 $content-size: 1rem;
-
-$font-fam: Arial,
-Helvetica,
-sans-serif;
+$header-text-size: 54px;
 
 :root {
-    font-size: 20px;
+    font-size: 16px;
 }
 
 %center {
@@ -28,20 +24,23 @@ sans-serif;
     vertical-align: middle;
 }
 
+
+
 html,
 body {
     background-color: $background-color;
-    margin: auto;
+    //margin: auto;
     padding: 0;
-    font-family: $font-fam;
-    font-size: 1vmax;
+    font-family: $text-font;
+    font-size: $content-size;
     letter-spacing: 1.5px;
     line-height: 1.8;
 
     //general phone
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: 980px) {
         letter-spacing: 1px;
     }
+    
 }
 
 
@@ -247,7 +246,7 @@ body {
         justify-items: center;
         padding-bottom: 5%;
         background-color: $background-color;
-        font-family: $font-fam;
+        font-family: $text-font;
 
         .track {
             margin: 10px;
@@ -359,7 +358,7 @@ body {
         box-sizing: border-box;
         background-color: $background-color;
         top: 10%;
-        font-family: $font-fam;
+        font-family: $text-font;
         color: $small-text-color;
         left: 10%;
 
@@ -415,12 +414,13 @@ body {
 .header {
     text-align: center;
     font-family: $header-font;
-    font-size: 30pt;
+    font-size: $large-text-color;
     color: $text-color;
 }
 
 .subheader {
     color: $text-color;
+    font-size: $subsection-size;
 }
 
 .subsection {
@@ -444,7 +444,7 @@ body {
     border: 2px solid black;
     color: #fff;
     display: inline-block;
-    font-size: 20px;
+    font-size: $subsection-size;
     line-height: 24px;
     padding: 10px;
 }
@@ -455,7 +455,7 @@ body {
 }
 
 .subtext {
-    font-size: $font-size;
+    font-size: $content-size;
     font-family: $text-font;
     color: $text-color;
 }
@@ -478,6 +478,7 @@ body {
     margin-right: 10%;
     margin-bottom: 10px;
     background-color: #4684B4;
+    font-size: $content-size;
 }
 
 .FAQButton {
@@ -488,6 +489,7 @@ body {
     height: 40px;
     color: white;
     box-shadow: 0 0 6px 1px rgba(0, 0, 0, .05);
+    font-size: $content-size;
 }
 
 .FAQButton:focus {
@@ -532,7 +534,7 @@ h1, h2, h4 {
 }
 
 .header-text-headline {
-    font-size: 54px;
+    font-size: $header-text-size;
 }
 
 .header-action {

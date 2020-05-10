@@ -1,5 +1,5 @@
 :root {
-  font-size: 20px;
+  font-size: 16px;
 }
 
 #aboutSection h2, #challenges, #challenges .track-container, #challenges .track-info {
@@ -10,15 +10,14 @@
 html,
 body {
   background-color: #c7ecfa;
-  margin: auto;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 1vmax;
+  font-size: 1rem;
   letter-spacing: 1.5px;
   line-height: 1.8;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 980px) {
   html,
   body {
     letter-spacing: 1px;
@@ -417,12 +416,13 @@ body {
 .header {
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 30pt;
+  font-size: #050f38;
   color: #050F38;
 }
 
 .subheader {
   color: #050F38;
+  font-size: 1.5rem;
 }
 
 .subsection {
@@ -446,7 +446,7 @@ body {
   border: 2px solid black;
   color: #fff;
   display: inline-block;
-  font-size: 20px;
+  font-size: 1.5rem;
   line-height: 24px;
   padding: 10px;
 }
@@ -457,7 +457,7 @@ body {
 }
 
 .subtext {
-  font-size: 16pt;
+  font-size: 1rem;
   font-family: Arial, Helvetica, sans-serif;
   color: #050F38;
 }
@@ -480,6 +480,7 @@ body {
   margin-right: 10%;
   margin-bottom: 10px;
   background-color: #4684B4;
+  font-size: 1rem;
 }
 
 .FAQButton {
@@ -491,6 +492,7 @@ body {
   color: white;
   -webkit-box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.05);
           box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.05);
+  font-size: 1rem;
 }
 
 .FAQButton:focus {
@@ -520,7 +522,7 @@ h1, h2, h4 {
 #header {
   height: 800px;
   background-color: #c7ecfa;
-  background-image: url("../img/bg_cut.png");
+  background-image: url("../assets/img/bg_cut.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   -moz-background-size: 100% 100%;
@@ -591,7 +593,7 @@ h1, h2, h4 {
   margin-top: 0px;
   padding-top: 0px;
   padding-bottom: 1000px;
-  background-image: url("../img/website_bottom.png");
+  background-image: url("../assets/img/website_bottom.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   -moz-background-size: 100% 100%;
