@@ -11,6 +11,7 @@ html,
 body {
   background-color: #c7ecfa;
   padding: 0;
+  margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1rem;
   letter-spacing: 1.5px;
@@ -451,7 +452,7 @@ h1, h2, h4 {
 #header {
   height: 800px;
   background-color: #c7ecfa;
-  background-image: url("../assets/img/bg_cut.png");
+  background-image: url("../img/bg_cut.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   -moz-background-size: 100% 100%;
@@ -520,7 +521,7 @@ h1, h2, h4 {
   margin-top: 0px;
   padding-top: 0px;
   padding-bottom: 1000px;
-  background-image: url("../assets/img/website_bottom.png");
+  background-image: url("../img/website_bottom.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   -moz-background-size: 100% 100%;
