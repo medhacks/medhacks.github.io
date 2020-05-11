@@ -5,12 +5,8 @@ $large-text-color: #050f38;
 $pop-color: #de495f; //highlight/button color
 $slide-background-color: #4684B4;
 
-$text-font: Arial,
-Helvetica,
-sans-serif;
-$header-font: Arial,
-Helvetica,
-sans-serif;
+$text-font: 'Raleway', sans-serif;  //change to raleway
+$header-font: 'Raleway', sans-serif;
 $font-size: 16pt;
 $text-color: #050F38;
 
@@ -151,7 +147,7 @@ body {
 .next:hover {
     background-color: white;
     color: $slide-background-color;
-    transform: scale(1.3);
+    //transform: scale(1.3);
 }
 
 /* The dot/bullet/indicator container */
@@ -543,7 +539,7 @@ body {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
-    background-color: #DE495F;
+    background-color: #EED4C3;
 }
 
 //from Header/Sponsor
