@@ -621,6 +621,7 @@ nav {
 
 a.header-action{
     box-shadow: 0 0 8px 2px rgba(0, 0, 0, .3);
+    transition: 0.3s;
     &:hover{
         transform: scale(1.1);
         text-decoration: none;
@@ -804,8 +805,16 @@ h4 {
     margin-top: 0px;
     padding-top: 0px;
     padding-bottom: 1000px;
-    background-image: url("../img/website_bottom.png");
+    background-image: url("../img/footer_mobile.png");
     background-repeat: no-repeat;
-    background-size: 100% 100%;
-    -moz-background-size: 100% 100%;
+    //background-size: 100% 100%;
+    background-size: cover;
+    background-position: center;
+    //-moz-background-size: 100% 100%;
+}
+
+@media only screen and (min-width: 760px) {
+    .website-bottom {
+        background-image: url("../img/footer.png");
+    }
 }
