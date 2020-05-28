@@ -6,7 +6,10 @@ At MedHacks 2016, the student-run medical hackathon at Johns Hopkins University,
 Because the website uses absolute paths, you cannot access it from the `file:///` protocol. Instead, to run it you will need to run the following from the repos root directory:
 
 ```bash
+Python 2:
 $ python -m SimpleHTTPServer
+Python 3:
+$ python -m http.server
 Serving HTTP on 0.0.0.0 port 8000
 ```
 
