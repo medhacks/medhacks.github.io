@@ -9,6 +9,7 @@
 
 html,
 body {
+  overflow-x: hidden;
   background-color: #c7ecfa;
   margin: 0;
   padding: 0;
@@ -28,7 +29,7 @@ nav {
   z-index: 2;
   position: fixed;
   padding-top: 1%;
-  box-shadow: 0px 10px 5px 4px #2a3887c4;
+  box-shadow: 0px 10px 5px 0px #2a3887c4;
   width: 100%;
   background-color: #2a3887c4;
   display: flex;
@@ -36,11 +37,10 @@ nav {
   justify-content: space-between;
 }
 nav a .logo {
-  margin-top: 0.7rem;
+  margin-top: 0.5rem;
   align-self: center;
-  height: 3.5rem;
-  margin-left: 10%;
-  margin-right: 10%;
+  height: 5vmax;
+  margin-left: 50%;
 }
 @media screen and (max-width: 800px) {
   nav a .logo {
@@ -711,6 +711,7 @@ h4 {
 }
 
 .website-bottom {
+  width: 100%;
   margin-top: 0px;
   padding-top: 0px;
   padding-bottom: 1000px;
@@ -723,6 +724,82 @@ h4 {
 @media only screen and (min-width: 760px) {
   .website-bottom {
     background-image: url("../img/footer.png");
+  }
+}
+.footer {
+  margin-top: -100px;
+  width: 100%;
+  background-color: #EED4C3;
+  max-height: 500px;
+  min-height: 300px;
+}
+
+.footer-left {
+  width: 100%;
+  float: left;
+  background-color: #EED4C3;
+}
+.footer-left img {
+  margin-left: 15%;
+  margin-right: 15%;
+  height: auto;
+  width: 70%;
+  object-fit: contain;
+}
+.footer-left p {
+  color: #050F38;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.footer-right {
+  text-align: center;
+  width: 100%;
+  float: right;
+  background-color: #EED4C3;
+}
+.footer-right h1 {
+  color: #4684B4;
+}
+
+.linkContainer {
+  text-decoration: none;
+  text-align: center;
+  color: #4684B4;
+}
+.linkContainer a {
+  text-decoration: none;
+  font-size: 18px;
+}
+.linkContainer a:hover {
+  text-decoration: underline;
+}
+.linkContainer a:visited {
+  color: #050F38;
+}
+.linkContainer a:active {
+  color: #050F38;
+}
+
+@media only screen and (min-width: 760px) {
+  .footer-left {
+    width: 50%;
+  }
+
+  .footer-right {
+    width: 50%;
+  }
+  .footer-right h1 {
+    text-align: right;
+    margin-right: 15%;
+  }
+  .footer-right a {
+    text-align: right;
+    margin-right: 15%;
+  }
+
+  .linkContainer {
+    text-align: right;
   }
 }
 

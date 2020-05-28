@@ -28,6 +28,7 @@ $header-text-size: 54px;
 
 html,
 body {
+    overflow-x: hidden;
     background-color: $background-color;
     margin: 0;
     padding: 0;
@@ -802,6 +803,7 @@ h4 {
 }
 
 .website-bottom {
+    width: 100%;
     margin-top: 0px;
     padding-top: 0px;
     padding-bottom: 1000px;
@@ -816,5 +818,93 @@ h4 {
 @media only screen and (min-width: 760px) {
     .website-bottom {
         background-image: url("../img/footer.png");
+    }
+}
+
+
+
+.footer {
+    margin-top: -100px;
+    width: 100%;
+    background-color: #EED4C3;
+    max-height: 500px;
+    min-height: 300px;
+}
+
+.footer-left {
+    width: 100%;
+    float: left;
+    background-color: #EED4C3;
+
+    img {
+        margin-left: 15%;
+        margin-right: 15%;
+        height: auto;
+        width: 70%;
+        object-fit: contain;
+    }
+
+    p {
+        color: $text-color;
+        margin-left : 15%;
+        margin-right: 15%;
+    }
+}
+
+.footer-right {
+    text-align: center;
+    width: 100%;
+    float: right;
+    background-color: #EED4C3;
+    h1 {
+        color: $slide-background-color;
+    }
+
+}
+
+.linkContainer {
+    text-decoration: none;
+    text-align: center;
+    color: $slide-background-color;
+    
+    a {
+        text-decoration: none;
+        font-size: 18px;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    a:visited {
+        color: $text-color;
+    }
+
+    a:active {
+        color: $text-color;
+    }
+
+}
+
+@media only screen and (min-width: 760px) {
+    .footer-left {
+        width: 50%;
+    }
+
+    .footer-right {
+        width: 50%;
+        
+        h1 {
+            text-align: right;
+            margin-right: 15%;
+        }
+
+        a {
+            text-align: right;
+            margin-right: 15%;
+        }
+    }
+    .linkContainer {
+        text-align: right;
     }
 }
