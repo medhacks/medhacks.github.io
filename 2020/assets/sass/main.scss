@@ -24,12 +24,13 @@ $header-text-size: 54px;
     vertical-align: middle;
 }
 
-
+body {
+    background-color: $background-color;
+}
 
 html,
 body {
     overflow-x: hidden;
-    background-color: $background-color;
     margin: 0;
     padding: 0;
     font-family: $text-font;
@@ -213,6 +214,7 @@ nav {
     }
 
     h2 {
+        z-index: 1;
         color: $large-text-color;
         padding-bottom: 2rem;
         margin: -10px;
@@ -398,7 +400,7 @@ nav {
         }
     }
 
-    background-color: $background-color;
+    //background-color: $background-color;
 
     .track-container {
         @extend %center;
@@ -425,7 +427,7 @@ nav {
         align-items: center;
         justify-items: center;
         padding-bottom: 5%;
-        background-color: $background-color;
+        //background-color: $background-color;
         font-family: $text-font;
 
         .track {
@@ -545,7 +547,7 @@ nav {
         display: none;
         position: fixed;
         box-sizing: border-box;
-        background-color: $background-color;
+        //background-color: $background-color;
         top: 10%;
         font-family: $text-font;
         color: $small-text-color;
@@ -604,9 +606,6 @@ nav {
 }
 
 //from FAQ/Apply
-.body {
-    background-color: $background-color;
-}
 
 .header {
     text-align: center;
@@ -726,17 +725,51 @@ h4 {
 
 /* Header */
 
-#header {
-    margin: -10px;
-    height: 800px;
-    background-color: #c7ecfa;
-    background-image: url("../img/bg_cut.png");
+.header-top {
+    //margin-bottom: -200px;
+    //padding-bottom: 200px;
+    height: 700px;
+    width: 100%;
+}
+
+.bg-gif {
+    position: relative;
+    background-color: transparent;
+}
+.bg-gif::after {
+    content: "";
+    position: absolute;
+    background-image: url("../img/splash-page3.gif");
+    height: 700px; 
+    width: 100%;
+    z-index: -1;
     background-repeat: no-repeat;
-    background-size: 100% 100%;
-    -moz-background-size: 100% 100%;
+    background-size: cover;
+    background-position: center;
+    -moz-background-size: cover;
+}
+
+@media only screen and (min-width: 1240px) {
+    .bg-gif {
+        position: relative;
+        background-color: transparent;
+    }
+    .bg-gif::after {
+        content: "";
+        position: absolute;
+        background-image: url("../img/splash-page3.gif");
+        height: 3000px; 
+        width: 100%;
+        z-index: -1;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: 50% -300px;
+        -moz-background-size: cover;
+    }
 }
 
 .header-text {
+    z-index: 1;
     width: 100%;
     top: 25%;
     position: absolute;
@@ -818,6 +851,11 @@ h4 {
 @media only screen and (min-width: 760px) {
     .website-bottom {
         background-image: url("../img/footer.png");
+        background-size: 100% 100%;
+        background-repeat: none;
+        height: 974px;
+        width: auto;
+        padding-bottom: 0;
     }
 }
 
@@ -870,6 +908,7 @@ h4 {
     a {
         text-decoration: none;
         font-size: 18px;
+        color: $text-color;
     }
 
     a:hover {

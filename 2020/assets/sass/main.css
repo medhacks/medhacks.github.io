@@ -7,10 +7,13 @@
   vertical-align: middle;
 }
 
+body {
+  background-color: #c7ecfa;
+}
+
 html,
 body {
   overflow-x: hidden;
-  background-color: #c7ecfa;
   margin: 0;
   padding: 0;
   font-family: "Raleway", sans-serif;
@@ -181,6 +184,7 @@ nav #bar {
   margin-top: 1rem;
 }
 #aboutSection h2 {
+  z-index: 1;
   color: #050f38;
   padding-bottom: 2rem;
   margin: -10px;
@@ -308,7 +312,6 @@ nav #bar {
 
 #challenges {
   display: block;
-  background-color: #c7ecfa;
 }
 #challenges p {
   margin: 0% 10%;
@@ -364,7 +367,6 @@ nav #bar {
   align-items: center;
   justify-items: center;
   padding-bottom: 5%;
-  background-color: #c7ecfa;
   font-family: "Raleway", sans-serif;
 }
 @media only screen and (max-width: 980px) {
@@ -470,7 +472,6 @@ nav #bar {
   display: none;
   position: fixed;
   box-sizing: border-box;
-  background-color: #c7ecfa;
   top: 10%;
   font-family: "Raleway", sans-serif;
   color: #050f38;
@@ -515,10 +516,6 @@ nav #bar {
 }
 #challenges .track-info .track-row .track-column p {
   font-size: 0.7rem;
-}
-
-.body {
-  background-color: #c7ecfa;
 }
 
 .header {
@@ -635,17 +632,50 @@ h4 {
 }
 
 /* Header */
-#header {
-  margin: -10px;
-  height: 800px;
-  background-color: #c7ecfa;
-  background-image: url("../img/bg_cut.png");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  -moz-background-size: 100% 100%;
+.header-top {
+  height: 700px;
+  width: 100%;
 }
 
+.bg-gif {
+  position: relative;
+  background-color: transparent;
+}
+
+.bg-gif::after {
+  content: "";
+  position: absolute;
+  background-image: url("../img/splash-page3.gif");
+  height: 700px;
+  width: 100%;
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  -moz-background-size: cover;
+}
+
+@media only screen and (min-width: 1240px) {
+  .bg-gif {
+    position: relative;
+    background-color: transparent;
+  }
+
+  .bg-gif::after {
+    content: "";
+    position: absolute;
+    background-image: url("../img/splash-page3.gif");
+    height: 3000px;
+    width: 100%;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 50% -300px;
+    -moz-background-size: cover;
+  }
+}
 .header-text {
+  z-index: 1;
   width: 100%;
   top: 25%;
   position: absolute;
@@ -724,6 +754,11 @@ h4 {
 @media only screen and (min-width: 760px) {
   .website-bottom {
     background-image: url("../img/footer.png");
+    background-size: 100% 100%;
+    background-repeat: none;
+    height: 974px;
+    width: auto;
+    padding-bottom: 0;
   }
 }
 .footer {
@@ -770,6 +805,7 @@ h4 {
 .linkContainer a {
   text-decoration: none;
   font-size: 18px;
+  color: #050F38;
 }
 .linkContainer a:hover {
   text-decoration: underline;
