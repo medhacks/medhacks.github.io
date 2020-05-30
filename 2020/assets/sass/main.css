@@ -16,6 +16,7 @@ body {
   font-size: 1rem;
   letter-spacing: 1.5px;
   line-height: 1.8;
+  overflow-x: hidden;
 }
 
 @media screen and (max-width: 980px) {
@@ -28,9 +29,10 @@ body {
 nav {
   z-index: 2;
   position: fixed;
+  margin-right: -5px;
   padding-top: 1%;
-  -webkit-box-shadow: 0px 10px 5px 0px #2a3887c4;
-          box-shadow: 0px 10px 5px 0px #2a3887c4;
+  -webkit-box-shadow: 0px 0px 5px 10px #2a3887c4;
+          box-shadow: 0px 0px 5px 10px #2a3887c4;
   width: 100%;
   background-color: #2a3887c4;
   display: -webkit-box;
@@ -51,13 +53,16 @@ nav a .logo {
       -ms-grid-row-align: center;
       align-self: center;
   height: 5vmax;
-  margin-left: 50%;
 }
 
 @media screen and (max-width: 800px) {
   nav a .logo {
     display: none;
   }
+}
+
+nav .logo {
+  margin-left: 50%;
 }
 
 nav a {
@@ -222,7 +227,7 @@ nav #bar {
 }
 
 #aboutSection {
-  padding: 5% 20% 5% 20%;
+  padding: 5% 15% 5% 15%;
   overflow: hidden;
 }
 
@@ -274,8 +279,8 @@ nav #bar {
   border-radius: 30px 30px 0 0;
   height: 400px;
   overflow: scroll;
-  -webkit-box-shadow: 0 -2px 8px 2px rgba(0, 0, 0, 0.3);
-          box-shadow: 0 -2px 8px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 0px 10px 3px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0px 10px 3px rgba(0, 0, 0, 0.3);
 }
 
 /* Next & previous buttons */
@@ -295,8 +300,8 @@ nav #bar {
       -ms-user-select: none;
           user-select: none;
   background-color: #de495f;
-  -webkit-box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.3);
-          box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 0px 5px 0px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0px 5px 0px rgba(0, 0, 0, 0.3);
 }
 
 @media screen and (max-width: 980px) {
@@ -340,8 +345,8 @@ nav #bar {
   padding: 5px;
   background: #4684B4;
   border-radius: 0 0 30px 30px;
-  -webkit-box-shadow: 0 2px 8px 2px rgba(0, 0, 0, 0.3);
-          box-shadow: 0 2px 8px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 2px 10px 2px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 2px 10px 2px rgba(0, 0, 0, 0.3);
 }
 
 /* The dots/bullets/indicators */
@@ -355,8 +360,8 @@ nav #bar {
   display: inline-block;
   -webkit-transition: background-color 0.6s ease;
   transition: background-color 0.6s ease;
-  -webkit-box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.3);
-          box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.3);
 }
 
 /* Add a background color to the active dot/circle */
@@ -378,12 +383,13 @@ nav #bar {
   text-align: center;
   display: block;
   overflow: auto;
-  margin-bottom: 5%;
+  margin-bottom: 1%;
 }
 
 #challenges h2 {
   color: #050f38;
   font-size: 1.8rem;
+  margin-bottom: 1%;
 }
 
 #challenges .challengeRow {
@@ -413,7 +419,7 @@ nav #bar {
   font-size: 1rem;
   text-align: center;
   display: block;
-  overflow: auto;
+  overflow: hidden;
 }
 
 #challenges .track-container {
@@ -456,10 +462,6 @@ nav #bar {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-}
-
-#challenges .track-container .track {
-  margin: 10px;
 }
 
 #challenges .track-container #track1 {

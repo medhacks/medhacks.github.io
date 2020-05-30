@@ -35,6 +35,7 @@ body {
     font-size: $content-size;
     letter-spacing: 1.5px;
     line-height: 1.8;
+    overflow-x: hidden;
 
     //general phone
     @media screen and (max-width: 980px) {
@@ -46,8 +47,9 @@ body {
 nav {
     z-index: 2;
     position: fixed;
+    margin-right: -5px;
     padding-top: 1%;
-    box-shadow: 0px 10px 5px 0px #2a3887c4;
+    box-shadow: 0px 0px 5px 10px #2a3887c4;
     width: 100%;
     background-color: #2a3887c4;
     display: flex;
@@ -62,6 +64,9 @@ nav {
         margin-top: 0.5rem;
         align-self: center;
         height: 5vmax;
+    }
+
+    .logo {
         margin-left: 50%;
     }
 
@@ -205,7 +210,7 @@ nav {
 
 
 #aboutSection {
-    padding: 5% 20% 5% 20%;
+    padding: 5% 15% 5% 15%;
 
     .top {
         margin-top: 1rem;
@@ -259,7 +264,7 @@ nav {
     border-radius: 30px 30px 0 0;
     height: 400px;
     overflow: scroll;
-    box-shadow: 0 -2px 8px 2px rgba(0, 0, 0, .3);
+    box-shadow: 0 0px 10px 3px rgba(0, 0, 0, .3);
 }
 
 /* Next & previous buttons */
@@ -276,7 +281,7 @@ nav {
     font-size: 16px;
     user-select: none;
     background-color: $pop-color;
-    box-shadow: 0 0 8px 2px rgba(0, 0, 0, .3);
+    box-shadow: 0 0px 5px 0px rgba(0, 0, 0, .3);
 
     @media screen and (max-width: 980px) {
         background-color: transparent;
@@ -317,7 +322,7 @@ nav {
     padding: 5px;
     background: $slide-background-color;
     border-radius: 0 0 30px 30px;
-    box-shadow: 0 2px 8px 2px rgba(0, 0, 0, .3);
+    box-shadow: 0 2px 10px 2px rgba(0, 0, 0, .3);
 }
 
 /* The dots/bullets/indicators */
@@ -330,7 +335,7 @@ nav {
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease;
-    box-shadow: 0 0 8px 1px rgba(0, 0, 0, .3);
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, .3);
 }
 
 /* Add a background color to the active dot/circle */
@@ -352,12 +357,13 @@ nav {
         text-align: center;
         display: block;
         overflow: auto;
-        margin-bottom: 5%;
+        margin-bottom: 1%;
     }
 
     h2 {
         color: $large-text-color;
         font-size: $section-header-size;
+        margin-bottom: 1%;
     }
 
     .challengeRow {
@@ -372,11 +378,6 @@ nav {
                 float: right;
                 position: relative;
                 z-index: 0;
-
-                //     left: 55%;
-                //     padding: 0;
-                //     margin: 0;
-                //     display: block;
             }
 
             p {
@@ -387,7 +388,7 @@ nav {
                 font-size: $content-size;
                 text-align: center;
                 display: block;
-                overflow: auto;
+                overflow: hidden;
             }
         }
     }
@@ -423,7 +424,7 @@ nav {
         font-family: $text-font;
 
         .track {
-            margin: 10px;
+            //margin: 10px;
         }
 
         #track1 {
