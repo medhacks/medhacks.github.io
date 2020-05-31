@@ -139,9 +139,9 @@ function checkBubbles() {
     if (scrollPosition > 1) {
         scrollPosition = 1;
     }
-    newWidth = (maxWidth * scrollPosition);
+    newWidth = (maxWidth * scrollPosition) - 5;
     var withProp = newWidth.toString() +"px";
-    $("#moose-mark").css("left", initWidth);
+    $("#moose-mark").css("left", initWidth + 3);
     $("#moose-mark").css("top", height - 3);
     $("#moose-mark").css('width', withProp);
     $("#aboutBubble").removeClass("filled");
