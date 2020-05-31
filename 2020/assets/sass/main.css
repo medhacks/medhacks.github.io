@@ -71,6 +71,17 @@ nav #sliderContainer {
     display: none;
   }
 }
+
+#slider-container .buttonContainer a {
+  border: 2px solid #de495f;
+  border-radius: 10px;
+  margin-left: 7rem;
+  padding: 8px;
+  width: 2.5px;
+  height: 2.5px;
+  display: inline-block;
+}
+
 nav #sliderContainer .buttonContainer {
   display: flex;
   flex-direction: row;
