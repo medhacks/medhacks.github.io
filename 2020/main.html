@@ -17,36 +17,45 @@
         <a href="#"><img class="logo" src="./assets/img/medhacks_logo.png"></a>
         <div id="sliderContainer">
             <div class="buttonContainer">
+            <!-- <ul> -->
+                <div id="moose-mark"></div>
                 <a id="homeButton">
+                    <div class="circle filled" id="homeBubble"></div>
                     <div class="navButton">
                             Home
                     </div>
                 </a>
-                <a href="#aboutSection" id="aboutButton">
+                <a id="aboutButton">
+                    <div class="circle" id="aboutBubble"></div>
                     <div class="navButton">
                         About
                     </div>
                 </a>
-                <a href="#challenges" id="tracksButton">
+                <a id="tracksButton">
+                    <div class="circle" id="tracksBubble"></div>
                     <div class="navButton">
                         Tracks
                     </div>
                 </a>
-                <a href="#applyingAnchor" id="applyingButton">
+                <a id="applyingButton">
+                    <div class="circle" id="applyingBubble"></div>
                     <div class="navButton">
                         Apply
                     </div>
                 </a>
-                <a href="#sponsor" id="sponsorButton">
+                <a id="sponsorButton">
+                    <div class="circle" id="sponsorBubble"></div>
                     <div class="navButton">
                         Sponsors
                     </div>
                 </a>
-                <a href="#faqSection" id="faqButton">
+                <a id="faqButton">
+                    <div class="circle" id="faqBubble"></div>
                     <div class="navButton">
                         FAQ
                     </div>
                 </a>
+            <!-- </ul> -->
             </div>
           <div class="planet-container">
         </div>
@@ -67,7 +76,7 @@
       </nav>
 
     <!-- === HEADER === -->
-    <div class="header-top bg-gif">
+    <div id="headerContainer" class="header-top bg-gif section-container">
 
         <div class="header-text">
             <h1 class="header-text-headline" id="title">
@@ -97,7 +106,7 @@
 
     <!-- === ABOUT === -->
 
-    <div id="aboutSection">
+    <div id="aboutSection" class="section-container">
         <h1 class="header">About MedHacks</h1>
         <div class="slideshow-box">
             <!--Slideshow container-->
@@ -324,38 +333,38 @@
 
 
     <!-- === APPLY === -->
-    <div id="applyingAnchor">
+    <div id="applyingAnchor" class="section-container">
         <h1 class="header">Apply</h1>
-    </div>
-    <div class="subsection">
-        <h3 class="subheader">The Application Process</h3>
-        <p class="subtext">
-            MedHacks receives thousands of applications from talented and diverse people all around the world every
-            year, but unfortunately we don’t have the space to accommodate everyone who would like to attend.
-            MedHacks prides itself on being accessible for all students, especially those without any kind of computing
-            background, and so we try as hard as possible to reflect that in the population of participants at the
-            event. We encourage all individuals interested in any (or all!) of the fields of medicine, technology, and
-            entrepreneurship to apply. We’d love to have you!
-        </p>
-    </div>
-    <div class="subsection">
-        <h3 class="subheader">The Application Portal</h3>
-        <p class="subtext">
-            This year, in order to streamline the application process, our talented team of developers have developed an
-            application portal. Once you create an account you can submit an application, view the status of your
-            application and view any resources.
-        </p>
-    </div>
-    <div class="linkDiv">
-        <a class="header-action" href="https://www.google.com" target="_blank">Apply Here Now!</a>
-    </div>
+        <div class="subsection">
+            <h3 class="subheader">The Application Process</h3>
+            <p class="subtext">
+                MedHacks receives thousands of applications from talented and diverse people all around the world every
+                year, but unfortunately we don’t have the space to accommodate everyone who would like to attend.
+                MedHacks prides itself on being accessible for all students, especially those without any kind of computing
+                background, and so we try as hard as possible to reflect that in the population of participants at the
+                event. We encourage all individuals interested in any (or all!) of the fields of medicine, technology, and
+                entrepreneurship to apply. We’d love to have you!
+            </p>
+        </div>
+        <div class="subsection">
+            <h3 class="subheader">The Application Portal</h3>
+            <p class="subtext">
+                This year, in order to streamline the application process, our talented team of developers have developed an
+                application portal. Once you create an account you can submit an application, view the status of your
+                application and view any resources.
+            </p>
+        </div>
+        <div class="linkDiv">
+            <a class="header-action" href="https://www.google.com" target="_blank">Apply Here Now!</a>
+        </div>
 
+    </div>
     <!-- === Margin === -->
     <div class="marginFormat" style="height:30px" ; width:"100%"></div>
 
 
     <!-- === SPONSORS === -->
-    <div id="sponsor">
+    <div id="sponsor" class="section-container">
 
         <h1 class="header" id="headline">Sponsors</h1>
         
@@ -411,7 +420,7 @@
 
     <!-- === FAQ === -->
     <h1 class="header" id="faqSection">FAQ</h1>
-    <div class="FAQContainer">
+    <div class="FAQContainer section-container">
         <div class="FAQColumn">
             <div class="FAQDiv">
                 <button class="FAQButton">What is a Hackathon?</button>

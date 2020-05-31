@@ -56,15 +56,38 @@ nav a {
   font-weight: 600;
 }
 nav .navButton {
+  width: 100px;
+  text-align: center;
   cursor: pointer;
   color: #ffeb7b;
 }
 nav .navButton:hover {
   color: #de495f;
 }
+
+.filled {
+  background: #ffeb7b;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.circle {
+  /* background: #ffeb7b; */
+  border: 2px solid #ffeb7b;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 nav #sliderContainer {
   display: flex;
   flex-direction: column;
+  padding-top: 15px;
 }
 @media screen and (max-width: 800px) {
   nav #sliderContainer {
@@ -88,6 +111,82 @@ nav #sliderContainer .buttonContainer {
   justify-content: space-around;
   padding-bottom: 0;
 }
+
+/* #slider-container {
+  position: relative;
+  left: 21.5rem;
+  position: fixed;
+  top: 1.5rem; }
+  @media screen and (max-width: 800px) {
+    #slider-container {
+      display: none; } }
+  #slider-container ul a {
+    border: 2px solid #193f55;
+    border-radius: 10px;
+    margin-left: 7rem;
+    padding: 8px;
+    width: 2.5px;
+    height: 2.5px;
+    display: inline-block; }
+    #slider-container ul a .navButton {
+      display: inline-block;
+      width: 1rem;
+      height: 1rem;
+      padding: 1rem;
+      float: left;
+      text-align: center;
+      position: relative;
+      font-size: 1.25rem; }
+      #slider-container ul a .navButton #homeBubP {
+        position: relative;
+        right: 17.4rem;
+        bottom: 0.5rem; }
+      #slider-container ul a .navButton #aboutBubP {
+        position: relative;
+        right: 38.7rem;
+        bottom: 0.5rem; }
+      #slider-container ul a .navButton #tracksBubP {
+        position: relative;
+        right: 41.7rem;
+        bottom: 0.5rem; }
+      #slider-container ul a .navButton #logBubP {
+        position: relative;
+        right: 44.7rem;
+        bottom: 0.5rem; }
+      #slider-container ul a .navButton #applyBubP {
+        position: relative;
+        right: 49.2rem;
+        bottom: 0.5rem; }
+    #slider-container ul a div {
+      display: inline-block;
+      position: relative;
+      left: 15rem;
+      color: #193f55;
+      text-decoration: none;
+      top: 0.5rem; }
+  #slider-container ul .filled {
+    background-color: #193f55; }
+  #slider-container ul #moose-mark {
+    border: 3px solid #193f55;
+    z-index: 4;
+    width: 0;
+    visibility: hidden;
+    display: inline;
+    position: fixed;
+    top: 0.5rem;
+    left: 11rem; } */
+
+#moose-mark {
+  border: 2.5px solid #ffeb7b;
+  z-index: 4;
+  width: 0;
+  visibility: hidden;
+  display: inline;
+  position: fixed;
+  top: 0.5rem;
+  left: 11rem; 
+}
+
 nav #bar {
   flex: 1;
   margin-top: 4rem;
