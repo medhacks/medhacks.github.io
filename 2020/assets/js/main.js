@@ -10,8 +10,17 @@ function changeVisibility() {
     if (info.style.maxHeight) {
         info.style.maxHeight = null;
     } else {
+        clearAllHeight();
         info.style.maxHeight = info.scrollHeight + "px";
     }
+}
+
+function clearAllHeight() {
+  var FAQs = document.getElementsByClassName("FAQButton");
+  for (i = 0; i < FAQs.length; i++) {
+    console.log(FAQs[i].style.maxHeight);
+    FAQs[i].nextElementSibling.style.maxHeight = null;
+  }
 }
 
 //For About

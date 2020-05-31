@@ -82,7 +82,7 @@ function checkBubbles() {
     heights.length = 0;
     heights.push($('#sliderContainer').height());
 
-    console.log($('#sliderContainer').height());
+    // console.log($('#sliderContainer').height());
 
     $(".section-container").each(function() {
         // console.log("NAME " + $(this).text());
@@ -91,7 +91,7 @@ function checkBubbles() {
         sections.push($(this));
     });
 
-    console.log("counter" + counter);
+    // console.log("counter" + counter);
 
     heights[2] = heights[2] - 100;
     heights[3] = heights[3] -100;
@@ -99,7 +99,7 @@ function checkBubbles() {
     heights[5] = heights[5] -100;
     heights[6] = heights[6] -100;
 
-    console.log(heights);
+    // console.log(heights);
 
     let scrollPosition = $(window).scrollTop();
     maxWidth = $("#faqBubble")[0].getBoundingClientRect().right;
@@ -112,7 +112,7 @@ function checkBubbles() {
     let percentage = 0;
     let section = 1;
 
-    console.log(scrollPosition);
+    // console.log(scrollPosition);
 
     if (scrollPosition >= heights[5]) {
         percentage = (scrollPosition - heights[5]) / (heights[6] - heights[5]);
