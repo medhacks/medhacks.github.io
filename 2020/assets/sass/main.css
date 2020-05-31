@@ -288,7 +288,7 @@ nav #bar {
 }
 
 #aboutSection {
-  padding: 5% 20% 5% 20%;
+  padding: 3% 20% 5% 20%;
   overflow: hidden;
 }
 #aboutSection .top {
@@ -361,6 +361,9 @@ nav #bar {
   box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.3);
 }
 @media screen and (max-width: 980px) {
+  #aboutSection {
+    padding: 3% 5% 5% 5%;
+  }
   .prev,
 .next {
     background-color: transparent;
@@ -432,7 +435,7 @@ nav #bar {
   text-align: center;
   display: block;
   overflow: auto;
-  margin-bottom: 5%;
+  
 }
 #challenges h2 {
   color: #050f38;
@@ -831,6 +834,7 @@ h4 {
 /* Sponsor */
 #sponsor {
   background-color: #c7ecfa;
+  margin-top: 10%;
 }
 
 #headline {
@@ -853,6 +857,9 @@ h4 {
 .sponsor-blocks {
   margin-left: 4%;
   margin-right: 4%;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .website-bottom {
   width: 100%;
