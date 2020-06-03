@@ -728,7 +728,7 @@ h4 {
 .header-top {
     //margin-bottom: -200px;
     //padding-bottom: 200px;
-    height: 100vh;
+    height: 700px;
     width: 100%;
 }
 
@@ -758,30 +758,20 @@ h4 {
         content: "";
         position: absolute;
         background-image: url("../img/splash-page3.gif");
-        height: 200vh;
+        height: 3000px; 
         width: 100%;
         z-index: -1;
         background-repeat: no-repeat;
         background-size: 100%;
-        background-position: 50% 0;
+        background-position: 50% -300px;
         -moz-background-size: cover;
-    }
-
-    .header-top {
-        height: 80vh;
-    }
-
-    .header-spacing {
-        background-color: #8EDBF3;
-        height: 20vh; 
-        width: 100%;
     }
 }
 
 .header-text {
     z-index: 1;
     width: 100%;
-    top: 0%;
+    top: 25%;
     position: absolute;
     text-align: center;
 }
