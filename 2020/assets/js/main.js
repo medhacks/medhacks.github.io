@@ -36,7 +36,6 @@ function currentSlide(n) {
 
 function currentSlideScroll(n) {
   $('.slider').animate({
-    scrollLeft: $('.slide').width() * (n-slideIndex)
     scrollLeft: $('.slide').width() * (n - slideIndex)
   });
   slideIndex = n;

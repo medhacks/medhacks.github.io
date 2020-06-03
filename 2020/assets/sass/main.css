@@ -37,9 +37,9 @@ nav {
   z-index: 2;
   position: fixed;
   padding-top: 1%;
-  box-shadow: 0px 10px 5px 0px #2a3887c4;
+  /* box-shadow: 0px 10px 5px 0px #2a3887; */
   width: 100%;
-  background-color: #2a3887c4;
+  background-color: #2a3887;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
