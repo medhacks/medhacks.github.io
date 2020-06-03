@@ -2,17 +2,17 @@ var FAQs = document.getElementsByClassName("FAQButton");
 var i;
 
 for (i = 0; i < FAQs.length; i++) {
-    FAQs[i].addEventListener("click", changeVisibility);
+  FAQs[i].addEventListener("click", changeVisibility);
 }
 
 function changeVisibility() {
-    var info = this.nextElementSibling;
-    if (info.style.maxHeight) {
-        info.style.maxHeight = null;
-    } else {
-        clearAllHeight();
-        info.style.maxHeight = info.scrollHeight + "px";
-    }
+  var info = this.nextElementSibling;
+  if (info.style.maxHeight) {
+    info.style.maxHeight = null;
+  } else {
+    clearAllHeight();
+    info.style.maxHeight = info.scrollHeight + "px";
+  }
 }
 
 function clearAllHeight() {
@@ -25,7 +25,6 @@ function clearAllHeight() {
 
 //For About
 var slideIndex = 1;
-showSlides(slideIndex);
 
 function plusSlides(n) {
   showSlides(slideIndex += n);
@@ -35,51 +34,107 @@ function currentSlide(n) {
   showSlides(slideIndex = n);
 }
 
+function currentSlideScroll(n) {
+  $('.slider').animate({
+    scrollLeft: $('.slide').width() * (n-slideIndex)
+  });
+  slideIndex = n;
+}
+
 function showSlides(n) {
   var i;
   var slides = document.getElementsByClassName("mySlides");
   var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-    }
-    for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-    }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
+  if (n > slides.length) { slideIndex = 1 }
+  if (n < 1) { slideIndex = slides.length }
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " active";
 }
 
-//for tracks
+
+/* detect whether website is viewed on mobile or tablet */
+var hasTouchScreen = false;
+if ("maxTouchPoints" in navigator) {
+  hasTouchScreen = navigator.maxTouchPoints > 0;
+} else if ("msMaxTouchPoints" in navigator) {
+  hasTouchScreen = navigator.msMaxTouchPoints > 0;
+} else {
+  var mQ = window.matchMedia && matchMedia("(pointer:coarse)");
+  if (mQ && mQ.media === "(pointer:coarse)") {
+    hasTouchScreen = !!mQ.matches;
+  } else if ('orientation' in window) {
+    hasTouchScreen = true; // deprecated, but good fallback
+  } else {
+    // Only as a last resort, fall back to user agent sniffing
+    var UA = navigator.userAgent;
+    hasTouchScreen = (
+      /\b(BlackBerry|webOS|iPhone|IEMobile)\b/i.test(UA) ||
+      /\b(Android|Windows Phone|iPad|iPod)\b/i.test(UA)
+    );
+  }
+}
+
+function scrollProgress() {
+  var scrolled = $('.slider').scrollLeft;
+ //$('.dot').css("background-color", "#de495f");
+  if ($('#slide-3').position().right == $('.slider').offset().right) {
+    $('#dot-3').css("background-color", "white");
+  } else if ($('#slide-2').position().left === 0) {
+    $('#dot-2').css("background-color", "white");
+  } else {
+    $('#dot-1').css("background-color", "white");
+  }
+}
+
+$('.slideshow-container').onscroll = function () { scrollProgress() };
+
+
 $(document).ready(() => {
-    let $curwindow;
-  
-    $('#track1').on('click', () => {
-        $('.black-overlay').fadeIn('fast');
-        $('#track1-info').fadeIn('medium');
-        $curwindow = $('#track1-info');
-    });
-  
-    $('#track2').on('click', () => {
-        $('.black-overlay').fadeIn('fast');
-        $('#track2-info').fadeIn('medium');
-        $curwindow = $('#track2-info');
-    });
-  
-    $('.close').on('click', () => {
-        $('.black-overlay').fadeOut('fast');
-        $curwindow.fadeOut('fast');
-    });
-  
-    $('#track3').on('click', () => {
-        $('.black-overlay').fadeIn('fast');
-        $('#track3-info').fadeIn('medium');
-        $curwindow = $('#track3-info');
-    });
-  
-    $('.black-overlay').on('click', () => {
-        $('.black-overlay').fadeOut('fast');
-        $curwindow.fadeOut('fast');
-    });
+  let $curwindow;
+
+  //for tracks
+  $('#track1').on('click', () => {
+    $('.black-overlay').fadeIn('fast');
+    $('#track1-info').fadeIn('medium');
+    $curwindow = $('#track1-info');
   });
+
+  $('#track2').on('click', () => {
+    $('.black-overlay').fadeIn('fast');
+    $('#track2-info').fadeIn('medium');
+    $curwindow = $('#track2-info');
+  });
+
+  $('.close').on('click', () => {
+    $('.black-overlay').fadeOut('fast');
+    $curwindow.fadeOut('fast');
+  });
+
+  $('#track3').on('click', () => {
+    $('.black-overlay').fadeIn('fast');
+    $('#track3-info').fadeIn('medium');
+    $curwindow = $('#track3-info');
+  });
+
+  $('.black-overlay').on('click', () => {
+    $('.black-overlay').fadeOut('fast');
+    $curwindow.fadeOut('fast');
+  });
+
+  /* check which type of slides to display for about section */
+  if (hasTouchScreen) {
+    $('.mobile').show();
+    $('.desktop').hide();
+  } else {
+    $('.mobile').hide();
+    $('.desktop').show();
+    showSlides(slideIndex);
+  }
+
+});
