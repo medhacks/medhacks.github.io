@@ -37,6 +37,7 @@ function currentSlide(n) {
 function currentSlideScroll(n) {
   $('.slider').animate({
     scrollLeft: $('.slide').width() * (n-slideIndex)
+    scrollLeft: $('.slide').width() * (n - slideIndex)
   });
   slideIndex = n;
 }
@@ -82,7 +83,7 @@ if ("maxTouchPoints" in navigator) {
 
 function scrollProgress() {
   var scrolled = $('.slider').scrollLeft;
- //$('.dot').css("background-color", "#de495f");
+  //$('.dot').css("background-color", "#de495f");
   if ($('#slide-3').position().right == $('.slider').offset().right) {
     $('#dot-3').css("background-color", "white");
   } else if ($('#slide-2').position().left === 0) {
@@ -96,9 +97,9 @@ $('.slideshow-container').onscroll = function () { scrollProgress() };
 
 
 $(document).ready(() => {
+
   let $curwindow;
 
-  //for tracks
   $('#track1').on('click', () => {
     $('.black-overlay').fadeIn('fast');
     $('#track1-info').fadeIn('medium');
@@ -136,5 +137,22 @@ $(document).ready(() => {
     $('.desktop').show();
     showSlides(slideIndex);
   }
+});
 
+
+var links = document.getElementsByName("footerLinks")
+$(document).ready(function () {
+  $("a").on("click", function (event) {
+    if (this.hash !== "") {
+      event.preventDefault();
+
+      var hash = this.hash;
+
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function () {
+        window.location.hash = hash;
+      });
+    }
+  });
 });
