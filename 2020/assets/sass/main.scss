@@ -31,6 +31,7 @@ body {
 
 html,
 body {
+    scroll-behavior: smooth;
     overflow-x: hidden;
     margin: 0;
     padding: 0;
@@ -821,6 +822,12 @@ h4 {
     height: 80vh;
 }
 
+.section-spacing {
+    background-color: $background-color;
+    height: 30vh;
+    width: 100%;
+}
+
 .header-spacing {
     background-color: #8EDBF3;
     height: 20vh; 
@@ -919,7 +926,7 @@ h4 {
 }
 
 .footer {
-    margin-top: -100px;
+    margin-top: -10vh;
     width: 100%;
     background-color: #EED4C3;
     max-height: 500px;
@@ -983,6 +990,10 @@ h4 {
 }
 
 @media only screen and (min-width: 760px) {
+    .footer {
+        margin-top: -25vh;
+    }
+    
     .footer-left {
         width: 50%;
     }
