@@ -30,32 +30,6 @@ $(document).ready(() => {
         $('#faqSection').goTo();
     });
 
-    // $('#home-small-button').on('click', () => {
-    //     $('#header').goTo();
-    //     $('#side-info').slideToggle();
-    //     $('#ham-container').toggleClass('change');
-    // });
-    // $('#apply-small-button').on('click', () => {
-    //     $('#logistics').goTo();
-    //     $('#side-info').slideToggle();
-    //     $('#ham-container').toggleClass('change');
-    // });
-    // $('#tracks-small-button').on('click', () => {
-    //     $('#challenges').goTo();
-    //     $('#side-info').slideToggle();
-    //     $('#ham-container').toggleClass('change');
-    // });
-    // $('#logistics-small-button').on('click', () => {
-    //     $('#applySection').goTo();
-    //     $('#ham-container').toggleClass('change');
-    //     $('#side-info').slideToggle();
-    // });
-    // $('#about-small-button').on('click', () => {
-    //     $('#aboutSection').goTo();
-    //     $('#side-info').slideToggle();
-    //     $('#ham-container').toggleClass('change');
-    // });
-
     $(".section-container").each(function() {
 
         // heights.push($(this).position(this).top - heights[0] - 75);
@@ -139,10 +113,10 @@ function checkBubbles() {
     if (scrollPosition > 1) {
         scrollPosition = 1;
     }
-    newWidth = (maxWidth * scrollPosition) - 5;
+    newWidth = (maxWidth * scrollPosition) - 10;
     var withProp = newWidth.toString() +"px";
     $("#moose-mark").css("left", initWidth + 3);
-    $("#moose-mark").css("top", height - 3);
+    $("#moose-mark").css("top", height - 2);
     $("#moose-mark").css('width', withProp);
     $("#aboutBubble").removeClass("filled");
     $("#tracksBubble").removeClass("filled");
