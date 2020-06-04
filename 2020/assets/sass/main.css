@@ -420,6 +420,10 @@ nav #bar {
   box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.3);
 }
 
+.mobile #dot-1 {
+  background-color: white;
+}
+
 /* Add a background color to the active dot/circle */
 .active,
 .dot:hover {

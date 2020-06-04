@@ -35,10 +35,11 @@ function currentSlide(n) {
 }
 
 function currentSlideScroll(n) {
+  let slideWidth = $('.slide').width();
+
   $('.slider').animate({
-    scrollLeft: $('.slide').width() * (n - slideIndex)
+    scrollLeft: slideWidth * (n-1)
   });
-  slideIndex = n;
 }
 
 function showSlides(n) {
@@ -81,18 +82,20 @@ if ("maxTouchPoints" in navigator) {
 }
 
 function scrollProgress() {
-  var scrolled = $('.slider').scrollLeft;
-  //$('.dot').css("background-color", "#de495f");
-  if ($('#slide-3').position().right == $('.slider').offset().right) {
-    $('#dot-3').css("background-color", "white");
-  } else if ($('#slide-2').position().left === 0) {
+  var sliderLeftOffset = $('.slider').offset().left;
+  $('.dot').css("background-color", "#de495f");
+  if ($('#slide-1').offset().left >= sliderLeftOffset) {
+    $('#dot-1').css("background-color", "white");
+  } else if ($('#slide-2').offset().left >= sliderLeftOffset) {
     $('#dot-2').css("background-color", "white");
   } else {
-    $('#dot-1').css("background-color", "white");
+    $('#dot-3').css("background-color", "white");
   }
 }
 
-$('.slideshow-container').onscroll = function () { scrollProgress() };
+$('.slider').on('scroll',function() {
+  scrollProgress();
+});
 
 
 $(document).ready(() => {
