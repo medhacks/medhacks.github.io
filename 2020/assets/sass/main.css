@@ -926,7 +926,7 @@ h4 {
   background-position: center;
 }
 
-@media only screen and (min-width: 760px) {
+@media only screen and (min-width: 500px) {
   .website-bottom {
     background-image: url("../img/footer.png");
     background-size: 100% 100%;
@@ -939,10 +939,13 @@ h4 {
 
 .footer {
   margin-top: -10vh;
+  height: 100%;
   width: 100%;
   background-color: #EED4C3;
-  max-height: 500px;
+  display: inline-block;
   min-height: 325px;
+  margin-bottom: -9px;
+  overflow: hidden;
 }
 
 .footer-left {
@@ -967,6 +970,7 @@ h4 {
 
 .footer-right {
   text-align: center;
+  height: 100%;
   width: 100%;
   float: right;
   background-color: #EED4C3;
@@ -974,6 +978,7 @@ h4 {
 
 .footer-right h1 {
   color: #4684B4;
+  margin: 0;
 }
 
 .linkContainer {
@@ -1000,7 +1005,7 @@ h4 {
   color: #050F38;
 }
 
-@media only screen and (min-width: 760px) {
+@media only screen and (min-width: 500px) {
   .footer {
     margin-top: -25vh;
   }
