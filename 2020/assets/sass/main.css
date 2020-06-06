@@ -719,6 +719,7 @@ a.header-action:hover {
 }
 
 .FAQContainer {
+  display: block;
   width: 80%;
   margin-left: 10%;
   margin-right: 10%;
@@ -844,6 +845,24 @@ h4 {
   width: 100%;
 }
 
+.announcementLink:active {
+  color: #050F38;
+}
+
+.announcementLink:hover {
+  color: #050F38;
+  text-decoration: none;
+}
+
+.announcementLink:visited {
+  color: #050F38;
+}
+
+.announcementLink:link {
+  color: #050F38;
+}
+
+
 .header-spacing {
   background-color: #8EDBF3;
   height: 20vh;
@@ -884,6 +903,11 @@ h4 {
 .header-action.nav-apply {
   margin: 0 20px 0 20px;
 }
+
+#announcementSection {
+  padding-top: 20vh;
+}
+
 
 @media screen and (max-width: 980px){
   .header-action.nav-apply {
@@ -931,8 +955,10 @@ h4 {
 }
 
 .website-bottom {
+  z-index: -1;
+  height: 100vh;
   width: 100%;
-  margin-top: 0px;
+  margin-top: 0;
   padding-top: 0px;
   padding-bottom: 1000px;
   background-image: url("../img/footer_mobile.png");

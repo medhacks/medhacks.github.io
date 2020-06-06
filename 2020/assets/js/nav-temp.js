@@ -67,13 +67,13 @@ function checkBubbles() {
 
     // console.log("counter" + counter);
 
-    heights[2] = heights[2] - 100;
-    heights[3] = heights[3] -100;
+    heights[3] = heights[3] - 100;
     heights[4] = heights[4] -100;
     heights[5] = heights[5] -100;
     heights[6] = heights[6] -100;
+    heights[7] = heights[7] -100;
 
-    // console.log(heights);
+    //console.log(heights);
 
     let scrollPosition = $(window).scrollTop();
     maxWidth = $("#faqBubble")[0].getBoundingClientRect().right;
@@ -88,26 +88,26 @@ function checkBubbles() {
 
     // console.log(scrollPosition);
 
-    if (scrollPosition >= heights[5]) {
-        percentage = (scrollPosition - heights[5]) / (heights[6] - heights[5]);
+    if (scrollPosition >= heights[6]) {
+        percentage = (scrollPosition - heights[6]) / (heights[7] - heights[6]);
         scrollPosition = 0.8 + percentage / (5);
         section = 5;
-    } else if (scrollPosition >= heights[4]) {
-        percentage = (scrollPosition - heights[4]) / (heights[5] - heights[4]);
+    } else if (scrollPosition >= heights[5]) {
+        percentage = (scrollPosition - heights[5]) / (heights[6] - heights[5]);
         scrollPosition = 0.6 + percentage / (5);
         section = 4
-    } else if (scrollPosition >= heights[3]) {
-        percentage = (scrollPosition - heights[3]) / (heights[4] - heights[3]);
+    } else if (scrollPosition >= heights[4]) {
+        percentage = (scrollPosition - heights[4]) / (heights[5] - heights[4]);
         scrollPosition = 0.4 + percentage / (5);
         section = 3
-    } else if (scrollPosition >= heights[2]) {
-        percentage = (scrollPosition - heights[2]) / (heights[3] - heights[2]);
+    } else if (scrollPosition >= heights[3]) {
+        percentage = (scrollPosition - heights[3]) / (heights[4] - heights[3]);
         // percentage = percentage + .5;
         scrollPosition = 0.2 + percentage / (5) ;
         section = 2;
     } else {
         section = 1;
-        percentage = scrollPosition / (heights[2]);
+        percentage = scrollPosition / (heights[3]);
         scrollPosition = percentage / 5;
     }
     if (scrollPosition > 1) {
