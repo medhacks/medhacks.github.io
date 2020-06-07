@@ -69,6 +69,7 @@ nav .navButton {
   cursor: pointer;
   color: #ffeb7b;
   padding: 0 10px 0 10px;
+  transition: 0.2s;
 }
 
 nav .navButton:hover {
@@ -113,6 +114,7 @@ nav #bar {
   height: 20px;
   margin-left: auto;
   margin-right: auto;
+  transition: 0.2s;
 }
 
 .circle {
@@ -123,6 +125,44 @@ nav #bar {
   height: 20px;
   margin-left: auto;
   margin-right: auto;
+  transition: 0.2s;
+}
+
+#homeButton:hover > div#homeBubble {
+  box-shadow: 0 0 5px 2px rgba(255, 235, 123, 1);
+}
+#homeButton:hover > #t1 {
+  color: #de495f;
+}
+#aboutButton:hover > div#aboutBubble {
+  box-shadow: 0 0 5px 2px rgba(255, 235, 123, 1);
+}
+#aboutButton:hover > #t2 {
+  color: #de495f;
+}
+#tracksButton:hover > div#tracksBubble {
+  box-shadow: 0 0 5px 2px rgba(255, 235, 123, 1);
+}
+#tracksButton:hover > #t3 {
+  color: #de495f;
+}
+#applyingButton:hover > div#applyingBubble {
+  box-shadow: 0 0 5px 2px rgba(255, 235, 123, 1);
+}
+#applyingButton:hover > #t4 {
+  color: #de495f;
+}
+#sponsorButton:hover > div#sponsorBubble {
+  box-shadow: 0 0 5px 2px rgba(255, 235, 123, 1);
+}
+#sponsorButton:hover > #t5 {
+  color: #de495f;
+}
+#faqButton:hover > div#faqBubble {
+  box-shadow: 0 0 5px 2px rgba(255, 235, 123, 1);
+}
+#faqButton:hover > #t6 {
+  color: #de495f;
 }
 
 #moose-mark {
