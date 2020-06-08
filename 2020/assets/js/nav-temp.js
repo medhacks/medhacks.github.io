@@ -17,8 +17,8 @@ $(document).ready(() => {
     $('#aboutButton').on('click', () => {
         $('#aboutSection').goTo();
     });
-    $('#tracksButton').on('click', () => {
-        $('#challenges').goTo();
+    $('#speakerButton').on('click', () => {
+        $('#speakers').goTo();
     });
     $('#applyingButton').on('click', () => {
         $('#applyingAnchor').goTo();

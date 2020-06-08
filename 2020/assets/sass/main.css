@@ -482,6 +482,31 @@ nav #bar {
   background-color: white;
 }
 
+#speakers {
+  text-align: center;
+}
+
+.speaker-div {
+  width: 90%;
+  text-align: center;
+  margin: 0 auto;
+
+}
+
+.speaker-div img {
+    width: 80%;
+}
+
+@media screen and (min-width: 600px) {
+  .speaker-div {
+    width: 40%;
+  }
+
+  .speaker-div img {
+    width: 50%;
+}
+}
+
 #challenges {
   display: block;
 }
