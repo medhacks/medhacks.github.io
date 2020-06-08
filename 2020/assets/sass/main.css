@@ -235,7 +235,7 @@ nav #bar {
   #ham-container {
     display: none;
   }
-  
+
   .header-logo {
     width: 40%;
   }
@@ -778,6 +778,12 @@ a.header-action:hover {
   float: left;
 }
 
+#FAQDivisor { 
+  height: 10vh;
+  width: 100%;
+  display: inline-block;
+}
+
 @media only screen and (min-width: 980px) {
   .FAQColumn {
     width: 50%;
@@ -888,11 +894,6 @@ h4 {
   height: 80vh;
 }
 
-.section-spacing {
-  background-color: #c7ecfa;
-  height: 30vh;
-  width: 100%;
-}
 
 .announcementLink:active {
   color: #050F38;
