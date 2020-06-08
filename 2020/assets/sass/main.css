@@ -54,6 +54,10 @@ nav a .logo {
   margin-left: 10%;
 }
 
+.header-logo {
+  width: 80%;
+}
+
 @media screen and (max-width: 800px) {
   nav a .logo {
     display: none;
@@ -230,6 +234,10 @@ nav #bar {
 @media screen and (min-width: 800px) {
   #ham-container {
     display: none;
+  }
+  
+  .header-logo {
+    width: 40%;
   }
 }
 
