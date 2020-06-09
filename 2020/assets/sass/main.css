@@ -495,6 +495,7 @@ nav #bar {
 
 .speaker-div img {
     width: 80%;
+    box-shadow: 0 -2px 8px 2px rgba(0, 0, 0, 0.3);
 }
 
 @media screen and (min-width: 600px) {
