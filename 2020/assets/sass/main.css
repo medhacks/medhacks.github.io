@@ -810,6 +810,10 @@ a.header-action:hover {
   display: inline-block;
 }
 
+#FAQDivisor p {
+  text-align: center;
+}
+
 @media only screen and (min-width: 980px) {
   .FAQColumn {
     width: 50%;
