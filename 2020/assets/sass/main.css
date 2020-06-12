@@ -188,7 +188,7 @@ nav #bar {
 }
 
 #moose-mark {
-  border: 2.5px solid #ffeb7b;
+  border: 3px solid #ffeb7b;
   z-index: 4;
   width: 0;
   visibility: hidden;
