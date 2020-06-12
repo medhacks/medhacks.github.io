@@ -792,6 +792,10 @@ a.header-action:hover {
   color: #050F38;
 }
 
+#faqSpacing {
+  height: 10vh;
+}
+
 .FAQContainer {
   display: block;
   width: 80%;
