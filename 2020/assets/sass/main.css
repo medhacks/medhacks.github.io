@@ -70,6 +70,7 @@ nav a {
 }
 
 nav .navButton {
+  text-align: center;
   cursor: pointer;
   color: #ffeb7b;
   padding: 0 10px 0 10px;
@@ -131,6 +132,23 @@ nav #bar {
   margin-right: auto;
   transition: 0.2s;
 }
+
+.navButtonWrapper {
+  width: 10vw;
+}
+
+@media screen and (min-width: 982px) {
+  .navButtonWrapper {
+    width: 8vw;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .navButtonWrapper {
+    width: 6vw;
+  }
+}
+
 
 #homeButton:hover > div#homeBubble {
   box-shadow: 0 0 5px 2px rgba(255, 235, 123, 1);
@@ -297,7 +315,7 @@ nav #bar {
 }
 
 #aboutSection {
-  padding: 5% 10% 5% 10%;
+  padding: 0% 10% 0% 10%;
   overflow: hidden;
 }
 
