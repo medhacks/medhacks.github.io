@@ -190,7 +190,6 @@ nav #bar {
 #moose-mark {
   border: 3px solid #ffeb7b;
   z-index: 4;
-  width: 0;
   visibility: hidden;
   display: inline;
   position: fixed;
@@ -204,6 +203,11 @@ nav #bar {
   display: inline-flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
+}
+
+.sponsor-blocks::-webkit-scrollbar {
+  display: none;
 }
 
 #slider-container .buttonContainer a {
@@ -1036,8 +1040,33 @@ h4 {
 }
 
 /* Sponsor */
+.progress-container2 {
+  width: 100%;
+  height: 4px;
+  background: #c7ecfa;
+}
+
+.progress-container1 {
+  width: 100%;
+  height: 4px;
+  background-image: linear-gradient(#58a7e7, #e6f8ff, #58a7e7);
+}
+
+#myBar1 {
+  height: 4px;
+  background-color: #c7ecfa;
+  width: 0%;
+}
+
+#myBar2 {
+  height: 4px;
+  background-image: linear-gradient(#58a7e7, #e6f8ff, #58a7e7);
+  width: 0%;
+}
+
 #sponsor {
   background-color: #c7ecfa;
+  
 }
 
 #headline {
@@ -1056,6 +1085,25 @@ h4 {
 .sponsor-block {
   margin-bottom: 0px;
   padding-bottom: 0px;
+}
+
+.controls {
+  position: absolute;
+  top: 90px;
+}
+.controls a {
+  position: absolute;
+  display: block;
+  width: 18px;
+  height: 20px;
+}
+a.control_left {
+  background: "&#10095";
+  left: 10px;
+}
+a.control_right {
+  background: "&#10094";
+  left: 370px;
 }
 
 .website-bottom {
