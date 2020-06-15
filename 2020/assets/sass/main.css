@@ -504,6 +504,12 @@ nav #bar {
   background-color: white;
 }
 
+.marginFormat {
+  height: 20vh;
+  width: 100%;
+  display: inline-block;
+}
+
 #speakers {
   text-align: center;
 }
