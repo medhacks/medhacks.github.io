@@ -87,12 +87,10 @@ $(document).ready(function () {
 
     $('.sponsor-blocks').on('touchmove', function () {
         stopSlider();
-        console.log("swipeed");
     });
 
     $('.sponsor-blocks').on('touchend', function () {
         startSlider();
-        console.log("scrolling");
     });
 
     // When the user scrolls the page, execute myFunction
