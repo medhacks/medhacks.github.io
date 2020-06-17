@@ -47,13 +47,13 @@ $(document).ready(function () {
 
     function resetInterval() { //add this method which wil reset the timer
         window.clearInterval(looper); //clear current interval
-        looper = setInterval(autoSlide, 500); //start auto slide again.
+        looper = setInterval(autoSlide, 200) //start auto slide again.
     }
 
     function autoSlide() { //move this to a function from being anonymous
         var last_sponsor_pos = $('#sponsor' + total_sponsor_number).position().left + $('#sponsor' + total_sponsor_number).width() - 10;
         var sponsor_right = $('.sponsor-blocks').width();
-        var horiz_inc = 100;
+        var horiz_inc = 50;
 
         if (last_sponsor_pos > sponsor_right) {
             $('.sponsor-blocks').animate({

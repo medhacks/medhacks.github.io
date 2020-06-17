@@ -137,6 +137,10 @@ nav #bar {
   width: 10vw;
 }
 
+.navButtonWrapper:hover {
+  cursor: pointer;
+}
+
 @media screen and (min-width: 982px) {
   .navButtonWrapper {
     width: 8vw;
@@ -162,10 +166,10 @@ nav #bar {
 #aboutButton:hover > #t2 {
   color: #de495f;
 }
-#tracksButton:hover > div#tracksBubble {
+#speakerButton:hover > div#tracksBubble {
   box-shadow: 0 0 5px 2px rgba(255, 235, 123, 1);
 }
-#tracksButton:hover > #t3 {
+#speakerButton:hover > #t3 {
   color: #de495f;
 }
 #applyingButton:hover > div#applyingBubble {
