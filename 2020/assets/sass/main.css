@@ -899,12 +899,12 @@ a.header-action:hover {
 }
 
 .FAQAnswer {
-  padding-left: 2%;
-  padding-right: 2%;
+  padding-left: 5%;
+  padding-right: 5%;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
-  background-color: #EED4C3;
+  background-color: #E8DCCA;
   border-radius: 0px 0px 7px 7px;
 }
 
