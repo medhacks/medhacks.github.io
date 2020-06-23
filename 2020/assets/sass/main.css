@@ -791,6 +791,7 @@ nav #bar {
 .subheader {
   color: #050F38;
   font-size: 1.5rem;
+  text-align: center;
 }
 
 a.header-action {
@@ -853,6 +854,10 @@ a.header-action:hover {
 @media only screen and (min-width: 980px) {
   .FAQColumn {
     width: 50%;
+  }
+
+  .subheader {
+    text-align: left;
   }
 
   .linkDiv {
