@@ -11,6 +11,8 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   <link href="../assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <link rel="shortcut icon" href="./assets/logos/medhacks_cross.png" type="image/png" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js" type="text/javascript"></script>
+  <script src="./style/script.js"></script>
   <title>Meet the Team</title>
 </head>
 
@@ -26,54 +28,12 @@
       <li class="header-navbar-item"><a href="#logistics" class="header-navbar-link">Logistics</a></li>
       <li class="header-navbar-item"><a href="#outreach" class="header-navbar-link">Outreach</a></li>
       <li class="header-navbar-item"><a href="#tech" class="header-navbar-link">Tech</a></li>
+      <li class="header-navbar-item"><a href="#medschool" class="header-navbar-link">Medical Student Liasons</a></li>
     </ul>
   </div>
-  <div>
-    <!-- TEAM SLIDE SHOW -->
 
-    <!--
-    <div id="team" class="slideshow-container">
-      <div class="marginFormat" style="height:75px; width:100%"></div>
-      <div class="mySlides">
-        <img src="assets/group-pics/Exec-Lead.JPG" style="width:100%">
-      </div>
-
-      <div class="mySlides">
-        <img src="assets/group-pics/Promo.JPG" style="width:100%">
-      </div>
-
-      <div class="mySlides">
-        <img src="assets/group-pics/Logistics.JPG" style="width:100%">
-      </div>
-
-      <div class="mySlides">
-        <img src="assets/group-pics/Outreach.JPG" style="width:100%">
-      </div>
-
-      <div class="mySlides">
-        <img src="assets/group-pics/Tech.JPG" style="width:100%">
-      </div>-->
-
-      <!-- Next and previous buttons -->
-
-      <!--
-      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-      <a class="next" onclick="plusSlides(1)">&#10095;</a>
-    </div>
-    <br> -->
-
-    <!-- The dots/circles -->
-    <!-- <div style="text-align:center">
-      <span class="dot" onclick="currentSlide(1)"></span>
-      <span class="dot" onclick="currentSlide(2)"></span>
-      <span class="dot" onclick="currentSlide(3)"></span>
-      <span class="dot" onclick="currentSlide(4)"></span>
-      <span class="dot" onclick="currentSlide(5)"></span>
-    </div> -->
-  </div>
-  
-  <div style="height: 100px; width: 100%;"></div>
-  <div class="team">
+  <div style="height: 15vh; width: 100%;"></div>
+  <div class="team" id="exec">
     <h1>The Executives</h1>
     <div class="teamRow">
       <div class="individual left">
@@ -101,7 +61,8 @@
           Director
         </h4>
         <p>
-          Dennis is one of this year's directors and served on the outreach team last year. He's a rising 3rd year BME undergraduate with a passion for medical entrepreneurship. Dennis is a big fan of basketball, tennis, and hackathons, and can't wait to see you at MedHacks 2020!</p>
+          Dennis is one of this year's directors and served on the outreach team last year. He's a rising 3rd year BME undergraduate with a passion for medical entrepreneurship. Dennis is a big fan of basketball, tennis, and hackathons, and can't wait to see you at MedHacks 2020!
+        </p>
       </div>
     </div>
 
@@ -117,7 +78,8 @@
           Community Outreach Chair
         </h4>
         <p>
-          Diane is a rising junior majoring in Biomedical Engineering. She joined the MedHacks organizing team as a freshman, and it's been a really great time getting to know everyone on the team. She currently serves on the executive board as the Community Outreach chair and hosts Mini MedHacks, which is an opportunity for MedHacks to work with and mentor local high school students who are interested in the intersection of engineering and medicine.        </p>
+          Diane is a rising junior majoring in Biomedical Engineering. She joined the MedHacks organizing team as a freshman, and it's been a really great time getting to know everyone on the team. She currently serves on the executive board as the Community Outreach chair and hosts Mini MedHacks, which is an opportunity for MedHacks to work with and mentor local high school students who are interested in the intersection of engineering and medicine.
+        </p>
       </div>
       <div class="individual right">
         <div class="pfp">
@@ -130,7 +92,9 @@
           Treasurer
         </h4>
         <p>
-          Priya is a rising junior studying Chemical and Biomolecular Engineering. She conducts computational modeling research on membrane proteins in the Gray Lab at Hopkins.      </div>
+          Priya is a rising junior studying Chemical and Biomolecular Engineering. She conducts computational modeling research on membrane proteins in the Gray Lab at Hopkins.
+        </p>
+      </div>
     </div>
     <div class="teamRow">
       <div class="individual left">
@@ -144,277 +108,611 @@
           Hacker Experience Chair
         </h4>
         <p>
-          Rebecca Yu is a rising junior studying Biomedical Engineering and Computer Science. Rebecca was a member of the outreach team last year and is serving as the Hacker Experience Team Lead this year. She does research in Computational Medicine and loves to see the new technology applied to the medical/health field by hackers every year during MedHacks!      </div>
+          Rebecca Yu is a rising junior studying Biomedical Engineering and Computer Science. Rebecca was a member of the outreach team last year and is serving as the Hacker Experience Team Lead this year. She does research in Computational Medicine and loves to see the new technology applied to the medical/health field by hackers every year during MedHacks!     
+        </p>
+        </div>
     </div>
   </div>
 
-  <div style="margin:3rem 0rem 3rem 6rem; padding:0">
-    <!-- PROMO -->
-    <div id="promo">
-      <div class="marginFormat" style="height:2rem; width:100%"></div>
-      <h1>The Promotion Team</h1>
-      <div class="row">
-        <div class="container-exec-lead" "column">
-          <img src="assets/exec-lead/Shravya.png" class="image">
-          <div class="overlay">
-            <div class="overlay-img-text">
-              Shravya Gogula, Co-Head of Promotion <br>
-              <p style="color:white;">Shravya is a Biomedical Engineering major involved with BMES, design team, research, Alumni Student Ambassadors, CCSL, sorority, and volunteering at the emergency department. She is also an avid fan of crime shows, eating lots of food, and
-                reading.
-              </p>
-            </div>
-          </div>
+  <div class="team" id="promo">
+    <h1>The Promotion Team</h1>
+    <div class="teamRow">
+      <div class="individual left">
+        <div class="pfp">
+          <img src="https://d2xssgyjy4ywy8.cloudfront.net/photos/FabianaCorsi.JPG" class="picture">
         </div>
-        <div class="container-exec-lead" "column">
-          <img src="assets/exec-lead/Damali.png" class="image">
-          <div class="overlay">
-            <div class="overlay-img-text">
-              Damali Davis, Co-Head of Promotion <br>
-              <p style="color:white;">Damali is from Bel Air, MD. Outside from MedHacks, she serves as the Secretary for the JHU Chapter of the National Society of Black Engineers and the JHU Gospel Choir. Damali also works for Johns Hopkins Technology Ventures, where she gets
-                to see how research projects are developed into commercialized products and serves as a member of the BME Department's Student Advisory Board.</p>
-            </div>
-          </div>
-        </div>
+        <h3>
+          Fabiana Corsi Mendez
+        </h3>
+        <h4>
+          Promotion Team Lead
+        </h4>
+        <p>
+          Fabiana is a rising junior who majors in Public Health and Political Science. Outside of MedHacks, she competes with the Model United Nations team, works as a graphic designer, and enjoys playing murder mysteries over Zoom.
+        </p>
       </div>
-      <div class="row">
-        <div class="container-member" "column">
-          <img src="assets/promo/Cindy.png" class="image">
-          <div class="overlay">
-            <div class="overlay-img-text">Cindy Koo, Graphic Design</div>
-          </div>
+      <div class="individual right">
+        <div class="pfp">
+          <img src="https://d2xssgyjy4ywy8.cloudfront.net/photos/ArianaBooker.JPG" class="picture">
         </div>
-        <div class="container-member" "column">
-          <img src="assets/promo/Janice.png" class="image">
-          <div class="overlay">
-            <div class="overlay-img-text">Janice Choi, Graphic Design</div>
-          </div>
-        </div>
-        <div class="container-member" "column">
-          <img src="assets/promo/Regan.png" class="image">
-          <div class="overlay">
-            <div class="overlay-img-text">Regan Stradtmann-Carvalho, Photography/Instragram</div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="container-member" "column">
-          <img src="assets/promo/Caite.png" class="image">
-          <div class="overlay">
-            <div class="overlay-img-text">Caite Arocho, Social Chair</div>
-          </div>
-        </div>
-        <div class="container-member" "column">
-          <img src="assets/promo/Audrey.png" class="image">
-          <div class="overlay">
-            <div class="overlay-img-text">Audrey Tao, Photography</div>
-          </div>
-        </div>
-        <div class="container-member" "column">
-          <img src="assets/promo/Irene.png" class="image">
-          <div class="overlay">
-            <div class="overlay-img-text">Irene Halferty, Graphic Design</div>
-          </div>
-        </div>
+        <h3>
+          Ariana Booker
+        </h3>
+        <h4>
+          Promotion Team Member
+        </h4>
+        <p>
+          Ariana is a rising sophomore studying Behavioral Biology at Johns Hopkins. In addition to Medhacks, she is a part of a mentoring program at Hopkins and is the Events Chair for the Hopkins Organization for Pre-health Education.     
+        </p>
       </div>
     </div>
-  </div>
-
-  <div style="margin:3rem 0rem 3rem 6rem; padding:0">
-    <!-- LOGISTICS -->
-    <div id="logistics">
-      <div class="marginFormat" style="height:2rem; width:100%"></div>
-      <h1>The Logistics Team</h1>
-      <div class="row">
-        <div class="container-exec-lead" "column">
-          <img src="assets/exec-lead/Patrick H.png" class="image">
-          <div class="overlay">
-            <div class="overlay-img-text">
-              Patrick Huie, Co-Head of Logistics <br>
-              <p style="color:white;">Patrick loves to build things that can help others! He finds it super exciting to indirectly serve others in various positions, from growing the Baltimore and Hopkins entrepreneurship ecosystem as an investor at A-Level, to designing technology
-                to aid clinicians in helping comatose patients recovery, and playing cello to positively influence listeners through music. His favorite activities to relax are reading and playing pickup soccer/basketball at the Rec. </p>
-            </div>
-          </div>
+    <div class="teamRow">
+      <div class="individual left">
+        <div class="pfp">
+          <img src="https://d2xssgyjy4ywy8.cloudfront.net/photos/ElizabethCho.jpg" class="picture">
         </div>
-        <div class="container-exec-lead" "column">
-          <img src="assets/exec-lead/Ben.png" class="image">
-          <div class="overlay">
-            <div class="overlay-img-text">
-              Ben Huang, Co-Head of Logistics <br>
-              <p style="color:white;">Originally from the suburbs of Baltimore County, Ben now lives in the city of Baltimore. He specializes in learning trivia about public health. Ben likes to jump on a fiberglass bendy stick at the D3 level. And he also enjoys eating food
-                on a daily basis.</p>
-            </div>
-          </div>
-        </div>
+        <h3>
+          Elizabeth Cho
+        </h3>
+        <h4>
+          Promotion Team Member
+        </h4>
+        <p>
+          Elizabeth is a rising junior (2022) majoring in biomedical engineering, computer science, and applied math. Outside of MedHacks, she likes to draw and play video games. She is also part of the organizing team for HopHacks.     
+        </p>
       </div>
-      <div class="row">
-        <div class="container-member" "column">
-          <img src="assets/logistics/Maggie.png" class="image">
-          <div class="overlay">
-            <div class="overlay-img-text">Maggie Luo, <br>Head of Application Handling</div>
-          </div>
+      <div class="individual right">
+        <div class="pfp">
+          <img src="https://d2xssgyjy4ywy8.cloudfront.net/photos/AnaFahey.jpg" class="picture">
         </div>
-        <div class="container-member" "column">
-          <img src="assets/logistics/Ryan.png" class="image">
-          <div class="overlay">
-            <div class="overlay-img-text">Ryan Lu, Venue</div>
-          </div>
-        </div>
-        <div class="container-member" "column">
-          <img src="assets/logistics/Claire.png" class="image">
-          <div class="overlay">
-            <div class="overlay-img-text">Claire Chiang, Catering</div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="container-member" "column">
-          <img src="assets/logistics/Valeria.png" class="image">
-          <div class="overlay">
-            <div class="overlay-img-text">Valeria Hesse, Catering</div>
-          </div>
-        </div>
-        <div class="container-member" "column">
-          <img src="assets/logistics/Vedant.png" class="image">
-          <div class="overlay">
-            <div class="overlay-img-text">Vedant Chandra, Judging</div>
-          </div>
-        </div>
-        <div class="container-member" "column">
-          <img src="assets/logistics/Angela.png" class="image">
-          <div class="overlay">
-            <div class="overlay-img-text">Angela Xu, Venue</div>
-          </div>
-        </div>
+        <h3>
+          Ana Fahey
+        </h3>
+        <h4>
+          Promotion Team Member
+        </h4>
+        <p>
+          Ana is a rising sophomore majoring in Computer Science from Annapolis, Maryland. On campus, she volunteers as a tutor for the Tutorial Project and started as an Organizer in the fall and works in a Cognitive Science Lab as an RA assisting with eye-tracking data analysis. Currently, she is a work from home intern helping to create a public dataset of videos of surgeons performing surgical training tasks that describe the video activity and the associated skill level by task. Aside from school and lab work, she loves to swim, read and play with her dog Luna. 
+        </p>
       </div>
     </div>
-  </div>
-
-  <div style="margin:3rem 0rem 3rem 6rem; padding:0">
-    <!-- OUTREACH -->
-    <div id="outreach">
-      <div class="marginFormat" style="height:2rem; width:100%"></div>
-      <h1>The Outreach Team</h1>
-      <div class="row">
-        <div class="container-exec-lead" "column">
-          <img src="assets/exec-lead/Usman.png" class="image">
-          <div class="overlay">
-            <div class="overlay-img-text">
-              Usman Enam, Co-Head of Outreach <br>
-              <p style="color:white;">Usman is a Molecular Cellular Biology and Computer Science major from Pakistan. He likes DNA and loves driving golf carts on campus and enjoys acting in theater. Fried chicken CharMar sandwiches makes his day.</p>
-            </div>
-          </div>
+    <div class="teamRow">
+      <div class="individual left">
+        <div class="pfp">
+          <img src="https://d2xssgyjy4ywy8.cloudfront.net/photos/SeoyoungKwon.jpg" class="picture">
         </div>
-        <div class="container-exec-lead" "column">
-          <img src="assets/exec-lead/Zenny.png" class="image">
-          <div class="overlay">
-            <div class="overlay-img-text">
-              Zenny Chu, Co-Head of Outreach <br>
-              <p style="color:white;">Zenny is a Biomedical Engineering and Applied Math major from Michigan. On campus, he is involved with Relay for Life and design team. He also conducts research at the med campus. In his free time, Zenny enjoys traveling to new places, rooting
-                in vain for his favorite sports teams, and napping.</p>
-            </div>
-          </div>
-        </div>
+        <h3>
+          Seoyoung Kwon
+        </h3>
+        <h4>
+          Promotion Team Member
+        </h4>
+        <p>
+          Seoyoung is a BME major in the class of 2023, leaning towards a focus in immunoengineering. This year, she joined a design team where they tackled improving margin assessment in Mohs surgery using MUSE slide-free microscopy. She has also gotten involved in research in a lab that develops and applies biomaterials and "tissue-on-a-chip" models used in disease modeling, drug screening, and stem cell-based therapies.
+        </p>    
       </div>
-      <div class="row">
-        <div class="container-member" "column">
-          <img src="assets/outreach/Alisha.png" class="image">
-          <div class="overlay">
-            <div class="overlay-img-text">Alisha Chen, Outreach</div>
-          </div>
+      <div class="individual right">
+        <div class="pfp">
+          <img src="https://d2xssgyjy4ywy8.cloudfront.net/photos/JessicaLi.jpg" class="picture">
         </div>
-        <div class="container-member" "column">
-          <img src="assets/outreach/Julie.png" class="image">
-          <div class="overlay">
-            <div class="overlay-img-text">Julie Cui, Outreach</div>
-          </div>
-        </div>
-        <div class="container-member" "column">
-          <img src="assets/outreach/Nicole.png" class="image">
-          <div class="overlay">
-            <div class="overlay-img-text">Nicole Jaurre, Outreach</div>
-          </div>
-        </div>
+        <h3>
+          Jessica Li
+        </h3>
+        <h4>
+          Promotion Team Member
+        </h4>
+        <p>
+          Jessica is a rising sophomore from San Diego, California. She is currently studying Public Health, and spends much of her free time illustrating or writing character-focused works. Among her prior projects is a collaborative graphic novel about environmental stewardship and several murals.
+        </p>
       </div>
-      <div class="row">
-        <div class="container-member" "column">
-          <img src="assets/outreach/Nick.png" class="image">
-          <div class="overlay">
-            <div class="overlay-img-text">Nick Garza, Outreach</div>
-          </div>
+    </div>
+    <div class="teamRow">
+      <div class="individual left">
+        <div class="pfp">
+          <img src="assets/exec-lead/member.png" class="picture">
         </div>
-        <div class="container-member" "column">
-          <img src="assets/outreach/Kelly.png" class="image">
-          <div class="overlay">
-            <div class="overlay-img-text">Kelly Pang, Outreach</div>
-          </div>
+        <h3>
+          Rishima Mukherjee
+        </h3>
+        <h4>
+          Promotion Team Member
+        </h4>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac tellus lectus. Sed quis ullamcorper ante, ut efficitur risus. Praesent nulla dolor, ornare vel purus in, vehicula lobortis elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam iaculis nibh non libero pellentesque, sed vehicula urna eleifend. Aliquam ultricies vel sapien venenatis porta. 
+        </p>    
+      </div>
+      <div class="individual right">
+        <div class="pfp">
+          <img src="https://d2xssgyjy4ywy8.cloudfront.net/photos/JonathanWu.jpg" class="picture">
         </div>
+        <h3>
+          Jonathan Wu
+        </h3>
+        <h4>
+          Promotion Team Member
+        </h4>
+        <p>
+          Jonathan is a rising sophomore (’23) majoring in BME. Having spent less than a full academic year at Hopkins due to current circumstances, his internships and lab have been canceled. Luckily, all the major events other organizations he's involved with are planning for the upcoming year are still ongoing, and hopes to be back on campus to experience all these events!
+        </p>
+      </div>
+    </div>
+    <div class="teamRow">
+      <div class="individual left">
+        <div class="pfp">
+          <img src="https://d2xssgyjy4ywy8.cloudfront.net/photos/AdyZhang.jpeg" class="picture">
+        </div>
+        <h3>
+          Ady Zhang
+        </h3>
+        <h4>
+          Promotion Team Member
+        </h4>
+        <p>
+          Ady is currently studying Molecular and Cellular Biology and Applied Mathematics and Statistics at Johns Hopkins University. Among the many student organizations at this university, she is also part of TCO labs, Jmag and Zeniada. An aspect of MedHacks she is particularly passionate about is bringing people from different backgrounds to work creatively on innovating solutions to difficult problems, especially ones at the intersection of medicine and bioengineering. 
+        </p>    
       </div>
     </div>
   </div>
 
-  <div style="margin:3rem 0rem 3rem 6rem; padding:0">
-    <!-- TECH -->
-    <div id="tech">
-      <div class="marginFormat" style="height:2rem; width:100%"></div>
-      <h1>The Tech Team</h1>
-      <div class="row">
-        <div class="container-exec-lead" "column">
-          <img src="assets/exec-lead/member.png" class="image">
-          <div class="overlay">
-            <div class="overlay-img-text">
-              Julian Orillac, Co-Head of Tech <br>
-              <p style="color:white;">Lorem ipsum dolor sit amet, at semper convenire corrumpit vim. Vel assentior neglegentur an. In elitr impetus epicuri vel, eum ut sapientem voluptaria, nihil quaerendum id usu. Exerci sensibus delicata ex nec. Ut nemore everti corpora est.
-              </p>
-            </div>
-          </div>
+  <div class="team" id="logistics">
+    <h1>The Logistics Team</h1>
+    <div class="teamRow">
+      <div class="individual left">
+        <div class="pfp">
+          <img src="https://d2xssgyjy4ywy8.cloudfront.net/photos/AsrithaGuduru.jpg" class="picture">
         </div>
-        <div class="container-exec-lead" "column">
-          <img src="assets/exec-lead/Bryan.png" class="image">
-          <div class="overlay">
-            <div class="overlay-img-text">
-              Bryan Li, Co-Head of Tech <br>
-              <p style="color:white;">Lorem ipsum dolor sit amet, at semper convenire corrumpit vim. Vel assentior neglegentur an. In elitr impetus epicuri vel, eum ut sapientem voluptaria, nihil quaerendum id usu. Exerci sensibus delicata ex nec. Ut nemore everti corpora est.
-              </p>
-            </div>
-          </div>
-        </div>
+        <h3>
+          Asritha Guduru
+        </h3>
+        <h4>
+          Logistics Team Lead
+        </h4>
+        <p>
+          Asritha is one of the leads for Logistics. She is a rising junior studying Chemistry and Computer Science. Outside of Medhacks, she volunteers with Remington Outreach, helps organize the Hopkins Model UN Conference, and works as a research assistant at a neurosurgery lab. In her free time, she loves to bake, read, and - of course - watch Netflix. She can't wait to meet you guys!
+        </p>
       </div>
-      <div class="row">
-        <div class="container-member" "column">
-          <img src="assets/tech/Elle.png" class="image">
-          <div class="overlay">
-            <div class="overlay-img-text">Elle Park, Frontend</div>
-          </div>
+      <div class="individual right">
+        <div class="pfp">
+          <img src="https://d2xssgyjy4ywy8.cloudfront.net/photos/HelenaHahn.jpg" class="picture">
         </div>
-        <div class="container-member" "column">
-          <img src="assets/tech/Sanjana.png" class="image">
-          <div class="overlay">
-            <div class="overlay-img-text">Sanjana Rao, Frontend</div>
-          </div>
-        </div>
-        <div class="container-member" "column">
-          <img src="assets/tech/Lucy.png" class="image">
-          <div class="overlay">
-            <div class="overlay-img-text">Lucy Zhang, Backend</div>
-          </div>
-        </div>
+        <h3>
+          Helena Hahn
+        </h3>
+        <h4>
+          Logistics Team Member
+        </h4>
+        <p>
+          Helena is a co-lead of the Logistics team this year. She is a rising senior studying electrical & computer engineering and economics, and she likes to do research and build things. In her free time, she's usually watching YouTube or discovering new products.    
+        </p>
       </div>
-      <div class="row">
-        <div class="container-member" "column">
-          <img src="assets/tech/Matthew.png" class="image">
-          <div class="overlay">
-            <div class="overlay-img-text">Matthew Kim, Backend</div>
-          </div>
+    </div>
+    <div class="teamRow">
+      <div class="individual left">
+        <div class="pfp">
+          <img src="https://d2xssgyjy4ywy8.cloudfront.net/photos/KristenChao.jpeg" class="picture">
         </div>
-        <div class="container-member" "column">
-          <img src="assets/tech/Sungho.png" class="image">
-          <div class="overlay">
-            <div class="overlay-img-text">Sungho Yoo, Backend </div>
-          </div>
+        <h3>
+          Kristen Chao
+        </h3>
+        <h4>
+          Logistics Team Member
+        </h4>
+        <p>
+          Kristen is a rising sophomore currently exploring the many fields Hopkins has to offer. Some of her interests include healthcare quality, anything planet related, and ancient mythologies (Greek, Roman, Egyptian!). Outside of school she loves to read, try out different dessert recipes, and bike. She looks forward to helping make MedHacks 2020 happen and seeing the different projects submitted!     
+        </p>
+      </div>
+      <div class="individual right">
+        <div class="pfp">
+          <img src="https://d2xssgyjy4ywy8.cloudfront.net/photos/SakshiChopra.png" class="picture">
         </div>
+        <h3>
+          Sakshi Chopra
+        </h3>
+        <h4>
+          Logistics Team Member
+        </h4>
+        <p>
+          Sakshi is a rising junior majoring in neuroscience and economics, and she joined the MedHacks organizing team this past year. In addition to MedHacks, she's involved with neuroscience research at the JHMI campus, she's a PILOT leader for organic chemistry, and am also a member of a dance team, among other student organizations, at Hopkins. This summer, she's been working virtually as a research assistant for the Casadevall Lab at JHSPH, tutoring for summer courses at Hopkins, and spending time with her family/friends!
+        </p>
+      </div>
+    </div>
+    <div class="teamRow">
+      <div class="individual left">
+        <div class="pfp">
+          <img src="https://d2xssgyjy4ywy8.cloudfront.net/photos/DanniGarcia.jpeg" class="picture">
+        </div>
+        <h3>
+          Danni Garcia
+        </h3>
+        <h4>
+          Logistics Team Member
+        </h4>
+        <p>
+          Danni is a rising junior majoring in Neuroscience and Psychology, and hoping to get into something related to human rights or helping out underrepresented communities once she finishes her time at Hopkins. She's been a part of Medhacks since her freshman year at Hopkins, starting out as a volunteer, then becoming a member of the Outreach subteam, and now Logistics. Outside of Medhacks, she's involved in research at the Carey Business School, she's a campus tour guide, and she loves volunteering around the Baltimore community! (Fun facts: She's a member of stan Twitter, and she is the most loyal Taylor Swift and Wallows fan you’ll ever find.) 
+        </p>    
+      </div>
+      <div class="individual right">
+        <div class="pfp">
+          <img src="https://d2xssgyjy4ywy8.cloudfront.net/photos/LinnyGuo.jpeg" class="picture">
+        </div>
+        <h3>
+          Alina Guo
+        </h3>
+        <h4>
+          Logistics Team Member
+        </h4>
+        <p>
+          Alina is a rising sophomore majoring in BME and minoring in CS. She enjoys outdoor adventures and in-lab cell transfections at JHMI. 
+        </p>
+      </div>
+    </div>
+    <div class="teamRow">
+      <div class="individual left">
+        <div class="pfp">
+          <img src="https://d2xssgyjy4ywy8.cloudfront.net/photos/ClaireLee.JPG" class="picture">
+        </div>
+        <h3>
+          Claire Lee
+        </h3>
+        <h4>
+          Logistics Team Member
+        </h4>
+        <p>
+          Claire is from South Korea and is a rising sophomore majoring in Mol Cell Bio and Public Health.
+        </p>    
+      </div>
+      <div class="individual right">
+        <div class="pfp">
+          <img src="https://d2xssgyjy4ywy8.cloudfront.net/photos/MilesLee.jpeg" class="picture">
+        </div>
+        <h3>
+          Miles Lee
+        </h3>
+        <h4>
+          Logistics Team Member
+        </h4>
+        <p>
+          Miles is a rising sophomore studying biomedical engineering and computer science. He loves dogs, going out with friends, and, of course, science/engineering. At Hopkins, he hopes to explore new fields, people, and research to expand his knowledge and career options. 
+        </p>
+      </div>
+    </div>
+    <div class="teamRow">
+      <div class="individual left">
+        <div class="pfp">
+          <img src="https://d2xssgyjy4ywy8.cloudfront.net/photos/JoshuaWoo.jpg" class="picture">
+        </div>
+        <h3>
+          Joshua Woo
+        </h3>
+        <h4>
+          Logistics Team Member
+        </h4>
+        <p>
+          Josh is a rising junior studying Public Health Studies and Economics here at Hopkins. He's originally from Greer, South Carolina and in his free time, he enjoys looking for new food places! 
+        </p>    
+      </div>
+      <div class="individual right">
+        <div class="pfp">
+          <img src="https://d2xssgyjy4ywy8.cloudfront.net/photos/RebeccaYin.jpg" class="picture">
+        </div>
+        <h3>
+          Rebecca Yin
+        </h3>
+        <h4>
+          Logistics Team Member
+        </h4>
+        <p>
+          Rebecca Yin is a sophomore double majoring in Biomedical Engineering and Computer Science. Outside of MedHacks, she is also involved in research on campus and Alpha Kappa Psi, a business fraternity. She is extremely excited to be a part of the MedHacks team. 
+        </p>    
       </div>
     </div>
   </div>
+  
+  <div class="team" id="outreach">
+    <h1>The Outreach Team</h1>
+    <div class="teamRow">
+      <div class="individual left">
+        <div class="pfp">
+          <img src="assets/exec-lead/member.png" class="picture">
+        </div>
+        <h3>
+          Darsh Patel
+        </h3>
+        <h4>
+          Outreach Lead
+        </h4>
+        <p>
+          Lorem ipsum dolor sit amet, at semper convenire corrumpit vim. Vel assentior neglegentur an. In elitr impetus epicuri vel, eum ut sapientem voluptaria, nihil quaerendum id usu. Exerci sensibus delicata ex nec. Ut nemore everti corpora est.
+        </p>
+      </div>
+      <div class="individual right">
+        <div class="pfp">
+          <img src="assets/exec-lead/member.png" class="picture">
+        </div>
+        <h3>
+          Kaitlyn Calabresi
+        </h3>
+        <h4>
+          Outreach Team Member
+        </h4>
+        <p>
+          Lorem ipsum dolor sit amet, at semper convenire corrumpit vim. Vel assentior neglegentur an. In elitr impetus epicuri vel, eum ut sapientem voluptaria, nihil quaerendum id usu. Exerci sensibus delicata ex nec. Ut nemore everti corpora est.
+        </p>
+      </div>
+    </div>
+
+    <div class="teamRow">
+      <div class="individual left">
+        <div class="pfp">
+          <img src="https://d2xssgyjy4ywy8.cloudfront.net/photos/JohnHan.jpg" class="picture">
+        </div>
+        <h3>
+          John Han
+        </h3>
+        <h4>
+          Outreach Team Member
+        </h4>
+        <p>
+          John is a rising junior majoring in Electrical Engineering. He is working towards the field of robotics + imaging to build and enhance medical/surgical devices. This summer, he's doing research with Durr Labs for Computational Biophotonics, where he'll be working on a project that applies real time ray-tracing to simulate a realistic environment inside the colon. 
+        </p>
+      </div>
+      <div class="individual right">
+        <div class="pfp">
+          <img src="assets/exec-lead/member.png" class="picture">
+        </div>
+        <h3>
+          Jaimie Huang
+        </h3>
+        <h4>
+          Outreach Team Member
+        </h4>
+        <p>
+          Lorem ipsum dolor sit amet, at semper convenire corrumpit vim. Vel assentior neglegentur an. In elitr impetus epicuri vel, eum ut sapientem voluptaria, nihil quaerendum id usu. Exerci sensibus delicata ex nec. Ut nemore everti corpora est.
+        </p>
+      </div>
+    </div>
+
+    <div class="teamRow">
+      <div class="individual left">
+        <div class="pfp">
+          <img src="assets/exec-lead/member.png" class="picture">
+        </div>
+        <h3>
+          Trisha Karani
+        </h3>
+        <h4>
+          Outreach Team Member
+        </h4>
+        <p>
+          Lorem ipsum dolor sit amet, at semper convenire corrumpit vim. Vel assentior neglegentur an. In elitr impetus epicuri vel, eum ut sapientem voluptaria, nihil quaerendum id usu. Exerci sensibus delicata ex nec. Ut nemore everti corpora est.
+        </p>
+      </div>
+      <div class="individual right">
+        <div class="pfp">
+          <img src="https://d2xssgyjy4ywy8.cloudfront.net/photos/PioKim.JPG" class="picture">
+        </div>
+        <h3>
+          Pio Kim
+        </h3>
+        <h4>
+          Outreach Team Member
+        </h4>
+        <p>
+          Pio is a rising junior majoring in Materials Science & Engineering on the Biomaterials track, and outside of school he is part of the Ultimate Frisbee team in addition to being on the board of KSA. He is excited to work with the Outreach team and the rest of the MedHacks members in making this event as great as possible!
+        </p>
+      </div>
+    </div>
+
+    <div class="teamRow">
+      <div class="individual left">
+        <div class="pfp">
+          <img src="https://d2xssgyjy4ywy8.cloudfront.net/photos/SelenaKim.jpg" class="picture">
+        </div>
+        <h3>
+          Selena Kim
+        </h3>
+        <h4>
+          Outreach Team Member
+        </h4>
+        <p>
+          Selena is a rising junior from Seoul, South Korea majoring Biomedical Engineering and minoring in music. She is part of the Medhacks outreach team and is excited for the upcoming hackathon. Outside of class, she is involved with research, Peabody, scientific communication, and design team. She likes to run and play piano in her free time!
+        </p>
+      </div>
+      <div class="individual right">
+        <div class="pfp">
+          <img src="assets/exec-lead/member.png" class="picture">
+        </div>
+        <h3>
+          Mathew Kunkler
+        </h3>
+        <h4>
+          Outreach Team Member
+        </h4>
+        <p>
+          Lorem ipsum dolor sit amet, at semper convenire corrumpit vim. Vel assentior neglegentur an. In elitr impetus epicuri vel, eum ut sapientem voluptaria, nihil quaerendum id usu. Exerci sensibus delicata ex nec. Ut nemore everti corpora est.
+        </p>
+      </div>
+    </div>
+
+    <div class="teamRow">
+      <div class="individual left">
+        <div class="pfp">
+          <img src="assets/exec-lead/member.png" class="picture">
+        </div>
+        <h3>
+          Sananda Pai
+        </h3>
+        <h4>
+          Outreach Team Member
+        </h4>
+        <p>
+          Lorem ipsum dolor sit amet, at semper convenire corrumpit vim. Vel assentior neglegentur an. In elitr impetus epicuri vel, eum ut sapientem voluptaria, nihil quaerendum id usu. Exerci sensibus delicata ex nec. Ut nemore everti corpora est.
+        </p>
+      </div>
+      <div class="individual right">
+        <div class="pfp">
+          <img src="https://d2xssgyjy4ywy8.cloudfront.net/photos/AnaRosu.png" class="picture">
+        </div>
+        <h3>
+          Ana Rosu
+        </h3>
+        <h4>
+          Outreach Team Member
+        </h4>
+        <p>
+          Ana Rosu is a rising sophomore from Champaign, Illinois majoring in Biomedical Engineering. She joined the MedHacks outreach team during Spring 2020. Besides MedHacks, she is involved with immunoengineering research on campus with the Elisseeff Lab and HydroGene, a design team developing a balloon catheter specialized for gene therapy delivery. 
+        </p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="team" id="tech">
+    <h1>The Tech Team</h1>
+    <div class="teamRow">
+      <div class="individual left">
+        <div class="pfp">
+          <img src="https://d2xssgyjy4ywy8.cloudfront.net/photos/NarayaniWagle.jpeg" class="picture">
+        </div>
+        <h3>
+          Narayani Wagle
+        </h3>
+        <h4>
+          Tech Team Lead
+        </h4>
+        <p>
+          Narayani is a rising junior majoring in CS and Neuroscience. Outside of Medhacks, she is involved in research and volunteers with the UN and Statistics Without Borders. 
+        </p>
+      </div>
+      <div class="individual right">
+        <div class="pfp">
+          <img src="https://d2xssgyjy4ywy8.cloudfront.net/photos/AlanZhang.jpg" class="picture">
+        </div>
+        <h3>
+          Alan Zhang
+        </h3>
+        <h4>
+          Tech Team Lead
+        </h4>
+        <p>
+          Alan is a rising sophomore studying computer science, economics, and possibly mathematics. Prior to Hopkins, he lived in Baltimore County.
+        </p>
+      </div>
+    </div>
+
+    <div class="teamRow" id="outreach">
+      <div class="individual left">
+        <div class="pfp">
+          <img src="assets/exec-lead/member.png" class="picture">
+        </div>
+        <h3>
+          AJ Cariaga
+        </h3>
+        <h4>
+          Outreach Team Member
+        </h4>
+        <p>
+          Lorem ipsum dolor sit amet, at semper convenire corrumpit vim. Vel assentior neglegentur an. In elitr impetus epicuri vel, eum ut sapientem voluptaria, nihil quaerendum id usu. Exerci sensibus delicata ex nec. Ut nemore everti corpora est.
+        </p>
+      </div>
+      <div class="individual right">
+        <div class="pfp">
+          <img src="https://d2xssgyjy4ywy8.cloudfront.net/photos/MelodyLee.jpg" class="picture">
+        </div>
+        <h3>
+          Melody Lee
+        </h3>
+        <h4>
+          Tech Team Member
+        </h4>
+        <p>
+          Melody is a Computer Science and Cognitive Science double major at JHU expecting to graduate in 2023. When she is not programming, volunteering, or doing research, she enjoys hanging out with her aKDPhi sisters, attending TASA events, drawing, and watching Netflix.
+        </p>
+      </div>
+    </div>
+
+    <div class="teamRow">
+      <div class="individual left">
+        <div class="pfp">
+          <img src="https://d2xssgyjy4ywy8.cloudfront.net/photos/JackZhang.JPG" class="picture">
+        </div>
+        <h3>
+          Jack Zhang
+        </h3>
+        <h4>
+          Tech Team Member
+        </h4>
+        <p>
+          Jack is a rising sophomore majoring in Computer Science and Mathematics. He loves coding and software engineering -- that's the reason why he joined Medhacks. This summer, he's doing an SWE internship at ByteDance, the maker of TikTok, focusing on C++ development. Fun fact: He's an avid car enthusiast. In his free time, he loves go-karting.
+        </p>
+      </div>
+      <div class="individual right">
+        <div class="pfp">
+          <img src="https://d2xssgyjy4ywy8.cloudfront.net/photos/AudreyZheng.jpeg" class="picture">
+        </div>
+        <h3>
+          Audrey Zheng
+        </h3>
+        <h4>
+          Tech Team Member
+        </h4>
+        <p>
+          Audrey is a rising junior majoring in Computer Science and Physics student at Hopkins. When she's not coding, you can find her napping on the couches somewhere inside Bloomberg.
+        </p>
+      </div>
+    </div>
+
+    <div class="teamRow">
+      <div class="individual left">
+        <div class="pfp">
+          <img src="https://d2xssgyjy4ywy8.cloudfront.net/photos/JustinZhao.JPG" class="picture">
+        </div>
+        <h3>
+          Justin Zhao
+        </h3>
+        <h4>
+          Outreach Team Member
+        </h4>
+        <p>
+          Justin is an incoming sophomore studying Computer Science and Applied Mathematics and Statistics. He originally hails from Princeton, NJ. When he's not studying, his hobbies include playing the piano and soccer. 
+        </p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="team" id="medschool">
+    <h1>Medical Student Liasons</h1>
+    <div class="teamRow">
+      <div class="individual left">
+        <div class="pfp">
+          <img src="https://d2xssgyjy4ywy8.cloudfront.net/photos/IuliaBarbur.jpg" class="picture">
+        </div>
+        <h3>
+          Iulia Barbur
+        </h3>
+        <h4>
+          Medical Student Liason
+        </h4>
+        <p>
+          Iulia is a second-year student at the Johns Hopkins University School of Medicine. She graduated from Case Western Reserve University with a BSE in biomedical engineering, and minored in computer science. In the past, she's done both basic science and clinical research, and loves finding ways to use computer science to find efficient ways to store and process data. She looks forward to being on the MedHacks team! 
+        </p>
+      </div>
+      <div class="individual right">
+        <div class="pfp">
+          <img src="https://d2xssgyjy4ywy8.cloudfront.net/photos/ClarissaRen.jpg" class="picture">
+        </div>
+        <h3>
+          Clarrisa Ren
+        </h3>
+        <h4>
+          Medical Student Liason
+        </h4>
+        <p>
+          Clarissa graduated from Indiana University with a B.S. in Biology, and is now a medical student at Hopkins. She is involved with Hopkins HIT (Health Innovation Technology), has a budding interest in entrepreneurship, and is very excited to help out with MedHacks this year! 
+        </p>
+      </div>
+    </div>
+  </div>
+
 
   <div class="marginFormat" style="height:80px; width:100%"></div>
 
@@ -428,9 +726,7 @@
     <div class="column2">
       <h3>Quick Links</h3>
       <ul>
-        <li><a href="http://www.medhacks.org">www.medhacks.org</a></li>
-        <li>*applyLink*</li>
-        <li>info@medhacks.org</li>
+        <li><a href="http://www.medhacks.io/2020">Medhacks 2020</a></li>
       </ul>
     </div>
     <div class="column3">
@@ -441,7 +737,7 @@
         <li>Baltimore, MD, 21205</li>
       </ul>
     </div>
-    <p style="color: gray" class="copyright">Copyright &copy; MedHacks 2018</p>
+    <p style="color: gray" class="copyright">Copyright &copy; MedHacks 2020</p>
   </footer>
 
 

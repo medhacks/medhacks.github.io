@@ -4,11 +4,11 @@ body {
     width: 100%;
     height: 100%;
     background-color: #EFEFEF;
+    font-size: 1rem;
 }
 
 body {
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-    font-weight: 300;
     overflow-x: hidden;
 }
 
@@ -31,11 +31,6 @@ body {
     }
 }
 
-p {
-    color: #193d56;
-    margin: 0 0 16px;
-    font-size: 16px;
-}
 
 
 hr.small {
@@ -146,7 +141,7 @@ hr.small {
     color: #fff;
 }
 
-@media only screen and (max-width: 836px) {
+@media only screen and (max-width: 1060px) {
     .header-navbar {
         box-shadow: 0 -5px 10px 4px rgba(0, 0, 0, .5);
         background-color: rgba(255, 255, 255, 0.95);
@@ -166,7 +161,7 @@ hr.small {
     }
 }
 
-@media all and (max-width: 950px) {
+@media all and (max-width: 1150px) {
     .header-navbar-logo {
         background: url("../assets/logos/logo_dark_smaller.png") no-repeat;
         height: 45px;
@@ -186,8 +181,11 @@ hr.small {
 
 /*@media only screen and (max-device-width: 736px) {*/
 
-@media only screen and (max-width: 836px) {
+@media only screen and (max-width: 1060px) {
+
     .header-navbar-hamburger {
+      display: none;
+
         cursor: pointer;
         float: right;
         height: 45px;
@@ -359,47 +357,151 @@ hr.small {
 }
 
 .team h1 {
-  margin-left: 5%;
+  text-align: center;
+  margin-top: 5%;
+  font-weight: 700;
 }
 
 .teamRow {
   display: inline-block;
-  margin-bottom: 20vh;
-}
-
-.left {
-  margin-left: 5%;
-}
-
-.right {
-  margin-right: 5%;
+  
 }
 
 .individual {
   width: 100%;
   height: 20vh;
-  float: left;
+  display: inline-block;
+  margin-top: 10%;
+  text-align: center;
+}
+
+.individual p {
+  margin-bottom: 2%;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 .pfp {
-  width: 30%;
+  width: 100%;
   height: auto;
   margin: 0;
-  float: left;
+  
 }
 
 .picture {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: cover;
-  height: 20vh;
-  padding-right: 1rem;
-  float: left;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  margin-bottom: 2%;
 }
 
-@media only screen and (min-width: 900px) {
+
+@media only screen and (min-width: 830px) {
+  .team h1 {
+    margin-left: 5%;
+    margin-bottom: 2%;
+    font-weight: 700;
+    margin-top: 0;
+  }
+
+
+  .pfp {
+    width: 30%;
+    height: auto;
+    margin: 0;
+  }
+  
+  .picture {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    height: 20vh;
+    padding-right: 1rem;
+    float: left;
+    width: auto;
+    margin-bottom: 0;
+  }
+
+  .left {
+    margin-left: 5%;
+    display: inline-block;
+  }
+  
+  .right {
+    margin-right: 0%;
+    margin-left: 5%;
+    display: inline-block;
+  }
+
+  .individual {
+    width: 95%;
+    height: 20vh;
+    float: left;
+    margin-bottom: 12%;
+    text-align: left;
+    margin-top: 0;
+  }
+  
+  .individual p{
+    padding: 0;
+  }
+
+  .left p{
+    padding-right: 2em;
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+
+  .right {
+    margin-right: 5%;
+    margin-left: 0;
+  }
+
   .individual {
     width: 45%;
+    margin-bottom: 20%;
+  }
+
+  .left p{
+    padding-right: 2em;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+
+  
+
+  .individual {
+    width: 45%;
+    margin-bottom: 15%;
+  }
+
+  .left p{
+    padding-right: 2em;
+  }
+}
+
+
+@media only screen and (min-width: 1400px) {
+
+  .individual {
+    width: 45%;
+    margin-bottom: 8%;
+  }
+
+  .left p{
+    padding-right: 2em;
+  }
+}
+
+
+@media only screen and (min-width: 1800px) {
+
+  .individual {
+    width: 45%;
+    margin-bottom: 5%;
   }
 
   .left p{
@@ -471,29 +573,6 @@ hr.small {
     -ms-transform: translate(-50%, -50%);
     text-align: center;
   }
-/*}*/
-
-p {
-  font-size: 1.2vw;
-  color: black;
-  padding-bottom: 0.5vw;
-}
-/*
-@media screen and (max width: 1030px) {
-  p {
-    display: none;
-    font-size: 1vw;
-    color: cyan;
-  }
-}
-@media screen and (min width: 1030px) {
-  p {
-    font-size: 1vw;
-    color: cyan;
-  }
-}
-}*/
-/* style ends */
 
 .column {
     float: left;
