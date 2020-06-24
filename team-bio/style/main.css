@@ -385,15 +385,29 @@ hr.small {
   width: 100%;
   height: auto;
   margin: 0;
-  
+  overflow: hidden;
 }
 
 .picture {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
   margin-bottom: 2%;
+}
+
+.pictureWide {
+  height: 15vw;
+  width: auto;
+}
+
+.pictureTall {
+  height: auto;
+  width: 15vw;
+}
+
+.pictureMobile {
+  width: 60%;
+  height: auto;
 }
 
 
@@ -407,19 +421,17 @@ hr.small {
 
 
   .pfp {
-    width: 30%;
-    height: auto;
+    width: 15vw;
+    height: 15vw;
     margin: 0;
+    float: left;
   }
   
   .picture {
     max-width: 100%;
-    max-height: 100%;
     object-fit: cover;
-    height: 20vh;
     padding-right: 1rem;
     float: left;
-    width: auto;
     margin-bottom: 0;
   }
 
