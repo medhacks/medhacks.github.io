@@ -27,7 +27,6 @@ for (i = 0; i < pics.length; i++) {
 
 
 window.onload = function() {
-  console.log("PogU");
   for (i = 0; i < pics.length; i++) {
     img = pics[i]
     img.onload = changeResolution(img);
