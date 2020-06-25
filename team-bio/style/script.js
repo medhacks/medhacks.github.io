@@ -17,10 +17,8 @@ var pics = document.getElementsByClassName("picture");
 var i;
 
 for (i = 0; i < pics.length; i++) {
-  console.log(pics[i]);
   let img = pics[i]
   img.addEventListener('load', function() {
-    console.log(img);
     img.onload = changeResolution(img);
   });
 }
