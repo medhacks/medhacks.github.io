@@ -364,7 +364,7 @@ hr.small {
 
 .teamRow {
   display: inline-block;
-  
+  width: 100%;
 }
 
 .individual {
