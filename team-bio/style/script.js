@@ -48,7 +48,7 @@ $(window).on('resize', function() {
 
 
 function changeResolution(n) {
-  if ($(window).width() < 813) {
+  if ($(window).width() < 830) {
     $(n).removeClass('pictureTall');
     $(n).removeClass('pictureWide');
     $(n).addClass('pictureMobile');

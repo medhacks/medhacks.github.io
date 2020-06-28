@@ -420,10 +420,10 @@ hr.small {
 
 
   .pfp {
-    width: 15vw;
-    height: 15vw;
+    width: 30vw;
+    height: 30vw;
     margin: 0;
-    float: left;
+    float: left
   }
   
   .picture {
@@ -432,6 +432,14 @@ hr.small {
     padding-right: 1rem;
     float: left;
     margin-bottom: 0;
+  }
+
+  .pictureWide {
+    height: 30vw;
+  }
+
+  .pictureTall {
+    width: 30vw;
   }
 
   .left {
@@ -447,15 +455,16 @@ hr.small {
 
   .individual {
     width: 95%;
-    height: 20vh;
+    height: 40vh;
     float: left;
-    margin-bottom: 12%;
     text-align: justify;
     margin-top: 0;
   }
   
   .individual p{
     padding: 0;
+    display: inline-block;
+    width: 65%;
   }
 
   .left p{
@@ -463,7 +472,22 @@ hr.small {
   }
 }
 
-@media only screen and (min-width: 1100px) {
+@media only screen and (min-width: 1050px) {
+
+  .pfp {
+    width: 15vw;
+    height: 15vw;
+    margin: 0;
+    float: left
+  }
+
+  .pictureWide {
+    height: 15vw;
+  }
+
+  .pictureTall {
+    width: 15vw;
+  }
 
   .right {
     margin-right: 5%;
@@ -472,8 +496,9 @@ hr.small {
 
   .individual {
     width: 45%;
-    margin-bottom: 20%;
+    height: 50vh;
   }
+
 
   .left p{
     padding-right: 2em;
@@ -486,7 +511,7 @@ hr.small {
 
   .individual {
     width: 45%;
-    margin-bottom: 15%;
+    height: 37vh;
   }
 
   .left p{
@@ -499,7 +524,7 @@ hr.small {
 
   .individual {
     width: 45%;
-    margin-bottom: 8%;
+    height: 40vh;
   }
 
   .left p{
@@ -512,7 +537,7 @@ hr.small {
 
   .individual {
     width: 45%;
-    margin-bottom: 5%;
+    height: 40vh;
   }
 
   .left p{
