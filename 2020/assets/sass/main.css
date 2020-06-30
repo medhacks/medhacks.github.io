@@ -51,8 +51,20 @@ nav a .logo {
   align-self: center;
   height: 3.5rem;
   margin-top: auto;
-  margin-left: 10%;
+  margin-left: 45%;
 }
+
+#mlh-trust-badge {
+  display:block;
+  max-width:100px;
+  min-width:60px;
+  position:fixed;
+  left:10px;
+  top:0;
+  width:10%;
+  z-index:10000;
+}
+
 
 .header-logo {
   width: 80%;
@@ -73,7 +85,6 @@ nav .navButton {
   text-align: center;
   cursor: pointer;
   color: #ffeb7b;
-  padding: 0 10px 0 10px;
   transition: 0.2s;
 }
 
@@ -141,7 +152,14 @@ nav #bar {
   cursor: pointer;
 }
 
-@media screen and (min-width: 982px) {
+@media screen and (min-width: 500px) {
+  .navButtonWrapper {
+    width: 9vw;
+  }
+}
+
+
+@media screen and (min-width: 1140px) {
   .navButtonWrapper {
     width: 8vw;
   }
@@ -1032,7 +1050,7 @@ h4 {
 }
 
 
-@media screen and (max-width: 980px){
+@media screen and (max-width: 1140px){
   .header-action.nav-apply {
     display: none;
   }
