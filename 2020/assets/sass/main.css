@@ -526,6 +526,23 @@ nav #bar {
   background-color: white;
 }
 
+#team-bio {
+  margin-top: 5%;
+  
+}
+
+#team-bio p {
+  color: #050F38;
+}
+
+#team-bio a:active {
+  color: #050F38;
+}
+
+#team-bio a:visited {
+  color: #050F38;
+}
+
 .marginFormat {
   height: 20vh;
   width: 100%;
