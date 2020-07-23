@@ -40,7 +40,7 @@ $(document).ready(function () {
 
     // set width and step variables and add active class to first slider
     var scroll_progress = 1;
-    total_sponsor_number = 18;
+    total_sponsor_number = 14;
 
     // start slider function
     startSlider();

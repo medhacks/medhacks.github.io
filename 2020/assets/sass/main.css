@@ -557,7 +557,7 @@ nav #bar {
   width: 90%;
   text-align: center;
   margin: 0 auto;
-
+  display: inline-block;
 }
 
 .speaker-div img {
@@ -565,14 +565,20 @@ nav #bar {
     box-shadow: 0 -2px 8px 2px rgba(0, 0, 0, 0.3);
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 900px) {
   .speaker-div {
-    width: 40%;
+    width: 50%;
+    float: left;
   }
 
   .speaker-div img {
-    width: 70%;
-}
+    width: 60%;
+  }
+  
+  .speaker-div p {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
 }
 
 #challenges {
