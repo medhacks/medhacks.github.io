@@ -581,6 +581,27 @@ nav #bar {
   }
 }
 
+.schedule-Table {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: hidden;
+  border-bottom: 1px solid black;
+  border-collapse: collapse;
+}
+
+.schedule-Table th {
+  font-weight: 900;
+  padding-top: 5vh;
+}
+
+.schedule-Table td{
+  border: 1px solid black;
+  margin: 0;
+  text-align: center;
+  width: 50%;
+}
+
 #challenges {
   display: block;
 }

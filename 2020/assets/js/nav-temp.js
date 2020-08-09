@@ -20,6 +20,9 @@ $(document).ready(() => {
     $('#speakerButton').on('click', () => {
         $('#speakers').goTo();
     });
+    $('#scheduleButton').on('click', () => {
+        $('#schedule').goTo();
+    });
     $('#applyingButton').on('click', () => {
         $('#applyingAnchor').goTo();
     });
@@ -37,7 +40,8 @@ $(document).ready(() => {
         sections.push($(this));
     });
     heights[3] = heights[3] - 100;
-    sections.push($("#tracksBubble"));
+    sections.push($("#speakerBubble"));
+    sections.push($("#scheduleBubble"));
     sections.push($("#logisticsBubble"));
     sections.push($("#faqBubble"));
 });
@@ -72,6 +76,7 @@ function checkBubbles() {
     heights[5] = heights[5] -100;
     heights[6] = heights[6] -100;
     heights[7] = heights[7] -100;
+    heights[8] = heights[8] -100;
 
     //console.log(heights);
 
@@ -88,27 +93,31 @@ function checkBubbles() {
 
     // console.log(scrollPosition);
 
-    if (scrollPosition >= heights[6]) {
+    if (scrollPosition >= heights[7]) {
+        percentage = (scrollPosition - heights[7]) / (heights[8] - heights[7]);
+        scrollPosition = 0.83 + percentage / (6);
+        section = 6;
+    } else if (scrollPosition >= heights[6]) {
         percentage = (scrollPosition - heights[6]) / (heights[7] - heights[6]);
-        scrollPosition = 0.8 + percentage / (5);
+        scrollPosition = 0.67 + percentage / (6);
         section = 5;
     } else if (scrollPosition >= heights[5]) {
         percentage = (scrollPosition - heights[5]) / (heights[6] - heights[5]);
-        scrollPosition = 0.6 + percentage / (5);
+        scrollPosition = 0.5 + percentage / (6);
         section = 4
     } else if (scrollPosition >= heights[4]) {
         percentage = (scrollPosition - heights[4]) / (heights[5] - heights[4]);
-        scrollPosition = 0.4 + percentage / (5);
+        scrollPosition = 0.33 + percentage / (6);
         section = 3
     } else if (scrollPosition >= heights[3]) {
         percentage = (scrollPosition - heights[3]) / (heights[4] - heights[3]);
         // percentage = percentage + .5;
-        scrollPosition = 0.2 + percentage / (5) ;
+        scrollPosition = 0.16 + percentage / (6) ;
         section = 2;
     } else {
         section = 1;
         percentage = scrollPosition / (heights[3]);
-        scrollPosition = percentage / 5;
+        scrollPosition = percentage / 6;
     }
     if (scrollPosition > 1) {
         scrollPosition = 1;
@@ -119,38 +128,51 @@ function checkBubbles() {
     $("#moose-mark").css("top", height - 2);
     $("#moose-mark").css('width', withProp);
     $("#aboutBubble").removeClass("filled");
-    $("#tracksBubble").removeClass("filled");
+    $("#speakerBubble").removeClass("filled");
+    $("#scheduleBubble").removeClass("filled");
     $("#applyingBubble").removeClass("filled");
     $("#sponsorBubble").removeClass("filled");
     $("#faqBubble").removeClass("filled");
     if (percentage > .99999) {
         if (section == 1) {
             $("#aboutBubble").addClass("filled");
-            $("#tracksBubble").removeClass("filled");
+            $("#speakerBubble").removeClass("filled");
+            $("#scheduleBubble").removeClass("filled");
             $("#applyingBubble").removeClass("filled");
             $("#sponsorBubble").removeClass("filled");
             $("#faqBubble").removeClass("filled");
         } else if (section == 2) {
             $("#aboutBubble").addClass("filled");
-            $("#tracksBubble").addClass("filled");
+            $("#speakerBubble").addClass("filled");
+            $("#scheduleBubble").removeClass("filled");
             $("#applyingBubble").removeClass("filled");
             $("#sponsorBubble").removeClass("filled");
             $("#faqBubble").removeClass("filled");
         } else if (section == 3) {
             $("#aboutBubble").addClass("filled");
-            $("#tracksBubble").addClass("filled");
-            $("#applyingBubble").addClass("filled");
+            $("#speakerBubble").addClass("filled");
+            $("#scheduleBubble").addClass("filled");
+            $("#applyingBubble").removeClass("filled");
             $("#sponsorBubble").removeClass("filled");
             $("#faqBubble").removeClass("filled");
         } else if (section == 4) {
             $("#aboutBubble").addClass("filled");
-            $("#tracksBubble").addClass("filled");
+            $("#speakerBubble").addClass("filled");
+            $("#scheduleBubble").addClass("filled")
             $("#applyingBubble").addClass("filled");
-            $("#sponsorBubble").addClass("filled");
+            $("#sponsorBubble").removeClass("filled");
             $("#faqBubble").removeClass("filled");
         } else if (section == 5) {
             $("#aboutBubble").addClass("filled");
-            $("#tracksBubble").addClass("filled");
+            $("#speakerBubble").addClass("filled");
+            $("#scheduleBubble").addClass("filled")
+            $("#applyingBubble").addClass("filled");
+            $("#sponsorBubble").addClass("filled");
+            $("#faqBubble").removeClass("filled");
+        } else if (section == 6) {
+            $("#aboutBubble").addClass("filled");
+            $("#speakerBubble").addClass("filled");
+            $("#scheduleBubble").addClass("filled")
             $("#applyingBubble").addClass("filled");
             $("#sponsorBubble").addClass("filled");
             $("#faqBubble").addClass("filled");
@@ -158,31 +180,43 @@ function checkBubbles() {
     } else {
         if (section == 1) {
             $("#aboutBubble").removeClass("filled");
-            $("#tracksBubble").removeClass("filled");
+            $("#speakerBubble").removeClass("filled");
+            $("#scheduleBubble").removeClass("filled");
             $("#applyingBubble").removeClass("filled");
             $("#sponsorBubble").removeClass("filled");
             $("#faqBubble").removeClass("filled");
         } else if (section == 2) {
             $("#aboutBubble").addClass("filled");
-            $("#tracksBubble").removeClass("filled");
+            $("#speakerBubble").removeClass("filled");
+            $("#scheduleBubble").removeClass("filled");
             $("#applyingBubble").removeClass("filled");
             $("#sponsorBubble").removeClass("filled");
             $("#faqBubble").removeClass("filled");
         } else if (section == 3) {
             $("#aboutBubble").addClass("filled");
-            $("#tracksBubble").addClass("filled");
+            $("#speakerBubble").addClass("filled");
+            $("#scheduleBubble").removeClass("filled");
             $("#applyingBubble").removeClass("filled");
             $("#sponsorBubble").removeClass("filled");
             $("#faqBubble").removeClass("filled");
         } else if (section == 4) {
             $("#aboutBubble").addClass("filled");
-            $("#tracksBubble").addClass("filled");
-            $("#applyingBubble").addClass("filled");
+            $("#speakerBubble").addClass("filled");
+            $("#scheduleBubble").addClass("filled");
+            $("#applyingBubble").removeClass("filled");
             $("#sponsorBubble").removeClass("filled");
             $("#faqBubble").removeClass("filled");
         } else if (section == 5) {
             $("#aboutBubble").addClass("filled");
-            $("#tracksBubble").addClass("filled");
+            $("#speakerBubble").addClass("filled");
+            $("#scheduleBubble").addClass("filled");
+            $("#applyingBubble").addClass("filled");
+            $("#sponsorBubble").removeClass("filled");
+            $("#faqBubble").removeClass("filled");
+        } else if (section == 6) {
+            $("#aboutBubble").addClass("filled");
+            $("#speakerBubble").addClass("filled");
+            $("#scheduleBubble").addClass("filled");
             $("#applyingBubble").addClass("filled");
             $("#sponsorBubble").addClass("filled");
             $("#faqBubble").removeClass("filled");
