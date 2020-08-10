@@ -601,6 +601,8 @@ nav #bar {
   margin: 0;
   text-align: center;
   width: 50%;
+  padding-left: 8%;
+  padding-right: 8%;
 }
 
 @media only screen and (max-width: 600px) {
