@@ -582,15 +582,16 @@ nav #bar {
 }
 
 .schedule-Table {
-  width: 70%;
+  width: 80%;
   margin-left: auto;
   margin-right: auto;
   border-style: hidden;
   border-bottom: 1px solid black;
+  border-top: 1px solid black;
   border-collapse: collapse;
 }
 
-.schedule-Table th {
+.schedule-Table caption {
   font-weight: 900;
   padding-top: 5vh;
 }
@@ -600,6 +601,18 @@ nav #bar {
   margin: 0;
   text-align: center;
   width: 50%;
+}
+
+@media only screen and (max-width: 600px) {
+  .schedule-Table td{
+    height: 6vh;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .schedule-Table td{
+    height: 8vh;
+  }
 }
 
 #challenges {
