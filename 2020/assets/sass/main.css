@@ -593,7 +593,12 @@ nav #bar {
 
 .schedule-Table caption {
   font-weight: 900;
-  padding-top: 5vh;
+  margin-top: 4vh;
+  padding-top: 1vh;
+  background-color: #4684B4;
+  color: white;
+  box-shadow: 1px -1px 5px rgba(0, 0, 0, 0.3), -1px 0px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 3rem 3rem 0 0;
 }
 
 .schedule-Table td{
