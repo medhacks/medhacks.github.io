@@ -565,6 +565,11 @@ nav #bar {
     box-shadow: 0 -2px 8px 2px rgba(0, 0, 0, 0.3);
 }
 
+.speaker-div p {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
 @media screen and (min-width: 900px) {
   .speaker-div {
     width: 50%;
@@ -579,6 +584,15 @@ nav #bar {
     padding-left: 10%;
     padding-right: 10%;
   }
+
+  #Danaher p {
+    text-align: left;
+  }
+}
+
+#Danaher {
+  width: 100%;
+  display: inline-block;
 }
 
 .schedule-Table {
