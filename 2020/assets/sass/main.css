@@ -925,6 +925,26 @@ a.header-action:hover {
   color: #050F38;
 }
 
+#videos {
+  text-align: center;
+  display: inline-block;
+  padding-bottom: 5vh;
+  width: 100%;
+  height: 40vh;
+}
+
+.videoDiv {
+  height: 100%;
+}
+
+@media only screen and (min-width: 980px) {
+  .videoDiv {
+    width: 50%;
+    float: left;
+  }
+}
+
+
 #faqSpacing {
   height: 10vh;
 }
