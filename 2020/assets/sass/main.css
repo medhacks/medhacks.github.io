@@ -210,7 +210,7 @@ nav #bar {
 }
 
 #moose-mark {
-  border: 3px solid #ffeb7b;
+  border: 4px solid #ffeb7b;
   z-index: 4;
   visibility: hidden;
   display: inline;
@@ -753,8 +753,6 @@ nav #bar {
 }
 
 #challenges .track-container #track2 img {
-  width: 18.75vw;
-  height: 4.125vw;
   margin-top: 2rem;
 }
 
@@ -794,7 +792,6 @@ nav #bar {
 
 #challenges .track-container .track:hover {
   border-color: #de495f;
-  cursor: pointer;
   transform: scale(1.02);
 }
 
