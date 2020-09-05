@@ -786,8 +786,7 @@ nav #bar {
 }
 
 #challenges .track-container .track img {
-  width: 10rem;
-  height: 10rem;
+  /* height: 10rem;   */
 }
 
 #challenges .track-container .track:hover {
