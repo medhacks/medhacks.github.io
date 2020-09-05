@@ -790,6 +790,7 @@ nav #bar {
 }
 
 .imgrow {
+  min-height: 30%;
 }
 
 #challenges .track-container .track img {
