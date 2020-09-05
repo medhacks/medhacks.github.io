@@ -720,7 +720,7 @@ nav #bar {
 #challenges .track-container #track1 {
   height: 20rem;
   width: 25rem;
-  background-color: white;
+  background-color: #E8DCCA;
   grid-area: track1;
 }
 
@@ -746,7 +746,7 @@ nav #bar {
 }
 
 #challenges .track-container #track2 {
-  background-color: #fff;
+  background-color: #E8DCCA;
   height: 20rem;
   width: 25rem;
   grid-area: track2;
@@ -761,7 +761,7 @@ nav #bar {
 }
 
 #challenges .track-container #track3 {
-  background-color: #fff;
+  background-color: #E8DCCA;
   grid-area: track3;
   height: 20rem;
   width: 25rem;
