@@ -724,13 +724,17 @@ nav #bar {
   grid-area: track1;
 }
 
+.track-container h2 {
+  margin-bottom: 0;
+}
+
 #challenges .track-container #track1 h2 {
   font-size: 1.5rem;
 }
 
 #challenges .track-container #track1 .imgrow {
+  margin-top: 0;
   position: relative;
-  bottom: 2rem;
   display: flex;
 }
 
@@ -782,7 +786,10 @@ nav #bar {
 #challenges .track-container .track {
   border: 3px solid #050f38;
   border-radius: 3rem;
-  padding: 0 3rem;
+  min-width: 30%;
+}
+
+.imgrow {
 }
 
 #challenges .track-container .track img {
