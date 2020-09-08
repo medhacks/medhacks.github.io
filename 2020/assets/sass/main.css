@@ -1151,6 +1151,41 @@ h4 {
   margin: 0 20px 0 20px;
 }
 
+.prize {
+  width: 38%;
+  float: left;
+  margin: 0;
+  height: 25vh;
+}
+
+.prizeLeft{
+  margin-left: 10%;
+  margin-right: 2%;
+}
+
+.prizeRight {
+  margin-right: 10%;
+  margin-left: 2%;
+}
+
+@media screen and (max-width: 1100px) {
+  .prize {
+    width: 80%;
+    display: inline-block;
+    height: auto;
+  }
+  
+  .prizeLeft{
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  
+  .prizeRight {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
+
 #announcementSection {
   padding-top: 20vh;
 }
