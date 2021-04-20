@@ -1,17 +1,14 @@
-import React, { useState } from "react";
+import React, { useEffect } from "react";
 import TrackPopup from "../TrackPopup";
 
 const TrackBox = (props) => {
-  const [popup, setPopup] = useState(false);
-
-  const trackClick = () => {
-    setPopup(true);
-  };
-
+  useEffect(() => {
+    console.log(props);
+  }, [props]);
   return (
     <>
-      {popup ? <TrackPopup /> : null}
-      <div className="track" style={trackStyle} onClick={trackClick}>
+      {props.popup ? <TrackPopup trackClick={props.trackClick} /> : null}
+      <div className="track" style={trackStyle} onClick={props.trackClick}>
         <h3>{props.titleNum}</h3>
         <p>{props.title}</p>
       </div>
@@ -31,7 +28,5 @@ const trackStyle = {
   border: "2px solid black",
   borderRadius: "20px",
 };
-
-const blockStyle = {};
 
 export default TrackBox;
