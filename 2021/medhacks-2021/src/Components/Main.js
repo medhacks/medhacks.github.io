@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import SpeakerPage from "./speakers/SpeakerPage";
 import Tracks from "./tracks/Tracks";
 
 function Main() {
@@ -16,6 +17,7 @@ function Main() {
       }}
     >
       <Tracks trackClick={trackClick} popup={popup} />
+      <SpeakerPage />
     </div>
   );
 }

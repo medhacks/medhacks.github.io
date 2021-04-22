@@ -38,6 +38,7 @@ const parentStyle = {
   width: "60%",
   height: "100%",
   display: "flex",
+  flexDirection: "row",
 };
 
 export default Tracks;
