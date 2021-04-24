@@ -3,21 +3,22 @@ import SpeakerPage from "./speakers/SpeakerPage";
 import Tracks from "./tracks/Tracks";
 
 function Main() {
-  const [popup, setPopup] = useState(false);
+  const [popup, setPopup] = useState(0);
 
-  const trackClick = () => {
-    console.log("click!");
-    setPopup(true);
+  const trackClick = (i) => {
+    console.log("click!" + i);
+    setPopup(i);
   };
   return (
     <div
       style={{ "background-color": "#71a4f1" }}
       onMouseDown={() => {
-        setPopup(false);
+        console.log("clear");
+        setPopup(0);
       }}
     >
-      <Tracks trackClick={trackClick} popup={popup} />
       <SpeakerPage />
+      <Tracks trackClick={trackClick} popup={popup} />
     </div>
   );
 }
