@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import SpeakerPage from "./speakers/SpeakerPage";
 import Tracks from "./tracks/Tracks";
+import Sponsors from "./Sponsors"
 
 function Main() {
   const [popup, setPopup] = useState(0);
@@ -19,6 +20,7 @@ function Main() {
     >
       <SpeakerPage />
       <Tracks trackClick={trackClick} popup={popup} />
+      <Sponsors />
     </div>
   );
 }
