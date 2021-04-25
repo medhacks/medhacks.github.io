@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import SpeakerPage from "./speakers/SpeakerPage";
 import Tracks from "./tracks/Tracks";
 import Sponsors from "./Sponsors"
+import AboutPage from "./About/AboutPage"
 
 function Main() {
   const [popup, setPopup] = useState(0);
@@ -18,6 +19,7 @@ function Main() {
         setPopup(0);
       }}
     >
+      <AboutPage/>
       <SpeakerPage />
       <Tracks trackClick={trackClick} popup={popup} />
       <Sponsors />
