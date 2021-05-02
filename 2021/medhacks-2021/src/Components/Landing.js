@@ -6,6 +6,8 @@ import background from '../Images/gradient_wide.png'
 import text from '../Images/updated_mh_text_cropped.png'
 import Main from './Main'
 
+const TITLE = 'Medhacks'
+
 const Landing = (Props) => {
   const backgroundStyle = {
     display: 'block',
@@ -36,10 +38,12 @@ const Landing = (Props) => {
   }
 
   return (
-    <div style={{overflow:'hidden', height:'100%', width:'100%'}}>
-      <img style = {backgroundStyle} src={background} alt="Landing Page Background"></img>
-      <img style = {piecesStyle} src={pieces} alt="Landing Page Background"></img>
-      <img style = {textStyle} src={text} alt="Landing Page Background"></img>
+    <div>
+      <div style={{overflow:'hidden', height:'100%', width:'100%'}}>
+        <img style = {backgroundStyle} src={background} alt="Landing Page Background"></img>
+        <img style = {piecesStyle} src={pieces} alt="Landing Page Background"></img>
+        <img style = {textStyle} src={text} alt="Landing Page Background"></img>
+      </div>
     </div>
   )
 }
