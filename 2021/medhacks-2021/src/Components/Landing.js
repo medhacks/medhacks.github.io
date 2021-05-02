@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link, BrowserRouter } from 'react-router-dom'
 
-import pieces from '../Images/blurredpieces.png'
+import pieces from '../Images/adjustedfade.png'
 import background from '../Images/gradient_wide.png'
-import text from '../Images/medhacks_text.png'
+import text from '../Images/updated_mh_text_cropped.png'
 import Main from './Main'
 
 const Landing = (Props) => {
@@ -21,6 +21,7 @@ const Landing = (Props) => {
     position: 'fixed',
     left: '50%',
     top: '50%',
+    minWidth: '100%',
     transform: 'translate(-50%, -50%)',
   }
 
@@ -30,7 +31,8 @@ const Landing = (Props) => {
     left: '50%',
     top: '50%',
     transform: 'translate(-50%, -50%)',
-    maxWidth: '120%',
+    maxWidth: '90%',
+    minWidth: '50%'
   }
 
   return (
