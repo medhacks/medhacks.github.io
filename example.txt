@@ -1,2 +1,0 @@
-this is how we use git
-
