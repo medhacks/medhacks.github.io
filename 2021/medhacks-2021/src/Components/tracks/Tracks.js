@@ -3,17 +3,35 @@ import "../../App.css";
 import TrackBox from "./TrackBox";
 
 const Tracks = (props) => {
+  const trackButtonsStyle = {
+    margin: "auto",
+    width: "60%",
+    height: "100%",
+    display: "flex",
+  
+    flexDirection: "row",
+  
+    display: "-ms-flex",
+    display: "-webkit-flex",
+  };
+
   return (
-    <div style={parentStyle}>
-      {tracks.map((track) => (
-        <TrackBox
-          titleNum={track.titleNum}
-          title={track.title}
-          description={track.description}
-          trackClick={props.trackClick}
-          popup={props.popup}
-        />
-      ))}
+    <div style={{'width:': '60%', 'textAlign': 'center'}}>
+      <div style={{'width': '100%'}}>
+        <h4>tracks</h4>
+        <p>To help with ideation, MedHacks and its sponsors create three tracks every year so hackers can pick a theme to focus their project on. The top three projects in each track will be awarded a prize.</p>
+      </div>
+      <div style={trackButtonsStyle}>
+        {tracks.map((track) => (
+          <TrackBox
+            titleNum={track.titleNum}
+            title={track.title}
+            description={track.description}
+            trackClick={props.trackClick}
+            popup={props.popup}
+          />
+        ))}
+      </div>
     </div>
   );
 };
@@ -35,18 +53,5 @@ let tracks = [
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vulputate feugiat nisl nec mattis. Donec non lorem faucibus, blandit odio eu, lacinia dui. Donec rhoncus metus a lectus efficitur, a egestas leo pulvinar. Etiam aliquet ut tortor ac scelerisque. Mauris maximus tincidunt dui. Donec iaculis tellus ut volutpat convallis. Suspendisse potenti. Nulla ac nunc posuere, suscipit lorem a, pulvinar nulla. \n Nunc vel dapibus tortor. Maecenas auctor nunc ut est maximus egestas. Pellentesque vel sapien sit amet metus eleifend euismod ac sodales leo. Mauris ut dictum neque, sed porttitor justo. Nunc maximus tempor nunc. Phasellus semper congue arcu, in aliquam risus vestibulum quis. Cras blandit iaculis orci eget vulputate. Nunc a rutrum lorem. Donec eu tempus est."
   },
 ];
-
-const parentStyle = {
-  margin: "auto",
-  width: "60%",
-  height: "100%",
-  display: "flex",
-
-  flexDirection: "row",
-
-  display: "-ms-flex",
-  display: "-webkit-flex",
-
-};
 
 export default Tracks;

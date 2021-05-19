@@ -8,7 +8,7 @@ import Main from './Main'
 
 const TITLE = 'Medhacks'
 
-const Landing = (Props) => {
+const Temp = (Props) => {
   const backgroundStyle = {
     display: 'block',
     zIndex: 0,
@@ -48,4 +48,4 @@ const Landing = (Props) => {
   )
 }
 
-export default Landing
+export default Temp

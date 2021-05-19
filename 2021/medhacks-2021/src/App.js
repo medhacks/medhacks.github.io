@@ -1,4 +1,4 @@
-import Landing from "./Components/Landing.js"
+import Temp from "./Components/Temp.js"
 import './App.css';
 import { Switch, BrowserRouter, Route } from "react-router-dom";
 import Main from "./Components/Main.js";
@@ -15,7 +15,7 @@ function App() {
           <title>{ TITLE }</title>
         </Helmet>
         <Switch>
-          <Route exact path="/" component={Landing} />
+          <Route exact path="/" component={Temp} />
           <Route exact path="/2021" component={Main} />
         </Switch>
       </div>

@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import SpeakerPage from "./speakers/SpeakerPage";
 import Tracks from "./tracks/Tracks";
-import Sponsors from "./Sponsors"
+import Sponsors from "./Sponsors/Sponsors"
 import AboutPage from "./About/AboutPage"
+import Landing from "./Landing/Landing"
 
 function Main() {
   const [popup, setPopup] = useState(0);
@@ -11,14 +12,22 @@ function Main() {
     console.log("click!" + i);
     setPopup(i);
   };
+
+  document.body.style.overflowX = 'hidden';
+
   return (
     <div
-      style={{ "background-color": "#a992ee", "background": "linear-gradient(135deg, #a992ee 0%, #82b4e6 46%, #b0edd6 100%)" }}
+      style={{ 
+        "background-color": "#a992ee", 
+        "background": "linear-gradient(135deg, #a992ee 0%, #82b4e6 46%, #b0edd6 100%)",
+        "overflow-x": "hidden",
+        }}
       onMouseDown={() => {
         console.log("clear");
         setPopup(0);
       }}
     >
+      <Landing />
       <AboutPage/>
       <SpeakerPage />
       <Tracks trackClick={trackClick} popup={popup} />
