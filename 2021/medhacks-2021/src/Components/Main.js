@@ -13,7 +13,7 @@ function Main() {
   };
   return (
     <div
-      style={{ "background-color": "#71a4f1" }}
+      style={{ "background-color": "#a992ee", "background": "linear-gradient(135deg, #a992ee 0%, #82b4e6 46%, #b0edd6 100%)" }}
       onMouseDown={() => {
         console.log("clear");
         setPopup(0);
