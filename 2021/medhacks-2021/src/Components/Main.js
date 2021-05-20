@@ -5,6 +5,8 @@ import Sponsors from "./Sponsors/Sponsors"
 import AboutPage from "./About/AboutPage"
 import Landing from "./Landing/Landing"
 
+import '../App.css'
+
 function Main() {
   const [popup, setPopup] = useState(0);
 
@@ -13,7 +15,6 @@ function Main() {
     setPopup(i);
   };
 
-  document.body.style.overflowX = 'hidden';
 
   return (
     <div

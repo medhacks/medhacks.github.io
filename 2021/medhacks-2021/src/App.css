@@ -1,5 +1,32 @@
+body{
+  overflow-x: hidden;
+  color: white;
+  font-family: proxima-nova, sans-serif;
+}
+
+.section-container {
+  width: 60%;
+  text-align: center;
+  margin: auto;
+  border-radius: 14px;
+  box-shadow: 7px 7px 7px rgb(0 0 0 / 20%)
+}
+
+.section-title {
+  font-weight: bold;
+  font-style: italic;
+  padding-top: 2%;
+}
+
+.section-text{
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+
 .track {
-  box-shadow: 0 0 1px 1px;
+  /*box-shadow: 0 0 1px 1px;*/
+  text-align: center;
 }
 
 .track:hover {

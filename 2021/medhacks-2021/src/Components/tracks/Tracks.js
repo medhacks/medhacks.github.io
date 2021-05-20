@@ -5,9 +5,12 @@ import TrackBox from "./TrackBox";
 const Tracks = (props) => {
   const trackButtonsStyle = {
     margin: "auto",
-    width: "60%",
+    width: "85%",
     height: "100%",
     display: "flex",
+
+    justifyContent: 'center',
+    alignItems: 'center',
   
     flexDirection: "row",
   
@@ -16,10 +19,10 @@ const Tracks = (props) => {
   };
 
   return (
-    <div style={{'width:': '60%', 'textAlign': 'center'}}>
+    <div className="section-container" style={{'backgroundColor':'rgb(17, 61, 86, .2)'}}>
       <div style={{'width': '100%'}}>
-        <h4>tracks</h4>
-        <p>To help with ideation, MedHacks and its sponsors create three tracks every year so hackers can pick a theme to focus their project on. The top three projects in each track will be awarded a prize.</p>
+        <h1 className="section-title">tracks</h1>
+        <p className="section-text">To help with ideation, MedHacks and its sponsors create three tracks every year so hackers can pick a theme to focus their project on. The top three projects in each track will be awarded a prize.</p>
       </div>
       <div style={trackButtonsStyle}>
         {tracks.map((track) => (
