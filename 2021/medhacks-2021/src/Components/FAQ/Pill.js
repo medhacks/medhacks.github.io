@@ -19,4 +19,5 @@ const styles = {
   width: "360px",
   textAlign: "center",
   color: "black",
+  boxShadow: "1px 2px 10px #646d95",
 };

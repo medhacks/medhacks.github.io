@@ -5,7 +5,7 @@ const FAQ = () => {
   return (
     <>
       <h1 style={titleStyle}>faq</h1>
-      {data.map((question, index) => (
+      {data.map((question) => (
         <div style={colStyle}>
           <div style={rowStyle}>
             <Pill customStyles={pillStyle} question={question[0]} />
@@ -24,7 +24,7 @@ const titleStyle = {
   marginBottom: "48px",
   fontStyle: "italic",
   fontWeight: "900",
-  fontSize: "6.5em",
+  fontSize: "5rem",
   color: "white",
 };
 

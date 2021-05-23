@@ -19,10 +19,10 @@ function Main() {
   return (
     <div
       style={{
-        "background-color": "#a992ee",
+        backgroundColor: "#a992ee",
         background:
           "linear-gradient(135deg, #a992ee 0%, #82b4e6 46%, #b0edd6 100%)",
-        "overflow-x": "hidden",
+        overflowX: "hidden",
       }}
       onMouseDown={() => {
         console.log("clear");
