@@ -7,11 +7,13 @@ const TrackBox = (props) => {
   }, [props]);
   return (
     <>
-      {props.popup === props.titleNum ? <TrackPopup 
-        description={props.description}
-        title={props.title}
-      /> : null}
-      <div className="track" style={trackStyle} onClick={() => props.trackClick(props.titleNum)}>
+      {props.popup === props.titleNum ? (
+        <TrackPopup description={props.description} title={props.title} />
+      ) : null}
+      <div
+        className='track'
+        style={trackStyle}
+        onClick={() => props.trackClick(props.titleNum)}>
         <h3>Track {props.titleNum}</h3>
         <p>{props.title}</p>
       </div>
