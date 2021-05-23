@@ -14,8 +14,8 @@ const TrackBox = (props) => {
         className='track'
         style={trackStyle}
         onClick={() => props.trackClick(props.titleNum)}>
-        <h3>Track {props.titleNum}</h3>
-        <p>{props.title}</p>
+        {/* <h3>Track {props.titleNum}</h3> */}
+        <p style={{ margin: 0 }}>{props.title}</p>
       </div>
     </>
   );
@@ -25,14 +25,17 @@ const trackStyle = {
   //flex: 1,
   width: "100%",
   display: "inline-block",
-  textAlign: "Center",
+  //textAlign: "Center",
   margin: "3%",
-  backgroundColor: "#b089f5",
+  backgroundColor: "white",
+  color: "black",
   height: "100%",
-  borderStyle: "solid",
-  border: "2px solid black",
-  borderRadius: "20px",
+  borderRadius: "50px",
   height: "auto",
+  justifyContent: "center",
+  //borderStyle: 'hidden',
+  padding: "20px",
+  alignSelf: "stretch",
 };
 
 export default TrackBox;
