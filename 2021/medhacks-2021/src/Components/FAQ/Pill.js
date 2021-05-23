@@ -18,4 +18,5 @@ const styles = {
   background: "white",
   width: "360px",
   textAlign: "center",
+  color: "black",
 };
