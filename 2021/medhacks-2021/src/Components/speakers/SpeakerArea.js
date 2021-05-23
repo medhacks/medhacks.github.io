@@ -2,7 +2,7 @@ import React from "react";
 
 const SpeakerArea = (props) => {
   return (
-    <div style={{ height: "50rem", overflowY: "scroll" }}>
+    <div style={{ height: "60rem", overflowY: "auto" }}>
       <div
         style={{
           width: "100%",
@@ -12,14 +12,16 @@ const SpeakerArea = (props) => {
           padding: "5rem",
           fontSize: "large",
           fontWeight: 400,
-        }}>
+        }}
+      >
         <img
           src={props.speaker.image}
           style={{
             verticalAlign: "middle",
             height: "30rem",
           }}
-          alt='speakerImage'></img>
+          alt="speakerImage"
+        ></img>
       </div>
       <div
         style={{
@@ -27,7 +29,8 @@ const SpeakerArea = (props) => {
           paddingLeft: "10%",
           paddingRight: "10%",
           paddingBottom: "4rem",
-        }}>
+        }}
+      >
         {props.speaker.bio}
       </div>
     </div>
