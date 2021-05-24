@@ -21,10 +21,11 @@ const Landing = () => {
     filter: "drop-shadow(7px 7px 7px rgb(0, 0, 0, 0.75))",
     maxWidth: "20vw",
   };
+
   const logoTextStyle = {
     filter: "drop-shadow(7px 7px 7px rgb(0, 0, 0, 0.75))",
     transform: "translate(-15%, 0)",
-    maxHeight: "7vw",
+    maxHeight: "6vw",
     maxWidth: "45vw",
     flexShrink: 1,
   };
@@ -39,16 +40,38 @@ const Landing = () => {
     flexShrink: 1,
   };
 
+  const textStyle = {
+    fontWeight: 'bold',
+    fontStyle: 'italic',
+    width: '100%',
+    display: 'inline-block',
+    //paddingTop: '20px',
+    paddingLeft: '20px',
+    paddingRight: '15%',
+    height: '2vw',
+  }
+
   return (
     <div style={{ height: "100vh", "overflow-x": "hidden" }}>
       <img style={piecesStyle} src={pieces} alt="Landing Page Background"></img>
       <div style={logoContainerStyle}>
-        <img style={logoStyle} src={logo} alt="Landing Page Background" />
-        <img
-          style={logoTextStyle}
-          src={logoText}
-          alt="Landing Page Background"
-        />
+        <img style={logoStyle} src={logo} alt="MedHacks Logo" />
+        <div>
+          <img
+            style={logoTextStyle}
+            src={logoText}
+            alt="MedHacks Text Logo"
+          />
+          <div style = {textStyle}>
+            <h2 style = {{'float': 'left'}}>designing solutions</h2>
+          </div>
+          <div style = {textStyle} >
+            <h2 style = {{'float': 'right'}}>piece by piece</h2>
+          </div>
+          <div style = {textStyle} >
+            <h2 style = {{'text-align': 'center'}}>9.10.21 - 9.12.21</h2>
+          </div>
+        </div>
       </div>
     </div>
   );
