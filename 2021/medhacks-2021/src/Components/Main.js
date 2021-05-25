@@ -7,7 +7,8 @@ import FAQ from "./FAQ/FAQ";
 import Sponsors from "./Sponsors/Sponsors";
 import AboutPage from "./About/AboutPage";
 import Landing from "./Landing/Landing";
-import NavBar from "./NavBar/NavBar"
+import NavBar from "./NavBar/NavBar";
+import Footer from "./Footer/Footer";
 
 import "../App.css";
 
@@ -39,6 +40,7 @@ function Main() {
       <Tracks trackClick={trackClick} popup={popup} />
       <FAQ />
       <Sponsors />
+      <Footer />
     </div>
   );
 }
