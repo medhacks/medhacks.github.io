@@ -6,42 +6,44 @@ import Card from 'react-bootstrap/Card'
 
 
 const SpeakerPage = () => {
+    const speakerStyle = {
+        textAlign: "Center",
+        margin: "100px auto",
+        width: '60%',
+        backgroundColor: 'rgb(0, 0, 0, 0.1)',
+        color: "white",
+        borderRadius: "14px",
+        justifyContent: "center",
+        padding: "20px",
+        alignSelf: "stretch",
+        border: '0px',
+        boxShadow: '7px 7px 7px rgb(0 0 0 / 20%)'
+    };
+
     return (
         <>
-            <Card style={rootStyle}>
+            <Card style={speakerStyle}>
                 <Card.Body>
-                    <Card.Title style={{ fontSize: "2.5rem", textAlign: "center" }}>
-                        About Us
+                    <Card.Title style={{ fontSize: "2.5rem", fontWeight: '900' }}>
+                        <i>about</i>
                     </Card.Title>
-                    <Tabs defaultActiveKey="about" transition={false} id="noanim-tab-example">
-                        <Tab eventKey="about" title="About">
-                            <p style={contentStyle}>At MedHacks 2020, we are bringing together the largest healthcare & technology companies in collaboration with the Johns Hopkins Medicine Network to revolutionize the way we think about medicine. Join us this September underwater with our new mascot, Odette the otter, and our longtime friend, Melvin the moose.</p>
-                        </Tab>
-                        <Tab eventKey="history" title="History">
-                            <p style={contentStyle}>MedHacks was started in 2015 by undergraduate students at Johns Hopkins University with the mission to bring together talented and diverse minds from all backgrounds and to foster collaboration towards solving the world’s most pressing medical issues. To this day, MedHacks is completely run by undergraduate students at Johns Hopkins University who have dedicated countless hours to making this hackathon as exciting and rewarding as possible for all participants, mentors, and sponsors. MedHacks has been attended by thousands from over 500 institutions and 30 countries, has formed partnerships with companies at the forefront of medicine and technology including Blue Cross Blue Shield, CVS Health, Google, and KPCB, and has established itself as one of the world’s most recognized and influential medical hackathons
-We believe that the most pressing medical challenges must be solved by interdisciplinary and diverse teams of people. We don’t care about whether or not you’ve won coding competitions, or even if you’re pursuing an engineering or CS degree. You don’t need a PhD or MD to innovate in healthcare, all you need is a passion for bettering humanity. Throughout the years, MedHacks has hosted hackers with diverse majors ranging from public health to anthropology to computer science. We have had participants of all ages, including undergraduates, graduate students, MD students, nursing students, and medical professionals, come together with their diverse expertise and backgrounds to solve problems. We can’t wait to see you and your ideas at MedHacks 2020!</p>
-
-                        </Tab>
-                        <Tab eventKey="medhack-factor" title="The MedHack Factor" >
-                            <p style={contentStyle}>We believe that the most pressing medical challenges must be solved by interdisciplinary and diverse teams of people. We don’t care about whether or not you’ve won coding competitions, or even if you’re pursuing an engineering or CS degree. You don’t need a PhD or MD to innovate in healthcare, all you need is a passion for bettering humanity.
-
-Throughout the years, MedHacks has hosted hackers with diverse majors ranging from public health to anthropology to computer science. We have had participants of all ages, including undergraduates, graduate students, MD students, nursing students, and medical professionals, come together with their diverse expertise and backgrounds to solve problems. We can’t wait to see you and your ideas at MedHacks 2020!</p>
-                        </Tab>
-                    </Tabs>
+                    <br />
+                    <h3>
+                        MedHacks is the nation's <bold style={{fontWeight: '800'}}><i>premier medical hackathon</i></bold>.
+                    </h3>
+                    <p>
+                        It was started in 2015 by undergraduate students at Johns Hopkins University with the mission to bring together talented and diverse minds from all backgrounds and to foster collaboration towards solving the world's most pressing medicacl issues. As a result, MedHacks has hosted hackers with diverse majors ranging from public health to anthropology to ocmputer science. Over the years, MedHacks has been attended by thousands from over 500 institutions and 30 countries, has formed partnerships with companies at the forefront of medicine and technology inccluding Blue Cross Blue Shield, CVS Health, Google, and Mathworks, and has established itselff as one of the world's most recognized and influential medical hackathons.
+                    </p>
+                    <br />
+                    <h5><i>
+                        We can't wait to see you and your ideas at
+                        <br />
+                        <span style={{ fontWeight: '800' }}>MedHacks 2021!</span>
+                    </i></h5>
                 </Card.Body>
             </Card>
         </>
     );
-};
-
-const rootStyle = {
-    padding: '30px',
-    backgroundColor: 'transparent',
-    height: '50vh'
-};
-
-const contentStyle = {
-    marginTop: '20px'
 };
 
 export default SpeakerPage;
