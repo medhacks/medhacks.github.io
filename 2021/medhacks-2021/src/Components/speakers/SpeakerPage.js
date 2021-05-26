@@ -4,9 +4,12 @@ import React, { useState } from "react";
 import speakers from "./speakerData/speakers";
 import SpeakerArea from "./SpeakerArea";
 import Carousel from "./Carousel";
+import { useLocation } from "react-router-dom";
+import SpeakerList from "./SpeakerList";
 
 const SpeakerPage = () => {
   const [index, setIndex] = useState(0);
+  const location = useLocation();
 
   return (
     <>
@@ -15,13 +18,18 @@ const SpeakerPage = () => {
           fontSize: "2.5rem",
           textAlign: "center",
           marginBottom: "2.5rem",
+          marginTop: "2.5rem",
         }}
       >
         <h1 className="section-title">speakers</h1>
       </div>
-      <div style={{ marginTop: "2.5rem", height: window.innerHeight * 0.45 }}>
-        <Carousel items={speakers} active={0} setIndex={setIndex} />
-      </div>
+      {location.pathname === "/speakers" ? (
+        <SpeakerList />
+      ) : (
+        <div style={{ marginTop: "2.5rem", height: window.innerHeight * 0.45 }}>
+          <Carousel items={speakers} active={0} setIndex={setIndex} />
+        </div>
+      )}
     </>
   );
 };

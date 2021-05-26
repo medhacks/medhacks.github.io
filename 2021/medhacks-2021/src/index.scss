@@ -21,6 +21,41 @@ code {
 }
 
 
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 1rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius:1rem;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 1rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+  border-radius: 1rem;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.speaker_block::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.speaker_block {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
 #carousel {
   /* position: absolute;
   height: 200px;
