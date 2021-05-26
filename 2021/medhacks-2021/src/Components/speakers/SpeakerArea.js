@@ -20,9 +20,6 @@ const SpeakerArea = (props) => {
         style={{
           fontSize: "2rem",
           fontWeight: "bold",
-          // position: "absolute",
-          // bottom: "4rem",
-          // height: "5rem",
           padding: "0rem",
           margin: "0rem",
           flexGrow: "1",
@@ -38,16 +35,10 @@ const SpeakerArea = (props) => {
           fontSize: "1.5rem",
           textAlign: "left",
           fontStyle: "italic",
-          // position: "absolute",
-          // bottom: "1rem",
           padding: "0rem",
           margin: "0rem",
-          // top: "0rem",
-          // height: "5rem",
-          // textOverflow: "clip",
           wordWrap: "normal",
           marginBottom: "0.5rem",
-          // width: "25vw",
         }}
       >
         {props.speaker.affiliation}

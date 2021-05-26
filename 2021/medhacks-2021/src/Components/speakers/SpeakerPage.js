@@ -10,25 +10,17 @@ const SpeakerPage = () => {
 
   return (
     <>
-      <div style={{ fontSize: "2.5rem", textAlign: "center" }}>
+      <div
+        style={{
+          fontSize: "2.5rem",
+          textAlign: "center",
+          marginBottom: "2.5rem",
+        }}
+      >
         <h1 className="section-title">speakers</h1>
       </div>
-      <div style={{ height: "60rem" }}>
-        {/* <Carousel activeIndex={index} onSelect={handleSelect}>
-          {getSpeakers()}
-        </Carousel> */}
+      <div style={{ marginTop: "2.5rem", height: window.innerHeight * 0.45 }}>
         <Carousel items={speakers} active={0} setIndex={setIndex} />
-
-        {/* <div
-          style={{
-            width: "100%",
-            paddingLeft: "10%",
-            paddingRight: "10%",
-            paddingBottom: "4rem",
-          }}
-        >
-          {speakers[index].bio}
-        </div> */}
       </div>
     </>
   );

@@ -15,7 +15,7 @@ const Carousel = (props) => {
   const generateItems = () => {
     let items = [];
     let level;
-    console.log("active is ", active);
+    // console.log("active is ", active);
     for (let i = active - 1; i < active + 2; i++) {
       let index = i;
       if (i < 0) {
@@ -24,17 +24,17 @@ const Carousel = (props) => {
         index = i % props.items.length;
       }
       level = active - i;
-      // props.setIndex(index - 1);
-      // console.log(index);
-      console.log(
-        level,
-        level === -1 ? "left" : level === 1 ? "right" : "middle"
-      );
+      // console.log(
+      //   level,
+      //   level === -1 ? "left" : level === 1 ? "right" : "middle"
+      // );
       items.push(
         <CSSTransition
           key={index}
-          classNames={direction}
-          timeOut={{ enter: 1000, exit: 1000 }}
+          // classNames={direction}
+          timeOut={1000}
+          onEnter={() => console.log("entering", props.items[index])}
+          onExit={() => console.log("exiting", props.items[index])}
         >
           <Item
             id={props.items[index]}
@@ -62,25 +62,18 @@ const Carousel = (props) => {
     let newActive = active - 1 < 0 ? props.items.length - 1 : active - 1;
     props.setIndex(newActive);
     setActive(newActive);
-    setDirection("left");
+    setDirection("goleft");
   };
 
   const moveRight = () => {
     let newActive = (active + 1) % props.items.length;
     props.setIndex(newActive);
     setActive(newActive);
-    setDirection("right");
+    setDirection("goright");
   };
 
   return (
-    <div
-      // id="carousel"
-      // className="noselect"
-      style={{
-        width: "100%",
-        height: "75%",
-      }}
-    >
+    <div style={{ position: "absolute" }}>
       <TransitionGroup>{generateItems()}</TransitionGroup>
     </div>
   );
@@ -97,7 +90,7 @@ const Item = (props) => {
         height: 30 - Math.abs(props.level) * 5 + "vw",
         left: 35 + props.level * 29 + (props.level < 0 ? 2 : 0) + "vw",
         // right: 100 - 35 + props.level * 25 + (props.level < 0 ? 5 : 0) + "vw",
-        marginTop: Math.abs(props.level * 4) + "rem",
+        // marginTop: Math.abs(props.level * 4) + "rem",
         zIndex: 1 - Math.abs(props.level),
       }}
       onClick={() => props.onClickFunc(props.level)}
