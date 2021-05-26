@@ -15,6 +15,7 @@ body{
 .section-title {
   font-weight: bold;
   font-style: italic;
+  text-align: center;
   padding-top: 2%;
 }
 
@@ -31,4 +32,48 @@ body{
 
 .track:hover {
   box-shadow: 0 0 5px 1px;
+}
+
+.page-title {
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+  font-size: 4em;
+}
+
+.schedule-table {
+  margin: auto;
+}
+
+.schedule-table > tr > td {
+  padding: 2%;
+  border: 1px solid black;
+  text-align: center;
+  margin: 5%;
+  color: black;
+  width: 50%;
+}
+
+.schedule-table > tr > td:first-child {
+  border-left: none;
+}
+
+.schedule-table > tr > td:last-child {
+  border-right: none;
+}
+
+.schedule-table > tr:first-child > td{
+  border-top: none;
+}
+
+.schedule-table > tr:last-child > td {
+  border-bottom: none;
+}
+
+.day {
+  box-shadow: 7px 7px 7px rgb(0 0 0 / 25%);
+}
+
+.day:hover {
+  box-shadow: 7px 7px 7px rgb(0 0 0 / 75%);
 }

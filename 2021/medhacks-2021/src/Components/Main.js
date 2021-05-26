@@ -22,25 +22,15 @@ function Main() {
 
   return (
     <div
-      style={{
-        backgroundColor: "#a992ee",
-        background:
-          "linear-gradient(135deg, #a992ee 0%, #82b4e6 46%, #b0edd6 100%)",
-        overflowX: "hidden",
-        color: "white",
-      }}
       onMouseDown={() => {
         console.log("clear");
         setPopup(0);
       }}>
-      <NavBar />
       <Landing />
       <AboutPage />
       <SpeakerPage />
       <Tracks trackClick={trackClick} popup={popup} />
       <FAQ />
-      <Sponsors />
-      <Footer />
     </div>
   );
 }

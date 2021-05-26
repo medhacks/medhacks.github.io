@@ -12,7 +12,7 @@ const Sponsors = (props) => {
   }
 
   return (
-    <div style={{justifyContent:"center"}} id="sponsors">
+    <div style={{justifyContent:"center", marginTop: '10%', marginBottom: '10%'}} id="sponsors">
       <h1 style={{textAlign:"center"}}>2020 Partners</h1>
 
       <div style = {parentStyle}>
