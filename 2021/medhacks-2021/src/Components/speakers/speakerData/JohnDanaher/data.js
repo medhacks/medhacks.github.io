@@ -1,5 +1,6 @@
 const data = {
   name: "John Danaher",
+  affiliation: "President of Clinical Solutions at Elsevier",
   bio: (
     <>
       <p>

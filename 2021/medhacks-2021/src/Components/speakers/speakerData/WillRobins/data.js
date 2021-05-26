@@ -1,5 +1,6 @@
 const data = {
   name: "Will Robbins",
+  affiliation: "Chief of Staff and Investor at Contrary Capital",
   bio: (
     <>
       <p>

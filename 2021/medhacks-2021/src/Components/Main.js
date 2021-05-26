@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Route, Switch, useLocation } from 'react-router-dom'
+import { Route, Switch, useLocation } from "react-router-dom";
 
 import SpeakerPage from "./speakers/SpeakerPage";
 import Tracks from "./tracks/Tracks";
@@ -25,7 +25,8 @@ function Main() {
       onMouseDown={() => {
         console.log("clear");
         setPopup(0);
-      }}>
+      }}
+    >
       <Landing />
       <AboutPage />
       <Tracks trackClick={trackClick} popup={popup} />

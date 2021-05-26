@@ -1,5 +1,6 @@
 const data = {
   name: "Po-Shen Loh",
+  affiliation: "Professor at Carnegie Mellon University",
   bio: (
     <>
       <p>

@@ -2,36 +2,55 @@ import React from "react";
 
 const SpeakerArea = (props) => {
   return (
-    <div style={{ height: "60rem", overflowY: "auto" }}>
+    <div
+      style={{
+        width: "100%",
+        height: "100%",
+        backgroundImage: `url(` + props.speaker.image + ")",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        paddingLeft: "1rem",
+        display: "flex",
+        flexDirection: "column",
+        color: "white",
+      }}
+    >
       <div
         style={{
-          width: "100%",
-          alignItems: "center", // does vertically center the desired content
-          justifyContent: "center", // horizontally centers single line items
-          textAlign: "center", // optional, but helps horizontally center text that breaks into multiple lines
-          padding: "5rem",
-          fontSize: "large",
-          fontWeight: 400,
+          fontSize: "2rem",
+          fontWeight: "bold",
+          // position: "absolute",
+          // bottom: "4rem",
+          // height: "5rem",
+          padding: "0rem",
+          margin: "0rem",
+          flexGrow: "1",
+          display: "flex",
+          flexDirection: "column",
         }}
       >
-        <img
-          src={props.speaker.image}
-          style={{
-            verticalAlign: "middle",
-            height: "30rem",
-          }}
-          alt="speakerImage"
-        ></img>
+        <div style={{ flexGrow: "2" }}></div>
+        <div style={{ bottom: "0rem" }}>{props.speaker.name}</div>
       </div>
       <div
         style={{
-          width: "100%",
-          paddingLeft: "10%",
-          paddingRight: "10%",
-          paddingBottom: "4rem",
+          fontSize: "1.5rem",
+          textAlign: "left",
+          fontStyle: "italic",
+          // position: "absolute",
+          // bottom: "1rem",
+          padding: "0rem",
+          margin: "0rem",
+          // top: "0rem",
+          // height: "5rem",
+          // textOverflow: "clip",
+          wordWrap: "normal",
+          marginBottom: "0.5rem",
+          // width: "25vw",
         }}
       >
-        {props.speaker.bio}
+        {props.speaker.affiliation}
       </div>
     </div>
   );

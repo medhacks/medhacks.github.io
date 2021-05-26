@@ -5,33 +5,30 @@ import speakers from "./speakerData/speakers";
 import SpeakerArea from "./SpeakerArea";
 import Carousel from "./Carousel";
 
-var items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-
 const SpeakerPage = () => {
   const [index, setIndex] = useState(0);
-
-  const handleSelect = (selectedIndex, e) => {
-    setIndex(selectedIndex);
-  };
-
-  // const getSpeakers = () => {
-  //   return speakers.map((speaker) => (
-  //     <Carousel.Item>
-  //       <SpeakerArea speaker={speaker} />
-  //     </Carousel.Item>
-  //   ));
-  // };
 
   return (
     <>
       <div style={{ fontSize: "2.5rem", textAlign: "center" }}>
-        Meet Our Keynote Speakers!
+        <h1 className="section-title">speakers</h1>
       </div>
       <div style={{ height: "60rem" }}>
         {/* <Carousel activeIndex={index} onSelect={handleSelect}>
           {getSpeakers()}
         </Carousel> */}
-        <Carousel items={speakers} active={0} />
+        <Carousel items={speakers} active={0} setIndex={setIndex} />
+
+        {/* <div
+          style={{
+            width: "100%",
+            paddingLeft: "10%",
+            paddingRight: "10%",
+            paddingBottom: "4rem",
+          }}
+        >
+          {speakers[index].bio}
+        </div> */}
       </div>
     </>
   );
