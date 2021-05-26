@@ -28,9 +28,8 @@ function Main() {
       }}>
       <Landing />
       <AboutPage />
-      <SpeakerPage />
       <Tracks trackClick={trackClick} popup={popup} />
-      <FAQ />
+      <SpeakerPage />
     </div>
   );
 }
