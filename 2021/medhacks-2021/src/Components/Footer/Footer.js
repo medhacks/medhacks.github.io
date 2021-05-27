@@ -41,7 +41,7 @@ const Footer = () => {
       </div>
       <div style={linkContainer}>
         <h2>quick links</h2>
-        <Link style={link} to={"/2021"} >
+        <Link style={link} to={"/2021#"} >
           home
         </Link>
         <Link style={link} to={{pathname:"https://www.google.com"}} target='blank'>

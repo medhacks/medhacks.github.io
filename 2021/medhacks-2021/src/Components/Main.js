@@ -19,7 +19,9 @@ function myFunction() {
   var height = (document.documentElement.scrollHeight - document.documentElement.clientHeight) * 100;
   var scrolled = (winScroll / height) * 100;
   var length = 300 * scrolled <= 300 ? 300 * scrolled : 300;
-  document.getElementById("myBar").style.height = length + "px";
+  if (document.getElementById("myBar") !== null) {
+    document.getElementById("myBar").style.height = length + "px";
+  }
 }
 
 function Main() {
