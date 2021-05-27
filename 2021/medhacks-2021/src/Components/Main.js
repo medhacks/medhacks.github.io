@@ -38,7 +38,7 @@ function Main() {
     top: '30%',
     left: '30px',
     height: '300px',
-    boxShadow: '0 0 7px rgb(255, 255, 255 / 80%)'
+    boxShadow: '5px 5px 7px rgb(0 0 0 / 20%)'
   }
 
   const containerStyle = {
@@ -52,9 +52,8 @@ function Main() {
     top: '0',
     zIndex: '1',
     borderRadius: '5px',
-    hover: {
-      boxShadow: '7px 7px 7px rgb(0 0 0 / 20%)'
-    }
+    boxShadow: '5px 5px 7px rgb(0 0 0 / 20%)',
+    color: 'white',
   }
 
   return (
@@ -66,19 +65,22 @@ function Main() {
           setPopup(0);
         }}
       >
-
-      <div class="timeline"  style={timelineStyle}></div>
-      <div class="timeline" id="myBar" style={Object.assign({}, timelineStyle, { backgroundColor: 'black', height: '0'})}>
-
-      <div class="container" style={containerStyle} />
-        <div class="container" style={Object.assign({}, containerStyle, { top: '100px' })} />
-        <div class="container" style={Object.assign({}, containerStyle, { top: '200px' })} />
-        <div class="container" style={Object.assign({}, containerStyle, { top: '300px' })} />
-      </div>
         <Landing />
+        <div style={{height: '10px'}} id='about'></div>
         <AboutPage />
+        <div style={{height: '10px'}} id='tracks'></div>
         <Tracks trackClick={trackClick} popup={popup} />
+        <div style={{height: '10px'}} id='speakers'></div>
         <SpeakerPage />
+
+        <div class="timeline" style={timelineStyle}></div>
+        <div class="timeline" id="myBar" style={Object.assign({}, timelineStyle, { backgroundColor: '#a992ee', height: '0' })}>
+
+          <a class="container" href='#top' style={containerStyle}></a>
+          <a class="container" href='#about' style={Object.assign({}, containerStyle, { top: '100px' })} />
+          <a class="container" href='#tracks' style={Object.assign({}, containerStyle, { top: '200px' })} />
+          <a class="container" href='#speakers' style={Object.assign({}, containerStyle, { top: '300px' })} />
+        </div>
       </div>
 
     </div>
