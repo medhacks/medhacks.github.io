@@ -42,7 +42,7 @@ export const FAQData = [
   [
     {
       q: "Does MedHacks have a code of conduct?",
-      a: "Yes, we do! All participants must follow our Code of Conduct at MedHacks.",
+      a: "Yes, we do! All participants must follow our <a target='_blank' rel='noopener noreferrer' href='https://docs.google.com/document/d/1VEFstsX7jg9W7uJSyx3ty_wcU-8yiXRlpP7MAelIIHA/edit?usp=sharing'>Code of Conduct</a> at MedHacks.",
     },
   ],
 ];

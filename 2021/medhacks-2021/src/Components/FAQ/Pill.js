@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const Pill = ({ customStyles, qa }) => {
+const Pill = ({ customStyles, qa, isLast }) => {
   const [pillClicked, setPillClicked] = useState(false);
 
   const styles = {
@@ -17,6 +17,7 @@ const Pill = ({ customStyles, qa }) => {
     width: "360px",
     color: "black",
     boxShadow: "1px 2px 10px #646d95",
+    cursor: "pointer",
   };
 
   return (
@@ -36,7 +37,14 @@ const Pill = ({ customStyles, qa }) => {
         >
           {qa.q}
         </div>
-        <div>{pillClicked && qa.a}</div>
+        {isLast && (
+          <div
+            dangerouslySetInnerHTML={
+              isLast && pillClicked ? { __html: qa.a } : { __html: "" }
+            }
+          />
+        )}
+        {!isLast && <div>{pillClicked && qa.a}</div>}
       </div>
     </div>
   );

@@ -11,6 +11,7 @@ const FAQ = () => {
             <Pill
               customStyles={i === data.length - 1 ? null : pillStyle}
               qa={pair[0]}
+              isLast={i === data.length - 1}
             />
             {i !== data.length - 1 && <Pill qa={pair[1]} />}
           </div>
