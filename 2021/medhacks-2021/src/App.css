@@ -43,6 +43,7 @@ body{
 
 .schedule-table {
   margin: auto;
+  width: 80%;
 }
 
 .schedule-table > tr > td {
@@ -51,7 +52,7 @@ body{
   text-align: center;
   margin: 5%;
   color: black;
-  width: 50%;
+  width: 40%;
 }
 
 .schedule-table > tr > td:first-child {

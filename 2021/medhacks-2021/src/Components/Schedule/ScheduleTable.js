@@ -8,11 +8,12 @@ const ScheduleTable = (props) => {
     marginLeft: '10%',
     marginRight: '10%',
     backgroundColor: 'rgb(169, 146, 238, 50%)',
-    paddingTop: '5%',
-    paddingBottom: '5%',
+    paddingTop: '2%',
+    paddingBottom: '2%',
     border: '6px solid transparent',
     borderRadius: "50px",
     boxShadow: "7px 7px 7px rgb(0 0 0 / 25%)",
+    fontWeight: 700,
   }
 
   switch(dayActive) {
