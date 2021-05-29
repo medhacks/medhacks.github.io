@@ -10,6 +10,7 @@ import Schedule from "./Components/Schedule/Schedule"
 import NavBar from "./Components/NavBar/NavBar"
 import Sponsors from "./Components/Sponsors/Sponsors"
 import Footer from "./Components/Footer/Footer"
+import MLH from "./Components/MLH/MLH"
 
 const TITLE = 'Medhacks'
 
@@ -28,6 +29,7 @@ function App() {
       <Helmet>
         <title>{ TITLE }</title>
       </Helmet>
+      <MLH />
       <NavBar />
       <Switch>
         <Route exact path="/" component={Temp} />
