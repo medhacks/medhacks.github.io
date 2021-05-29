@@ -2,6 +2,7 @@ import React from "react";
 import logo from "../../Images/mh logo filled.png";
 import pieces from "../../Images/adjustedfade.png";
 import logoText from "../../Images/mh-text.png";
+import Countdown from './Countdown'
 
 const Landing = () => {
   const logoContainerStyle = {
@@ -11,7 +12,7 @@ const Landing = () => {
     margin: "0",
     position: "absolute",
     left: "50%",
-    top: "50%",
+    top: "35%",
     transform: "translate(-50%, -50%)",
     display: "flex",
   };
@@ -51,6 +52,19 @@ const Landing = () => {
     height: '2vw',
   }
 
+  const countdownStyle = {
+    zIndex: 2,
+    width: '50%',
+    margin: "auto",
+    position: "absolute",
+    left: "50%",
+    top: "75%",
+    transform: "translate(-50%, -50%)",
+    textAlign: 'center',
+    fontWeight: 'bold',
+    fontSize: '5em',
+  }
+
   return (
     <div style={{ height: "100vh", "overflow-x": "hidden" }}>
       <img style={piecesStyle} src={pieces} alt="Landing Page Background"></img>
@@ -72,6 +86,9 @@ const Landing = () => {
             <h2 style = {{'text-align': 'center'}}>9.10.21 - 9.12.21</h2>
           </div>
         </div>
+      </div>
+      <div style={countdownStyle}>
+        <Countdown />
       </div>
     </div>
   );
