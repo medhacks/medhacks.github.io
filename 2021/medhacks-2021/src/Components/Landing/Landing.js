@@ -17,15 +17,17 @@ const Landing = () => {
     display: "flex",
   };
 
+  const textShadowStyle = {
+    filter: "drop-shadow(3px 3px 2px rgb(0, 0, 0, 0.75))"
+  };
+
   const logoStyle = {
     maxHeight: "20vw",
-    filter: "drop-shadow(7px 7px 7px rgb(0, 0, 0, 0.75))",
     maxWidth: "20vw",
   };
 
   const logoTextStyle = {
-    filter: "drop-shadow(7px 7px 7px rgb(0, 0, 0, 0.75))",
-    transform: "translate(-15%, 0)",
+    transform: "translate(-15%, 10px)",
     maxHeight: "6vw",
     maxWidth: "45vw",
     flexShrink: 1,
@@ -36,8 +38,8 @@ const Landing = () => {
     position: "absolute",
     left: "50%",
     top: "50%",
-    maxWidth: "80%",
-    transform: "translate(-50%, -50%)",
+    maxWidth: "90%",
+    transform: "translate(-50%, -75%)",
     flexShrink: 1,
   };
 
@@ -46,10 +48,8 @@ const Landing = () => {
     fontStyle: 'italic',
     width: '100%',
     display: 'inline-block',
-    //paddingTop: '20px',
     paddingLeft: '20px',
     paddingRight: '15%',
-    height: '2vw',
   }
 
   const countdownStyle = {
@@ -69,21 +69,19 @@ const Landing = () => {
     <div style={{ height: "100vh", "overflow-x": "hidden" }}>
       <img style={piecesStyle} src={pieces} alt="Landing Page Background"></img>
       <div style={logoContainerStyle}>
-        <img style={logoStyle} src={logo} alt="MedHacks Logo" />
+        <img style={Object.assign({}, logoStyle, textShadowStyle)} src={logo} alt="MedHacks Logo" />
         <div>
           <img
-            style={logoTextStyle}
+            style={Object.assign({}, logoTextStyle, textShadowStyle)}
             src={logoText}
             alt="MedHacks Text Logo"
           />
-          <div style = {textStyle}>
-            <h2 style = {{'float': 'left'}}>designing solutions</h2>
+          <div style = {Object.assign({}, textStyle, textShadowStyle, {marginTop: '30px', lineHeight: '1.2px'})}>
+            <h2 style = {{'float': 'left', fontWeight: '900', marginBottom: '0'}}>designing solutions</h2>
+            <h2 style = {{'float': 'right', fontWeight: '900'}}>piece by piece</h2>
           </div>
           <div style = {textStyle} >
-            <h2 style = {{'float': 'right'}}>piece by piece</h2>
-          </div>
-          <div style = {textStyle} >
-            <h2 style = {{'text-align': 'center'}}>9.10.21 - 9.12.21</h2>
+            <h2 style = {{'text-align': 'center', fontWeight: '900'}}>9.10.21 - 9.12.21</h2>
           </div>
         </div>
       </div>
