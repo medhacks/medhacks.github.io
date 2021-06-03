@@ -17,7 +17,8 @@ const SpeakerPage = () => {
         padding: "20px",
         alignSelf: "stretch",
         border: '0px',
-        boxShadow: '7px 7px 7px rgb(0 0 0 / 20%)'
+        boxShadow: '7px 7px 7px rgb(0 0 0 / 20%)',
+        backgroundColor: 'rgb(96, 89, 142, 30%)'
     };
 
     return (

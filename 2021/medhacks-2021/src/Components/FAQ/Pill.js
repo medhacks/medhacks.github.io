@@ -13,7 +13,7 @@ const Pill = ({ customStyles, qa, isLast }) => {
     padding: `${pillClicked ? "20px" : "0"} 30px ${
       pillClicked ? "20px" : "0"
     } 30px`,
-    background: "white",
+    background: "rgb(255, 255, 255, 60%)",
     width: "360px",
     color: "black",
     boxShadow: "1px 2px 10px #646d95",

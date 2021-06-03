@@ -7,7 +7,7 @@ const ScheduleTable = (props) => {
   const containerStyle = {
     marginLeft: '10%',
     marginRight: '10%',
-    backgroundColor: 'rgb(169, 146, 238, 50%)',
+
     paddingTop: '2%',
     paddingBottom: '2%',
     border: '6px solid transparent',
@@ -16,10 +16,22 @@ const ScheduleTable = (props) => {
     fontWeight: 700,
   }
 
+  const fridayGradient = {
+    background: "linear-gradient(rgb(255, 255, 255, 30%), rgb(255, 255, 255, 30%)) padding-box, linear-gradient(45deg, rgb(255, 255, 255, 60%) 0%, rgb(255, 255, 255, 30%) 100%) border-box",
+  }
+
+  const saturdayGradient = {
+    background: "linear-gradient(rgb(255, 255, 255, 30%), rgb(255, 255, 255, 30%)) padding-box, linear-gradient(45deg, rgb(255, 255, 255, 60%) 0%, rgb(255, 255, 255, 30%) 100%) border-box",
+  }
+
+  const sundayGradient = {
+    background: "linear-gradient(rgb(255, 255, 255, 30%), rgb(255, 255, 255, 30%)) padding-box, linear-gradient(45deg, rgb(255, 255, 255, 60%) 0%, rgb(255, 255, 255, 30%) 100%) border-box",
+  }
+
   switch(dayActive) {
     case "friday":
       return (
-        <div style={{...containerStyle, ...props.fridayGradient}}>
+        <div style={{...containerStyle, ...fridayGradient}}>
           <table className="schedule-table">
             <tr>
               <td>Sponsor & Mentor Check-In</td>
@@ -54,7 +66,7 @@ const ScheduleTable = (props) => {
       );
     case "saturday":
       return (
-        <div style={{...containerStyle, ...props.saturdayGradient}}>
+        <div style={{...containerStyle, ...saturdayGradient}}>
           <table className="schedule-table">
             <tr>
               <td>Workshops</td>
@@ -69,7 +81,7 @@ const ScheduleTable = (props) => {
       );
     case "sunday":
       return (
-        <div style={{...containerStyle, ...props.sundayGradient}}>
+        <div style={{...containerStyle, ...sundayGradient}}>
           <table className="schedule-table">
             <tr>
               <td>DevPost Help</td>

@@ -25,7 +25,7 @@ export default FAQ;
 
 const titleStyle = {
   textAlign: "center",
-  marginTop: "40px",
+  marginTop: "60px",
   marginBottom: "48px",
   fontStyle: "italic",
   fontWeight: "900",

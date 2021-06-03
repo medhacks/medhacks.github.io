@@ -25,11 +25,11 @@ const SpeakerCard = (props) => {
       <div
         className="speaker_block"
         style={{
-          backgroundColor: "lightgray",
+          backgroundColor: "rgb(255, 255, 255, 60%)",
           // flexGlow: "1",
           color: "black",
           marginLeft: "5rem",
-          borderRadius: "5rem",
+          borderRadius: "3rem",
           padding: "2rem",
           fontSize: "1.5rem",
           fontWeight: "bold",

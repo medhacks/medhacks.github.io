@@ -1,5 +1,7 @@
 import React from "react";
 import { HashLink as Link } from 'react-router-hash-link'
+import { ReactComponent as Instagram } from '../../Images/instagram.svg'
+import { ReactComponent as Facebook } from '../../Images/facebook.svg'
 
 const Footer = () => {
 
@@ -30,6 +32,14 @@ const Footer = () => {
 
   const link = {
     color: 'white',
+    marginBottom: '1%',
+    fontSize: '1.2em',
+  }
+
+  const imgLink = {
+    width: '5%',
+    height: '5%',
+    marginLeft: '1%', 
   }
 
   return(
@@ -53,6 +63,14 @@ const Footer = () => {
         <Link style={link} to={{pathname:"https://www.google.com"}} target='blank'>
           MLH Code of Conduct
         </Link>
+        <div>
+          <Link to={{pathname:"https://www.instagram.com/medhacks/"}} target='blank'>
+            <Instagram style={imgLink} />
+          </Link>
+          <Link style={imgLink} to={{pathname:"https://www.facebook.com/medhacks"}} target='blank'>
+            <Facebook style={imgLink} />
+          </Link>
+        </div>
       </div>
     </div>
   )
