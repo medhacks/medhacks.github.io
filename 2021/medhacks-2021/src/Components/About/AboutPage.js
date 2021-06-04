@@ -9,7 +9,7 @@ const SpeakerPage = () => {
     const speakerStyle = {
         textAlign: "Center",
         margin: "100px auto",
-        width: '60%',
+        //width: '60%',
         backgroundColor: 'rgb(0, 0, 0, 0.1)',
         color: "white",
         borderRadius: "14px",
@@ -23,7 +23,7 @@ const SpeakerPage = () => {
 
     return (
         <>
-            <Card style={speakerStyle}>
+            <Card style={speakerStyle} className="section-container">
                 <Card.Body>
                     <Card.Title style={{ fontSize: "2.5rem", fontWeight: '900' }}>
                         <i>about</i>

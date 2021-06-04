@@ -12,8 +12,6 @@ const Tracks = (props) => {
     justifyContent: 'center',
     alignItems: 'center',
   
-    flexDirection: "row",
-  
     display: "-ms-flex",
     display: "-webkit-flex",
   };
@@ -24,7 +22,7 @@ const Tracks = (props) => {
         <h1 className="section-title">tracks</h1>
         <p className="section-text">To help with ideation, MedHacks and its sponsors create three tracks every year so hackers can pick a theme to focus their project on. The top three projects in each track will be awarded a prize.</p>
       </div>
-      <div style={trackButtonsStyle}>
+      <div style={trackButtonsStyle} className="tracks-container">
         {tracks.map((track) => (
           <TrackBox
             titleNum={track.titleNum}

@@ -54,7 +54,7 @@ const Landing = () => {
 
   const countdownStyle = {
     zIndex: 2,
-    width: '50%',
+    //width: '50%',
     margin: "auto",
     position: "absolute",
     left: "50%",
@@ -62,7 +62,8 @@ const Landing = () => {
     transform: "translate(-50%, -50%)",
     textAlign: 'center',
     fontWeight: 'bold',
-    fontSize: '5em',
+    //fontSize: '4em',
+    boxShadow: 'none',
   }
 
   return (
@@ -85,7 +86,7 @@ const Landing = () => {
           </div>
         </div>
       </div>
-      <div style={countdownStyle}>
+      <div style={countdownStyle} className="countdown-container">
         <Timer />
       </div>
     </div>

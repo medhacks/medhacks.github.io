@@ -4,12 +4,28 @@ body{
   font-family: proxima-nova, sans-serif;
 }
 
+.countdown-container{
+  width: 50%;
+  font-size: 4em;
+}
+
 .section-container {
   width: 60%;
   text-align: center;
   margin: auto;
   border-radius: 14px;
   box-shadow: 7px 7px 7px rgb(0 0 0 / 20%)
+}
+
+@media only screen and (max-width: 700px) {
+  .section-container {
+    width: 80%;
+  }
+
+  .countdown-container{
+    width: 80%;
+    font-size: 3em;
+  }
 }
 
 .section-title {
@@ -22,6 +38,16 @@ body{
 .section-text{
   padding-left: 10%;
   padding-right: 10%;
+}
+
+.tracks-container {
+  flex-direction: "row",
+}
+
+@media only screen and (max-width: 700px) {
+  .tracks-container {
+    flex-direction: column;
+  }
 }
 
 

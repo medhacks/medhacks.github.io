@@ -10,7 +10,6 @@ const TrackPopup = (props) => {
     width: "60%",
     border: "2px solid black",
     position: "fixed",
-    //backgroundColor: "#abffd1",
     backgroundColor: 'white',
     color: 'black',
     textAlign: "center",

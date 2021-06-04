@@ -14,7 +14,6 @@ const TrackBox = (props) => {
         className='track'
         style={trackStyle}
         onClick={() => props.trackClick(props.titleNum)}>
-        {/* <h3>Track {props.titleNum}</h3> */}
         <p style={{ margin: 0 }}>{props.title}</p>
       </div>
     </>
