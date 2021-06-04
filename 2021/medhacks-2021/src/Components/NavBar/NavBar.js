@@ -21,28 +21,32 @@ const NavBar = () => {
   }
 
   return (
-    <div style={container}>
-      <Link style={link} to="/2021">
-        home
-      </Link>
-      <Link style={link} to={"/2021#tracks"}>
-        tracks
-      </Link>
-      <Link style={link} to="/speakers">
-        speakers
-      </Link>
-      <Link style={link} to="/schedule">
-        schedule
-      </Link>
-      <Link style={link} to="#sponsors">
-        sponsors
-      </Link>
-      <Link style={link} to="/faq">
-        faq
-      </Link>
-      <Link style={{...link, fontWeight: 'bold'}} to={{ pathname: "https://www.google.com"}} target='blank'>
-        apply
-      </Link>
+    <div style={{marginLeft: '10%'}}>
+      <div style={container}>
+        <Link style={link} to="#sponsors">
+          sponsors
+        </Link>
+        <Link style={link} to="/faq">
+          faq
+        </Link>
+        <Link style={{...link, fontWeight: 'bold'}} to={{ pathname: "https://www.google.com"}} target='blank'>
+          apply
+        </Link>
+      </div>
+      <div style={container}>
+        <Link style={link} to="/2021">
+          home
+        </Link>
+        <Link style={link} to={"/2021#tracks"}>
+          tracks
+        </Link>
+        <Link style={link} to="/speakers">
+          speakers
+        </Link>
+        <Link style={link} to="/schedule">
+          schedule
+        </Link>
+      </div>
     </div>
   )
 };

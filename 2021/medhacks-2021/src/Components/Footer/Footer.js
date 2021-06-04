@@ -12,24 +12,6 @@ const Footer = () => {
     width: '100%',
   }
 
-  const info = {
-    width: '30%',
-    marginLeft: '5%',
-    marginTop: '5%',
-    marginRight: '0',
-    float: 'left',
-  }
-
-  const linkContainer = {
-    float: 'right',
-    display: 'flex',
-    flexDirection: 'column',
-    textAlign: 'right',
-    paddingRight: '5%',
-    paddingBottom: '5%',
-    marginTop: '5%',
-  }
-
   const link = {
     color: 'white',
     marginBottom: '1%',
@@ -44,12 +26,12 @@ const Footer = () => {
 
   return(
     <div style={container}>
-      <div style={info}>
+      <div className="footer-text">
         <p>
           MedHacks brings together diverse minds from all backgrounds to foster collaboration towards solving the world's most pressing medical issues.
         </p>
       </div>
-      <div style={linkContainer}>
+      <div className="footer-links">
         <h2>quick links</h2>
         <Link style={link} to={"/2021#"} >
           home
@@ -60,15 +42,15 @@ const Footer = () => {
         <Link style={link} to={{pathname:"mailto: info@medhacks.io"}} target='blank'>
           email us
         </Link>
-        <Link style={link} to={{pathname:"https://www.google.com"}} target='blank'>
-          MLH Code of Conduct
+        <Link style={link} to={{pathname:"https://docs.google.com/document/d/1VEFstsX7jg9W7uJSyx3ty_wcU-8yiXRlpP7MAelIIHA/"}} target='blank'>
+          Code of Conduct
         </Link>
         <div>
           <Link to={{pathname:"https://www.instagram.com/medhacks/"}} target='blank'>
-            <Instagram style={imgLink} />
+            <Instagram className="footer-img" />
           </Link>
-          <Link style={imgLink} to={{pathname:"https://www.facebook.com/medhacks"}} target='blank'>
-            <Facebook style={imgLink} />
+          <Link to={{pathname:"https://www.facebook.com/medhacks"}} target='blank'>
+            <Facebook className="footer-img" />
           </Link>
         </div>
       </div>
