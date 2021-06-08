@@ -1,6 +1,8 @@
 import React from "react";
 import "../../App.css";
 import TrackBox from "./TrackBox";
+import Piece7 from "../../Images/puzzlePieces/7.png"
+import Piece8 from "../../Images/puzzlePieces/8.png"
 
 const Tracks = (props) => {
   const trackButtonsStyle = {
@@ -19,7 +21,11 @@ const Tracks = (props) => {
   return (
     <div id="tracks" className="section-container" style={{'backgroundColor':'rgb(17, 61, 86, .2)'}}>
       <div style={{'width': '100%'}}>
-        <h1 className="section-title">tracks</h1>
+        <div className="section-title-container">
+          <img src={Piece7}></img>
+          <h1 className="section-title">tracks</h1>
+          <img src={Piece8}></img>
+        </div>
         <p className="section-text">To help with ideation, MedHacks and its sponsors create three tracks every year so hackers can pick a theme to focus their project on. The top three projects in each track will be awarded a prize.</p>
       </div>
       <div style={trackButtonsStyle} className="tracks-container">

@@ -12,7 +12,7 @@ const Sponsors = (props) => {
     margin: "auto",
     width: "60%",
     backgroundColor: 'rgb(255, 255, 255, .6)',
-    disply: 'flex',
+    display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
   }

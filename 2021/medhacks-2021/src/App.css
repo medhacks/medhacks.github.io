@@ -28,6 +28,21 @@ body{
   }
 }
 
+.section-title-container {
+  display:flex;
+  align-items: center;
+  margin: auto;
+  width: fit-content;
+  justify-content: center;
+}
+
+.section-title-container > img {
+  height:7%;
+  width: 7%;
+  margin: 2%;
+
+}
+
 .section-title {
   font-weight: 900;
   font-style: italic;

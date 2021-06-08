@@ -52,7 +52,7 @@ const Timer = () => {
       <div ref={ref} style={{width: 'fit-content', margin: 'auto'}}>
         <Countdown date={new Date(2021, 8, 10, 18, 0, 0)} />
       </div>
-      <div style={{...unitContainer, width: myWidth}}>
+      <div style={{...unitContainer, width: myWidth * 1.06}}>
         <p style={units}>Days</p>
         <p style={units}>Hours</p>
         <p style={units}>Minutes</p>
