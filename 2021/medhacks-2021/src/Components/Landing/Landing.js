@@ -5,52 +5,6 @@ import logoText from "../../Images/mh-text.png";
 import Timer from "./Timer";
 
 const Landing = () => {
-  const logoContainerStyle = {
-    zIndex: 2,
-    height: "30vh",
-    width: "60vw",
-    margin: "0",
-    position: "absolute",
-    left: "50%",
-    top: "35%",
-    transform: "translate(-50%, -50%)",
-    display: "flex",
-  };
-
-  const textShadowStyle = {
-    filter: "drop-shadow(3px 3px 2px rgb(0, 0, 0, 0.75))"
-  };
-
-  const logoStyle = {
-    maxHeight: "20vw",
-    maxWidth: "20vw",
-  };
-
-  const logoTextStyle = {
-    transform: "translate(-15%, 10px)",
-    maxHeight: "6vw",
-    maxWidth: "45vw",
-    flexShrink: 1,
-  };
-
-  const piecesStyle = {
-    zIndex: 1,
-    position: "absolute",
-    left: "50%",
-    top: "50%",
-    maxWidth: "90%",
-    transform: "translate(-50%, -75%)",
-    flexShrink: 1,
-  };
-
-  const textStyle = {
-    fontWeight: 'bold',
-    fontStyle: 'italic',
-    width: '100%',
-    display: 'inline-block',
-    paddingLeft: '20px',
-    paddingRight: '15%',
-  }
 
   const countdownStyle = {
     zIndex: 2,
@@ -66,23 +20,35 @@ const Landing = () => {
     boxShadow: 'none',
   }
 
+  const piecesStyle = {
+    zIndex: 1,
+    position: "absolute",
+    left: "50%",
+    top: "50%",
+    maxWidth: "90%",
+    transform: "translate(-50%, -75%)",
+  };
+
   return (
-    <div style={{ height: "100vh", "overflow-x": "hidden" }}>
-      <img style={piecesStyle} src={pieces} alt="Landing Page Background"></img>
-      <div style={logoContainerStyle}>
-        <img style={Object.assign({}, logoStyle, textShadowStyle)} src={logo} alt="MedHacks Logo" />
-        <div>
-          <img
-            style={Object.assign({}, logoTextStyle, textShadowStyle)}
-            src={logoText}
-            alt="MedHacks Text Logo"
-          />
-          <div style = {Object.assign({}, textStyle, textShadowStyle, {marginTop: '30px', lineHeight: '1.2px'})}>
-            <h2 style = {{'float': 'left', fontWeight: '900', marginBottom: '0'}}>designing solutions</h2>
-            <h2 style = {{'float': 'right', fontWeight: '900'}}>piece by piece</h2>
+    <div style={{height: '100vh'}}>
+      <div>
+        <img style={piecesStyle} src={pieces} alt="Landing Page Background"></img>
+        <div className="logo-container">
+          <div className="logo-child logo-left">
+            <img src={logo} alt="MedHacks Logo" />
           </div>
-          <div style = {textStyle} >
-            <h2 style = {{'text-align': 'center', fontWeight: '900'}}>9.10.21 - 9.12.21</h2>
+          <div className="logo-child logo-right">
+            <img
+              src={logoText}
+              alt="MedHacks Text Logo"
+            />
+            <div className="logo-text">
+              <h2 style={{textAlign: 'left'}}>designing solutions</h2>
+              <h2 style={{textAlign: 'right'}}>piece by piece</h2>
+            </div>
+            <div>
+              <h2 className="date-text" style={{textAlign: 'center', fontWeight: 900, fontStyle:'italic'}}>9.10.21 - 9.12.21</h2>
+            </div>
           </div>
         </div>
       </div>
