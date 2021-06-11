@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const Pill = ({ customStyles, qa, isLast }) => {
+const Pill = ({ customStyles, qa, p, isLast }) => {
   const [pillClicked, setPillClicked] = useState(false);
 
   const styles = {
@@ -33,8 +33,10 @@ const Pill = ({ customStyles, qa, isLast }) => {
             marginBottom: pillClicked ? "10px" : "0px",
             color: "#60598e",
             fontWeight: "600",
+            display: "flex",
           }}
         >
+          <div style={{ display: "flex", alignItems: "center" }}>{p}</div>
           {qa.q}
         </div>
         {isLast && (
