@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const Pill = ({ customStyles, qa, p, isLast }) => {
+const Pill = ({ qa, p, isLast }) => {
   const [pillClicked, setPillClicked] = useState(false);
 
   const styles = {
@@ -8,16 +8,17 @@ const Pill = ({ customStyles, qa, p, isLast }) => {
     height: pillClicked ? "auto" : "60px",
     display: "flex",
     flexDirection: "row",
-    alignItems: "center",
+    alignItems: !pillClicked ? "center" : "",
     borderRadius: "50px",
-    padding: `${pillClicked ? "20px" : "0"} 30px ${
-      pillClicked ? "20px" : "0"
+    padding: `${pillClicked ? "20px" : "0"} 10px ${
+      pillClicked ? "10px" : "0"
     } 30px`,
     background: "rgb(255, 255, 255, 60%)",
     width: "360px",
     color: "black",
     boxShadow: "1px 2px 10px #646d95",
     cursor: "pointer",
+    marginBottom: "20px",
   };
 
   return (
@@ -25,8 +26,8 @@ const Pill = ({ customStyles, qa, p, isLast }) => {
       onClick={() =>
         pillClicked ? setPillClicked(false) : setPillClicked(true)
       }
-      style={{ ...customStyles, ...styles }}
-    >
+      className='faq-pill'
+      style={styles}>
       <div>
         <div
           style={{
@@ -34,10 +35,9 @@ const Pill = ({ customStyles, qa, p, isLast }) => {
             color: "#60598e",
             fontWeight: "600",
             display: "flex",
-          }}
-        >
+          }}>
           <div style={{ display: "flex", alignItems: "center" }}>{p}</div>
-          {qa.q}
+          <div className='faq-pill-q'>{qa.q}</div>
         </div>
         {isLast && (
           <div

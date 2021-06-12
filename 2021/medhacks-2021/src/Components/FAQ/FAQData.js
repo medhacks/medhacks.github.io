@@ -82,7 +82,7 @@ export const FAQData = [
   ],
   [
     {
-      q: "will this year’s hackathon be virtual?",
+      q: "Will this year’s hackathon be virtual?",
       a: "All communication will be conducted on a virtual platform, which we will announce later on. We are still planning on offering the same perks that we have in previous MedHacks events, such as fun games, workshops, speakers, social media activities, mentorship, and merch. Details regarding day-of-event logistics will be sent out to all participants closer to the event. Other than that, nothing about the event really changes! Good news: you’ll get to sleep in your own bed, shower in your own home, eat home-cooked meals, and you don’t have to pay for travel!",
       p: (
         <img

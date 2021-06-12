@@ -1,4 +1,4 @@
-body{
+body {
   overflow-x: hidden;
   color: white;
   font-family: proxima-nova, sans-serif;
@@ -44,7 +44,7 @@ body{
   font-weight: 900;
 }
 
-.countdown-container{
+.countdown-container {
   width: 50%;
   font-size: 3vw;
 }
@@ -66,7 +66,6 @@ body{
   .date-text {
     font-size: 4vw;
   }
-
 }
 
 .section-container {
@@ -74,7 +73,7 @@ body{
   text-align: center;
   margin: auto;
   border-radius: 14px;
-  box-shadow: 7px 7px 7px rgb(0 0 0 / 20%)
+  box-shadow: 7px 7px 7px rgb(0 0 0 / 20%);
 }
 
 @media only screen and (max-width: 700px) {
@@ -82,14 +81,14 @@ body{
     width: 80%;
   }
 
-  .countdown-container{
+  .countdown-container {
     width: 80%;
     font-size: 3em;
   }
 }
 
 .section-title-container {
-  display:flex;
+  display: flex;
   align-items: center;
   margin: auto;
   width: fit-content;
@@ -97,7 +96,7 @@ body{
 }
 
 .section-title-container > img {
-  height:7%;
+  height: 7%;
   width: 7%;
   margin: 2%;
 }
@@ -109,13 +108,13 @@ body{
   padding-top: 2%;
 }
 
-.section-text{
+.section-text {
   padding-left: 10%;
   padding-right: 10%;
 }
 
 .tracks-container {
-  flex-direction: "row",
+  flex-direction: "row";
 }
 
 @media only screen and (max-width: 700px) {
@@ -208,7 +207,7 @@ body{
   border-right: none;
 }
 
-.schedule-table > tr:first-child > td{
+.schedule-table > tr:first-child > td {
   border-top: none;
 }
 
@@ -222,4 +221,42 @@ body{
 
 .day:hover {
   box-shadow: 7px 7px 7px rgb(0 0 0 / 75%);
+}
+
+.faq-pill-col {
+  paddingbottom: "24px";
+}
+
+.faq-pill-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.faq-pill {
+  margin-right: 30px;
+}
+
+.faq-pill-q {
+  width: 280px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media only screen and (max-width: 900px) {
+  .faq-pill-col {
+    paddingbottom: 0;
+  }
+
+  .faq-pill-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .faq-pill {
+    margin-right: 0;
+  }
+
+  .faq-pill-q {
+  }
 }
