@@ -31,13 +31,7 @@ const Carousel = (props) => {
       //   level === -1 ? "left" : level === 1 ? "right" : "middle"
       // );
       items.push(
-        <CSSTransition
-          key={index}
-          // classNames={direction}
-          timeOut={1000}
-          onEnter={() => console.log("entering", props.items[index])}
-          onExit={() => console.log("exiting", props.items[index])}
-        >
+        <CSSTransition key={index} id={direction} timeOut={1000}>
           <Item
             id={props.items[index]}
             level={level}
@@ -91,9 +85,9 @@ const Item = (props) => {
       className={"item speaker_" + (props.level + 2) + " level" + props.level}
       style={{
         position: "absolute",
-        width: 20 - Math.abs(props.level) * 2 + "vw",
-        height: 20 - Math.abs(props.level) * 5 + "vw",
-        left: 20 + props.level * 17 + (props.level < 0 ? 2 : 0) + "vw",
+        width: 25 - Math.abs(props.level) + "vw",
+        height: 25 - Math.abs(props.level) + "vw",
+        left: 17 + props.level * 17 + (props.level < 0 ? 2 : 0) + "vw",
         // right: 100 - 35 + props.level * 25 + (props.level < 0 ? 5 : 0) + "vw",
         // marginTop: Math.abs(props.level * 4) + "rem",
         zIndex: 1 - Math.abs(props.level),

@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import speakers from "./speakerData/speakers";
 import SpeakerArea from "./SpeakerArea";
 import Carousel from "./Carousel";
-import { useLocation } from "react-router-dom";
+import { useHistory, useLocation } from "react-router-dom";
 import SpeakerList from "./SpeakerList";
 import Piece5 from "../../Images/puzzlePieces/5.png";
 import Piece6 from "../../Images/puzzlePieces/6.png";
@@ -12,6 +12,7 @@ import Piece6 from "../../Images/puzzlePieces/6.png";
 const SpeakerPage = () => {
   const [index, setIndex] = useState(0);
   const location = useLocation();
+  const history = useHistory();
 
   return (
     <>
@@ -22,7 +23,7 @@ const SpeakerPage = () => {
               fontSize: "2.5rem",
               textAlign: "center",
               marginBottom: "2.5rem",
-              marginTop: "2.5rem",
+              marginTop: "4rem",
             }}
           >
             <h1 className="section-title">speakers</h1>
@@ -36,19 +37,34 @@ const SpeakerPage = () => {
           style={{
             backgroundColor: "rgb(17, 61, 86, .2)",
             marginTop: "2.5rem",
-            height: "30vw",
+            height: "35vw",
             // position: "relative",
           }}
         >
           <div
             className="section-title-container"
-            style={{ marginBottom: "1.5rem" }}
+            style={{ marginBottom: "0rem" }}
           >
             <img src={Piece5} alt="p5"></img>
             <h1 className="section-title">speakers</h1>
-            <img src={Piece6} alt="p6"></img>
+            <img src={Piece6} alt="p5"></img>
           </div>
-          <Carousel items={speakers} active={0} setIndex={setIndex} />
+
+          {window.innerWidth > 750 ? (
+            <Carousel items={speakers} active={0} setIndex={setIndex} />
+          ) : (
+            <button
+              style={{
+                borderRadius: "1rem",
+                marginTop: "1rem",
+              }}
+              onClick={() => {
+                history.push("/speakers");
+              }}
+            >
+              Click here to view speakers
+            </button>
+          )}
         </div>
       )}
     </>

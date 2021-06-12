@@ -17,10 +17,10 @@ const SpeakerCard = (props) => {
       <div
         className={"speaker_" + (props.index + 1)}
         style={{
-          width: "15vw",
-          height: "15vw",
-          minWidth: "15vw",
-          minHeight: "15vw",
+          width: "20vw",
+          height: "20vw",
+          minWidth: "20vw",
+          minHeight: "20vw",
           backgroundImage: `url(` + props.speaker.image + ")",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
@@ -36,11 +36,12 @@ const SpeakerCard = (props) => {
         style={{
           backgroundColor: "rgb(255, 255, 255, 60%)",
           color: "black",
-          marginLeft: "5rem",
+          marginLeft: "2rem",
           borderRadius: "3rem",
           padding: "2rem",
-          fontSize: "1.5rem",
+          fontSize: "medium",
           fontWeight: "bold",
+          width: "65vw",
           // height: "15vw",
           // overflow: "clip",
           boxShadow: "5px 5px 20px black",
