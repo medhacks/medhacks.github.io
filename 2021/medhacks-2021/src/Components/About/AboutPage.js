@@ -10,7 +10,7 @@ import Piece2 from '../../Images/puzzlePieces/2.png'
 const SpeakerPage = () => {
     const speakerStyle = {
         textAlign: "Center",
-        margin: "100px auto",
+        marginBottom: "2.5rem",
         //width: '60%',
         backgroundColor: 'rgb(0, 0, 0, 0.1)',
         color: "white",
