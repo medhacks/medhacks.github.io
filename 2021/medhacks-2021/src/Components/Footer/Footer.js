@@ -3,16 +3,15 @@ import { HashLink as Link } from 'react-router-hash-link'
 import { ReactComponent as Instagram } from '../../Images/instagram.svg'
 import { ReactComponent as Facebook } from '../../Images/facebook.svg'
 import Pieces from '../../Images/footer_2.png'
+import Logo from '../../Images/mhtextwhiteonly.png'
 
 const Footer = () => {
 
   const container = {
     paddingTop: '2%',
-    //backgroundColor: '#a992ee',
     display: 'inline-block',
     width: '100%',
     backgroundImage: 'url(' + Pieces+ ')',
-    //backgroundImage: 'url(' + Pieces+ '), linear-gradient(0deg, #a992ee 0%, #82b4e6 46%, #b0edd6 100%)',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center bottom',
     backgroundSize: '100%'
@@ -34,10 +33,16 @@ const Footer = () => {
     marginBottom: '5%',
   }
 
+  const logoStyle = {
+    maxWidth: '80%',
+    marginBottom: '10%',
+  }
+
   return(
     <div style={container}>
       <div style={whiteContainer}>
         <div className="footer-text">
+          <img style={logoStyle} src={Logo} alt="MedHacks Logo"></img>
           <p>
             MedHacks brings together diverse minds from all backgrounds to foster collaboration towards solving the world's most pressing medical issues.
           </p>
@@ -47,7 +52,7 @@ const Footer = () => {
           <Link style={link} to={"/2021#"} >
             home
           </Link>
-          <Link style={link} to={{pathname:"https://www.google.com"}} target='blank'>
+          <Link style={link} to={{pathname:"https://apply.medhacks.io"}} target='blank'>
             apply
           </Link>
           <Link style={link} to={{pathname:"mailto: info@medhacks.io"}} target='blank'>

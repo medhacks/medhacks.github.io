@@ -21,18 +21,7 @@ const NavBar = () => {
   }
 
   return (
-    <div style={{marginLeft: '10%'}}>
-      <div style={container}>
-        <Link style={link} to="#sponsors">
-          sponsors
-        </Link>
-        <Link style={link} to="/faq">
-          faq
-        </Link>
-        <Link style={{...link, fontWeight: 'bold'}} to={{ pathname: "https://www.google.com"}} target='blank'>
-          apply
-        </Link>
-      </div>
+    <div className="nav-bar-container">
       <div style={container}>
         <Link style={link} to="/2021">
           home
@@ -45,6 +34,17 @@ const NavBar = () => {
         </Link>
         <Link style={link} to="/schedule">
           schedule
+        </Link>
+      </div>
+      <div style={container}>
+        <Link style={link} to="#sponsors">
+          sponsors
+        </Link>
+        <Link style={link} to="/faq">
+          faq
+        </Link>
+        <Link style={{...link, fontWeight: 'bold'}} to={{ pathname: "https://apply.medhacks.io"}} target='blank'>
+          apply
         </Link>
       </div>
     </div>

@@ -23,10 +23,9 @@ const Landing = () => {
   const piecesStyle = {
     zIndex: 1,
     position: "absolute",
-    left: "50%",
-    top: "50%",
+    marginTop: "-20%",
     maxWidth: "90%",
-    transform: "translate(-50%, -75%)",
+    margin: 'auto',
   };
 
   return (

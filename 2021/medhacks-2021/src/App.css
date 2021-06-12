@@ -4,6 +4,20 @@ body {
   font-family: proxima-nova, sans-serif;
 }
 
+.nav-bar-container {
+  display: flex;
+  float: right;
+  margin-left: 10%;
+}
+
+@media only screen and (max-width: 600px) {
+  .nav-bar-container {
+    display: block;
+    float: right;
+    margin-left: 10%;
+  }
+}
+
 .logo-container {
   width: 60%;
   height: auto;
@@ -144,7 +158,7 @@ body {
 }
 
 .footer-text {
-  width: 30%;
+  width: 40%;
   margin-left: 5%;
   margin-top: 5%;
   margin-right: 0;
@@ -258,5 +272,15 @@ body {
   }
 
   .faq-pill-q {
+  }
+}
+
+.sponsor-container {
+  width: 70%;
+}
+
+@media only screen and (max-width: 700px) {
+  .sponsor-container {
+    width: 90%;
   }
 }
