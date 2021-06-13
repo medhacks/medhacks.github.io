@@ -13,18 +13,20 @@ const SpeakerArea = (props) => {
         paddingLeft: "1rem",
         display: "flex",
         flexDirection: "column",
+        textShadow: "2px 2px #000000",
         color: "white",
       }}
     >
       <div
         style={{
-          fontSize: "2rem",
+          fontSize: "1.5rem",
           fontWeight: "bold",
           padding: "0rem",
           margin: "0rem",
           flexGrow: "1",
           display: "flex",
           flexDirection: "column",
+          textAlign: "left",
         }}
       >
         <div style={{ flexGrow: "2" }}></div>
@@ -32,7 +34,7 @@ const SpeakerArea = (props) => {
       </div>
       <div
         style={{
-          fontSize: "1.5rem",
+          fontSize: "1rem",
           textAlign: "left",
           fontStyle: "italic",
           padding: "0rem",
