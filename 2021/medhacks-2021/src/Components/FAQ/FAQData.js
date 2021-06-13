@@ -14,7 +14,7 @@ export const FAQData = [
       a: "A hackathon is a place where people learn, play, and create. A hackathon is where people perform superhuman feats and solve problems in short periods of time. Hackathons are likely the most exciting thing you don't know too much about. But more broadly defined, a hackathon is a multi-day event where people come together, ideate, and work intensively on ideas and products.",
       p: (
         <img
-          style={{ width: "20px", height: "20px", marginRight: "8px" }}
+          style={{ width: "20px", height: "20px", marginRight: "8px", filter: "drop-shadow(1px 1px 0px rgb(0, 0, 0, .3))"}}
           src={Puzzle1}
           alt="puzzle 1"
         />
@@ -25,7 +25,7 @@ export const FAQData = [
       a: "MedHacks focuses on innovating at the crossroads of medical entrepreneurship and technological development. By working together for the weekend, hackers at MedHacks will gain unique opportunities to learn from each other and from experts at the forefront of medicine and technology – integrating their learning into real solutions to pressing medical challenges.",
       p: (
         <img
-          style={{ width: "20px", height: "20px", marginRight: "8px" }}
+          style={{ width: "20px", height: "20px", marginRight: "8px", filter: "drop-shadow(1px 1px 0px rgb(0, 0, 0, .3))" }}
           src={Puzzle2}
           alt="puzzle 2"
         />
