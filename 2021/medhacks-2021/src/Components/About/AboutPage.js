@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Tabs from 'react-bootstrap/Tabs'
-import Tab from 'react-bootstrap/Tab'
 import Card from 'react-bootstrap/Card'
 import Piece1 from '../../Images/puzzlePieces/1.png'
 import Piece2 from '../../Images/puzzlePieces/2.png'
