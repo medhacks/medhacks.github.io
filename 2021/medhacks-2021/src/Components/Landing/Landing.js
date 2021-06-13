@@ -21,7 +21,7 @@ const Landing = () => {
   }
 
   const piecesStyle = {
-    zIndex: 1,
+    zIndex: 0,
     position: "absolute",
     marginTop: "-20%",
     maxWidth: "90%",

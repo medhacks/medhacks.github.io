@@ -38,11 +38,8 @@ function App() {
         <Route exact path="/schedule" component={Schedule} />
         <Route exact path="/faq" component={FAQ} />
       </Switch>
-
-      <div id='sponsors'>
       <Sponsors />
-      </div>
-        <Footer />
+      <Footer />
     </div>
   );
 }

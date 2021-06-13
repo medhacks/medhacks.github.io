@@ -90,7 +90,7 @@ function Main() {
     left: '-12.5px',
     backgroundColor: 'white',
     top: '0',
-    zIndex: '50',
+    zIndex: '99',
     borderRadius: '5px',
     boxShadow: '5px 5px 7px rgb(0 0 0 / 20%)',
     color: 'white',
@@ -106,12 +106,13 @@ function Main() {
         }}
       >
         <Landing />
-        <div style={{ height: '10px' }} id='about'></div>
+        <div style={{ height: '50px' }} id='about'></div>
         <AboutPage />
-        <div style={{ height: '10px' }} id='tracks'></div>
+        <div style={{ height: '50px' }} id='tracks'></div>
         <Tracks trackClick={trackClick} popup={popup} />
-        <div style={{ height: '10px' }} id='speakers'></div>
+        <div style={{ height: '50px' }} id='speakers'></div>
         <SpeakerPage />
+        <div style={{ height: '50px' }} id='sponsors'></div>
 
         <div class="timeline" style={Object.assign({}, timelineStyle, { height: '400px' })}>
           <a class="container" id='cont1' href='#top' style={containerStyle}></a>
