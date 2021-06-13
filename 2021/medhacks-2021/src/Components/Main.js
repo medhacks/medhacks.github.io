@@ -18,24 +18,28 @@ function scrollProgressIndicator() {
   var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
   var height = 0;
   var winScrollSection = 0;
-  // if (winScroll >= document.getElementById("speakerPage").offsetTop) {
-  //   height = document.getElementById("speakerPage").offsetHeight;
-  //   winScrollSection = winScroll - document.getElementById("speakers").offsetTop;
-  //   changeTimelineBar('bar4', winScrollSection, height);
-  //   console.log('speakers')
-  // } else if (winScroll >= document.getElementById("tracks").offsetTop) {
-  //   height = document.getElementById("speakers").offsetTop - document.getElementById("tracks").offsetTop;
-  //   winScrollSection = winScroll - document.getElementById("tracks").offsetTop;
-  //   changeTimelineBar('bar3', winScrollSection, height);
-  // } else if (winScroll >= document.getElementById("about").offsetTop) {
-  //   height = document.getElementById("tracks").offsetTop - document.getElementById("about").offsetTop;
-  //   winScrollSection = winScroll - document.getElementById("about").offsetTop;
-  //   changeTimelineBar('bar2', winScrollSection, height);
-  // } else {
-  //   height = document.getElementById("about").offsetTop;
-  //   winScrollSection = winScroll;
-  //   changeTimelineBar('bar1', winScrollSection, height);
-  // }
+  if (document.getElementById('landing') === null) {
+    return;
+  }
+  
+  if (winScroll >= document.getElementById("speakers").offsetTop) {
+    height = document.getElementById("speakerPage").offsetHeight;
+    winScrollSection = winScroll - document.getElementById("speakers").offsetTop;
+    changeTimelineBar('bar4', winScrollSection, height);
+    console.log('speakers')
+  } else if (winScroll >= document.getElementById("tracks").offsetTop) {
+    height = document.getElementById("speakers").offsetTop - document.getElementById("tracks").offsetTop;
+    winScrollSection = winScroll - document.getElementById("tracks").offsetTop;
+    changeTimelineBar('bar3', winScrollSection, height);
+  } else if (winScroll >= document.getElementById("about").offsetTop) {
+    height = document.getElementById("tracks").offsetTop - document.getElementById("about").offsetTop;
+    winScrollSection = winScroll - document.getElementById("about").offsetTop;
+    changeTimelineBar('bar2', winScrollSection, height);
+  } else {
+    height = document.getElementById("about").offsetTop;
+    winScrollSection = winScroll;
+    changeTimelineBar('bar1', winScrollSection, height);
+  }
 
 }
 
@@ -112,7 +116,7 @@ function Main() {
         <Tracks trackClick={trackClick} popup={popup} />
         <div style={{ height: '50px' }} id='speakers'></div>
         <SpeakerPage />
-        <div style={{ height: '50px' }} id='sponsors'></div>
+        <div style={{ height: '0px' }} id='sponsors'></div>
 
         <div class="timeline" style={Object.assign({}, timelineStyle, { height: '400px' })}>
           <a class="container" id='cont1' href='#top' style={containerStyle}></a>

@@ -29,7 +29,7 @@ const Landing = () => {
   };
 
   return (
-    <div style={{height: '100vh'}}>
+    <div id='landing' style={{height: '100vh'}}>
       <div>
         <img style={piecesStyle} src={pieces} alt="Landing Page Background"></img>
         <div className="logo-container">
