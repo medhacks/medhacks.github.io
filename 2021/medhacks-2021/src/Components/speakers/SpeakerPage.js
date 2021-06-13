@@ -12,7 +12,7 @@ const SpeakerPage = () => {
   const location = useLocation();
 
   return (
-    <>
+    <div id='speakerPage'>
       <div
         style={{
           fontSize: "2.5rem",
@@ -30,7 +30,7 @@ const SpeakerPage = () => {
           <Carousel items={speakers} active={0} setIndex={setIndex} />
         </div>
       )}
-    </>
+    </div>
   );
 };
 

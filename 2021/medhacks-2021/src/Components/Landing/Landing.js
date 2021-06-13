@@ -27,7 +27,7 @@ const Landing = () => {
   };
 
   const logoTextStyle = {
-    transform: "translate(-15%, 10px)",
+    transform: "translate(-15%, 15px)",
     maxHeight: "6vw",
     maxWidth: "45vw",
     flexShrink: 1,

@@ -15,7 +15,7 @@ import MLH from "./Components/MLH/MLH"
 const TITLE = 'Medhacks'
 
 function App() {
-  
+
   const appStyle = {
     backgroundColor: "#a992ee",
     background:
@@ -27,7 +27,7 @@ function App() {
   return (
     <div style={appStyle}>
       <Helmet>
-        <title>{ TITLE }</title>
+        <title>{TITLE}</title>
       </Helmet>
       <MLH />
       <NavBar />
@@ -38,8 +38,11 @@ function App() {
         <Route exact path="/schedule" component={Schedule} />
         <Route exact path="/faq" component={FAQ} />
       </Switch>
+
+      <div id='sponsors'>
       <Sponsors />
-      <Footer />
+      </div>
+        <Footer />
     </div>
   );
 }
