@@ -8,6 +8,8 @@ import Piece4White from '../../Images/puzzlePieces/4_white.png'
 import Piece7White from '../../Images/puzzlePieces/7_white.png'
 import Piece9White from '../../Images/puzzlePieces/9_white.png'
 
+import "../../App.css"
+
 var pieces = [Piece9, Piece1, Piece7, Piece4];
 var pieces_white = [Piece9White, Piece1White, Piece7White, Piece4White];
 
@@ -58,13 +60,15 @@ function changeTimelineBar(barId, winScrollSection, height) {
             }
         } else {
             document.getElementById(`scrollImage${i}`).src = pieces[i-1];
-        } 
+        }
         if (i === parseInt(barId[barId.length - 1])){
             document.getElementById(`scrollImage${i}`).src = pieces[i-1];
-            document.getElementById(`scrollImage${i}`).style = "width: 40px; height: 40px; margin-left: -20px;filter: drop-shadow(5px 5px 7px rgb(0, 0, 0, 0.5));";
+            document.getElementById(`scrollImage${i}`).style = "width: 30px; height: 30px; margin-left: -15px; filter: drop-shadow(5px 5px 7px rgb(0, 0, 0, 0.5)); transorm: scale(1.1)";
+            document.getElementById(`scrollImage${i}`).className = "scroll-animation grow";
         } else {
             document.getElementById(`scrollImage${i}`).src = pieces_white[i-1];
             document.getElementById(`scrollImage${i}`).style = "width: 30px; height: 30px; margin-left: -15px;filter: drop-shadow(5px 5px 7px rgb(0, 0, 0, 0.5));";
+            document.getElementById(`scrollImage${i}`).className = "";
         }
     }
 }
@@ -75,7 +79,7 @@ const timelineStyle = {
     width: '6px',
     backgroundColor: 'rgb(255, 255, 255, 0.3)',
     top: '200px',
-    left: '30px',
+    right: '30px',
     height: '100px',
     boxShadow: '0px 0px 5px rgb(255, 255, 255, 0.5)',
     zIndex: '0'

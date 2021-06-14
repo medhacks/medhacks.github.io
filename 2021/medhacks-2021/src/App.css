@@ -4,6 +4,10 @@ body {
   font-family: proxima-nova, sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .nav-bar-container {
   display: flex;
   float: right;
@@ -206,7 +210,7 @@ body {
 
 .schedule-table > tr > td {
   padding: 2%;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   text-align: center;
   margin: 5%;
   color: black;
@@ -283,4 +287,12 @@ body {
   .sponsor-container {
     width: 90%;
   }
+}
+
+.scroll-animation {
+  transition: transform .3s ease-in-out,
+}
+
+.grow {
+  transform: scale(1.5);
 }

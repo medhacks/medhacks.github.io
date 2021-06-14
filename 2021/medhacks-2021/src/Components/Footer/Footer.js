@@ -59,7 +59,7 @@ const Footer = () => {
             email us
           </Link>
           <Link style={link} to={{pathname:"https://docs.google.com/document/d/1VEFstsX7jg9W7uJSyx3ty_wcU-8yiXRlpP7MAelIIHA/"}} target='blank'>
-            Code of Conduct
+            code of conduct
           </Link>
           <div>
             <Link to={{pathname:"https://www.instagram.com/medhacks/"}} target='blank'>
