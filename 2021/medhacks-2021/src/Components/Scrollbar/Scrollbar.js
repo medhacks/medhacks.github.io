@@ -42,7 +42,6 @@ function scrollProgressIndicator() {
 }
 
 function changeTimelineBar(barId, winScrollSection, height) {
-    console.log(barId)
     var scrollProgress = (winScrollSection / height);
     var length = 100 * scrollProgress <= 100 ? 100 * scrollProgress : 100;
 
