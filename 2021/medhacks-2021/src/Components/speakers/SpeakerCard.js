@@ -36,7 +36,7 @@ const SpeakerCard = (props) => {
       <div
         className="speaker_block"
         style={{
-          backgroundColor: "rgb(255, 255, 255, 60%)",
+          backgroundColor: "rgb(255, 255, 255, 40%)",
           color: "black",
           marginLeft: window.innerWidth < 800 ? "auto" : "2rem",
           marginRight: window.innerWidth < 800 ? "auto" : null,
@@ -50,7 +50,7 @@ const SpeakerCard = (props) => {
           width: window.innerWidth < 800 ? "80vw" : "65vw",
           height: window.innerWidth < 800 ? "107.5vw" : "20vw",
           overflow: "scroll",
-          boxShadow: "5px 5px 20px black",
+          boxShadow: "5px 5px 20px rgb(0, 0, 0, .6)",
         }}
       >
         {props.speaker.bio}

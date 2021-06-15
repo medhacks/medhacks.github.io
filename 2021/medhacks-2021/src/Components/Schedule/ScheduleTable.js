@@ -5,8 +5,8 @@ const ScheduleTable = (props) => {
   let dayActive = props.dayActive;
 
   const containerStyle = {
-    marginLeft: '10%',
-    marginRight: '10%',
+    margin: 'auto',
+    width: '60%',
 
     paddingTop: '2%',
     paddingBottom: '2%',
@@ -50,6 +50,9 @@ const ScheduleTable = (props) => {
               <td>10:00 PM - 2:00 AM</td>
             </tr>
           </table>
+          <div style={{textAlign: 'center', color: 'black'}}>
+            <h6>Times are Subject to Change</h6>
+          </div>
         </div>
       );
     case "saturday":
@@ -65,6 +68,9 @@ const ScheduleTable = (props) => {
               <td>ALL DAY</td>
             </tr>
           </table>
+          <div style={{textAlign: 'center', color: 'black'}}>
+            <h6>Times are Subject to Change</h6>
+          </div>
         </div>
       );
     case "sunday":
@@ -82,10 +88,6 @@ const ScheduleTable = (props) => {
             <tr>
               <td>Judging Round 1</td>
               <td>10:00 AM - 11:45 AM</td>
-            </tr>
-            <tr>
-              <td>Elimination to 3 teams per track & setup for judging round 2</td>
-              <td>11:45 AM - 12:00 PM</td>
             </tr>
             <tr>
               <td>Judging Round 2</td>

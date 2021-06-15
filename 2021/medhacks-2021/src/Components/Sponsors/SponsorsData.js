@@ -16,8 +16,7 @@ import ffu from '../../Images/Sponsors/fastforward.jpg'
 import mathWorks from '../../Images/Sponsors/math-works.png'
 
 const sponsorStyle = {
-  width: "80%",
-  //height: '20%',
+  width: "90%",
   marginLeft: 'auto',
   marginRight: 'auto',
   display: 'block',
@@ -25,7 +24,6 @@ const sponsorStyle = {
 
 const parentStyle = {
   margin: "auto",
-  //backgroundColor: 'rgb(255, 255, 255, .6)',
   display: 'flex',
   flexDirection: 'row',
   alignItems: 'stretch',
@@ -36,14 +34,14 @@ const parentStyle = {
 }
 
 const primary = {
-  flexBasis: '46%',
+  flexBasis: '50%',
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'space-around',
 }
 
 const secondary = {
-  flexBasis: '22%',
+  flexBasis: '25%',
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'space-around',

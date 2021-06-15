@@ -11,20 +11,20 @@ const Schedule = () => {
 
   const days = {
     display: 'flex',
-    width: '80%',
+    width: '60%',
     margin: 'auto',
   }
 
   const fridayGradient = {
-    background: "linear-gradient(rgb(169, 146, 238, 70%), rgb(169, 146, 238, 70%)) padding-box, linear-gradient(45deg, #ffffff 0%, #b0edd6 100%) border-box",
+    background: "linear-gradient(rgba(255, 255, 255, .4), rgba(255, 255, 255, 0.4)) padding-box padding-box, linear-gradient(45deg, rgb(255, 255, 255, .2) 0%, rgb(176, 237, 214, .5) 100%) border-box border-box",
   }
 
   const saturdayGradient = {
-    background: "linear-gradient(rgb(169, 146, 238, 70%), rgb(169, 146, 238, 70%)) padding-box, linear-gradient(45deg, #ffffff 0%, #82b4e6 100%) border-box",
+    background: "linear-gradient(rgba(255, 255, 255, .4), rgba(255, 255, 255, 0.4)) padding-box padding-box, linear-gradient(45deg, rgb(255, 255, 255, .2) 0%, rgb(130, 180, 230, .5) 100%) border-box border-box",
   }
 
   const sundayGradient = {
-    background: "linear-gradient(rgb(169, 146, 238, 70%), rgb(169, 146, 238, 70%)) padding-box, linear-gradient(45deg, #ffffff 0%, #a992ee 100%) border-box",
+    background: "linear-gradient(rgba(255, 255, 255, .4), rgba(255, 255, 255, 0.4)) padding-box padding-box, linear-gradient(45deg, rgb(255, 255, 255, .2) 0%, rgb(169, 146, 238, .5) 100%) border-box border-box",
   }
 
   const dayStyle = {

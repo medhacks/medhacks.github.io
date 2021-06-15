@@ -8,7 +8,6 @@ const Landing = () => {
 
   const countdownStyle = {
     zIndex: 2,
-    //width: '50%',
     margin: "auto",
     position: "absolute",
     left: "50%",
@@ -16,20 +15,20 @@ const Landing = () => {
     transform: "translate(-50%, -50%)",
     textAlign: 'center',
     fontWeight: 'bold',
-    //fontSize: '4em',
     boxShadow: 'none',
   }
 
   const piecesStyle = {
     zIndex: 0,
     position: "absolute",
-    marginTop: "-20%",
+    transform: "translate(0, -20%)",
     maxWidth: "90%",
-    margin: 'auto',
+    marginLeft: '5%',
+
   };
 
   return (
-    <div id='landing' style={{height: '100vh'}}>
+    <div id='landing' style={{height: '80vh'}}>
       <div>
         <img style={piecesStyle} src={pieces} alt="Landing Page Background"></img>
         <div className="logo-container">

@@ -7,18 +7,11 @@ import Piece2 from '../../Images/puzzlePieces/2.png'
 
 const SpeakerPage = () => {
     const speakerStyle = {
-        textAlign: "Center",
-        marginBottom: "2.5rem",
-        //width: '60%',
-        backgroundColor: 'rgb(0, 0, 0, 0.1)',
-        color: "white",
+        textAlign: "center",
         borderRadius: "14px",
-        justifyContent: "center",
-        padding: "20px",
-        alignSelf: "stretch",
-        border: '0px',
-        boxShadow: '7px 7px 7px rgb(0 0 0 / 20%)',
-        backgroundColor: 'rgb(96, 89, 142, 30%)'
+        boxShadow: "7px 7px 7px rgb(0 0 0 / 20%)",
+        backgroundColor: 'rgb(96, 89, 142, 30%)',
+        border: 'none',
     };
 
     return (
@@ -30,11 +23,10 @@ const SpeakerPage = () => {
                         <i>about</i>
                         <img src={Piece2}></img>
                     </Card.Title>
-                    <br />
                     <h3>
                         MedHacks is the nation's <bold style={{fontWeight: '800'}}><i>premier medical hackathon</i></bold>.
                     </h3>
-                    <p>
+                    <p className="section-text">
                         It was started in 2015 by undergraduate students at Johns Hopkins University with the mission to bring together talented and diverse minds from all backgrounds and to foster collaboration towards solving the world's most pressing medicacl issues. As a result, MedHacks has hosted hackers with diverse majors ranging from public health to anthropology to ocmputer science. Over the years, MedHacks has been attended by thousands from over 500 institutions and 30 countries, has formed partnerships with companies at the forefront of medicine and technology inccluding Blue Cross Blue Shield, CVS Health, Google, and Mathworks, and has established itselff as one of the world's most recognized and influential medical hackathons.
                     </p>
                     <br />

@@ -21,10 +21,8 @@ const TrackBox = (props) => {
 };
 
 const trackStyle = {
-  //flex: 1,
   width: "100%",
   display: "inline-block",
-  //textAlign: "Center",
   margin: "3%",
   backgroundColor: "white",
   color: "black",
@@ -32,7 +30,6 @@ const trackStyle = {
   borderRadius: "50px",
   height: "auto",
   justifyContent: "center",
-  //borderStyle: 'hidden',
   padding: "20px",
   alignSelf: "stretch",
 };

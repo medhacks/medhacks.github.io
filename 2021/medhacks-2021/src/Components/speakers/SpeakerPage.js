@@ -36,7 +36,7 @@ const SpeakerPage = () => {
           className="section-container"
           style={{
             backgroundColor: "rgb(17, 61, 86, .2)",
-            marginTop: "2.5rem",
+            //marginTop: "2.5rem",
             height: window.innerWidth < 800 ? "auto" : "34vw",
             paddingBottom: window.innerWidth < 800 ? "1rem" : null,
           }}
