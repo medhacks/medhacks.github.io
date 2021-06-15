@@ -72,7 +72,12 @@ const Carousel = (props) => {
   };
 
   return (
-    <div style={{ position: "relative" }}>
+    <div
+      style={{
+        position: "relative",
+        marginTop: "1rem",
+      }}
+    >
       <TransitionGroup>{generateItems()}</TransitionGroup>
     </div>
   );
@@ -85,9 +90,10 @@ const Item = (props) => {
       className={"item speaker_" + (props.level + 2) + " level" + props.level}
       style={{
         position: "absolute",
-        width: 25 - Math.abs(props.level) + "vw",
-        height: 25 - Math.abs(props.level) + "vw",
-        left: 17 + props.level * 17 + (props.level < 0 ? 2 : 0) + "vw",
+        width: 25 - Math.abs(props.level) * 5 + "vw",
+        height: 25 - Math.abs(props.level) * 5 + "vw",
+        left: 17.5 + props.level * 17 + (props.level < 0 ? 5 : 0) + "vw",
+        opacity: 1 - Math.abs(props.level) * 0.2,
         // right: 100 - 35 + props.level * 25 + (props.level < 0 ? 5 : 0) + "vw",
         // marginTop: Math.abs(props.level * 4) + "rem",
         zIndex: 1 - Math.abs(props.level),

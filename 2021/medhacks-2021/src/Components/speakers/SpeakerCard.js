@@ -10,17 +10,18 @@ const SpeakerCard = (props) => {
     <div
       style={{
         margin: "5vw",
+        marginLeft: "auto",
+        marginRight: "auto",
         display: "flex",
-        flexDirection: "row",
+        flexDirection: window.innerWidth < 800 ? "column" : "row",
+        width: "75%",
       }}
     >
       <div
         className={"speaker_" + (props.index + 1)}
         style={{
-          width: "20vw",
-          height: "20vw",
-          minWidth: "20vw",
-          minHeight: "20vw",
+          width: window.innerWidth < 800 ? "50vw" : "20vw",
+          height: window.innerWidth < 800 ? "50vw" : "20vw",
           backgroundImage: `url(` + props.speaker.image + ")",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
@@ -28,7 +29,8 @@ const SpeakerCard = (props) => {
           paddingLeft: "1rem",
           color: "white",
           boxShadow: "5px 5px 20px black",
-          // margin: "auto",
+          marginLeft: window.innerWidth < 800 ? "auto" : null,
+          marginRight: window.innerWidth < 800 ? "auto" : null,
         }}
       ></div>
       <div
@@ -36,14 +38,18 @@ const SpeakerCard = (props) => {
         style={{
           backgroundColor: "rgb(255, 255, 255, 60%)",
           color: "black",
-          marginLeft: "2rem",
+          marginLeft: window.innerWidth < 800 ? "auto" : "2rem",
+          marginRight: window.innerWidth < 800 ? "auto" : null,
+          marginTop: window.innerWidth < 800 ? "2rem" : null,
           borderRadius: "3rem",
-          padding: "2rem",
+          paddingLeft: "2rem",
+          paddingTop: "1.25rem",
+          paddingRight: "1rem",
           fontSize: "medium",
           fontWeight: "bold",
-          width: "65vw",
-          // height: "15vw",
-          // overflow: "clip",
+          width: window.innerWidth < 800 ? "80vw" : "65vw",
+          height: window.innerWidth < 800 ? "107.5vw" : "20vw",
+          overflow: "scroll",
           boxShadow: "5px 5px 20px black",
         }}
       >
