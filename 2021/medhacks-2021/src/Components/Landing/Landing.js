@@ -51,6 +51,7 @@ const Landing = () => {
         </div>
       </div>
       <div style={countdownStyle} className="countdown-container">
+        <h2 style={{textAlign:"center", margin:'1%', fontWeight:'700'}}>Applications Coming Soon!</h2>
         <Timer />
       </div>
     </div>

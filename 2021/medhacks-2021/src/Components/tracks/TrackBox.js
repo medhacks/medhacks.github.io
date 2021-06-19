@@ -3,7 +3,7 @@ import TrackPopup from "./TrackPopup";
 
 const TrackBox = (props) => {
   useEffect(() => {
-    console.log(props);
+    //console.log(props);
   }, [props]);
   return (
     <>

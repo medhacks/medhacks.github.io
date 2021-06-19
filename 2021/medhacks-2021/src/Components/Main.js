@@ -21,7 +21,7 @@ function Main() {
 
       <div
         onMouseDown={() => {
-          console.log("clear");
+          //console.log("clear");
           setPopup(0);
         }}
       >

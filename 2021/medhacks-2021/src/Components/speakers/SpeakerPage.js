@@ -11,8 +11,18 @@ import SpeakerArea from "./SpeakerArea";
 
 const SpeakerPage = () => {
   const [index, setIndex] = useState(0);
+  const [useCarousel, setUseCarousel] = useState(true);
   const location = useLocation();
   const history = useHistory();
+
+  window.addEventListener("resize", function() {
+    if (window.innerWidth > 700) {
+      setUseCarousel(true)
+    } else {
+      setUseCarousel(false)
+    }
+  });
+
 
   return (
     <div id="speakerPage">
@@ -36,9 +46,8 @@ const SpeakerPage = () => {
           className="section-container"
           style={{
             backgroundColor: "rgb(17, 61, 86, .2)",
-            //marginTop: "2.5rem",
-            height: window.innerWidth < 800 ? "auto" : "34vw",
-            paddingBottom: window.innerWidth < 800 ? "1rem" : null,
+            //height: !useCarousel ? "auto" : "38vw",
+            paddingBottom: !useCarousel ? "1rem" : null,
           }}
         >
           <div
@@ -49,7 +58,10 @@ const SpeakerPage = () => {
             <h1 className="section-title">speakers</h1>
             <img src={Piece6} alt="p5"></img>
           </div>
-          {window.innerWidth > 750 ? (
+          <div className="section-text" style={{margin: '5%'}}>
+            <h2>Stay Tuned for This Year's Tracks!</h2>
+          </div>
+          {/* {useCarousel ? (
             <Carousel items={speakers} active={0} setIndex={setIndex} />
           ) : (
             <>
@@ -114,7 +126,7 @@ const SpeakerPage = () => {
                 </div>
               ))}
             </>
-          )}
+          )} */}
         </div>
       )}
     </div>

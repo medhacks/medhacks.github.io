@@ -8,15 +8,13 @@ const Timer = () => {
 
   useEffect(() => {
     if (ref.current != null) {
-      console.log(ref.current.offsetWidth);
       setWidth(ref.current.offsetWidth);
     }
-  })
+  }, [])
 
   useEffect(() => {
     const handleResize = () => {
       if (ref.current != null) {
-        console.log(ref.current.offsetWidth);
         setWidth(ref.current.offsetWidth);
       }
     }

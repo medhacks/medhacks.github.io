@@ -31,6 +31,7 @@ const Footer = () => {
     width: '80%',
     marginLeft: '10%',
     marginBottom: '5%',
+    paddingBottom: '2%',
   }
 
   const logoStyle = {
@@ -52,9 +53,9 @@ const Footer = () => {
           <Link style={link} to={"/2021#"} >
             home
           </Link>
-          <Link style={link} to={{pathname:"https://apply.medhacks.io"}} target='blank'>
+          {/* <Link style={link} to={{pathname:"https://apply.medhacks.io"}} target='blank'>
             apply
-          </Link>
+          </Link> */}
           <Link style={link} to={{pathname:"mailto: info@medhacks.io"}} target='blank'>
             email us
           </Link>

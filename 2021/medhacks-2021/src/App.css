@@ -297,6 +297,19 @@ html {
 
 .sponsor-container {
   width: 60%;
+  height: 30vh;
+}
+
+.fade-in {
+  opacity:1;
+  transition: width 0.5s, height 0.5s, opacity 0.5s 0.5s;
+  position: absolute;
+}
+
+.fade-out {
+  opacity:0;
+  transition: width 0.5s 0.5s, height 0.5s 0.5s, opacity 0.5s;
+  position: absolute;
 }
 
 @media only screen and (max-width: 700px) {
