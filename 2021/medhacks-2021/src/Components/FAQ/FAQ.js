@@ -10,23 +10,28 @@ const FAQ = () => {
         <img
           style={{ width: "50px", height: "50px", marginRight: "10px" }}
           src={Puzzle8}
-          alt='puzzle 8'
+          alt="puzzle 8"
         />
         <div>faq</div>
         <img
           style={{ width: "50px", height: "50px", marginLeft: "10px" }}
           src={Puzzle7}
-          alt='puzzle 7'
+          alt="puzzle 7"
         />
       </div>
-      {data.map((pair, i) => (
-        <div className='faq-pill-col'>
-          <div className='faq-pill-row'>
+      <div style={{ display: "flex", justifyContent: "center" }}>
+        <div className="faq-pill-col">
+          {data.map((pair, i) => (
             <Pill qa={pair[0]} p={pair[0].p} isLast={i === data.length - 1} />
-            {i !== data.length - 1 && <Pill qa={pair[1]} p={pair[1].p} />}
-          </div>
+          ))}
         </div>
-      ))}
+        <div className="faq-pill-col">
+          {data.map(
+            (pair, i) =>
+              i !== data.length - 1 && <Pill qa={pair[1]} p={pair[1].p} />
+          )}
+        </div>
+      </div>
     </div>
   );
 };
