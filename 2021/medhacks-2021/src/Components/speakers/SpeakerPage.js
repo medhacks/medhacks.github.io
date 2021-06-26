@@ -5,9 +5,10 @@ import speakers from "./speakerData/speakers";
 import Carousel from "./Carousel";
 import { useHistory, useLocation } from "react-router-dom";
 import SpeakerList from "./SpeakerList";
-import Piece5 from "../../Images/puzzlePieces/5.png";
-import Piece6 from "../../Images/puzzlePieces/6.png";
 import SpeakerArea from "./SpeakerArea";
+
+const Piece5 = "https://mmedhacks-2021-website.s3.amazonaws.com/PuzzlePieces/5.png";
+const Piece6 = "https://mmedhacks-2021-website.s3.amazonaws.com/PuzzlePieces/6.png";
 
 const SpeakerPage = () => {
   const [index, setIndex] = useState(0);
@@ -59,7 +60,7 @@ const SpeakerPage = () => {
             <img src={Piece6} alt="p5"></img>
           </div>
           <div className="section-text" style={{margin: '5%'}}>
-            <h2>Stay Tuned for This Year's Tracks!</h2>
+            <h2>Stay Tuned for This Year's Speakers!</h2>
           </div>
           {/* {useCarousel ? (
             <Carousel items={speakers} active={0} setIndex={setIndex} />

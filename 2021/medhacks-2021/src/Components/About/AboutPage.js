@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Card from 'react-bootstrap/Card'
-import Piece1 from '../../Images/puzzlePieces/1.png'
-import Piece2 from '../../Images/puzzlePieces/2.png'
 
 
 const SpeakerPage = () => {
@@ -19,9 +17,9 @@ const SpeakerPage = () => {
             <Card style={speakerStyle} className="section-container">
                 <Card.Body>
                     <Card.Title className="section-title-container" style={{ fontSize: "2.5rem", fontWeight: '900' }}>
-                        <img src={Piece1}></img>
+                        <img src={"https://mmedhacks-2021-website.s3.amazonaws.com/PuzzlePieces/1.png"}></img>
                         <i>about</i>
-                        <img src={Piece2}></img>
+                        <img src={"https://mmedhacks-2021-website.s3.amazonaws.com/PuzzlePieces/2.png"}></img>
                     </Card.Title>
                     <h3>
                         MedHacks is the nation's <bold style={{fontWeight: '800'}}><i>premier medical hackathon</i></bold>.

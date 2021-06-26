@@ -1,14 +1,15 @@
 import React from "react";
-import Piece1 from '../../Images/puzzlePieces/1.png'
-import Piece4 from '../../Images/puzzlePieces/4.png'
-import Piece7 from '../../Images/puzzlePieces/7.png'
-import Piece9 from '../../Images/puzzlePieces/9.png'
-import Piece1White from '../../Images/puzzlePieces/1_white.png'
-import Piece4White from '../../Images/puzzlePieces/4_white.png'
-import Piece7White from '../../Images/puzzlePieces/7_white.png'
-import Piece9White from '../../Images/puzzlePieces/9_white.png'
 
 import "../../App.css"
+
+const Piece1 = 'https://mmedhacks-2021-website.s3.amazonaws.com/PuzzlePieces/ScrollBar/1.png'
+const Piece4 = 'https://mmedhacks-2021-website.s3.amazonaws.com/PuzzlePieces/ScrollBar/4.png'
+const Piece7 = 'https://mmedhacks-2021-website.s3.amazonaws.com/PuzzlePieces/ScrollBar/7.png'
+const Piece9 = 'https://mmedhacks-2021-website.s3.amazonaws.com/PuzzlePieces/ScrollBar/9.png'
+const Piece1White = 'https://mmedhacks-2021-website.s3.amazonaws.com/PuzzlePieces/ScrollBar/1_white.png'
+const Piece4White = 'https://mmedhacks-2021-website.s3.amazonaws.com/PuzzlePieces/ScrollBar/4_white.png'
+const Piece7White = 'https://mmedhacks-2021-website.s3.amazonaws.com/PuzzlePieces/ScrollBar/7_white.png'
+const Piece9White = 'https://mmedhacks-2021-website.s3.amazonaws.com/PuzzlePieces/ScrollBar/9_white.png'
 
 var pieces = [Piece9, Piece1, Piece7, Piece4];
 var pieces_white = [Piece9White, Piece1White, Piece7White, Piece4White];

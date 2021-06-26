@@ -5,7 +5,7 @@ const Pill = ({ qa, p, isLast }) => {
 
   const styles = {
     minHeight: "60px",
-    height: pillClicked ? "auto" : "60px",
+    maxHeight: pillClicked ? "500px" : "60px",
     display: "flex",
     flexDirection: "row",
     alignItems: !pillClicked ? "center" : "",
@@ -20,6 +20,11 @@ const Pill = ({ qa, p, isLast }) => {
     cursor: "pointer",
     marginBottom: "20px",
   };
+
+  const hidden = {
+    display: !pillClicked ? 'none' : "",
+    paddingBottom: '20px',
+  }
 
   return (
     <div
@@ -41,12 +46,11 @@ const Pill = ({ qa, p, isLast }) => {
         </div>
         {isLast && (
           <div
-            dangerouslySetInnerHTML={
-              isLast && pillClicked ? { __html: qa.a } : { __html: "" }
-            }
+            dangerouslySetInnerHTML={{ __html: qa.a }}
+            style={hidden}
           />
         )}
-        {!isLast && <div>{pillClicked && qa.a}</div>}
+        {!isLast && <div style={hidden}>{pillClicked && qa.a}</div>}
       </div>
     </div>
   );

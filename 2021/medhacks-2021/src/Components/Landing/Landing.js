@@ -1,8 +1,9 @@
 import React from "react";
-import logo from "../../Images/mh logo filled.png";
-import pieces from "../../Images/adjustedfade.png";
-import logoText from "../../Images/mh-text.png";
 import Timer from "./Timer";
+
+const logo = "https://mmedhacks-2021-website.s3.amazonaws.com/mh logo filled.png";
+const pieces = "https://mmedhacks-2021-website.s3.amazonaws.com/adjustedfade.png";
+const logoText = "https://mmedhacks-2021-website.s3.amazonaws.com/mh-text.png";
 
 const Landing = () => {
 
@@ -51,7 +52,7 @@ const Landing = () => {
         </div>
       </div>
       <div style={countdownStyle} className="countdown-container">
-        <h2 style={{textAlign:"center", margin:'1%', fontWeight:'700'}}>Applications Coming Soon!</h2>
+        <h2 style={{textAlign:"center", margin:'1%', fontWeight:'700', filter: 'drop-shadow(-2px 2px 0px rgb(0, 0, 0, 0.4))'}}>Applications Coming Soon!</h2>
         <Timer />
       </div>
     </div>

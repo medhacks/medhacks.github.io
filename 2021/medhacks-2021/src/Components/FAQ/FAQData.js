@@ -1,11 +1,11 @@
-import Puzzle1 from "../../Images/puzzlePieces/1.png";
-import Puzzle2 from "../../Images/puzzlePieces/2.png";
-import Puzzle3 from "../../Images/puzzlePieces/3.png";
-import Puzzle4 from "../../Images/puzzlePieces/4.png";
-import Puzzle5 from "../../Images/puzzlePieces/5.png";
-import Puzzle6 from "../../Images/puzzlePieces/6.png";
-import Puzzle7 from "../../Images/puzzlePieces/7.png";
-import Puzzle8 from "../../Images/puzzlePieces/8.png";
+const Puzzle1 = "https://mmedhacks-2021-website.s3.amazonaws.com/PuzzlePieces/1.png";
+const Puzzle2 = "https://mmedhacks-2021-website.s3.amazonaws.com/PuzzlePieces/2.png";
+const Puzzle3 = "https://mmedhacks-2021-website.s3.amazonaws.com/PuzzlePieces/3.png";
+const Puzzle4 = "https://mmedhacks-2021-website.s3.amazonaws.com/PuzzlePieces/4.png";
+const Puzzle5 = "https://mmedhacks-2021-website.s3.amazonaws.com/PuzzlePieces/5.png";
+const Puzzle6 = "https://mmedhacks-2021-website.s3.amazonaws.com/PuzzlePieces/6.png";
+const Puzzle7 = "https://mmedhacks-2021-website.s3.amazonaws.com/PuzzlePieces/7.png";
+const Puzzle8 = "https://mmedhacks-2021-website.s3.amazonaws.com/PuzzlePieces/8.png";
 
 export const FAQData = [
   [
@@ -22,7 +22,7 @@ export const FAQData = [
     },
     {
       q: "Why MedHacks?",
-      a: "MedHacks focuses on innovating at the crossroads of medical entrepreneurship and technological development. By working together for the weekend, hackers at MedHacks will gain unique opportunities to learn from each other and from experts at the forefront of medicine and technology – integrating their learning into real solutions to pressing medical challenges.",
+      a: "MedHacks focuses on innovating at the crossroads of medical entrepreneurship and technological development. By working together for the weekend, hackers at MedHacks will gain unique opportunities to learn = each other and = experts at the forefront of medicine and technology – integrating their learning into real solutions to pressing medical challenges.",
       p: (
         <img
           style={{ width: "20px", height: "20px", marginRight: "8px", filter: "drop-shadow(1px 1px 0px rgb(0, 0, 0, .3))" }}
@@ -35,7 +35,7 @@ export const FAQData = [
   [
     {
       q: "What if I have no experience in healthcare or coding?",
-      a: "If you don't know much about health or engineering, don’t worry - learning is a huge part of the MedHacks experience. We will have workshops on different subjects and mentors to answer questions and help out teams. Come with an open mind; you'll work with a great team, learn a lot, and most importantly, have fun!",
+      a: "If you don't know much about health or engineering, don’t worry - learning is a huge part of the MedHacks experience. We will have workshops on different subjects and mentors to answer questions and help out teams. Come with an open mind; you'll work with a great team, learn a lot, and most constantly, have fun!",
       p: (
         <img
           style={{ width: "20px", height: "20px", marginRight: "8px" }}

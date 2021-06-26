@@ -6,8 +6,6 @@ const ScheduleTable = (props) => {
 
   const containerStyle = {
     margin: 'auto',
-    width: '60%',
-
     paddingTop: '2%',
     paddingBottom: '2%',
     border: '6px solid transparent',
@@ -19,7 +17,7 @@ const ScheduleTable = (props) => {
   switch(dayActive) {
     case "friday":
       return (
-        <div style={{...containerStyle, ...props.fridayGradient}}>
+        <div className="schedule-div" style={{...containerStyle, ...props.fridayGradient}}>
           <table className="schedule-table">
             <tr>
               <td>Sponsor & Mentor Check-In</td>
@@ -57,7 +55,7 @@ const ScheduleTable = (props) => {
       );
     case "saturday":
       return (
-        <div style={{...containerStyle, ...props.saturdayGradient}}>
+        <div className="schedule-div" style={{...containerStyle, ...props.saturdayGradient}}>
           <table className="schedule-table">
             <tr>
               <td>Workshops</td>
@@ -75,7 +73,7 @@ const ScheduleTable = (props) => {
       );
     case "sunday":
       return (
-        <div style={{...containerStyle, ...props.sundayGradient}}>
+        <div className="schedule-div" style={{...containerStyle, ...props.sundayGradient}}>
           <table className="schedule-table">
             <tr>
               <td>DevPost Help</td>
@@ -98,6 +96,9 @@ const ScheduleTable = (props) => {
               <td>3:00 PM - 4:00 PM</td>
             </tr>
           </table>
+          <div style={{textAlign: 'center', color: 'black'}}>
+            <h6>Times are Subject to Change</h6>
+          </div>
         </div>
       );
     default:

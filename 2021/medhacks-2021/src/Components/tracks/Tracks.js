@@ -1,8 +1,8 @@
 import React from "react";
 import "../../App.css";
 import TrackBox from "./TrackBox";
-import Piece7 from "../../Images/puzzlePieces/7.png"
-import Piece8 from "../../Images/puzzlePieces/8.png"
+const Piece7 = "https://mmedhacks-2021-website.s3.amazonaws.com/PuzzlePieces/7.png"
+const Piece8 = "https://mmedhacks-2021-website.s3.amazonaws.com/PuzzlePieces/8.png"
 
 const Tracks = (props) => {
   const trackButtonsStyle = {

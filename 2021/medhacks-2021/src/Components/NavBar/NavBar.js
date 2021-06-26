@@ -23,10 +23,10 @@ const NavBar = () => {
   return (
     <div className="nav-bar-container">
       <div style={container}>
-        <Link style={link} to="/2021">
+        <Link style={link} to="/">
           home
         </Link>
-        <Link style={link} to={"/2021#tracks"}>
+        <Link style={link} to={"/#tracks"}>
           tracks
         </Link>
         <Link style={link} to="/speakers">

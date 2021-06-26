@@ -1,9 +1,11 @@
 import React from "react";
 import { HashLink as Link } from 'react-router-hash-link'
-import { ReactComponent as Instagram } from '../../Images/instagram.svg'
-import { ReactComponent as Facebook } from '../../Images/facebook.svg'
-import Pieces from '../../Images/footer_2.png'
-import Logo from '../../Images/mhtextwhiteonly.png'
+
+const Instagram = 'https://mmedhacks-2021-website.s3.amazonaws.com/instagram.svg'
+const Facebook = 'https://mmedhacks-2021-website.s3.amazonaws.com/facebook.svg'
+
+const Pieces = 'https://mmedhacks-2021-website.s3.amazonaws.com/footer_2.png'
+const Logo = 'https://mmedhacks-2021-website.s3.amazonaws.com/mhtextwhiteonly.png'
 
 const Footer = () => {
 
@@ -63,11 +65,11 @@ const Footer = () => {
             code of conduct
           </Link>
           <div>
-            <Link to={{pathname:"https://www.instagram.com/medhacks/"}} target='blank'>
-              <Instagram className="footer-img" />
+            <Link to={{pathname:"https://www.instagram.com/medhacks/"}} target='blank' style={logoStyle}>
+              <img src={Instagram} alt="Instagram" className="footer-img"/>
             </Link>
-            <Link to={{pathname:"https://www.facebook.com/medhacks"}} target='blank'>
-              <Facebook className="footer-img" />
+            <Link to={{pathname:"https://www.facebook.com/medhacks"}} target='blank' style={logoStyle}>
+              <img src={Facebook} alt="FaceBook" className="footer-img"/>
             </Link>
           </div>
         </div>

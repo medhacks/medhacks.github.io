@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { sponsorsData } from "./SponsorsData";
-import { ReactComponent as careFirst } from '../../Images/Sponsors/logo-carefirst.svg'
 
 const Sponsors = (props) => {
   const [i, setI] = useState(0);
@@ -11,7 +10,7 @@ const Sponsors = (props) => {
 
 
   return (
-    <div style={{justifyContent:"center", marginTop: '10%', height: '40vh'}} id="sponsors">
+    <div style={{justifyContent:"center", marginTop: '50px', height: '40vh'}} id="sponsors">
       <h1 style={{textAlign:"center", fontStyle:"italic", fontWeight:"900"}}>sponsors</h1>
       <div className={i === 0 ? 'fade-in' : 'fade-out'}>
         {sponsorsData[0]}

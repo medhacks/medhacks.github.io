@@ -9,12 +9,6 @@ const Schedule = () => {
     setDayActive(day);
   }
 
-  const days = {
-    display: 'flex',
-    width: '60%',
-    margin: 'auto',
-  }
-
   const fridayGradient = {
     background: "linear-gradient(rgba(255, 255, 255, .4), rgba(255, 255, 255, 0.4)) padding-box padding-box, linear-gradient(45deg, rgb(255, 255, 255, .2) 0%, rgb(176, 237, 214, .5) 100%) border-box border-box",
   }
@@ -49,7 +43,7 @@ const Schedule = () => {
       <div style={{marginTop: '5%'}}>
         <h1 className="page-title">schedule</h1>
       </div>
-      <div style={days}>
+      <div className="days">
         <div className="day" style={{...dayStyle, ...fridayGradient}} onClick={() => changeDay("friday")}>
           friday
         </div>

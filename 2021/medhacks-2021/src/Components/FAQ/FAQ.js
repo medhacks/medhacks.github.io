@@ -1,7 +1,9 @@
 import Pill from "./Pill";
 import { FAQData as data } from "./FAQData";
-import Puzzle7 from "../../Images/puzzlePieces/7.png";
-import Puzzle8 from "../../Images/puzzlePieces/8.png";
+
+
+const Puzzle7 = "https://mmedhacks-2021-website.s3.amazonaws.com/PuzzlePieces/7.png";
+const Puzzle8 = "https://mmedhacks-2021-website.s3.amazonaws.com/PuzzlePieces/8.png";
 
 const FAQ = () => {
   return (
@@ -19,7 +21,7 @@ const FAQ = () => {
           alt="puzzle 7"
         />
       </div>
-      <div style={{ display: "flex", justifyContent: "center" }}>
+      <div style={{ display: "flex", justifyContent: "center" }} className="faq-pill-col">
         <div className="faq-pill-col">
           {data.map((pair, i) => (
             <Pill qa={pair[0]} p={pair[0].p} isLast={i === data.length - 1} />
