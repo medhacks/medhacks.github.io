@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { sponsorsData } from "./SponsorsData";
 
 const Sponsors = (props) => {
-  const [i, setI] = useState(0);
+  const [i, setI] = useState(2);
 
   useEffect(() => {
     setTimeout(() => setI((i + 1) % 3), 4000);

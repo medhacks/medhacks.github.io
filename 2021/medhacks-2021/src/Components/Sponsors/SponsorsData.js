@@ -1,7 +1,7 @@
 import { HashLink as Link } from 'react-router-hash-link'
 
 const sponsorStyle = {
-  width: "90%",
+  width: "95%",
   marginLeft: 'auto',
   marginRight: 'auto',
   display: 'block',
@@ -20,7 +20,7 @@ const parentStyle = {
 }
 
 const primary = {
-  flexBasis: '50%',
+  flexBasis: '46%',
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'space-around',
@@ -28,10 +28,10 @@ const primary = {
 }
 
 const secondary = {
-  flexBasis: '25%',
+  flexBasis: '20%',
   display: 'flex',
   flexDirection: 'column',
-  justifyContent: 'space-around',
+  justifyContent: 'space-evenly',
   zIndex: '0',
 }
 
@@ -65,23 +65,23 @@ export const sponsorsData = [
     <div style = {parentStyle} className="sponsor-container">
       <div style={secondary}>
         <Link to={{ pathname: "https://www.tedcomd.com/"}} target='blank'>
-          <img style={sponsorStyle} src={"https://mmedhacks-2021-website.s3.amazonaws.com/Sponsors/TEDCO.jpg"} alt="Maryland Technology Development Corporation"></img>
+          <img style={sponsorStyle} src={"https://mmedhacks-2021-website.s3.amazonaws.com/Sponsors/TEDCO.png"} alt="Maryland Technology Development Corporation"></img>
         </Link>
-        <Link to={{ pathname: "https://idies.jhu.edu/"}} target='blank'>
-          <img style={sponsorStyle} src={"https://mmedhacks-2021-website.s3.amazonaws.com/Sponsors/IDIES.png"} alt="The Institute for Data Intensive Engineering and Science"></img>
+        <Link to={{ pathname: "https://www.mathworks.com/"}} target='blank'>
+          <img style={sponsorStyle} src={"https://mmedhacks-2021-website.s3.amazonaws.com/Sponsors/mathworks.svg"} alt="MathWorks"></img>
         </Link>
       </div>
       <div style={primary}>
         <Link to={{ pathname: "https://www.carefirst.com/"}} target='blank'>
-          <img style={sponsorStyle} src={"https://mmedhacks-2021-website.s3.amazonaws.com/Sponsors/logo-carefirst.svg"} alt="CareFirst BlueCross BlueShield"></img>
+          <img style={sponsorStyle} src={"https://mmedhacks-2021-website.s3.amazonaws.com/Sponsors/careFirst.png"} alt="CareFirst BlueCross BlueShield"></img>
         </Link>
       </div>
       <div style={secondary}>
         <Link to={{ pathname: "https://www.echoar.xyz/"}} target='blank'>
           <img style={sponsorStyle} src={"https://mmedhacks-2021-website.s3.amazonaws.com/Sponsors/echoAR.png"} alt="echoAR"></img>
         </Link>
-        <Link to={{ pathname: "https://www.mathworks.com/"}} target='blank'>
-          <img style={sponsorStyle} src={"https://mmedhacks-2021-website.s3.amazonaws.com/Sponsors/mathworks.svg"} alt="MathWorks"></img>
+        <Link to={{ pathname: "https://idies.jhu.edu/"}} target='blank'>
+          <img style={sponsorStyle} src={"https://mmedhacks-2021-website.s3.amazonaws.com/Sponsors/idies.png"} alt="The Institute for Data Intensive Engineering and Science"></img>
         </Link>
       </div>
     </div>
@@ -92,8 +92,11 @@ export const sponsorsData = [
         <Link to={{ pathname: "https://cloud.google.com/"}} target='blank'>
           <img style={sponsorStyle} src={"https://mmedhacks-2021-website.s3.amazonaws.com/Sponsors/google-cloud.png"} alt="Google Cloud"></img>
         </Link>
-        <Link to={{ pathname: "https://ventures.jhu.edu/programs-services/fastforward-u/"}} target='blank'>
+        {/* <Link to={{ pathname: "https://ventures.jhu.edu/programs-services/fastforward-u/"}} target='blank'>
           <img style={sponsorStyle} src={"https://mmedhacks-2021-website.s3.amazonaws.com/Sponsors/fastforward.jpg"} alt="Fast Forward U"></img>
+        </Link> */}
+        <Link to={{ pathname: "https://www.hopkinsmedicine.org/som/"}} target='blank'>
+          <img style={sponsorStyle} src={"https://mmedhacks-2021-website.s3.amazonaws.com/Sponsors/medicine.png"} alt="Johns Hopkins School of Medicine"></img>
         </Link>
       </div>
       <div style={primary}>
@@ -104,6 +107,9 @@ export const sponsorsData = [
       <div style={secondary}>
         <Link to={{ pathname: "https://www.i-biomed.com/"}} target='blank'>
           <img style={sponsorStyle} src={"https://mmedhacks-2021-website.s3.amazonaws.com/Sponsors/IBT.png"} alt="Infinite Biomedical Tech"></img>
+        </Link>
+        <Link to={{ pathname: "https://www.jhsph.edu/"}} target='blank'>
+          <img style={sponsorStyle} src={"https://mmedhacks-2021-website.s3.amazonaws.com/Sponsors/bloomberg.png"} alt="Johns Hopkins Bloomberg School of Public Health"></img>
         </Link>
       </div>
     </div>
