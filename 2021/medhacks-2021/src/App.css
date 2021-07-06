@@ -36,6 +36,21 @@ html {
   margin-top: 25vh;
 }
 
+#landing {
+  height: 80vh;
+}
+
+@media only screen and (min-width: 2200px) {
+  .logo-container {
+    margin-top: 10vh;
+  }
+
+  #landing {
+    height: 100vh;
+  }
+}
+
+
 .logo-left {
   width: 30%;
   transform: translate(10%, 0);

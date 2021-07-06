@@ -43,10 +43,10 @@ const SpeakerPage = () => {
         </>
       ) : (
         <div
-          id="tracks"
+          id="speakers"
           className="section-container"
           style={{
-            backgroundColor: "rgb(17, 61, 86, .2)",
+            backgroundColor: "rgb(11, 104, 64, .2)",
             //height: !useCarousel ? "auto" : "38vw",
             paddingBottom: !useCarousel ? "1rem" : null,
           }}
