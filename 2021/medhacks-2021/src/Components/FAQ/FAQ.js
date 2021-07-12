@@ -9,17 +9,7 @@ const FAQ = () => {
   return (
     <div style={{ width: "100%", height: "100%", padding: "0 40px 0 40px" }}>
       <div style={titleStyle}>
-        <img
-          style={{ width: "50px", height: "50px", marginRight: "10px" }}
-          src={Puzzle8}
-          alt="puzzle 8"
-        />
         <div>faq</div>
-        <img
-          style={{ width: "50px", height: "50px", marginLeft: "10px" }}
-          src={Puzzle7}
-          alt="puzzle 7"
-        />
       </div>
       <div style={{ display: "flex", justifyContent: "center" }} className="faq-pill-col">
         <div className="faq-pill-col">

@@ -43,9 +43,9 @@ const NavBar = () => {
         <Link style={link} to="/faq">
           faq
         </Link>
-        {/* <Link style={{...link, fontWeight: 'bold'}} to={{ pathname: "https://apply.medhacks.io"}} target='blank'>
+        <Link style={{...link, fontWeight: 'bold'}} to={{ pathname: "https://apply.medhacks.io"}} target='blank'>
           apply
-        </Link> */}
+        </Link>
       </div>
     </div>
   )

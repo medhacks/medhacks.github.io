@@ -55,9 +55,9 @@ const Footer = () => {
           <Link style={link} to={"/2021#"} >
             home
           </Link>
-          {/* <Link style={link} to={{pathname:"https://apply.medhacks.io"}} target='blank'>
+          <Link style={link} to={{pathname:"https://apply.medhacks.io"}} target='blank'>
             apply
-          </Link> */}
+          </Link>
           <Link style={link} to={{pathname:"mailto: info@medhacks.io"}} target='blank'>
             email us
           </Link>
