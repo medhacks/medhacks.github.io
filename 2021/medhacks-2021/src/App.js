@@ -28,7 +28,7 @@ function App() {
       <Helmet>
         <title>{TITLE}</title>
       </Helmet>
-      <MLH />
+      {/* <MLH /> */}
       <NavBar />
       <Switch>
         <Route exact path="/" component={Main} />
