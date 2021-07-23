@@ -58,6 +58,9 @@ export const sponsorsData = [
           <Link to={{ pathname: "https://nursing.jhu.edu/"}} target='blank'>
             <img style={sponsorStyle} src={"https://mmedhacks-2021-website.s3.amazonaws.com/Sponsors/nursing.png"} alt="School of Nursing at Johns Hopkins University"></img>
           </Link>
+          <Link to={{ pathname: "https://ventures.jhu.edu/programs-services/fastforward-u/"}} target='blank'>
+            <img style={sponsorStyle} src={"https://mmedhacks-2021-website.s3.amazonaws.com/Sponsors/FFU.png"} alt="Fast Forward U"></img>
+          </Link>
         </div>
       </div>
   </>,
@@ -92,9 +95,6 @@ export const sponsorsData = [
         <Link to={{ pathname: "https://cloud.google.com/"}} target='blank'>
           <img style={sponsorStyle} src={"https://mmedhacks-2021-website.s3.amazonaws.com/Sponsors/google-cloud.png"} alt="Google Cloud"></img>
         </Link>
-        {/* <Link to={{ pathname: "https://ventures.jhu.edu/programs-services/fastforward-u/"}} target='blank'>
-          <img style={sponsorStyle} src={"https://mmedhacks-2021-website.s3.amazonaws.com/Sponsors/fastforward.jpg"} alt="Fast Forward U"></img>
-        </Link> */}
         <Link to={{ pathname: "https://www.hopkinsmedicine.org/som/"}} target='blank'>
           <img style={sponsorStyle} src={"https://mmedhacks-2021-website.s3.amazonaws.com/Sponsors/medicine.png"} alt="Johns Hopkins School of Medicine"></img>
         </Link>
