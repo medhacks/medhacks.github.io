@@ -8,8 +8,14 @@ html {
 }
 
 @media only screen and (max-width: 700px) {
-  h1, h2, h3, h4, h5, h6, P {
-    font-size: .8rem;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  P {
+    font-size: 0.8rem;
   }
 }
 
@@ -49,7 +55,6 @@ html {
     height: 100vh;
   }
 }
-
 
 .logo-left {
   width: 30%;
@@ -204,7 +209,7 @@ html {
     flex-direction: column;
     text-align: center;
     margin-top: 5%;
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
 
   .footer-links > h2 {
@@ -307,11 +312,6 @@ html {
   justify-content: center;
 }
 
-.faq-pill {
-  margin-right: 30px;
-  transition: max-height .5s ease-in-out,
-}
-
 .faq-pill-q {
   width: 280px;
   overflow: hidden;
@@ -343,14 +343,14 @@ html {
 }
 
 .fade-in {
-  opacity:1;
+  opacity: 1;
   transition: width 0.5s, height 0.5s, opacity 0.5s 0.5s;
   position: absolute;
   z-index: 10;
 }
 
 .fade-out {
-  opacity:0;
+  opacity: 0;
   transition: width 0.5s 0.5s, height 0.5s 0.5s, opacity 0.5s;
   position: absolute;
   z-index: 0;
@@ -363,7 +363,7 @@ html {
 }
 
 .scroll-animation {
-  transition: transform .3s ease-in-out,
+  transition: transform 0.3s ease-in-out;
 }
 
 .grow {

@@ -1,10 +1,6 @@
 import Pill from "./Pill";
 import { FAQData as data } from "./FAQData";
 
-
-const Puzzle7 = "https://mmedhacks-2021-website.s3.amazonaws.com/PuzzlePieces/7.png";
-const Puzzle8 = "https://mmedhacks-2021-website.s3.amazonaws.com/PuzzlePieces/8.png";
-
 const FAQ = () => {
   return (
     <div style={{ width: "100%", height: "100%", padding: "0 40px 0 40px" }}>

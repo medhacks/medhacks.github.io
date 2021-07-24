@@ -18,12 +18,17 @@ const Pill = ({ qa, p, isLast }) => {
     color: "black",
     boxShadow: "1px 2px 10px #646d95",
     cursor: "pointer",
+    paddingTop: pillClicked ? "20px" : "17.9px",
     marginBottom: "20px",
+    marginRight: "30px",
+    transition: "all 0.5s ease-in-out"
   };
 
   const hidden = {
-    display: !pillClicked ? 'none' : "",
-    paddingBottom: '20px',
+    height: !pillClicked ? 0 : '',
+    opacity: !pillClicked ? 0 : 1,
+    transition: "height 0.5s ease-in-out, opacity 0.5s linear",
+    paddingBottom: "20px",
   }
 
   return (
