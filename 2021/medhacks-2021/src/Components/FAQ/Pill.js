@@ -21,7 +21,7 @@ const Pill = ({ qa, p, isLast }) => {
     paddingTop: pillClicked ? "20px" : "17.9px",
     marginBottom: "20px",
     marginRight: "30px",
-    transition: "all 0.5s ease-in-out"
+    transition: "max-height 0.5s ease-in-out"
   };
 
   const hidden = {

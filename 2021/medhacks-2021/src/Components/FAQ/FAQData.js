@@ -22,7 +22,7 @@ export const FAQData = [
     },
     {
       q: "Why MedHacks?",
-      a: "MedHacks focuses on innovating at the crossroads of medical entrepreneurship and technological development. By working together for the weekend, hackers at MedHacks will gain unique opportunities to learn = each other and = experts at the forefront of medicine and technology – integrating their learning into real solutions to pressing medical challenges.",
+      a: "MedHacks focuses on innovating at the crossroads of medical entrepreneurship and technological development. By working together for the weekend, hackers at MedHacks will gain unique opportunities to learn from each other and from experts at the forefront of medicine and technology – integrating their learning into real solutions to pressing medical challenges.",
       p: (
         <img
           style={{ width: "20px", height: "20px", marginRight: "8px", filter: "drop-shadow(1px 1px 0px rgb(0, 0, 0, .3))" }}
