@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import './App.css';
-import { Switch, BrowserRouter, Route, useLocation } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import Main from "./Components/Main.js";
 import { Helmet } from 'react-helmet'
 import FAQ from "./Components/FAQ/FAQ.js";
@@ -31,10 +31,10 @@ function App() {
       {/* <MLH /> */}
       <NavBar />
       <Switch>
-        <Route exact path="/" component={Main} />
         <Route exact path="/speakers" component={SpeakerPage} />
         <Route exact path="/schedule" component={Schedule} />
         <Route exact path="/faq" component={FAQ} />
+        <Route exact path="/" component={Main} />
       </Switch>
       <Sponsors />
       <Footer />
