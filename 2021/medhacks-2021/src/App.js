@@ -34,6 +34,10 @@ function App() {
         <Route exact path="/speakers" component={SpeakerPage} />
         <Route exact path="/schedule" component={Schedule} />
         <Route exact path="/faq" component={FAQ} />
+        <Route path='/apply' component={() => { 
+          window.location.href = 'https://apply.medhacks.io'; 
+          return null;
+        }}/>
         <Route exact path="/" component={Main} />
       </Switch>
       <Sponsors />
