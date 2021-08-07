@@ -8,28 +8,40 @@ const TrackBox = (props) => {
   return (
     <>
       {props.popup === props.titleNum ? (
-        <TrackPopup description={props.description} title={props.title} />
+        <TrackPopup trackClick={props.trackClick} description={props.description} title={props.title} logo={props.logo} titleNum={props.titleNum}/>
       ) : null}
       <div
         className='track'
         style={trackStyle}
         onClick={() => props.trackClick(props.titleNum)}>
-        <p style={{ margin: 0 }}>{props.title}</p>
+        <p style={{ margin: 0, fontWeight: 700, fontStyle:"italic"}}>{props.title}</p>
+        <div style={{height: '10vh'}}>
+          <img style={imgStyle} src={props.logo} alt={props.title + " logo"}></img>
+        </div>
       </div>
     </>
   );
 };
 
+const imgStyle = {
+  width: '80%',
+  position: 'relative', 
+  top: '50%',
+  transform: 'translateY(-50%)',
+}
+
 const trackStyle = {
   width: "100%",
-  display: "inline-block",
+  display: "flex",
+  flexDirection: "column",
   margin: "3%",
+  //backgroundColor: "rgb(192,212,244)",
   backgroundColor: "white",
   color: "black",
-  height: "100%",
+  //border: '1px black solid',
   borderRadius: "50px",
   height: "auto",
-  justifyContent: "center",
+  justifyContent: "space-between",
   padding: "20px",
   alignSelf: "stretch",
 };

@@ -16,15 +16,13 @@ function Main() {
     console.log("click!" + i);
     setPopup(i);
   };
+
   return (
     <div>
-
-      <div
-        onMouseDown={() => {
-          //console.log("clear");
-          setPopup(0);
-        }}
-      >
+      <div onMouseDown={() => {
+          console.log("clear");
+          //setPopup(0);
+        }}>
         <Landing />
         <div style={{ height: '50px' }} id='about'></div>
         <AboutPage />

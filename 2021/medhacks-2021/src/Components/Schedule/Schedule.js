@@ -10,14 +10,17 @@ const Schedule = () => {
   }
 
   const fridayGradient = {
+    fontWeight: dayActive === "friday" ? 900 : "normal",
     background: "linear-gradient(rgba(255, 255, 255, .4), rgba(255, 255, 255, 0.4)) padding-box padding-box, linear-gradient(45deg, rgb(255, 255, 255, .2) 0%, rgb(176, 237, 214, .5) 100%) border-box border-box",
   }
 
   const saturdayGradient = {
+    fontWeight: dayActive === "saturday" ? 900 : "normal",
     background: "linear-gradient(rgba(255, 255, 255, .4), rgba(255, 255, 255, 0.4)) padding-box padding-box, linear-gradient(45deg, rgb(255, 255, 255, .2) 0%, rgb(130, 180, 230, .5) 100%) border-box border-box",
   }
 
   const sundayGradient = {
+    fontWeight: dayActive === "sunday" ? 900 : "normal",
     background: "linear-gradient(rgba(255, 255, 255, .4), rgba(255, 255, 255, 0.4)) padding-box padding-box, linear-gradient(45deg, rgb(255, 255, 255, .2) 0%, rgb(169, 146, 238, .5) 100%) border-box border-box",
   }
 

@@ -1,4 +1,5 @@
 import React from "react";
+import { HashLink as Link } from 'react-router-hash-link'
 
 import "../../App.css"
 
@@ -116,10 +117,10 @@ const Scrollbar = () => {
                 </div>
             ))}
             <div class="timeline" style={Object.assign({}, timelineStyle, { height: '300px', zIndex: '0'})}>
-                {['top', 'about', 'tracks', 'speakers'].map((element, i) => (
-                    <a class="container" id={`cont${i + 1}`} href={`#${element}`} style={Object.assign({}, containerStyle, { top: -15 + i * 100 + 'px' })} >
+                {['#top', '#about', '#tracks', '#speakers'].map((element, i) => (
+                    <Link class="container" id={`cont${i + 1}`} to={element} style={Object.assign({}, containerStyle, { top: -15 + i * 100 + 'px' })} >
                         <img id={`scrollImage${i+1}`} style={pieceStyle} src={pieces_white[i]} alt="p"></img>
-                    </a>
+                    </Link>
                 ))}
             </div>
         </>

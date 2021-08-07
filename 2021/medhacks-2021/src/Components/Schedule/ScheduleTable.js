@@ -49,7 +49,7 @@ const ScheduleTable = (props) => {
             </tr>
           </table>
           <div style={{textAlign: 'center', color: 'black'}}>
-            <h6>Times are Subject to Change</h6>
+            <h6>Times are in EDT(UTC-4) and are subject to change</h6>
           </div>
         </div>
       );
@@ -67,7 +67,7 @@ const ScheduleTable = (props) => {
             </tr>
           </table>
           <div style={{textAlign: 'center', color: 'black'}}>
-            <h6>Times are Subject to Change</h6>
+            <h6>Times are in EDT(UTC-4) and are subject to change</h6>
           </div>
         </div>
       );
@@ -97,7 +97,7 @@ const ScheduleTable = (props) => {
             </tr>
           </table>
           <div style={{textAlign: 'center', color: 'black'}}>
-            <h6>Times are Subject to Change</h6>
+            <h6>Times are in EDT(UTC-4) and are subject to change</h6>
           </div>
         </div>
       );

@@ -52,25 +52,25 @@ const Footer = () => {
         </div>
         <div className="footer-links">
           <h2>quick links</h2>
-          <Link style={link} to={"/2021#"} >
+          <Link style={link} to={"/#top"} >
             home
           </Link>
-          <Link style={link} to={{pathname:"https://apply.medhacks.io"}} target='blank'>
+          <a style={link} href="https://apply.medhacks.io" target='blank'>
             apply
-          </Link>
-          <Link style={link} to={{pathname:"mailto: info@medhacks.io"}} target='blank'>
+          </a>
+          <a style={link} href="mailto: info@medhacks.io" target='blank'>
             email us
-          </Link>
-          <Link style={link} to={{pathname:"https://docs.google.com/document/d/1VEFstsX7jg9W7uJSyx3ty_wcU-8yiXRlpP7MAelIIHA/"}} target='blank'>
+          </a>
+          <a style={link} href="https://docs.google.com/document/d/1VEFstsX7jg9W7uJSyx3ty_wcU-8yiXRlpP7MAelIIHA/" target='blank'>
             code of conduct
-          </Link>
+          </a>
           <div>
-            <Link to={{pathname:"https://www.instagram.com/medhacks/"}} target='blank' style={logoStyle}>
+            <a href="https://www.instagram.com/medhacks/" target='blank' style={logoStyle}>
               <img src={Instagram} alt="Instagram" className="footer-img"/>
-            </Link>
-            <Link to={{pathname:"https://www.facebook.com/medhacks"}} target='blank' style={logoStyle}>
+            </a>
+            <a href="https://www.facebook.com/medhacks" target='blank' style={logoStyle}>
               <img src={Facebook} alt="FaceBook" className="footer-img"/>
-            </Link>
+            </a>
           </div>
         </div>
       </div>
