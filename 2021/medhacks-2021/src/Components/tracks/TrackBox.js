@@ -8,7 +8,14 @@ const TrackBox = (props) => {
   return (
     <>
       {props.popup === props.titleNum ? (
-        <TrackPopup trackClick={props.trackClick} description={props.description} title={props.title} logo={props.logo} titleNum={props.titleNum}/>
+        <TrackPopup 
+          trackClick={props.trackClick} 
+          description={props.description} 
+          title={props.title} 
+          logo={props.logo} 
+          titleNum={props.titleNum}
+          video={props.video}
+          />
       ) : null}
       <div
         className='track'

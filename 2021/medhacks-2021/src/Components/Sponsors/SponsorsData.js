@@ -41,6 +41,9 @@ export const sponsorsData = [
           <a href="https://www.new-innov.com/pub/" target='_blank'>
             <img style={sponsorStyle} src={"https://mmedhacks-2021-website.s3.amazonaws.com/Sponsors/NI.png"} alt="New Innovations"></img>
           </a>
+          <a href="https://www.echoar.xyz/"  target='_blank'>
+            <img style={sponsorStyle} src={"https://mmedhacks-2021-website.s3.amazonaws.com/Sponsors/echoAR.png"} alt="echoAR"></img>
+          </a>
           <a href="https://malonecenter.jhu.edu/" target='_blank'>
             <img style={sponsorStyle} src={"https://mmedhacks-2021-website.s3.amazonaws.com/Sponsors/malone-center.png"} alt="The Malone Center for Engineering in Healthcare"></img>
           </a>
@@ -79,9 +82,9 @@ export const sponsorsData = [
         </a>
       </div>
       <div style={secondary}>
-        <a href="https://www.echoar.xyz/"  target='_blank'>
-          <img style={sponsorStyle} src={"https://mmedhacks-2021-website.s3.amazonaws.com/Sponsors/echoAR.png"} alt="echoAR"></img>
-        </a>
+          <a href="https://a3.ai/" target='_blank'>
+            <img style={sponsorStyle} src={"https://mmedhacks-2021-website.s3.amazonaws.com/Sponsors/a3ai.png"} alt="A3 AI"></img>
+          </a>
         <a href="https://idies.jhu.edu/"  target='_blank'>
           <img style={sponsorStyle} src={"https://mmedhacks-2021-website.s3.amazonaws.com/Sponsors/idies.png"} alt="The Institute for Data Intensive Engineering and Science"></img>
         </a>

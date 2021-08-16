@@ -32,6 +32,7 @@ const Tracks = (props) => {
         {tracks.map((track) => (
           <TrackBox
             logo={track.logo}
+            video={track.video}
             titleNum={track.titleNum}
             title={track.title}
             description={track.description}
@@ -48,18 +49,21 @@ let tracks = [
   { 
     titleNum: 1,
     logo: "https://mmedhacks-2021-website.s3.amazonaws.com/Sponsors/careFirst.png",
+    video: "https://mmedhacks-2021-website.s3.amazonaws.com/TrackVideos/CareFirst_Track.mp4",
     title: "Using Smart Devices and Integrated Medical History to Enhance Access-to-Care",
     description: "Your team's mission is to use smart devices and integrated medical history to lower access-to-care barriers including but not limited to rural areas, language challenges, mental/behavioral/cognitive health issues. Your project might build upon the following focus areas: using an apple watch, mobile phone or other IoT devices for signal capture, feedback or intervention; fusing multi-modal device data and medical history; analytics;  data privacy.",
   },
   {
     titleNum: 2,
     logo: "https://mmedhacks-2021-website.s3.amazonaws.com/Sponsors/CBID.png",
+    video: "https://mmedhacks-2021-website.s3.amazonaws.com/TrackVideos/CBID_Track.mp4",
     title: "Combating Healthcare Challenges in Older Patients",
     description: "As populations around the world get older, there is an increased need to combat healthcare challenges in older patients. Your team’s mission is to come up with solutions that address these challenges while maintaining patient quality of care and quality of life. Your project might build upon the following focus areas: memory, mobility, polypharmacy, telemedicine, etc. Get creative! There is considerable room for entrepreneurship and innovation in this area."
   },
   {
     titleNum: 3,
     logo: "https://mmedhacks-2021-website.s3.amazonaws.com/Sponsors/apl.png",
+    video: "https://mmedhacks-2021-website.s3.amazonaws.com/TrackVideos/APL_Track.mp4",
     title: "Data Science, Technology, and Health Innovation",
     description: "Your team’s mission is to help us advance the healthcare industry through an open science “hack.” The possibilities are endless. The first step is to identify emerging issues in healthcare, and then come up with creative and unique solutions to reduce or resolve them. Your project might build upon the following focus areas: scaling technology platforms, making data actionable, and empowering patients."
   },

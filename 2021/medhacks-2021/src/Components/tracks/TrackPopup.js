@@ -22,8 +22,9 @@ const TrackPopup = (props) => {
     backgroundColor: 'white',
   }
 
-  const logoStyle = {
-    marginBottom: '5%',
+  const videoStyle = {
+    width: '80%',
+    
   }
 
   const invisible = {
@@ -36,16 +37,20 @@ const TrackPopup = (props) => {
   }
 
   const onClick = () => {
-    console.log("closed");
+    console.log(props.video);
     props.trackClick(0);
   }
 
   return (
     <div>
       <div onClick={() => onClick()} style={invisible}>
-
       </div>
       <div className="schedule-div" style={popupStyle}>
+        <div>
+          <video controls style={videoStyle}>
+            <source src={props.video}></source>
+          </video>
+        </div>
         <h4>{props.title}</h4>
         <p>{props.description}</p>
       </div>
