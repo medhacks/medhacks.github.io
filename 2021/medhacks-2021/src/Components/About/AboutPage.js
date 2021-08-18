@@ -27,6 +27,9 @@ const SpeakerPage = () => {
                     <p className="section-text">
                         It was started in 2015 by undergraduate students at Johns Hopkins University with the mission to bring together talented and diverse minds from all backgrounds and to foster collaboration towards solving the world's most pressing medical issues. As a result, MedHacks has hosted hackers with diverse majors ranging from public health to anthropology to computer science. Over the years, MedHacks has been attended by thousands from over 500 institutions and 30 countries, has formed partnerships with companies at the forefront of medicine and technology including Blue Cross Blue Shield, CVS Health, Google, and MathWorks, and has established itself as one of the world's most recognized and influential medical hackathons.
                     </p>
+                    <h5>
+                        MedHacks will be held virtually this year.
+                    </h5>
                     <br />
                     <h5><i>
                         We can't wait to see you and your ideas at

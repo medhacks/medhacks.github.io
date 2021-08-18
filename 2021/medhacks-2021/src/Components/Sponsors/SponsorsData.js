@@ -30,7 +30,7 @@ const secondary = {
   flexBasis: '20%',
   display: 'flex',
   flexDirection: 'column',
-  justifyContent: 'space-evenly',
+  justifyContent: 'space-between',
   zIndex: '0',
 }
 
@@ -83,10 +83,10 @@ export const sponsorsData = [
       </div>
       <div style={secondary}>
           <a href="https://a3.ai/" target='_blank'>
-            <img style={sponsorStyle} src={"https://mmedhacks-2021-website.s3.amazonaws.com/Sponsors/a3ai.png"} alt="A3 AI"></img>
+            <img style={{...sponsorStyle, width: '80%'}} src={"https://mmedhacks-2021-website.s3.amazonaws.com/Sponsors/a3ai.png"} alt="A3 AI"></img>
           </a>
         <a href="https://idies.jhu.edu/"  target='_blank'>
-          <img style={sponsorStyle} src={"https://mmedhacks-2021-website.s3.amazonaws.com/Sponsors/idies.png"} alt="The Institute for Data Intensive Engineering and Science"></img>
+          <img style={{...sponsorStyle, width: '80%'}} src={"https://mmedhacks-2021-website.s3.amazonaws.com/Sponsors/idies.png"} alt="The Institute for Data Intensive Engineering and Science"></img>
         </a>
       </div>
     </div>
@@ -108,7 +108,7 @@ export const sponsorsData = [
       </div>
       <div style={secondary}>
         <a href="https://www.i-biomed.com/"  target='_blank'>
-          <img style={sponsorStyle} src={"https://mmedhacks-2021-website.s3.amazonaws.com/Sponsors/IBT.png"} alt="Infinite Biomedical Tech"></img>
+          <img style={{...sponsorStyle, width: '80%'}} src={"https://mmedhacks-2021-website.s3.amazonaws.com/Sponsors/IBT.png"} alt="Infinite Biomedical Tech"></img>
         </a>
         <a href="https://www.jhsph.edu/"  target='_blank'>
           <img style={sponsorStyle} src={"https://mmedhacks-2021-website.s3.amazonaws.com/Sponsors/bloomberg.png"} alt="Johns Hopkins Bloomberg School of Public Health"></img>
