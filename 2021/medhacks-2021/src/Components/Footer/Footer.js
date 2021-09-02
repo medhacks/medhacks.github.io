@@ -55,9 +55,9 @@ const Footer = () => {
           <Link style={link} to={"/#top"} >
             home
           </Link>
-          <a style={link} href="https://apply.medhacks.io" target='blank'>
+          {/* <a style={link} href="https://apply.medhacks.io" target='blank'>
             apply
-          </a>
+          </a> */}
           <a style={link} href="mailto: info@medhacks.io" target='blank'>
             email us
           </a>

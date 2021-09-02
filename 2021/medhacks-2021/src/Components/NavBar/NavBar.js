@@ -43,9 +43,9 @@ const NavBar = () => {
         <Link style={link} to="/faq">
           faq
         </Link>
-        <Link style={{...link, fontWeight: 'bold'}} to={"/apply"}>
+        {/* <Link style={{...link, fontWeight: 'bold'}} to={"/apply"}>
           apply
-        </Link>
+        </Link> */}
       </div>
     </div>
   )
