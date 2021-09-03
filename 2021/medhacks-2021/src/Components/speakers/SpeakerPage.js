@@ -2,6 +2,7 @@ import React, { useState } from "react";
 // import Carousel from "react-bootstrap/Carousel";
 // import "bootstrap/dist/css/bootstrap.min.css";
 import speakers from "./speakerData/speakers";
+import Speakers from "./Speakers"
 import Carousel from "./Carousel";
 import { useHistory, useLocation } from "react-router-dom";
 import SpeakerList from "./SpeakerList";
@@ -59,16 +60,14 @@ const SpeakerPage = () => {
             <h1 className="section-title">speakers</h1>
             <img src={Piece6} alt="p5"></img>
           </div>
-          <div className="section-text" style={{margin: '5%'}}>
-            <h2>Stay Tuned for This Year's Speakers!</h2>
-          </div>
-          {/* {useCarousel ? (
-            <Carousel items={speakers} active={0} setIndex={setIndex} />
+          {/* <Carousel items={speakers} active={0} setIndex={setIndex} /> */}
+          {useCarousel ? (
+            <Speakers items={speakers} />
           ) : (
             <>
               {speakers.map((speaker, index) => (
                 <div
-                  className={"speaker_" + (index + 1)}
+                  id={"speaker_" + (index + 1)}
                   style={{
                     width: window.innerWidth < 800 ? "50vw" : "20vw",
                     height: window.innerWidth < 800 ? "50vw" : "20vw",
@@ -127,7 +126,7 @@ const SpeakerPage = () => {
                 </div>
               ))}
             </>
-          )} */}
+          )}
         </div>
       )}
     </div>

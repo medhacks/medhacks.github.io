@@ -1,13 +1,8 @@
-import jDanaher from "./JohnDanaher/data";
-import jDanaherPic from "./JohnDanaher/Danaher.png";
-import pSLoh from "./PoShenLoh/data";
-import pSLohPic from "./PoShenLoh/Poh.png";
-import wRobins from "./WillRobins/data";
-import wRobinsPic from "./WillRobins/Robins.png";
+import aChi from "./AlbertChi/data";
+import eDong from "./EnshengDong/data";
 
 const speakers = [
-  { ...jDanaher, image: jDanaherPic },
-  { ...pSLoh, image: pSLohPic },
-  { ...wRobins, image: wRobinsPic },
+  { ...aChi, image: "https://mmedhacks-2021-website.s3.amazonaws.com/Speakers/AlbertChi.png" },
+  { ...eDong, image: "https://mmedhacks-2021-website.s3.amazonaws.com/Speakers/EnshengDong.png" },
 ];
 export default speakers;

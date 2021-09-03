@@ -11,9 +11,10 @@ const SpeakerArea = (props) => {
         backgroundSize: "cover",
         backgroundPosition: "center",
         paddingLeft: "1rem",
+        paddingRight: "1rem",
         display: "flex",
         flexDirection: "column",
-        textShadow: "2px 2px #000000",
+        textShadow: "3px 3px 6px #000000",
         color: "white",
       }}
     >

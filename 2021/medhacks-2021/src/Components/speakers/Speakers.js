@@ -1,0 +1,29 @@
+import React from 'react';
+import SpeakerArea from "./SpeakerArea"
+import { HashLink as Link } from 'react-router-hash-link'
+
+const Speakers = (props) => {
+
+  const container = {
+    display: 'flex',
+    justifyContent: 'space-around',
+  }
+
+  const style = {
+    height: '50vh',
+    width: '45%'
+  }
+
+  return (
+    <div style={container}>
+      <Link className="speaker_1" style={style} to="/speakers#Speaker_1">
+        <SpeakerArea speaker={props.items[0]}/>
+      </Link>
+      <Link className="speaker_2" style={style} to="/speakers#Speaker_2">
+        <SpeakerArea speaker={props.items[1]}/>
+      </Link>
+    </div>
+  )
+}
+
+export default Speakers

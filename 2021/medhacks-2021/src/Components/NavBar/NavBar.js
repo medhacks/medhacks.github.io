@@ -29,9 +29,9 @@ const NavBar = () => {
         <Link style={link} to={"/#tracks"}>
           tracks
         </Link>
-        {/* <Link style={link} to="/speakers">
+        <Link style={link} to="/speakers">
           speakers
-        </Link> */}
+        </Link>
       </div>
       <div style={container}>
         <Link style={link} to="/schedule">
