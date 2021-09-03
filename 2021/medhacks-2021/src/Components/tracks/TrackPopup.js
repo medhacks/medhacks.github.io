@@ -37,7 +37,6 @@ const TrackPopup = (props) => {
   }
 
   const onClick = () => {
-    console.log(props.video);
     props.trackClick(0);
   }
 

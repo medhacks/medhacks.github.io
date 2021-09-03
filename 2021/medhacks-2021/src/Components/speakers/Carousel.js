@@ -46,7 +46,6 @@ const Carousel = (props) => {
   };
 
   const move = (level) => {
-    console.log("moving", level);
     if (level === -1) {
       moveLeft();
     } else if (level === 1) {

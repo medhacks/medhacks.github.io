@@ -11,11 +11,11 @@ const Speakers = (props) => {
 
   const style = {
     height: '50vh',
-    width: '45%'
+    width: window.innerWidth < 800 ? '100%':  '45%',
   }
 
   return (
-    <div style={container}>
+    <div className="tracks-container" style={container}>
       <Link className="speaker_1" style={style} to="/speakers#Speaker_1">
         <SpeakerArea speaker={props.items[0]}/>
       </Link>

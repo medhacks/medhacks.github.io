@@ -2,9 +2,6 @@ import React, { useEffect, useState } from "react";
 
 const SpeakerCard = (props) => {
   const [showMore, setShowMore] = useState(false);
-  useEffect(() => {
-    console.log("speaker_" + props.index + 1);
-  });
 
   return (
     <div

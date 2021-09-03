@@ -28,7 +28,7 @@ const ScheduleTable = (props) => {
               <td>2:00 PM - 6:00 PM</td>
             </tr>
             <tr>
-              <td>Sponsor Fair</td>
+              <td>Sponsor Meet & Greet</td>
               <td>2:30 PM - 5:30 PM</td>
             </tr>
             <tr>

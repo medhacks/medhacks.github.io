@@ -13,14 +13,12 @@ function Main() {
   const [popup, setPopup] = useState(0);
 
   const trackClick = (i) => {
-    console.log("click!" + i);
     setPopup(i);
   };
 
   return (
     <div>
       <div onMouseDown={() => {
-          console.log("clear");
           //setPopup(0);
         }}>
         <Landing />
