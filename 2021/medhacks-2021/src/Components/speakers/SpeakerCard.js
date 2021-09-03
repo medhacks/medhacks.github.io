@@ -13,6 +13,7 @@ const SpeakerCard = (props) => {
         flexDirection: window.innerWidth < 800 ? "column" : "row",
         width: "75%",
       }}
+      id={"speaker_" + (props.index + 1)}
     >
       <div
         className={"speaker_" + (props.index + 1)}

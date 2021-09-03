@@ -16,10 +16,10 @@ const Speakers = (props) => {
 
   return (
     <div className="tracks-container" style={container}>
-      <Link className="speaker_1" style={style} to="/speakers#Speaker_1">
+      <Link className="speaker_1" style={style} to="/speakers#speaker_1">
         <SpeakerArea speaker={props.items[0]}/>
       </Link>
-      <Link className="speaker_2" style={style} to="/speakers#Speaker_2">
+      <Link className="speaker_2" style={style} to="/speakers#speaker_2">
         <SpeakerArea speaker={props.items[1]}/>
       </Link>
     </div>
