@@ -46,6 +46,18 @@ html {
   height: 80vh;
 }
 
+@media only screen and (max-height: 800px) {
+  .logo-container {
+    margin-top: 20vh;
+  }
+}
+
+@media only screen and (max-height: 600px) {
+  .logo-container {
+    margin-top: 15vh;
+  }
+}
+
 @media only screen and (min-width: 2200px) {
   .logo-container {
     margin-top: 10vh;
