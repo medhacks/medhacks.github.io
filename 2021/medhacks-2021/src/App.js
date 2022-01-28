@@ -23,9 +23,10 @@ function App() {
   };
 
   useEffect(() => {
-    if (window.location.pathname === "/join")
-      window.location.href = "https://forms.gle/mf5eovQLuSo5HUHYA";
-  }, [window.location.pathname]);
+    console.log(window.location.hash);
+    if (window.location.hash === "#/join")
+      window.location.replace("https://forms.gle/mf5eovQLuSo5HUHYA");
+  }, [window.location.hash]);
 
   return (
     <div style={appStyle}>
