@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "./App.css";
-import { Switch, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Main from "./Components/Main.js";
 import { Helmet } from "react-helmet";
 import FAQ from "./Components/FAQ/FAQ.js";
@@ -35,19 +35,21 @@ function App() {
       </Helmet>
       <MLH />
       <NavBar />
-      <Switch>
-        <Route exact path="/speakers" component={SpeakerPage} />
-        <Route exact path="/schedule" component={Schedule} />
-        <Route exact path="/faq" component={FAQ} />
-        <Route
-          path="/apply"
-          component={() => {
-            window.location.href = "https://apply.medhacks.io";
-            return null;
-          }}
-        />
-        <Route exact path="/" component={Main} />
-      </Switch>
+      <Routes>
+        <Route path="/" element={<App />}>
+          <Route exact path="/speakers" component={SpeakerPage} />
+          <Route exact path="/schedule" component={Schedule} />
+          <Route exact path="/faq" component={FAQ} />
+          <Route
+            path="/apply"
+            component={() => {
+              window.location.href = "https://apply.medhacks.io";
+              return null;
+            }}
+          />
+          <Route exact path="/" component={Main} />
+        </Route>
+      </Routes>
       <Sponsors />
       <Footer />
     </div>
