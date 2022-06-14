@@ -16,7 +16,7 @@ Serving HTTP on 0.0.0.0 port 8000
 Then go to http://localhost:8000/ to visit your development version of the site.
 
 
-## Running 2022 React App
+## Frontend: Running 2022 React App
 We now are using React.
 Navigate to 2022/medhacks-2022
 
