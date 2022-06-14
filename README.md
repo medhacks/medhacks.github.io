@@ -16,10 +16,12 @@ Serving HTTP on 0.0.0.0 port 8000
 Then go to http://localhost:8000/ to visit your development version of the site.
 
 
-## Running 2021 React App
+## Running 2022 React App
 We now are using React.
-Navigate to 2021/medhacks-2021
-Then run npm start to host on localhost
+Navigate to 2022/medhacks-2022
+
+Then run `npm install` to install the necessary dependencies. 
+For development, run `npm start` to host on localhost
 
 To deploy changes to medhacks.io in terminal
-npm run deploy
+`npm run deploy`
