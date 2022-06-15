@@ -1,9 +1,11 @@
-import About from "./About";
+import About from './About';
+import Landing from './Landing';
 
 export default function Main() {
-    return (
-        <div>
-            <About/>
-        </div>
-    );
+  return (
+    <div>
+      <Landing />
+      <About />
+    </div>
+  );
 }
