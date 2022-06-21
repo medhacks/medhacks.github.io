@@ -1,6 +1,6 @@
 import { FC } from 'react';
-import { ReactComponent as AboutSVG } from '../assets/aboutheader.svg';
-
+import { ReactComponent as AboutSVG } from '../assets/About_Header_SVG.svg';
+import { ReactComponent as AboutheaderSVG } from '../assets/aboutheader.svg';
 
 const About: FC = () => {
   return (
