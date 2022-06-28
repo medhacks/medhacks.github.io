@@ -24,14 +24,14 @@ const SpeakerPortrait: FC<{
   name: string
  }> = ({ imageUrl, description, name }) => {
   return (
-    <div className="justify-center h-5/6 w-96 hover:scale-[102%] transition ease-in-out delay-50">
-      <div className="rounded-lg shadow-lg bg-slate-50/75">
+    <div className="justify-center h-5/6 w-96">
+      <div className="rounded-lg">
         <a href="#!">
-          <img className="rounded-t-lg object-fill" src={imageUrl} alt=""/>
+          <img className="rounded-lg object-fill" src={imageUrl} alt=""/>
         </a>
         <div className="p-6">
-          <h5 className="text-gray-900 text-xl font-medium mb-2 font-sans">{name}</h5>
-          <p className="text-gray-700 text-base mb-4 font-sans">
+          { /* <h5 className="text-xl text-white font-medium mb-2 font-sans">{name}</h5> */ }
+          <p className="text-base text-white mb-4 font-sans">
             {description}
           </p>
         </div>
