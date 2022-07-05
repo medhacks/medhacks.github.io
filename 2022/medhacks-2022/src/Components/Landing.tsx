@@ -2,7 +2,6 @@ import { ReactComponent as PlaneSVG } from '../assets/plane.svg';
 import { ReactComponent as LogoSVG } from '../assets/logo.svg';
 import bg from '../assets/background.png';
 import map from '../assets/map.jpg';
-import { FC } from 'react';
 
 export type Section = 'Home' | 'About' | 'Tracks' | 'Apply' | 'Logistics';
 type HeaderOptionType = { label: Section; value: string };
@@ -15,22 +14,22 @@ const options: HeaderOptionType[] = [
   { label: 'Logistics', value: '/logistics' },
 ];
 
-const Landing: FC = () => {
+const Landing = () => {
   return (
     <div className="w-full h-[screen] bg-green-600">
-      <div className="bg-white py-2 px-4 w-full flex flex-row">
+      <div className="fixed flex flex-row w-full h-[100px] px-4 py-2 bg-white z-10">
         <div className="grow">
           <LogoSVG className="cursor-pointer w-[25%] h-[100%] my-auto ml-5" />
         </div>
         {options.map((option: HeaderOptionType) => (
-          <button className="flex flex-col py-1 px-2 m-2  transition ease-in-out delay-150 hover:scale-110 duration-300 rounded hover:bg-red-100">
-            <div className="my-auto text-2xl mx-auto">{option.label}</div>
-            <div className="my-auto mx-auto">{option.value}</div>
+          <button className="flex flex-col px-2 py-1 m-2 transition duration-300 ease-in-out delay-150 rounded hover:scale-110 hover:bg-red-100">
+            <div className="mx-auto my-auto text-2xl">{option.label}</div>
+            <div className="mx-auto my-auto">{option.value}</div>
           </button>
         ))}
       </div>
       <div
-        className="h-screen w-full overflow-x-clip bg-cover pt-[5%]"
+        className="h-screen w-full overflow-x-clip bg-cover pt-[5%] relative top-[100px]"
         style={{ backgroundImage: `url(${bg})` }}
       >
         <PlaneSVG className="w-[60%] mx-auto transition ease-in-out delay-150 hover:scale-110 duration-300 h-min" />
