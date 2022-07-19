@@ -22,17 +22,17 @@ const TrackCard: FC<{
 const Tracks: FC = () => {
   return (
     <div className="w-full bg-[#8FC150] flex flex-col">
-      { /* Tracks Header */ }
+      { /* Tracks Header */}
       <div className="w-full flex flex-row justify-center items-center h-64 hover:scale-[102%] transition ease-in-out delay-50">
         <TracksHeaderSVG className="scale-[50%]" />
       </div>
 
-      { /* Description of Tracks */ }
+      { /* Description of Tracks */}
       <p className="font-sans text-white text-2xl p-4">
-        Medhacks and its sponsors create three tracks every year. Description
+        Tracks are coming soon! Stay tuned for this year’s tracks and prizes!
       </p>
 
-      { /* Track Cards */ }
+      { /* Track Cards */}
       <div className="flex flex-row justify-center">
         <TrackCard
           trackName="Track 1"

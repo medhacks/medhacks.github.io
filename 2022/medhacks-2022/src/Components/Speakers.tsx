@@ -75,6 +75,10 @@ const Speakers: FC = () => {
         <SpeakersHeaderSVG className="scale-[50%]" />
       </div>
 
+      <div className="font-sans text-white text-2xl p-4">
+      Stay tuned for this year’s speakers!
+      </div>
+
       { /* Speaker Cards */ }
       <div className="flex flex-wrap items-center justify-center w-full h-fit">
         {speakerData.map((speaker) => (
