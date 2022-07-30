@@ -7,9 +7,9 @@ const TrackCard: FC<{
 }> = ({ trackName, description }) => {
   return (
     <div className="flex justify-center p-6 h-72 max-w-xs">
-      <div className="rounded-lg bg-[#FCE689] flex justify-center p-6 box-border ">
-        <div className="border-4 hover:border-rose-600 rounded-lg border-white">
-          <h5 className="text-gray-900 text-xl text-center leading-tight font-medium font-bold font-sans p-2">
+      <div className="rounded-2xl bg-[#FCE689] flex justify-center p-4 box-border ">
+        <div className="border-4 hover:border-rose-600 rounded-2xl border-white">
+          <h5 className="text-gray-900 text-xl text-center leading-tight font-medium font-bold font-sans p-3">
             {trackName}
           </h5>
           <p className="text-gray-700 text-center text-sm font-sans p-2">
