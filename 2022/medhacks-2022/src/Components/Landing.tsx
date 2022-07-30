@@ -16,8 +16,8 @@ const options: HeaderOptionType[] = [
 
 const Landing = () => {
   return (
-    <div className="w-full h-[screen] bg-green-600">
-      <div className="fixed flex flex-row w-full h-[100px] px-4 py-2 bg-white z-10">
+    <div className="w-full h-[screen]">
+      <div className="fixed flex flex-row w-full h-[100px] px-4 py-2 z-10">
         <div className="grow">
           <LogoSVG className="cursor-pointer w-[25%] h-[100%] my-auto ml-5" />
         </div>
@@ -30,16 +30,16 @@ const Landing = () => {
       </div>
       <div
         className="h-screen w-full overflow-x-clip bg-cover pt-[5%] relative top-[100px]"
-        style={{ backgroundImage: `url(${bg})` }}
+        // style={{ backgroundImage: `url(${bg})` }}
       >
         <PlaneSVG className="w-[60%] mx-auto transition ease-in-out delay-150 hover:scale-110 duration-300 h-min" />
       </div>
-      <div
+      {/* <div
         className="h-[62.5rem] w-full overflow-x-clip"
         style={{ backgroundImage: `url(${map})` }}
       >
         Map
-      </div>
+      </div> */}
     </div>
   );
 };

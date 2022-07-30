@@ -8,16 +8,26 @@ import Spacer from './Spacer';
 export default function Main() {
   return (
     <div>
-      <Landing />
-      <Spacer sectionId='about'/>
-      <About />
-      <Spacer sectionId='tracks'/>
-      <Tracks />
-      <Spacer sectionId='speakers'/>
-      <Speakers />
-      <Spacer sectionId='schedule'/>
-      <Schedule />
-      <Spacer sectionId='footer'/>
+      <div className="bg-gradient-to-b from-[#C7F2FF] to-[#FFCDC6]">
+        <Landing />
+        <Spacer sectionId="about" />
+      </div>
+      <div className="bg-gradient-to-b from-[#FFCDC6] to-[#FFC0B7]">
+        <About />
+        <Spacer sectionId="tracks" />
+      </div>
+      <div className="bg-gradient-to-b from-[#FFC0B7] to-[#93D8FF]">
+        <Tracks />
+        <Spacer sectionId="speakers" />
+      </div>
+      <div className="bg-[#93D8FF]">
+        <Speakers />
+        <Spacer sectionId="schedule" />
+      </div>
+      <div className="bg-gradient-to-b from-[#93D8FF] to-[#2E6CC9]">
+        <Schedule />
+        <Spacer sectionId="footer" />
+      </div>
     </div>
   );
 }
