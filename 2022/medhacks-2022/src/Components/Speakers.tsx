@@ -1,4 +1,5 @@
-import { FC } from 'react';
+import { FC, useState } from 'react';
+import internal from 'stream';
 import { ReactComponent as SpeakersHeaderSVG } from '../assets/speakers_header.svg';
 
 /**
@@ -20,23 +21,44 @@ type SpeakerData = {
  */
 const SpeakerPortrait: FC<{
   imageUrl: string;
-  description: string;
-  name: string;
-}> = ({ imageUrl, description, name }) => {
+  index: number;
+  setHover: Function;
+}> = ({ imageUrl, index, setHover }) => {
   return (
-    <div className="justify-center h-5/6 w-96">
-      <div className="rounded-lg">
-        <a href="#!">
-          <img className="rounded-lg object-fill" src={imageUrl} alt="" />
-        </a>
-        <div className="p-6">
-          {/* <h5 className="text-xl text-white font-medium mb-2 font-sans">{name}</h5> */}
-          <p className="text-base text-white mb-4 font-sans">{description}</p>
-        </div>
-      </div>
+    <div
+      className="relative rounded-2xl border-2 border-white hover:border-rose-600 w-32 sm:w-64 mx-auto"
+      onMouseEnter={() => setHover(index)}
+      onMouseLeave={() => setHover(-1)}
+    >
+      <img className="object-contain" src={imageUrl} alt="" />
     </div>
   );
 };
+
+const SpeakerDescription: FC<{
+  index: number,
+  speakerData: SpeakerData[]
+}> = ({ index, speakerData }) => {
+  const boxStyling = "h-48 bg-[#5DA6DC]/[.6] border-2 rounded-3xl border-[#5DA6DC]/50 overflow-auto";
+  return (
+    index === -1 ? 
+    <div className={boxStyling}>
+      <div className='font-sans text-white text-2xl align-middle pt-4'>
+        Above are the speakers for MedHacks.
+        You can hover over them to read more about each speaker!
+      </div>
+    </div>
+    :
+    <div className={boxStyling}>
+      <div className='font-sans text-white text-2xl leading-loose'>
+        {speakerData[index].name}
+      </div>
+      <div className='font-sans text-white text-xl pt-4'>
+        {speakerData[index].description}
+      </div>
+    </div>
+  );
+}
 
 /**
  *
@@ -47,36 +69,43 @@ const Speakers: FC = () => {
     {
       // Portrait 1
       imageUrl:
-        'https://image.shutterstock.com/image-photo/portrait-young-beautiful-cute-cheerful-260nw-666258808.jpg',
+        'https://www.illumination.com/wp-content/uploads/2020/02/YoungGru.png',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+        'Description 1 Description 1 Description 1 Description 1 Description 1 Description 1 Description 1 Description 1 Description 1 Description 1 Description 1 Description 1', 
       name: 'Person 1',
     },
     {
       // Portrait 2
       imageUrl:
-        'https://image.shutterstock.com/image-photo/indoor-portrait-beautiful-brunette-young-260nw-640005220.jpg',
+        'https://www.illumination.com/wp-content/uploads/2020/02/YoungGru.png',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+        'Description 2 Description 2 Description 2 Description 2 Description 2 Description 2 Description 2 Description 2 Description 2 Description 2 Description 2 Description 2', 
       name: 'Person 2',
     },
     {
       // Portrait 3
       imageUrl:
-        'https://media.istockphoto.com/photos/mature-businessman-smiling-over-white-background-picture-id685132245?k=20&m=685132245&s=612x612&w=0&h=oKxgMF_dOhoGJtd_YxhbmpK4qFvcl-0s0NFmxuh7IKA=',
+        'https://www.illumination.com/wp-content/uploads/2020/02/YoungGru.png',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+        'Description 3 Description 3 Description 3 Description 3 Description 3 Description 3 Description 3 Description 3 Description 3 Description 3 Description 3 Description 3', 
       name: 'Person 3',
     },
     {
       // Portrait 4
       imageUrl:
-        'https://media.gettyimages.com/photos/handsome-young-adult-businessman-with-stubble-picture-id1250238624?s=612x612',
+        'https://www.illumination.com/wp-content/uploads/2020/02/YoungGru.png',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+        'Description 4 Description 4 Description 4 Description 4 Description 4 Description 4 Description 4 Description 4 Description 4 Description 4 Description 4 Description 4', 
       name: 'Person 4',
     },
   ];
+
+  const defaultHoverList = [];
+  for (const ignored in speakerData) {
+    defaultHoverList.push(false);
+  }
+
+  const [hover, setHover] = useState<number>(-1);
 
   return (
     <div className="w-full flex flex-col">
@@ -90,16 +119,24 @@ const Speakers: FC = () => {
       </div>
 
       {/* Speaker Cards */}
-      <div className="flex flex-wrap items-center justify-center w-full h-fit">
-        {speakerData.map((speaker) => (
+      <div className="flex flex-wrap items-center justify-center w-full h-fit object-contain">
+        {speakerData.map((speaker, index) => (
           <div className="m-6">
             <SpeakerPortrait
               imageUrl={speaker.imageUrl}
-              description={speaker.description}
-              name={speaker.name}
+              index={index}
+              setHover={setHover}
             />
           </div>
         ))}
+      </div>
+
+      {/* Speaker Description */}
+      <div className='px-48 align-center'>
+        <SpeakerDescription
+          index={hover}
+          speakerData={speakerData}
+        />
       </div>
     </div>
   );
