@@ -4,6 +4,8 @@ import Speakers from './Speakers';
 import Tracks from './Tracks';
 import Schedule from './Schedule';
 import Spacer from './Spacer';
+import Sponsors from './Sponsors';
+import Footer from './Footer';
 
 export default function Main() {
   return (
@@ -26,7 +28,14 @@ export default function Main() {
       </div>
       <div className="bg-gradient-to-b from-[#93D8FF] to-[#2E6CC9]">
         <Schedule />
+        <Spacer sectionId="sponsors" />
+      </div>
+      <div className="bg-[#2E6CC9]">
+        <Sponsors />
         <Spacer sectionId="footer" />
+      </div>
+      <div className="bg-[#175BB6]">
+        <Footer />
       </div>
     </div>
   );
