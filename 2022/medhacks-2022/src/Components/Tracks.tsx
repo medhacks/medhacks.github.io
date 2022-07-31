@@ -30,7 +30,7 @@ const Tracks: FC = () => {
       </div>
 
       {/* Description of Tracks */}
-      <p className="font-sans text-white text-2xl p-4">
+      <p className="font-sans text-white text-2xl pl-20 pr-20 bg-[#CFACB9] mr-20 ml-20 pt-10 pb-10 rounded-3xl">
         Tracks are coming soon! Stay tuned for this year’s tracks and prizes!
       </p>
 

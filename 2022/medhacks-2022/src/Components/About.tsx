@@ -7,7 +7,7 @@ const About: FC = () => {
       <div className="w-full flex flex-row justify-center items-center h-64 hover:scale-[102%] transition ease-in-out delay-50">
         <AboutSVG className="scale-[50%]" />
       </div>
-      <div className="px-[10%] text-white text-xl text-justify font-['Mulish'] leading 7">
+      <div className="px-[10%] text-white text-xl text-justify font-['Mulish'] leading 7 bg-[#E3A29ECC] mr-20 ml-20 pt-10 pb-10 rounded-3xl">
         <p className="">
           MedHacks is the nation’s premier medical hackathon at Johns Hopkins
           University – and one of the largest student run hackathons. Our

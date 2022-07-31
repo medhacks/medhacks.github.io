@@ -32,44 +32,40 @@ const Schedule: FC = () => {
       <div className="w-full flex flex-row justify-center items-center h-64 hover:scale-[102%] transition ease-in-out delay-50">
         <ScheduleHeaderSVG className="scale-[50%]" />
       </div>
-      <div className="font-sans text-white text-2xl p-4">
+      <div className="font-sans text-white text-2xl pl-20 pr-20 bg-[#377BC2CC] mr-20 ml-20 pt-10 pb-10 mb-20 rounded-3xl">
         Below is a tentative schedule for MedHacks 2022. We will be releasing a
         full schedule closer to the hackathon, so check back soon!
       </div>
 
-      {/* Schedule Tabs */}
-      <div className="flex flex-row justify-center">
-        <button
-          onClick={(e) => {
-            handleMouseEvent(e, 5);
-          }}
-        >
-          <ScheduleTab day="friday" />
-        </button>
-        <button
-          onClick={(e) => {
-            handleMouseEvent(e, 6);
-          }}
-        >
-          <ScheduleTab day="saturday" />
-        </button>
-        <button
-          onClick={(e) => {
-            handleMouseEvent(e, 7);
-          }}
-        >
-          <ScheduleTab day="sunday" />
-        </button>
-      </div>
+      <div>
+        {/* Schedule Tabs */}
+        <div className="flex flex-row justify-center">
+          <button
+            onClick={(e) => {
+              handleMouseEvent(e, 5);
+            }}
+          >
+            <ScheduleTab day="friday" />
+          </button>
+          <button
+            onClick={(e) => {
+              handleMouseEvent(e, 6);
+            }}
+          >
+            <ScheduleTab day="saturday" />
+          </button>
+          <button
+            onClick={(e) => {
+              handleMouseEvent(e, 7);
+            }}
+          >
+            <ScheduleTab day="sunday" />
+          </button>
+        </div>
 
-      {/* Tab Content */}
-      <div className="h-200 w-full">
-        <ScheduleTable dayActive={dayActive} />
-
-        <div className="flex justify-center flex-column">
-          <h5 className="font-sans">
-            *Times are in EDT(UTC-4) and are subject to change
-          </h5>
+        {/* Tab Content */}
+        <div className="h-200 w-full">
+          <ScheduleTable dayActive={dayActive} />
         </div>
       </div>
     </div>
