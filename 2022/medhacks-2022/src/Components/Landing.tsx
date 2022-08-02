@@ -1,5 +1,7 @@
 import { ReactComponent as PlaneSVG } from '../assets/plane.svg';
 import { ReactComponent as LogoSVG } from '../assets/logo.svg';
+import { ReactComponent as Cloud1SVG } from '../assets/cloud 1.svg';
+import { ReactComponent as Cloud2SVG } from '../assets/cloud 2.svg';
 import bg from '../assets/background.png';
 import map from '../assets/map.jpg';
 
@@ -40,6 +42,13 @@ const Landing = () => {
       >
         Map
       </div> */}
+            <div
+        className="h-screen w-cover overflow-x-clip bg-cover pt-[5%] relative top-[100px]"
+        // style={{ backgroundImage: `url(${bg})` }}
+      >
+        <Cloud1SVG className="w-[100%] mx-auto h-min" />
+        <Cloud2SVG className="w-[100%] mx-auto transition ease-in-out delay-100 hover:scale-110 duration-300 h-min absolute top-10 left-0" />
+      </div>
     </div>
   );
 };

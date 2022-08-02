@@ -6,15 +6,9 @@ const ScheduleTab: FC<{
   day: string;
 }> = ({ day }) => {
   return (
-    <div className="flex justify-center p-6 h-201 max-w-xs">
-      <div className="rounded-lg bg-[#D31D25] flex justify-center p-2 box-border">
-        <div className="border-4 hover:border-[#FCE689] rounded-lg border-white">
-          <h5 className="text-[#FCE689] hover:text-white uppercase italic text-xl text-center leading-tight font-medium font-bold font-sans p-2">
-            {day}
-          </h5>
-        </div>
-      </div>
-    </div>
+    <h5 className="text-[#FCE689] hover:text-white focus:text-white uppercase italic text-xl text-center leading-tight font-medium font-bold font-sans p-2">
+      {day}
+    </h5>
   );
 };
 
@@ -27,7 +21,7 @@ const Schedule: FC = () => {
   };
 
   return (
-    <div className="w-full flex flex-col">
+    <div>
       {/* Schedule Header */}
       <div className="w-full flex flex-row justify-center items-center h-64 hover:scale-[102%] transition ease-in-out delay-50">
         <ScheduleHeaderSVG className="scale-[50%]" />
@@ -39,36 +33,48 @@ const Schedule: FC = () => {
 
       <div>
         {/* Schedule Tabs */}
-        <div className="flex flex-row justify-center">
-          <button
-            onClick={(e) => {
-              handleMouseEvent(e, 5);
-            }}
-          >
-            <ScheduleTab day="friday" />
-          </button>
-          <button
-            onClick={(e) => {
-              handleMouseEvent(e, 6);
-            }}
-          >
-            <ScheduleTab day="saturday" />
-          </button>
-          <button
-            onClick={(e) => {
-              handleMouseEvent(e, 7);
-            }}
-          >
-            <ScheduleTab day="sunday" />
-          </button>
+        <div className="flex justify-center flex-row m-auto w-[80%] flex-shrink" >
+          <div className="md:w-[170px] xl:w-[300px] mr-2 ml-2 bg-[#E63F21] p-2 rounded-xl">
+            <button
+              onClick={(e) => {
+                handleMouseEvent(e, 5);
+              }}
+
+              className="w-full border-4 hover:border-[#FCE689] focus:border-[#FCE689] rounded-xl border-white "
+            >
+              <ScheduleTab day="friday" />
+            </button>
+          </div>
+          <div className="md:w-[170px] xl:w-[300px] mr-2 ml-2 bg-[#E63F21] p-2 rounded-xl">
+            <button
+              onClick={(e) => {
+                handleMouseEvent(e, 6);
+              }}
+
+              className="w-full border-4 hover:border-[#FCE689] focus:border-[#FCE689] rounded-xl border-white "
+            >
+              <ScheduleTab day="saturday" />
+            </button>
+          </div>
+          <div className="md:w-[170px] xl:w-[300px] mr-2 ml-2 bg-[#E63F21] p-2 rounded-xl">
+            <button
+              onClick={(e) => {
+                handleMouseEvent(e, 7);
+              }}
+
+              className="w-full border-4 hover:border-[#FCE689] focus:border-[#FCE689] rounded-xl border-white "
+            >
+              <ScheduleTab day="sunday" />
+            </button>
+          </div>
         </div>
 
         {/* Tab Content */}
         <div className="h-200 w-full">
           <ScheduleTable dayActive={dayActive} />
         </div>
-      </div>
-    </div>
+      </div >
+    </div >
   );
 };
 
