@@ -34,13 +34,13 @@ const tableContent = (dayActive: number) => {
 
 const ScheduleTable: FC<TableProps> = ({ dayActive }) => {
   return (
-    <div className="font-sans text-white text-2l h-100 bg-[#377BC2CC] mr-20 ml-20 pt-10 pb-10 rounded-3xl" >
+    <div className="font-sans text-white text-xl h-100 bg-[#377BC2CC] mr-20 ml-20 pt-10 pb-10 rounded-3xl" >
       <table className="flex justify-center flex-column">
         <tbody key={dayActive + 'schedule'}>{tableContent(dayActive)}</tbody>
       </table>
-      <h5 className="font-sans text-black">
-        *Times are in EDT(UTC-4) and are subject to change
-      </h5>
+      <div className="font-bold text-black">
+        <br/> *Times are in EDT(UTC-4) and are subject to change
+      </div>
     </div>
   );
 }
