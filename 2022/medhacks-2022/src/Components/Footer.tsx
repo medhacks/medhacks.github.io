@@ -3,7 +3,7 @@ import { ReactComponent as LogoSvg } from '../assets/mh_logo_text.svg';
 
 const Footer: FC = () => {
   return (
-    <div className="w-full">
+    <div className="flex">
       <LogoSvg className="scale-[50%]"/>
     </div>
   );

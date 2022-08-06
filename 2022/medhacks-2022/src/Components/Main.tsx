@@ -1,3 +1,4 @@
+import { useState, UIEventHandler } from 'react';
 import About from './About';
 import Landing from './Landing';
 import Speakers from './Speakers';
@@ -7,9 +8,35 @@ import Spacer from './Spacer';
 import Sponsors from './Sponsors';
 import Footer from './Footer';
 
+import { ReactComponent as PlaneSVG } from '../assets/plane_no_bg.svg';
+
+
+
 export default function Main() {
+
+  const [progress, setprogress] = useState(0);
+
+  function scrollBarProgress() {
+    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    if(winScroll < 100){
+      setprogress(0);
+    }
+    else {
+      setprogress(winScroll / document.body.clientHeight * document.body.clientWidth * 1.1);
+    }
+  }
+
+  window.addEventListener('scroll', scrollBarProgress);
   return (
-    <div>
+    <div >
+      {/* Scroll Bar */}
+      <div id='scrollbar' className='fixed top-[90px] z-20 left-0' style={{width:progress, visibility: progress ? 'visible' : 'hidden' }}>
+        <PlaneSVG id='plane-scroll' className='absolute top-[-50px] scale-[30%]' style={{left:progress-50}}/>
+        <div className='shadow w-full h-[10px] bg-gradient-to-r from-[#E63F21] to-[#FCE689]'>
+        </div>
+      </div>
+
+      {/* Page Contents */}
       <div className="bg-gradient-to-b from-[#C7F2FF] to-[#FFCDC6]">
         <Landing />
         <Spacer sectionId="about" />

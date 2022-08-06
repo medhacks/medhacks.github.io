@@ -5,15 +5,15 @@ import { ReactComponent as Cloud2SVG } from '../assets/cloud 2.svg';
 import bg from '../assets/background.png';
 import map from '../assets/map.jpg';
 
-export type Section = 'Home' | 'About' | 'Tracks' | 'Apply' | 'Logistics';
+export type Section = 'Home' | 'About' | 'Tracks' | 'Speakers' | 'Schedule';
 type HeaderOptionType = { label: Section; value: string };
 
 const options: HeaderOptionType[] = [
-  { label: 'Home', value: '/home' },
-  { label: 'About', value: '/about' },
-  { label: 'Tracks', value: '/tracks' },
-  { label: 'Apply', value: '/apply' },
-  { label: 'Logistics', value: '/logistics' },
+  { label: 'Home', value: '/' },
+  { label: 'About', value: '#about' },
+  { label: 'Tracks', value: '#tracks' },
+  { label: 'Speakers', value: '#speakers' },
+  { label: 'Schedule', value: '#schedule' },
 ];
 
 const Landing = () => {
@@ -24,15 +24,17 @@ const Landing = () => {
           <LogoSVG className="cursor-pointer w-[25%] h-[100%] my-auto ml-5" />
         </div>
         {options.map((option: HeaderOptionType) => (
-          <button className="flex flex-col px-2 py-1 m-2 transition duration-300 ease-in-out delay-150 rounded hover:scale-110 hover:bg-red-100">
-            <div className="mx-auto my-auto text-2xl">{option.label}</div>
-            <div className="mx-auto my-auto">{option.value}</div>
-          </button>
+          <a href={option.value}>
+            <button className="flex flex-col px-2 py-1 m-2 transition duration-300 ease-in-out delay-150 rounded hover:scale-110 hover:bg-red-100" >
+              <div className="mx-auto my-auto text-2xl">{option.label}</div>
+              <div className="mx-auto my-auto">{option.value}</div>
+            </button>
+          </a>
         ))}
       </div>
       <div
         className="h-screen w-full overflow-x-clip bg-cover pt-[5%] relative top-[100px]"
-        // style={{ backgroundImage: `url(${bg})` }}
+      // style={{ backgroundImage: `url(${bg})` }}
       >
         <PlaneSVG className="w-[60%] mx-auto transition ease-in-out delay-150 hover:scale-110 duration-300 h-min" />
       </div>
@@ -42,9 +44,9 @@ const Landing = () => {
       >
         Map
       </div> */}
-            <div
+      <div
         className="h-screen w-cover overflow-x-clip bg-cover pt-[5%] relative top-[100px]"
-        // style={{ backgroundImage: `url(${bg})` }}
+      // style={{ backgroundImage: `url(${bg})` }}
       >
         <Cloud1SVG className="w-[100%] mx-auto h-min" />
         <Cloud2SVG className="w-[100%] mx-auto transition ease-in-out delay-100 hover:scale-110 duration-300 h-min absolute top-10 left-0" />
