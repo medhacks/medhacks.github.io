@@ -1,18 +1,16 @@
-import { FC, useState, MouseEvent } from 'react';
+import { useState, type MouseEvent } from 'react';
 import { ReactComponent as ScheduleHeaderSVG } from '../assets/schedule_header.svg';
 import ScheduleTable from './ScheduleTab';
 
-const ScheduleTab: FC<{
-  day: string;
-}> = ({ day }) => {
+const ScheduleTab = ({ day }: { day: string }) => {
   return (
-    <h5 className="text-[#FCE689] hover:text-white focus:text-white uppercase italic text-xl text-center leading-tight font-medium font-bold font-sans p-2">
+    <h5 className="text-[#FCE689] hover:text-white focus:text-white uppercase italic text-xl text-center leading-tight font-bold font-sans p-2">
       {day}
     </h5>
   );
 };
 
-const Schedule: FC = () => {
+const Schedule = () => {
   const [dayActive, setDayActive] = useState(5);
 
   const handleMouseEvent = (e: MouseEvent<HTMLButtonElement>, day: number) => {
@@ -33,13 +31,12 @@ const Schedule: FC = () => {
 
       <div>
         {/* Schedule Tabs */}
-        <div className="flex justify-center flex-row m-auto w-[80%] flex-shrink" >
+        <div className="flex justify-center flex-row m-auto w-[80%] flex-shrink">
           <div className="md:w-[170px] xl:w-[300px] mr-2 ml-2 bg-[#E63F21] p-2 rounded-xl">
             <button
               onClick={(e) => {
                 handleMouseEvent(e, 5);
               }}
-
               className="w-full border-4 hover:border-[#FCE689] focus:border-[#FCE689] rounded-xl border-white "
             >
               <ScheduleTab day="friday" />
@@ -50,7 +47,6 @@ const Schedule: FC = () => {
               onClick={(e) => {
                 handleMouseEvent(e, 6);
               }}
-
               className="w-full border-4 hover:border-[#FCE689] focus:border-[#FCE689] rounded-xl border-white "
             >
               <ScheduleTab day="saturday" />
@@ -61,7 +57,6 @@ const Schedule: FC = () => {
               onClick={(e) => {
                 handleMouseEvent(e, 7);
               }}
-
               className="w-full border-4 hover:border-[#FCE689] focus:border-[#FCE689] rounded-xl border-white "
             >
               <ScheduleTab day="sunday" />
@@ -70,11 +65,11 @@ const Schedule: FC = () => {
         </div>
 
         {/* Tab Content */}
-        <div className="h-200 w-full">
+        <div className="w-full h-200">
           <ScheduleTable dayActive={dayActive} />
         </div>
-      </div >
-    </div >
+      </div>
+    </div>
   );
 };
 
