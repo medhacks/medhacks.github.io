@@ -58,9 +58,8 @@ export default function Main() {
       </div>
 
       {/* Page Contents */}
-      {document.documentElement.scrollTop &&
-      (!document.documentElement.scrollTop ||
-        getBaloonsScrollModifier() < 208) ? (
+      {(!document.documentElement.scrollTop ||
+        getBaloonsScrollModifier() < 208) && (
         <BaloonsSVG
           className={`w-[97.5%] z-0 absolute`}
           style={{
@@ -72,7 +71,7 @@ export default function Main() {
             }rem`,
           }}
         />
-      ) : null}
+      )}
       <div className="bg-gradient-to-b from-[#C7F2FF] to-[#FFCDC6]">
         <Landing />
         <Spacer sectionId="about" />
