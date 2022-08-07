@@ -46,13 +46,13 @@ export default function Main() {
       {/* Scroll Bar */}
       <div
         id="scrollbar"
-        className="fixed top-[90px] z-20 left-0"
+        className="fixed top-[0px] z-50 left-0"
         style={{ width: progress, visibility: progress ? 'visible' : 'hidden' }}
       >
         <PlaneSVG
           id="plane-scroll"
           className="absolute top-[-50px] scale-[30%]"
-          style={{ left: progress - 50 }}
+          style={{ left: progress -80 }}
         />
         <div className="shadow w-full h-[10px] bg-gradient-to-r from-[#E63F21] to-[#FCE689]"></div>
       </div>

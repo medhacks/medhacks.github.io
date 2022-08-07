@@ -34,7 +34,7 @@ const tableContent = (dayActive: number) => {
 
 const ScheduleTable: FC<TableProps> = ({ dayActive }) => {
   return (
-    <div className="font-sans text-white text-xl h-100 bg-[#377BC2CC] mr-20 ml-20 pt-10 pb-10 rounded-3xl" >
+    <div className="font-sans text-white md:text-xl sm:text-lg h-100 bg-[#0000000F] mr-[5%] ml-[5%] p-[5%] rounded-3xl border-2 border-[#5DA6DC]" >
       <table className="flex justify-center flex-column">
         <tbody key={dayActive + 'schedule'}>{tableContent(dayActive)}</tbody>
       </table>

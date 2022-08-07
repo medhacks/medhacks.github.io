@@ -7,7 +7,7 @@ const About: FC = () => {
       <div className="w-full flex flex-row justify-center items-center h-64 hover:scale-[102%] transition ease-in-out delay-50 z-20">
         <AboutSVG className="scale-[50%]" />
       </div>
-      <div className="px-[10%] text-white text-xl text-justify font-['Mulish'] leading 7 bg-[#E3A29ECC] mr-20 ml-20 pt-10 pb-10 rounded-3xl z-20">
+      <div className="px-[10%] text-white md:text-xl sm:text-lg text-justify font-['Mulish'] leading 7 bg-[#E3A29ECC] mr-[5%] ml-[5%] pt-[2%] pb-[2%] rounded-3xl z-20">
         <p className="">
           MedHacks is the nation’s premier medical hackathon at Johns Hopkins
           University – and one of the largest student run hackathons. Our
@@ -21,6 +21,7 @@ const About: FC = () => {
           can participate, virtually or in-person (our first on-site event since
           2019!).
         </p>
+        <br/>
         <p className="font-bold">
           We can't wait to see you and your ideas at MedHacks 2022!
         </p>

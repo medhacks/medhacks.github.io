@@ -39,21 +39,21 @@ const SpeakerDescription: FC<{
   index: number,
   speakerData: SpeakerData[]
 }> = ({ index, speakerData }) => {
-  const boxStyling = "h-48 bg-[#5DA6DC]/[.6] border-2 rounded-3xl border-[#5DA6DC]/50 overflow-auto";
+  const boxStyling = "p-[5%] bg-[#5DA6DC]/[.6] border-2 rounded-3xl border-[#5DA6DC]/50 overflow-auto";
   return (
     index === -1 ? 
     <div className={boxStyling}>
-      <div className='font-sans text-white text-2xl align-middle pt-4'>
+      <div className='font-sans text-white md:text-2xl sm:text-lg align-middle'>
         Above are the speakers for MedHacks.
         You can hover over them to read more about each speaker!
       </div>
     </div>
     :
     <div className={boxStyling}>
-      <div className='font-sans text-white text-2xl leading-loose'>
+      <div className='font-sans text-white md:text-2xl sm:text-lg leading-loose'>
         {speakerData[index].name}
       </div>
-      <div className='font-sans text-white text-xl pt-4'>
+      <div className='font-sans text-white md:text-2xl sm:text-lg pt-4'>
         {speakerData[index].description}
       </div>
     </div>
@@ -114,14 +114,14 @@ const Speakers: FC = () => {
         <SpeakersHeaderSVG className="scale-[50%]" />
       </div>
 
-      <div className="font-sans text-white text-2xl pl-20 pr-20 bg-[#5DA6DCCC] mr-20 ml-20 pt-10 pb-10 rounded-3xl">
+      <div className="font-sans text-white text-white md:text-2xl sm:text-lg pl-[2%] pr-[2%] bg-[#00000010] mr-[5%] ml-[5%] mt-10 pt-10 pb-10 rounded-3xl">
         Stay tuned for this year’s speakers!
       </div>
 
       {/* Speaker Cards */}
       <div className="flex flex-wrap items-center justify-center w-full h-fit object-contain">
         {speakerData.map((speaker, index) => (
-          <div className="m-6">
+          <div className="m-[2%]">
             <SpeakerPortrait
               imageUrl={speaker.imageUrl}
               index={index}
@@ -132,7 +132,7 @@ const Speakers: FC = () => {
       </div>
 
       {/* Speaker Description */}
-      <div className='px-48 align-center'>
+      <div className='px-[5%] align-center '>
         <SpeakerDescription
           index={hover}
           speakerData={speakerData}

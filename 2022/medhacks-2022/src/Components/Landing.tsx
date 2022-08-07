@@ -57,6 +57,7 @@ const Landing = () => {
             }}
           />
         </div>
+
       </div>
       {/* <div
         className="h-[62.5rem] w-full overflow-x-clip"

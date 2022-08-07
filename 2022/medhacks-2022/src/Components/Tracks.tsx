@@ -30,12 +30,12 @@ const Tracks: FC = () => {
       </div>
 
       {/* Description of Tracks */}
-      <p className="font-sans text-white text-2xl pl-20 pr-20 bg-[#CFACB9] mr-20 ml-20 pt-10 pb-10 rounded-3xl z-20">
+      <p className="font-sans text-white md:text-2xl sm:text-lg pl-[2%] pr-[2%] bg-[#CFACB9] mr-[5%] ml-[5%] pt-10 pb-10 rounded-3xl">
         Tracks are coming soon! Stay tuned for this year’s tracks and prizes!
       </p>
 
       {/* Track Cards */}
-      <div className="flex flex-row justify-center z-20">
+      <div className="flex flex-row justify-center flex-wrap">
         <TrackCard
           trackName="Track 1"
           description="When cursor hovers over a track, border turns red. Centered description"
