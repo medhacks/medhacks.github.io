@@ -25,17 +25,17 @@ const Tracks: FC = () => {
   return (
     <div className="w-full flex flex-col">
       {/* Tracks Header */}
-      <div className="w-full flex flex-row justify-center items-center h-64 hover:scale-[102%] transition ease-in-out delay-50">
+      <div className="w-full flex flex-row justify-center items-center h-64 hover:scale-[102%] transition ease-in-out delay-50 z-20">
         <TracksHeaderSVG className="scale-[50%]" />
       </div>
 
       {/* Description of Tracks */}
-      <p className="font-sans text-white text-2xl pl-20 pr-20 bg-[#CFACB9] mr-20 ml-20 pt-10 pb-10 rounded-3xl">
+      <p className="font-sans text-white text-2xl pl-20 pr-20 bg-[#CFACB9] mr-20 ml-20 pt-10 pb-10 rounded-3xl z-20">
         Tracks are coming soon! Stay tuned for this year’s tracks and prizes!
       </p>
 
       {/* Track Cards */}
-      <div className="flex flex-row justify-center">
+      <div className="flex flex-row justify-center z-20">
         <TrackCard
           trackName="Track 1"
           description="When cursor hovers over a track, border turns red. Centered description"

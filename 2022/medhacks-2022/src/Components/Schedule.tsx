@@ -21,10 +21,10 @@ const Schedule = () => {
   return (
     <div>
       {/* Schedule Header */}
-      <div className="w-full flex flex-row justify-center items-center h-64 hover:scale-[102%] transition ease-in-out delay-50">
+      <div className="w-full flex flex-row justify-center items-center h-64 hover:scale-[102%] transition ease-in-out delay-50 z-20">
         <ScheduleHeaderSVG className="scale-[50%]" />
       </div>
-      <div className="font-sans text-white text-2xl pl-20 pr-20 bg-[#377BC2CC] mr-20 ml-20 pt-10 pb-10 mb-20 rounded-3xl">
+      <div className="font-sans text-white text-2xl pl-20 pr-20 bg-[#377BC2CC] mr-20 ml-20 pt-10 pb-10 mb-20 rounded-3xl z-20">
         Below is a tentative schedule for MedHacks 2022. We will be releasing a
         full schedule closer to the hackathon, so check back soon!
       </div>

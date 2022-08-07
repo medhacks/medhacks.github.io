@@ -8,6 +8,7 @@ import Spacer from './Spacer';
 import Sponsors from './Sponsors';
 import Footer from './Footer';
 import { ReactComponent as PlaneSVG } from '../assets/plane_no_bg.svg';
+import { ReactComponent as BaloonsSVG } from '../assets/baloons.svg';
 
 export default function Main() {
   const [progress, setprogress] = useState(0);
@@ -31,8 +32,17 @@ export default function Main() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const getBaloonsScrollModifier = () => {
+    return (
+      ((document.documentElement.scrollTop / document.body.clientHeight) *
+        document.body.clientWidth) /
+        2 -
+      20
+    );
+  };
+
   return (
-    <div>
+    <div style={{ height: 'min-content', overflow: 'hidden' }}>
       {/* Scroll Bar */}
       <div
         id="scrollbar"
@@ -48,6 +58,21 @@ export default function Main() {
       </div>
 
       {/* Page Contents */}
+      {document.documentElement.scrollTop &&
+      (!document.documentElement.scrollTop ||
+        getBaloonsScrollModifier() < 208) ? (
+        <BaloonsSVG
+          className={`w-[97.5%] z-0 absolute`}
+          style={{
+            top: `${
+              document.documentElement.scrollTop &&
+              getBaloonsScrollModifier() > 8
+                ? getBaloonsScrollModifier()
+                : 8
+            }rem`,
+          }}
+        />
+      ) : null}
       <div className="bg-gradient-to-b from-[#C7F2FF] to-[#FFCDC6]">
         <Landing />
         <Spacer sectionId="about" />
