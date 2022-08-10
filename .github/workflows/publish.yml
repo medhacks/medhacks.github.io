@@ -18,7 +18,7 @@ jobs:
         working-directory: 2022/medhacks-2022
 
       - name: Build
-        run: npm run-script build
+        run: CI=false npm run-script build
         working-directory: 2022/medhacks-2022
     
       - name: Push
