@@ -26,32 +26,32 @@ const Landing = () => {
   return (
     <div className="w-full h-[screen]">
       <div className="h-screen w-full overflow-x-clip bg-cover relative">
-        <div className="absolute top-0 w-screen h-screen flex flex-col z-20">
+        <div className="w-screen h-screen flex flex-col z-20 ">
           <PlaneSVG
-            className="w-[60%] mx-[20%] transition ease-in-out delay-150 hover:scale-105 duration-300 mt-5 max-h-[20%] h-min z-20"
+            className="w-[60%]  min-w-[80vw] m-auto mt-[5vh] transition ease-in-out delay-150 hover:scale-105 duration-300 mt-5 max-h-[20%] h-min z-20"
             // style={{ marginRight: document.body.scrollHeight + 'rem' }}
           />
-          <IslandSVG className="w-[50%] mx-[25%] my-auto h-min z-20" />
+          <IslandSVG className="w-[50%] min-w-[100vw] m-auto z-20" />
           <Link to={SectionID.ABOUT}>
-            <AboutSVG className="absolute min-w-[8%] w-[4rem] h-min left-[25.55%] top-[43vh] top-0 mx-auto transition ease-in-out delay-150 hover:scale-105 duration-300 cursor-pointer z-20" />
+            <AboutSVG className="absolute min-w-[8%] w-[4rem] h-min left-[25.55%] top-[43vh] mx-auto transition ease-in-out delay-150 hover:scale-105 duration-300 cursor-pointer z-20" />
           </Link>
           <Link to={SectionID.SPONSORS}>
-            <SponsorsSVG className="absolute min-w-[10%] w-[5rem] h-min left-[30.15%] top-[30vh] top-0 mx-auto transition ease-in-out delay-150 hover:scale-105 duration-300 cursor-pointer z-20" />
+            <SponsorsSVG className="absolute min-w-[10%] w-[5rem] h-min left-[30.15%] top-[30vh] mx-auto transition ease-in-out delay-150 hover:scale-105 duration-300 cursor-pointer z-20" />
           </Link>
           <Link to={SectionID.SPEAKERS}>
-            <SpeakersSVG className="absolute min-w-[10%] w-[5rem] h-min left-[33%] top-[59vh] top-0 mx-auto transition ease-in-out delay-150 hover:scale-105 duration-300 cursor-pointer z-20" />{' '}
+            <SpeakersSVG className="absolute min-w-[10%] w-[5rem] h-min left-[33%] top-[59vh] mx-auto transition ease-in-out delay-150 hover:scale-105 duration-300 cursor-pointer z-20" />{' '}
           </Link>
           <Link to={SectionID.TRACKS}>
-            <TracksSVG className="absolute min-w-[8%] w-[4rem] h-min left-[66.65%] top-[42vh] top-0 mx-auto transition ease-in-out delay-150 hover:scale-105 duration-300 cursor-pointer z-20" />{' '}
+            <TracksSVG className="absolute min-w-[8%] w-[4rem] h-min left-[66.65%] top-[42vh] mx-auto transition ease-in-out delay-150 hover:scale-105 duration-300 cursor-pointer z-20" />{' '}
           </Link>
           <Link to={SectionID.FAQ}>
-            <FaqSVG className="absolute min-w-[5%] w-[3rem] h-min left-[60.4%] top-[59.5vh] top-0 mx-auto transition ease-in-out delay-150 hover:scale-105 duration-300 cursor-pointer z-20" />{' '}
+            <FaqSVG className="absolute min-w-[5%] w-[3rem] h-min left-[60.4%] top-[59.5vh] mx-auto transition ease-in-out delay-150 hover:scale-105 duration-300 cursor-pointer z-20" />{' '}
           </Link>
           <Link to={SectionID.SCHEDULE}>
-            <ScheduleSVG className="absolute min-w-[10%] w-[5rem] h-min left-[59.25%] top-[30vh] top-0 mx-auto transition ease-in-out delay-150 hover:scale-105 duration-300 cursor-pointer z-20" />{' '}
+            <ScheduleSVG className="absolute min-w-[10%] w-[5rem] h-min left-[59.25%] top-[30vh]  mx-auto transition ease-in-out delay-150 hover:scale-105 duration-300 cursor-pointer z-20" />{' '}
           </Link>
           <ApplySVG
-            className="absolute min-w-[10%] w-[5rem] h-min left-[45%] top-[43vh] top-0 mx-auto transition ease-in-out delay-150 hover:scale-105 duration-300 cursor-pointer z-20"
+            className="absolute min-w-[10%] w-[5rem] h-min left-[45%] top-[43vh]  mx-auto transition ease-in-out delay-150 hover:scale-105 duration-300 cursor-pointer z-20"
             onClick={() => {
               window.location.href = 'http://apply.medhacks.io';
             }}
@@ -66,7 +66,7 @@ const Landing = () => {
         Map
       </div> */}
       <div
-        className="h-screen w-cover overflow-x-clip bg-cover pt-[5%] relative top-[100px] z-20"
+        className="h-screen w-cover overflow-x-clip bg-cover relative  mt-[-10%]"
         // style={{ backgroundImage: `url(${bg})` }}
       >
         <Cloud1SVG className="w-[100%] mx-auto h-min" />

@@ -119,7 +119,7 @@ const Speakers: FC = () => {
       </div>
 
       {/* Speaker Cards */}
-      <div className="flex flex-wrap items-center justify-center w-full h-fit object-contain">
+      {/* <div className="flex flex-wrap items-center justify-center w-full h-fit object-contain">
         {speakerData.map((speaker, index) => (
           <div className="m-[2%]">
             <SpeakerPortrait
@@ -129,15 +129,15 @@ const Speakers: FC = () => {
             />
           </div>
         ))}
-      </div>
+      </div> */}
 
       {/* Speaker Description */}
-      <div className='px-[5%] align-center '>
+      {/* <div className='px-[5%] align-center '>
         <SpeakerDescription
           index={hover}
           speakerData={speakerData}
         />
-      </div>
+      </div> */}
     </div>
   );
 };

@@ -35,7 +35,7 @@ const Tracks: FC = () => {
       </p>
 
       {/* Track Cards */}
-      <div className="flex flex-row justify-center flex-wrap">
+      {/* <div className="flex flex-row justify-center flex-wrap">
         <TrackCard
           trackName="Track 1"
           description="When cursor hovers over a track, border turns red. Centered description"
@@ -48,7 +48,7 @@ const Tracks: FC = () => {
           trackName="Track 3"
           description="This is just a simple description"
         />
-      </div>
+      </div> */}
     </div>
   );
 };
