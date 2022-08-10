@@ -15,9 +15,11 @@ jobs:
 
       - name: Install all dependencies
         run: npm install
+        working-directory: 2022/medhacks-2022
 
       - name: Build
         run: npm run-script build
+        working-directory: 2022/medhacks-2022
     
       - name: Push
         uses: s0/git-publish-subdir-action@develop
