@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "./App.css";
-import { Routes, Route } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import Main from "./Components/Main.js";
 import { Helmet } from "react-helmet";
 import FAQ from "./Components/FAQ/FAQ.js";
@@ -35,7 +35,7 @@ function App() {
       </Helmet>
       <MLH />
       <NavBar />
-      <Routes>
+      <Switch>
         <Route path="/" element={<App />}>
           <Route exact path="/speakers" component={SpeakerPage} />
           <Route exact path="/schedule" component={Schedule} />
@@ -49,7 +49,7 @@ function App() {
           />
           <Route exact path="/" component={Main} />
         </Route>
-      </Routes>
+      </Switch>
       <Sponsors />
       <Footer />
     </div>
