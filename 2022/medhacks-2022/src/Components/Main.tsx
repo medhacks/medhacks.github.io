@@ -1,14 +1,15 @@
 import { useEffect, useState } from 'react';
+import { ReactComponent as BaloonsSVG } from '../assets/baloons.svg';
+import { ReactComponent as PlaneSVG } from '../assets/plane_no_bg.svg';
 import About from './About';
+import FAQ from './FAQ';
+import Footer from './Footer';
 import Landing from './Landing';
-import Speakers from './Speakers';
-import Tracks from './Tracks';
 import Schedule from './Schedule';
 import Spacer from './Spacer';
+import Speakers from './Speakers';
 import Sponsors from './Sponsors';
-import Footer from './Footer';
-import { ReactComponent as PlaneSVG } from '../assets/plane_no_bg.svg';
-import { ReactComponent as BaloonsSVG } from '../assets/baloons.svg';
+import Tracks from './Tracks';
 
 export default function Main() {
   const [progress, setprogress] = useState(0);
@@ -52,7 +53,7 @@ export default function Main() {
         <PlaneSVG
           id="plane-scroll"
           className="absolute top-[-50px] scale-[30%]"
-          style={{ left: progress -80 }}
+          style={{ left: progress - 80 }}
         />
         <div className="shadow w-full h-[10px] bg-gradient-to-r from-[#E63F21] to-[#FCE689]"></div>
       </div>
@@ -88,9 +89,13 @@ export default function Main() {
         <Speakers />
         <Spacer sectionId="schedule" />
       </div>
-      <div className="bg-gradient-to-b from-[#93D8FF] to-[#2E6CC9]">
+      <div className="bg-gradient-to-b from-[#93D8FF] to-[#5fbef5]">
         <Schedule />
         <Spacer sectionId="sponsors" />
+      </div>
+      <div className="bg-gradient-to-b from-[#5fbef5] to-[#2E6CC9]">
+        <FAQ />
+        <Spacer sectionId="faq" />
       </div>
       <div className="bg-[#2E6CC9]">
         <Sponsors />
