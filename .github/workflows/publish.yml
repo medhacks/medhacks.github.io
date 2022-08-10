@@ -3,7 +3,7 @@ name: Generate a build and push to another branch
 on:
   push:
     branches:
-      - gh-pages-22
+      - "2022"
 
 jobs:
   build:
