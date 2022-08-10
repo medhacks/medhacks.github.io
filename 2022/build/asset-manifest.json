@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/static/css/main.358bb19b.css",
+    "main.js": "/static/js/main.9e09dcb0.js",
+    "static/js/787.882cd3cc.chunk.js": "/static/js/787.882cd3cc.chunk.js",
+    "static/media/island.svg": "/static/media/island.0d2d68beab95d6ff97ebf82f6c85e354.svg",
+    "static/media/baloons.svg": "/static/media/baloons.ea6e220ee92f1331d720ccf14d2ad229.svg",
+    "static/media/plane.svg": "/static/media/plane.0f19571ae18445a1a9646c3f71847924.svg",
+    "static/media/mh_logo_text.svg": "/static/media/mh_logo_text.6def141ec6ee53ba9ca438dc8865d231.svg",
+    "static/media/plane_no_bg.svg": "/static/media/plane_no_bg.e0e1c02425ec9d9fda7819cf1e27ab84.svg",
+    "static/media/sponsors_header.svg": "/static/media/sponsors_header.523e981364fb24c51714d9bfb5231cc7.svg",
+    "static/media/speakers_header.svg": "/static/media/speakers_header.c666d6103a9fd87b7ee2b93968a11024.svg",
+    "static/media/schedule_header.svg": "/static/media/schedule_header.765ec737ba844c2c84775ca9fa18924f.svg",
+    "static/media/tracks_header.svg": "/static/media/tracks_header.bea37e8ac8e13ee64ddfc0e1ea8edc4d.svg",
+    "static/media/cloud 2.svg": "/static/media/cloud 2.9ae2453fcc6eba00e2a16a85b0668c26.svg",
+    "static/media/cloud 1.svg": "/static/media/cloud 1.fcab1b49535ff7f245b603334a870e29.svg",
+    "static/media/About_Header_SVG.svg": "/static/media/About_Header_SVG.9a58ed8643f2b82031286ef7c5538a97.svg",
+    "static/media/sponsors.svg": "/static/media/sponsors.ad5b6d8ec7ff1d14db2dbeeac817743b.svg",
+    "static/media/speakers.svg": "/static/media/speakers.46818c64abd8b870f24dd0adde09b289.svg",
+    "static/media/schedule.svg": "/static/media/schedule.72d6116dca43a1ef132face4949cca59.svg",
+    "static/media/tracks.svg": "/static/media/tracks.1ffd68ae3d6f59cae8b8b1dfc8930e21.svg",
+    "static/media/apply.svg": "/static/media/apply.ebd9b376946994b6e836a2000217d6e9.svg",
+    "static/media/about.svg": "/static/media/about.6bf02faf404ceef73fbb224a357cb3b0.svg",
+    "static/media/faq.svg": "/static/media/faq.486f134d6bcdb0629b9b38d0fc914662.svg",
+    "index.html": "/index.html",
+    "main.358bb19b.css.map": "/static/css/main.358bb19b.css.map",
+    "main.9e09dcb0.js.map": "/static/js/main.9e09dcb0.js.map",
+    "787.882cd3cc.chunk.js.map": "/static/js/787.882cd3cc.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.358bb19b.css",
+    "static/js/main.9e09dcb0.js"
+  ]
+}
