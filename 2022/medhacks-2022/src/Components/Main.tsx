@@ -9,6 +9,7 @@ import Sponsors from './Sponsors';
 import Footer from './Footer';
 import { ReactComponent as PlaneSVG } from '../assets/plane_no_bg.svg';
 import { ReactComponent as BaloonsSVG } from '../assets/baloons.svg';
+import { ReactComponent as LogoSVG } from '../assets/logo.svg';
 
 export default function Main() {
   const [progress, setprogress] = useState(0);
@@ -56,6 +57,7 @@ export default function Main() {
         />
         <div className="shadow w-full h-[10px] bg-gradient-to-r from-[#E63F21] to-[#FCE689]"></div>
       </div>
+      <LogoSVG className="fixed top-[10px] left-[0] w-[10%] h-auto z-30"/>
 
       {/* Page Contents */}
       {(!document.documentElement.scrollTop ||
