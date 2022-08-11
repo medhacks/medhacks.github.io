@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { ReactComponent as BaloonsSVG } from '../assets/baloons.svg';
 import { ReactComponent as PlaneSVG } from '../assets/plane_no_bg.svg';
+import { ReactComponent as LogoSVG } from '../assets/logo.svg';
 import About from './About';
 import FAQ from './FAQ';
 import Footer from './Footer';
@@ -57,6 +58,7 @@ export default function Main() {
         />
         <div className="shadow w-full h-[10px] bg-gradient-to-r from-[#E63F21] to-[#FCE689]"></div>
       </div>
+      <LogoSVG className="fixed top-[10px] left-[0] w-[10%] h-auto z-30"/>
 
       {/* Page Contents */}
       {(!document.documentElement.scrollTop ||

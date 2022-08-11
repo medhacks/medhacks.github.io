@@ -17,10 +17,10 @@ const About: FC = () => {
           11th, 2022. Hackers will have 36 hours to research, code, prototype,
           and finally, present their work to a judge panel. Applicants can
           register either as a team or an individual looking to form a team at
-          the event. This year, we will host a hybrid hackathon so that anyone
-          can participate, virtually or in-person (our first on-site event since
-          2019!).
+          the event. This year, we will host a <b className="italic text-[#FCE689]">solely in-person</b> hackathon (our first on-site event since
+          2019!) at <b className="text-[#FCE689]">Fast Forward U </b>(320 W 29th St #200, Baltimore, MD 21211)!.
         </p>
+
         <br/>
         <p className="font-bold">
           We can't wait to see you and your ideas at MedHacks 2022!
