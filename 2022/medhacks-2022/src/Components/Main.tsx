@@ -93,11 +93,11 @@ export default function Main() {
       </div>
       <div className="bg-gradient-to-b from-[#93D8FF] to-[#5fbef5]">
         <Schedule />
-        <Spacer sectionId="sponsors" />
+        <Spacer sectionId="faq" />
       </div>
       <div className="bg-gradient-to-b from-[#5fbef5] to-[#2E6CC9]">
         <FAQ />
-        <Spacer sectionId="faq" />
+        <Spacer sectionId="sponsors" />
       </div>
       <div className="bg-[#2E6CC9]">
         <Sponsors />
