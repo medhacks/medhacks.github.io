@@ -11,10 +11,10 @@ export default function FAQCard({
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <div className="w-[400px] font-sans">
+    <div className="font-['Mulish']">
       <button
         className={clsx(
-          'px-2 py-3 w-full hover:bg-red-500 font-medium transition-colors duration-150 ease-in text-white bg-red-400 select-none',
+          'px-2 py-3 w-full md:text-xl sm:text-lg hover:bg-red-500 font-medium transition-colors duration-150 ease-in text-white bg-[#E63F21] select-none',
           {
             'rounded-t': isExpanded,
             rounded: !isExpanded,
@@ -26,7 +26,7 @@ export default function FAQCard({
       </button>
       {isExpanded ? (
         <div
-          className="px-5 py-4 text-white bg-opacity-70 bg-slate-700"
+        className="text-white md:text-lg sm:text-md bg-[#2F69A8] pl-[5%] pr-[5%] bg-[#0000000F] pt-10 pb-10"
           dangerouslySetInnerHTML={{ __html: answer }}
         />
       ) : null}
