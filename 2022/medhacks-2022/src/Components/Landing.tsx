@@ -1,15 +1,15 @@
-import { ReactComponent as PlaneSVG } from '../assets/plane.svg';
-import { ReactComponent as IslandSVG } from '../assets/island.svg';
-import { ReactComponent as AboutSVG } from '../assets/about.svg';
-import { ReactComponent as SponsorsSVG } from '../assets/sponsors.svg';
-import { ReactComponent as SpeakersSVG } from '../assets/speakers.svg';
-import { ReactComponent as ScheduleSVG } from '../assets/schedule.svg';
-import { ReactComponent as FaqSVG } from '../assets/faq.svg';
-import { ReactComponent as TracksSVG } from '../assets/tracks.svg';
-import { ReactComponent as ApplySVG } from '../assets/apply.svg';
 import { HashLink as Link } from 'react-router-hash-link';
+import { ReactComponent as AboutSVG } from '../assets/about.svg';
+import { ReactComponent as ApplySVG } from '../assets/apply.svg';
 import { ReactComponent as Cloud1SVG } from '../assets/cloud 1.svg';
 import { ReactComponent as Cloud2SVG } from '../assets/cloud 2.svg';
+import { ReactComponent as FaqSVG } from '../assets/faq.svg';
+import { ReactComponent as IslandSVG } from '../assets/island.svg';
+import { ReactComponent as PlaneSVG } from '../assets/plane.svg';
+import { ReactComponent as ScheduleSVG } from '../assets/schedule.svg';
+import { ReactComponent as SpeakersSVG } from '../assets/speakers.svg';
+import { ReactComponent as SponsorsSVG } from '../assets/sponsors.svg';
+import { ReactComponent as TracksSVG } from '../assets/tracks.svg';
 
 enum SectionID {
   HOME = '#home',
@@ -25,10 +25,10 @@ enum SectionID {
 const Landing = () => {
   return (
     <div className="w-full h-[screen]">
-      <div className="h-screen w-full overflow-x-clip bg-cover relative">
-        <div className="w-screen h-screen flex flex-col z-20 ">
+      <div className="relative w-full h-screen bg-cover overflow-x-clip">
+        <div className="z-20 flex flex-col w-screen h-screen ">
           <PlaneSVG
-            className="w-[60%]  min-w-[80vw] m-auto mt-[5vh] transition ease-in-out delay-150 hover:scale-105 duration-300 mt-5 max-h-[20%] h-min z-20"
+            className="w-[60%]  min-w-[80vw] m-auto transition ease-in-out delay-150 hover:scale-105 duration-300 mt-5 max-h-[20%] h-min z-20"
             // style={{ marginRight: document.body.scrollHeight + 'rem' }}
           />
           <IslandSVG className="w-[50%] min-w-[100vw] m-auto z-20" />
@@ -57,7 +57,6 @@ const Landing = () => {
             }}
           />
         </div>
-
       </div>
       {/* <div
         className="h-[62.5rem] w-full overflow-x-clip"
