@@ -31,7 +31,7 @@ const Tracks: FC = () => {
 
       {/* Description of Tracks */}
       <p className="font-sans text-white md:text-2xl sm:text-lg pl-[2%] pr-[2%] bg-[#CFACB9] mr-[5%] ml-[5%] pt-10 pb-10 rounded-3xl">
-        Tracks are coming soon! Stay tuned for this year’s tracks and prizes!
+        Tracks are coming soon! This year's tracks will be coming from JHU SoN and APL. Stay tuned for more information on tracks and prizes!
       </p>
 
       {/* Track Cards */}

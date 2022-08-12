@@ -114,7 +114,7 @@ const Speakers: FC = () => {
         <SpeakersHeaderSVG className="w-[40%] min-w-[350px] max-w-[500px] h-auto"  />
       </div>
 
-      <div className="font-sans text-white text-white md:text-2xl sm:text-lg pl-[2%] pr-[2%] bg-[#00000010] mr-[5%] ml-[5%] mt-10 pt-10 pb-10 rounded-3xl">
+      <div className="font-sans text-white text-white md:text-2xl sm:text-lg pl-[2%] pr-[2%] bg-[#00000010] mr-[5%] ml-[5%] pt-10 pb-10 rounded-3xl">
         Stay tuned for this year’s speakers!
       </div>
 

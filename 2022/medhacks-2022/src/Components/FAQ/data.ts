@@ -36,7 +36,7 @@ export default [
 
   [
     "Will this year's hackathon be virtual?",
-    'MedHacks 2022 will be in a hybrid format! This means that we are planning to hold both in-person and virtual components of the hackathon. We are still planning on offering the same perks that we have in previous in-person MedHacks events such as fun games, workshops, speakers, social media activities, mentorship, and merch. Details regarding day-of-event logistics will be sent out to all participants closer to the event. ',
+    'MedHacks 2022 will be fully in-person! We are still planning on offering the same perks that we have in previous in-person MedHacks events such as fun games, workshops, speakers, social media activities, mentorship, and merch. Details regarding day-of-event logistics will be sent out to all participants closer to the event. ',
   ],
 
   [
