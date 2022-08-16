@@ -5,7 +5,7 @@ const About: FC = () => {
   return (
     <div className="w-full flex flex-col">
       <div className="w-full flex flex-row justify-center items-center h-64 hover:scale-[102%] transition ease-in-out delay-50 z-20">
-        <AboutSVG className="scale-[50%]" />
+        <AboutSVG className="w-[40%] min-w-[300px] max-w-[500px] h-auto" />
       </div>
       <div className="px-[10%] text-white md:text-xl sm:text-lg text-justify font-['Mulish'] leading 7 bg-[#E3A29ECC] mr-[5%] ml-[5%] pt-[2%] pb-[2%] rounded-3xl z-20">
         <p className="">

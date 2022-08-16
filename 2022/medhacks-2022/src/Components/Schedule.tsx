@@ -22,7 +22,7 @@ const Schedule = () => {
     <div>
       {/* Schedule Header */}
       <div className="w-full flex flex-row justify-center items-center h-64 hover:scale-[102%] transition ease-in-out delay-50 z-20">
-        <ScheduleHeaderSVG className="w-[40%] min-w-[350px] max-w-[500px] h-auto" />
+        <ScheduleHeaderSVG className="w-[40%] min-w-[300px] max-w-[500px] h-auto" />
       </div>
     <div className="font-sans text-white md:text-2xl sm:text-lg pl-[2%] pr-[2%] bg-[#0000000F] mr-[5%] ml-[5%] pt-10 pb-10 rounded-3xl">
         Below is a tentative schedule for MedHacks 2022. We will be releasing a

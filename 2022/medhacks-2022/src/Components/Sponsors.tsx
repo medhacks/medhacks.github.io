@@ -6,7 +6,7 @@ const Sponsors: FC = () => {
   return (
     <div className="w-full flex flex-col">
       <div className="w-full flex flex-row justify-center items-center h-64 hover:scale-[102%] transition ease-in-out delay-50">
-        <SponsorsSVG className="w-[70%] min-w-[500px] max-w-[800px] h-auto"  />
+        <SponsorsSVG className="w-[70%] min-w-[400px] max-w-[800px] h-auto"  />
       </div>
       {/* <div className="flex  items-center gap-36 mt-10 mb-20">
         <div className="basis-1/3 ml-20 mr-2 object-cover">

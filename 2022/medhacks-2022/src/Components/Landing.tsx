@@ -65,11 +65,11 @@ const Landing = () => {
         Map
       </div> */}
       <div
-        className="h-screen w-cover overflow-x-clip bg-cover relative  mt-[-10%]"
+        className="h-auto w-cover overflow-x-clip bg-cover relative  mt-[-10%]"
         // style={{ backgroundImage: `url(${bg})` }}
       >
-        <Cloud1SVG className="w-[100%] mx-auto h-min" />
-        <Cloud2SVG className="w-[100%] mx-auto transition ease-in-out delay-100 hover:scale-110 duration-300 h-min absolute top-10 left-0" />
+        <Cloud1SVG className="w-[100%] h-auto" />
+        <Cloud2SVG className="w-[100%] h-auto transition ease-in-out delay-100 hover:scale-110 duration-300 h-min absolute top-10 left-0" />
       </div>
     </div>
   );

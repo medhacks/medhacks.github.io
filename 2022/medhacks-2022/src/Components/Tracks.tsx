@@ -26,7 +26,7 @@ const Tracks: FC = () => {
     <div className="w-full flex flex-col">
       {/* Tracks Header */}
       <div className="w-full flex flex-row justify-center items-center h-64 hover:scale-[102%] transition ease-in-out delay-50 z-20">
-        <TracksHeaderSVG className="w-[40%] min-w-[350px] max-w-[500px] h-auto"  />
+        <TracksHeaderSVG className="w-[40%] min-w-[300px] max-w-[500px] h-auto"  />
       </div>
 
       {/* Description of Tracks */}

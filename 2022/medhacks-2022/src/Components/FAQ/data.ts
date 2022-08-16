@@ -49,7 +49,10 @@ export default [
     `Yes we do! All participants must follow our ${getAnchor(
       'Code of Conduct',
       'https://docs.google.com/document/d/1cOO6rDV2nfbasEU5GdgVDdXgnwMzmXaRxJFecYlZPIo/edit?usp=sharing',
-    )} at MedHacks.`,
+    )} at MedHacks. Additionally, as a member of MLH, all participants must also follow the ${getAnchor(
+      'MLH Code of Conduct',
+      'https://static.mlh.io/docs/mlh-code-of-conduct.pdf'
+    )}.`,
   ],
 
   [

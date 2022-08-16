@@ -6,6 +6,7 @@ import About from './About';
 import FAQ from './FAQ';
 import Footer from './Footer';
 import Landing from './Landing';
+import MLH from './MLH/MLH';
 import Schedule from './Schedule';
 import Spacer from './Spacer';
 import Speakers from './Speakers';
@@ -58,7 +59,10 @@ export default function Main() {
         />
         <div className="shadow w-full h-[10px] bg-gradient-to-r from-[#E63F21] to-[#FCE689]"></div>
       </div>
-      <LogoSVG className="fixed top-[10px] left-[0] w-[10%] h-auto z-30"/>
+      <a  href="/">
+        <LogoSVG className="fixed top-[10px] left-[0] w-[8%] h-auto z-30"/>
+      </a>
+      <MLH />
 
       {/* Page Contents */}
       {(!document.documentElement.scrollTop ||
@@ -80,7 +84,7 @@ export default function Main() {
         <Spacer sectionId="about" />
       </div>
       <div className="bg-gradient-to-b from-[#FFCDC6] to-[#FFC0B7]">
-        <About />
+        <About/>
         <Spacer sectionId="tracks" />
       </div>
       <div className="bg-gradient-to-b from-[#FFC0B7] to-[#93D8FF]">
