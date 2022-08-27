@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.css": "/static/css/main.7a9eb3cf.css",
-    "main.js": "/static/js/main.87a419af.js",
+    "main.css": "/static/css/main.2f5a1795.css",
+    "main.js": "/static/js/main.8abb79ec.js",
     "static/js/787.882cd3cc.chunk.js": "/static/js/787.882cd3cc.chunk.js",
     "static/media/island.svg": "/static/media/island.0d2d68beab95d6ff97ebf82f6c85e354.svg",
     "static/media/baloons.svg": "/static/media/baloons.ea6e220ee92f1331d720ccf14d2ad229.svg",
     "static/media/plane.svg": "/static/media/plane.0f19571ae18445a1a9646c3f71847924.svg",
-    "static/media/medhacks red.svg": "/static/media/medhacks red.54380c0fa6a1688e1b3cab655d90c682.svg",
+    "static/media/medhacks_logo.png": "/static/media/medhacks_logo.3937638736daafff5fbf.png",
     "static/media/plane_no_bg.svg": "/static/media/plane_no_bg.e0e1c02425ec9d9fda7819cf1e27ab84.svg",
     "static/media/sponsors_header.svg": "/static/media/sponsors_header.523e981364fb24c51714d9bfb5231cc7.svg",
     "static/media/speakers_header.svg": "/static/media/speakers_header.c666d6103a9fd87b7ee2b93968a11024.svg",
@@ -24,14 +24,13 @@
     "static/media/apply.svg": "/static/media/apply.ebd9b376946994b6e836a2000217d6e9.svg",
     "static/media/about.svg": "/static/media/about.6bf02faf404ceef73fbb224a357cb3b0.svg",
     "static/media/faq.svg": "/static/media/faq.486f134d6bcdb0629b9b38d0fc914662.svg",
-    "static/media/logo_plain.svg": "/static/media/logo_plain.4cf06240cc26261e29b2f896e006854a.svg",
     "index.html": "/index.html",
-    "main.7a9eb3cf.css.map": "/static/css/main.7a9eb3cf.css.map",
-    "main.87a419af.js.map": "/static/js/main.87a419af.js.map",
+    "main.2f5a1795.css.map": "/static/css/main.2f5a1795.css.map",
+    "main.8abb79ec.js.map": "/static/js/main.8abb79ec.js.map",
     "787.882cd3cc.chunk.js.map": "/static/js/787.882cd3cc.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7a9eb3cf.css",
-    "static/js/main.87a419af.js"
+    "static/css/main.2f5a1795.css",
+    "static/js/main.8abb79ec.js"
   ]
 }
