@@ -79,35 +79,35 @@ export default function Main() {
           }}
         />
       )}
-      <div className="bg-gradient-to-b from-[#C7F2FF] to-[#FFCDC6]">
+      <div className="bg-gradient-to-b from-[#C1E3EC] to-[#F3D5DA]">
         <Landing />
         <Spacer sectionId="about" />
       </div>
-      <div className="bg-gradient-to-b from-[#FFCDC6] to-[#FFC0B7]">
+      <div className="bg-[#F3D5DA]">
         <About/>
         <Spacer sectionId="tracks" />
       </div>
-      <div className="bg-gradient-to-b from-[#FFC0B7] to-[#93D8FF]">
+      <div className="bg-gradient-to-b from-[#F3D5DA] to-[#F5E8D8]">
         <Tracks />
         <Spacer sectionId="speakers" />
       </div>
-      <div className="bg-[#93D8FF]">
+      <div className="bg-[#F5E8D8]">
         <Speakers />
         <Spacer sectionId="schedule" />
       </div>
-      <div className="bg-gradient-to-b from-[#93D8FF] to-[#5fbef5]">
+      <div className="bg-gradient-to-b from-[#F5E8D8] to-[#CFE5C1]">
         <Schedule />
         <Spacer sectionId="faq" />
       </div>
-      <div className="bg-gradient-to-b from-[#5fbef5] to-[#2E6CC9]">
+      <div className="bg-[#CFE5C1]">
         <FAQ />
         <Spacer sectionId="sponsors" />
       </div>
-      <div className="bg-[#2E6CC9]">
+      <div className="bg-gradient-to-b from-[#CFE5C1] to-[#FFFFFF]">
         <Sponsors />
         <Spacer sectionId="footer" />
       </div>
-      <div className="bg-[#175BB6]">
+      <div className="bg-[#FFFFFF]">
         <Footer />
       </div>
     </div>
