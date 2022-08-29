@@ -12,7 +12,7 @@ const TrackCard: FC<{
       <div className="rounded-2xl bg-[#FCE689] flex justify-center p-4 box-border ">
         <div className="border-4 hover:border-rose-600 rounded-2xl border-white">
           <div className="">
-            <h5 className="text-gray-900 text-xl text-center leading-tight font-medium font-extrabold font-sans p-2">
+            <h5 className="text-gray-900 text-xl text-center leading-tight font-medium font-extrabold font-sans p-10">
               {trackName}
             </h5>
             {
@@ -21,7 +21,7 @@ const TrackCard: FC<{
               : <img className="max-h-xs" src={img} alt="Tracks"/>
             }
           </div>
-          <p className="text-gray-700 text-center text-md font-sans pt-2 pb-3 px-2">
+          <p className="text-gray-700 text-center text-md font-sans pt-10 pb-3 px-2">
             {description}
           </p>
         </div>
@@ -39,7 +39,7 @@ const Tracks: FC = () => {
       </div>
 
       {/* Description of Tracks */}
-      <p className="font-sans text-white md:text-2xl sm:text-lg pl-[2%] pr-[2%] bg-[#CFACB9] mr-[5%] ml-[5%] pt-10 pb-10 rounded-3xl">
+      <p className="font-sans text-black md:text-2xl sm:text-lg pl-[2%] pr-[2%]  mr-[5%] ml-[5%] pt-10 pb-10 rounded-3xl">
         MedHacks and its sponsors create three tracks every year.
       </p>
 

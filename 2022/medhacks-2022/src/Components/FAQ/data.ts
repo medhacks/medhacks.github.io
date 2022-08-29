@@ -65,5 +65,5 @@ export default [
 ];
 
 function getAnchor(text: string, url: string) {
-  return `<a target="_blank" rel="noopener noreferrer" href="${url}" style="color: #67e8f9;">${text}</a>`;
+  return `<a target="_blank" rel="noopener noreferrer" href="${url}" style="color: blue;">${text}</a>`;
 }

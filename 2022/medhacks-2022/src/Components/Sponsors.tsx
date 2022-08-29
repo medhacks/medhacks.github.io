@@ -19,9 +19,9 @@ const Sponsors: FC = () => {
           <img src={bourne} alt="Bourne Logo" />
         </div>
       </div> */}
-      <div className="text-white justify-center font-['Mulish'] bg-[#0000002F] w-[80%] m-auto pt-5 pb-5 rounded-3xl">
+      <div className="text-black justify-center font-['Mulish'] bg-[#0000000F] w-[80%] m-auto pt-5 pb-5 rounded-3xl">
 
-        <div className="px-[10%] text-[#C7F2FF] md:text-2xl text-xl justify-center leading 7 font-bold tracking-wide">
+        <div className="px-[10%] text-[#E63F21] md:text-2xl text-xl justify-center leading 7 font-bold tracking-wide">
           Thank you to this year’s sponsors!
         </div>
         <br/>

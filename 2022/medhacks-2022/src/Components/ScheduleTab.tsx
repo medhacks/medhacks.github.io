@@ -8,24 +8,74 @@ const tableContent = (dayActive: number) => {
   switch (dayActive) {
     case 5:
       return (
-        <tr>
-          <td>Sponsor & Mentor Check-In</td>
-          <td>2:00 PM - 10:00 PM</td>
-        </tr>
+        <div>
+          <tr>
+            <td>Sponsor & Mentor Check-In</td>
+            <td>6:00-6:30 PM</td>
+          </tr>
+          <tr>
+            <td>Individual Hacker Check-In</td>
+            <td>6:00-6:30 PM</td>
+          </tr>
+          <tr>
+            <td>Sponsor Meet and Greet</td>
+            <td>TBD</td>
+          </tr>
+          <tr>
+            <td>Opening Ceremony</td>
+            <td>6:00-7:30 PM</td>
+          </tr>
+          <tr>
+            <td>Idea Pitching/ Team Forming Sessions</td>
+            <td>7:45-9:30 PM</td>
+          </tr>
+          <tr>
+            <td>Hacking Begins</td>
+            <td>9:30 PM</td>
+          </tr>
+          <tr>
+            <td className="pr-[10px]">Post Pitch Session Collaboration / Team Forming</td>
+            <td>TBD</td>
+          </tr>
+          <tr>
+            <td>Team Registration</td>
+            <td>10:00 PM</td>
+          </tr>
+          <tr>
+            <td>Friday night hacker experience</td>
+            <td>TBD</td>
+          </tr>
+        </div>
       );
     case 6:
       return (
-        <tr>
-          <td>Workshops</td>
-          <td>10:00 AM - 6:00 PM</td>
-        </tr>
+        <div>
+          <tr>
+            <td>Workshops</td>
+            <td>TBD</td>
+          </tr>
+          <tr>
+            <td className="pr-[10px]">Hacker experience activities</td>
+            <td>TBD</td>
+          </tr>
+        </div>
       );
     case 7:
       return (
-        <tr>
-          <td>DevPost Help</td>
-          <td>6:00 AM - 9:00 AM</td>
-        </tr>
+        <div>
+          <tr>
+            <td>Devpost submissions</td>
+            <td>TBD</td>
+          </tr>
+          <tr>
+            <td className="pr-[10px]">First round judging</td>
+            <td>TBD</td>
+          </tr>
+          <tr>
+            <td className="pr-[10px]">Second round judging</td>
+            <td>TBD</td>
+          </tr>
+        </div>
       );
     default:
       return null;
@@ -34,12 +84,12 @@ const tableContent = (dayActive: number) => {
 
 const ScheduleTable: FC<TableProps> = ({ dayActive }) => {
   return (
-    <div className="font-sans text-white md:text-xl sm:text-lg h-100 bg-[#0000000F] mr-[5%] ml-[5%] p-[5%] rounded-3xl border-2 border-[#5DA6DC]" >
-      <table className="flex justify-center flex-column">
+    <div className="font-sans text-black md:text-xl sm:text-lg h-100 bg-[#FFFFFF8F] mr-[5%] ml-[5%] p-[5%] rounded-xl" >
+      <table className="flex justify-center flex-column text-left font-bold">
         <tbody key={dayActive + 'schedule'}>{tableContent(dayActive)}</tbody>
       </table>
-      <div className="font-bold text-black">
-        <br/> *Times are in EDT(UTC-4) and are subject to change
+      <div className="text-black">
+        <br /> *Times are in EDT(UTC-4) and are subject to change
       </div>
     </div>
   );

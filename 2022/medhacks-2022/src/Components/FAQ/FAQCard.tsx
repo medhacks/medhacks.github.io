@@ -26,7 +26,7 @@ export default function FAQCard({
       </button>
       {isExpanded ? (
         <div
-        className="text-white md:text-lg sm:text-md bg-[#2F69A8] pl-[5%] pr-[5%] bg-[#0000000F] pt-10 pb-10"
+        className="text-black md:text-lg sm:text-md pl-[5%] pr-[5%] bg-[#0000000F] pt-10 pb-10"
           dangerouslySetInnerHTML={{ __html: answer }}
         />
       ) : null}
