@@ -35,11 +35,11 @@ const tableContent = (dayActive: number) => {
           </tr>
           <tr>
             <td>Movie Night</td>
-            <td>12:00 PM</td>
+            <td>12:00 AM</td>
           </tr>
           <tr>
             <td>Movie Night</td>
-            <td>2:00 PM</td>
+            <td>2:00 AM</td>
           </tr>
         </div>
       );
@@ -76,7 +76,7 @@ const tableContent = (dayActive: number) => {
           </tr>
           <tr>
             <td>Movie Night</td>
-            <td>12:00 PM</td>
+            <td>12:00 AM</td>
           </tr>
         </div>
       );
