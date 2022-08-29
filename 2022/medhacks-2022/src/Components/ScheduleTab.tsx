@@ -11,39 +11,35 @@ const tableContent = (dayActive: number) => {
         <div>
           <tr>
             <td>Sponsor & Mentor Check-In</td>
-            <td>6:00-6:30 PM</td>
+            <td>6:00-7:30 PM</td>
           </tr>
           <tr>
-            <td>Individual Hacker Check-In</td>
-            <td>6:00-6:30 PM</td>
-          </tr>
-          <tr>
-            <td>Sponsor Meet and Greet</td>
-            <td>TBD</td>
+            <td>Hacker Check-In</td>
+            <td>6:00-9:00 PM</td>
           </tr>
           <tr>
             <td>Opening Ceremony</td>
             <td>6:00-7:30 PM</td>
           </tr>
           <tr>
-            <td>Idea Pitching/ Team Forming Sessions</td>
-            <td>7:45-9:30 PM</td>
+            <td>Pitch Sessions</td>
+            <td>7:45-9:00 PM</td>
           </tr>
           <tr>
-            <td>Hacking Begins</td>
-            <td>9:30 PM</td>
+            <td className="pr-[10px]">Team Registration/Hacking Begins</td>
+            <td>9:00-11:00 PM</td>
           </tr>
           <tr>
-            <td className="pr-[10px]">Post Pitch Session Collaboration / Team Forming</td>
-            <td>TBD</td>
-          </tr>
-          <tr>
-            <td>Team Registration</td>
+            <td>Movie Night</td>
             <td>10:00 PM</td>
           </tr>
           <tr>
-            <td>Friday night hacker experience</td>
-            <td>TBD</td>
+            <td>Movie Night</td>
+            <td>12:00 PM</td>
+          </tr>
+          <tr>
+            <td>Movie Night</td>
+            <td>2:00 PM</td>
           </tr>
         </div>
       );
@@ -52,11 +48,35 @@ const tableContent = (dayActive: number) => {
         <div>
           <tr>
             <td>Workshops</td>
-            <td>TBD</td>
+            <td>11:00 AM</td>
           </tr>
           <tr>
-            <td className="pr-[10px]">Hacker experience activities</td>
-            <td>TBD</td>
+            <td>Hacker Experience</td>
+            <td>1:00-2:00 PM</td>
+          </tr>
+          <tr>
+            <td>Workshops</td>
+            <td>12:30 PM</td>
+          </tr>
+          <tr>
+            <td className="pr-[10px]">MATLAB for Machine Learning (ML) <br></br>and Deep Learning (DL) workflows</td>
+            <td>2:00-3:00 PM</td>
+          </tr>
+          <tr>
+            <td>Painting with Bob Ross and MLH</td>
+            <td>3:00-4:00 PM</td>
+          </tr>
+          <tr>
+            <td>Hacker Experience</td>
+            <td>7:00-8:00 PM</td>
+          </tr>
+          <tr>
+            <td>Movie Night</td>
+            <td>10:00 PM</td>
+          </tr>
+          <tr>
+            <td>Movie Night</td>
+            <td>12:00 PM</td>
           </tr>
         </div>
       );
@@ -64,16 +84,32 @@ const tableContent = (dayActive: number) => {
       return (
         <div>
           <tr>
-            <td>Devpost submissions</td>
-            <td>TBD</td>
+            <td>DevPost Help</td>
+            <td>6:00-9:00 AM</td>
           </tr>
           <tr>
-            <td className="pr-[10px]">First round judging</td>
-            <td>TBD</td>
+            <td>DevPost Due</td>
+            <td>8:30 AM</td>
           </tr>
           <tr>
-            <td className="pr-[10px]">Second round judging</td>
-            <td>TBD</td>
+            <td className="pr-[10px]">Judging Round 1</td>
+            <td>10:00-11:45 AM</td>
+          </tr>
+          <tr>
+            <td className="pr-[10px]">Elimination to 3 teams/track <br></br>+ setup for judging round 2</td>
+            <td>11:45 AM-12:00 PM</td>
+          </tr>
+          <tr>
+            <td className="pr-[10px]">Judging Round 2</td>
+            <td>12:30-3:00 PM</td>
+          </tr>
+          <tr>
+            <td>Judge Deliberation</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td >Closing Ceremony</td>
+            <td>3:00-4:00 PM</td>
           </tr>
         </div>
       );
