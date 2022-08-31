@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import { ReactComponent as TracksHeaderSVG } from '../assets/tracks_header.svg';
 import APL from '../assets/apl.png';
+import CILDI from '../assets/CILDI_White Vertical.png';
 
 const TrackCard: FC<{
   trackName: string;
@@ -17,8 +18,8 @@ const TrackCard: FC<{
             </h5>
             {
               img === ""
-              ? null
-              : <img className="max-h-xs" src={img} alt="Tracks"/>
+                ? null
+                : <img className="max-h-xs" src={img} alt="Tracks" />
             }
           </div>
           <p className="text-gray-700 text-center text-md font-sans pt-10 pb-3 px-2">
@@ -40,7 +41,7 @@ const Tracks: FC = () => {
 
       {/* Description of Tracks */}
       <p className="font-sans text-black md:text-2xl sm:text-lg pl-[2%] pr-[2%]  mr-[5%] ml-[5%] pt-10 pb-10 rounded-3xl">
-        MedHacks and its sponsors create three tracks every year.
+        MedHacks and their sponsors are pleased to present two title tracks this year.
       </p>
 
       {/* Track Cards */}
@@ -50,6 +51,12 @@ const Tracks: FC = () => {
           trackName="Health and Data Science Innovation Track"
           description="Your team's mission is to help us advance patient care through an open science “hack.” The possibilities are endless. Identify an emerging issue related to patient care, and then come up with creative and unique solutions to reduce or resolve them. Your project may build on the following focus areas: scaling technology platforms, moving treatment technology from the hospital to the home, improving hospital operation or medical supply logistics, making data actionable, and empowering patients."
           img={APL}
+        />
+        {/* School of Nursing Track */}
+        <TrackCard
+          trackName="Innovations in reducing human errors and improving patient safety in hospital settings"
+          description=""
+          img={CILDI}
         />
       </div>
     </div>
