@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.1450ca21.css",
-    "main.js": "/static/js/main.a02f0797.js",
+    "main.js": "/static/js/main.fb51253c.js",
     "static/js/787.882cd3cc.chunk.js": "/static/js/787.882cd3cc.chunk.js",
     "static/media/island.svg": "/static/media/island.0d2d68beab95d6ff97ebf82f6c85e354.svg",
     "static/media/baloons.svg": "/static/media/baloons.ea6e220ee92f1331d720ccf14d2ad229.svg",
@@ -17,6 +17,7 @@
     "static/media/About_Header_SVG.svg": "/static/media/About_Header_SVG.9a58ed8643f2b82031286ef7c5538a97.svg",
     "static/media/faq_header.svg": "/static/media/faq_header.7306aeae6547379d52d652eccd20c67e.svg",
     "static/media/apl.png": "/static/media/apl.076ba9e418f89c8471d8.png",
+    "static/media/CILDI_White Vertical.png": "/static/media/CILDI_White Vertical.e31ca39277a0b5473d6f.png",
     "static/media/logo.svg": "/static/media/logo.6782a1673d35cd26f1ebae9fc981aeaf.svg",
     "static/media/sponsors.svg": "/static/media/sponsors.ad5b6d8ec7ff1d14db2dbeeac817743b.svg",
     "static/media/speakers.svg": "/static/media/speakers.46818c64abd8b870f24dd0adde09b289.svg",
@@ -27,11 +28,11 @@
     "static/media/faq.svg": "/static/media/faq.486f134d6bcdb0629b9b38d0fc914662.svg",
     "index.html": "/index.html",
     "main.1450ca21.css.map": "/static/css/main.1450ca21.css.map",
-    "main.a02f0797.js.map": "/static/js/main.a02f0797.js.map",
+    "main.fb51253c.js.map": "/static/js/main.fb51253c.js.map",
     "787.882cd3cc.chunk.js.map": "/static/js/787.882cd3cc.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1450ca21.css",
-    "static/js/main.a02f0797.js"
+    "static/js/main.fb51253c.js"
   ]
 }
