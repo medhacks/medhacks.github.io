@@ -56,7 +56,7 @@ const Tracks: FC = () => {
         {/* School of Nursing Track */}
         <TrackCard
           trackName="Innovations in Reducing Human Errors and Improving Patient Safety in Hospital Settings"
-          description={<div></div>}
+          description={<div>Your team’s mission is to help us reduce human errors and improve patient safety in hospital settings. Despite critical attention and successful interventions, patient safety remains a significant problem in the United States. Human errors lead to adverse medication errors and healthcare-association infections. Your goal is to develop technology-enabled solutions to reduce medication errors and healthcare-associated infections. Healthcare-associated infections may include central line-associated bloodstream infections, catheter-associated urinary tract infections, ventilator-associated pneumonia, or surgical site infections. In addition, your project should consider leveraging AI, robotization, and other emerging technologies (not limited to virtual reality, mixed reality, and extended reality) to increase the transition from task-oriented activities to solution-based care of patients.</div>}
           img={CILDI}
         />
         {/* BIG IDEA: Best Technology-Enabled Patient Safety Solutions Track */}
