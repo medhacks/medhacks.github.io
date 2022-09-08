@@ -63,14 +63,13 @@ const Tracks: FC = () => {
         <TrackCard
           trackName="BIG IDEA: Best Technology-Enabled Patient Safety Solutions"
           description={
-            <div><p>We’re in search of bold new thinking. This is a call to the NEXT GENERATION. An invitation to solve the problem of medical error that harms millions of U.S. patients and costs billions of dollars every year. We’re calling on MedHacks teams to envision the best technology-enabled patient safety solution that has the potential to avert patient harm and save lives. Your hack must align with one of the following four leading patient safety challenges facing health care across the continuum of care.
+            <div><p>We’re in search of bold new thinking. This is a call to the NEXT GENERATION. An invitation to solve the problem of medical error that harms millions of U.S. patients and costs billions of dollars every year. We’re calling on MedHacks teams to envision the best technology-enabled patient safety solution that has the potential to avert patient harm and save lives. We are thrilled that the School of Nursing is focusing on two leading patient harm categories; together with our three additional patient harm categories, we cover the 5 leading causes of patient harm. For the Patient Safety Technology track, your hack must align with one of the following three leading patient safety challenges facing health care across the continuum of care.
               </p><br/>
-              <ol type="1" className="text-left pl-5">
-                <li> * Procedural/surgical errors (e.g. pneumothorax, excessive bleeding, intestinal perforation)</li>
-                <li>  * Errors during routine patient care (e.g. pressure ulcers, blood clots, falls)</li>
-                <li>  * Infections (e.g. respiratory infections, surgical site infections, central line-associated blood stream infections)</li>
-                <li>  * Diagnostic safety (e.g. missed, delayed or wrong diagnoses)</li>
-              </ol><br/>
+              <ul className="text-left pl-5 list-group">
+                <li className="list-group-item"> Procedural/surgical errors (e.g. pneumothorax, excessive bleeding, intestinal perforation)</li>
+                <li className="list-group-item">  Errors during routine patient care (e.g. pressure ulcers, blood clots, falls)</li>
+                <li className="list-group-item">  Diagnostic safety (e.g. missed, delayed or wrong diagnoses)</li>
+              </ul><br/>
               <p>We encourage teams to consider autonomous patient safety solutions, those where the automation of an existing technology can improve patient safety by easing the burden on our healthcare workforce that is burning out and turning over at astonishing rates that are not sustainable.</p></div>
           }
           img={PSTC}
