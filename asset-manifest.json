@@ -1,10 +1,11 @@
 {
   "files": {
-    "main.css": "/static/css/main.afd85cfd.css",
-    "main.js": "/static/js/main.61c9e29c.js",
+    "main.css": "/static/css/main.492991f4.css",
+    "main.js": "/static/js/main.f92a0615.js",
     "static/js/787.882cd3cc.chunk.js": "/static/js/787.882cd3cc.chunk.js",
     "static/media/island.svg": "/static/media/island.0d2d68beab95d6ff97ebf82f6c85e354.svg",
     "static/media/baloons.svg": "/static/media/baloons.ea6e220ee92f1331d720ccf14d2ad229.svg",
+    "static/media/sponsors.png": "/static/media/sponsors.ca07426d1d5daa9403ce.png",
     "static/media/plane.svg": "/static/media/plane.0f19571ae18445a1a9646c3f71847924.svg",
     "static/media/medhacks_logo.png": "/static/media/medhacks_logo.3937638736daafff5fbf.png",
     "static/media/plane_no_bg.svg": "/static/media/plane_no_bg.e0e1c02425ec9d9fda7819cf1e27ab84.svg",
@@ -28,12 +29,12 @@
     "static/media/about.svg": "/static/media/about.6bf02faf404ceef73fbb224a357cb3b0.svg",
     "static/media/faq.svg": "/static/media/faq.486f134d6bcdb0629b9b38d0fc914662.svg",
     "index.html": "/index.html",
-    "main.afd85cfd.css.map": "/static/css/main.afd85cfd.css.map",
-    "main.61c9e29c.js.map": "/static/js/main.61c9e29c.js.map",
+    "main.492991f4.css.map": "/static/css/main.492991f4.css.map",
+    "main.f92a0615.js.map": "/static/js/main.f92a0615.js.map",
     "787.882cd3cc.chunk.js.map": "/static/js/787.882cd3cc.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.afd85cfd.css",
-    "static/js/main.61c9e29c.js"
+    "static/css/main.492991f4.css",
+    "static/js/main.f92a0615.js"
   ]
 }
